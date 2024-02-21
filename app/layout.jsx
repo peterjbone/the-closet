@@ -1,26 +1,26 @@
 import "./globals.css";
 import { Lato } from "next/font/google";
 
-import Navbar from "@/components/navbar/Navbar.jsx";
+import Header from "./components/header/Header";
 
-// Main font
+//? Main font
 const lato = Lato({
 	subsets: ["latin"],
-	style: ["normal", "italic"],
-	weight: ["300", "400", "700", "900"]
+	weight: ["300", "400", "700"],
+	style: ["normal", "italic"]
 });
 
-// Metadata
+//? Metadata
 export const metadata = {
 	title: "The closet"
 };
 
 export default function RootLayout({ children }) {
-	/* prettier-ignore */
+	/* prettier-ignore*/
 	return (
-		<html lang="en">
+		<html lang="es">
       <body className={lato.className}>
-        <Navbar/>
+        <Header/>
         {children}
       </body>
 		</html>
