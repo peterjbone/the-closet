@@ -786,5 +786,135 @@
 				}
 			}
 		]
+	},
+	{
+		"categoria": "destacados",
+		"productos": [
+			{
+				"id": 4,
+				"nombre": "campera pablo",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 12.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "prendaSuperior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/279725-1200-1440?v=638345443183630000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/279726-1200-1440?v=638345443304900000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/279728-1200-1440?v=638345443703100000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["S", "M", "L", "XL"],
+				"colores": ["negro", "blanco"],
+				"Stock": {
+					"S": { "negro": 10, "blanco": 15 },
+					"M": { "negro": 10, "blanco": 15 },
+					"L": { "negro": 10, "blanco": 15 },
+					"XL": { "negro": 10, "blanco": 15 }
+				}
+			},
+			{
+				"id": 13,
+				"nombre": "Borcegos clásicos",
+				"marca": "batistella",
+				"descripcion": "algo hay que poner",
+				"precio": 30.6,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "calsado",
+				"imagen": [
+					"https://calzadosbatistella.com.ar/shop/83106-superlarge_default/borcegos-clasicos-de-cuero-en-habano.jpg",
+					"https://calzadosbatistella.com.ar/shop/83107-superlarge_default/borcegos-clasicos-de-cuero-en-habano.jpg",
+					"https://calzadosbatistella.com.ar/shop/83108-superlarge_default/borcegos-clasicos-de-cuero-en-habano.jpg"
+				],
+				"tallas": ["39", "41", "43", "45"],
+				"colores": ["marron"],
+				"Stock": {
+					"39": { "marron": 30 },
+					"41": { "marron": 30 },
+					"43": { "marron": 30 },
+					"45": { "marron": 30 }
+				}
+			},
+			{
+				"id": 14,
+				"nombre": "Borcegos de cuero en habano",
+				"marca": "batistella",
+				"descripcion": "algo hay que poner",
+				"precio": 10.4,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "calsado",
+				"imagen": [
+					"https://calzadosbatistella.com.ar/shop/88875-superlarge_default/borcegos-clasicos-de-cuero-en-habano.jpg",
+					"https://calzadosbatistella.com.ar/shop/88870-superlarge_default/borcegos-clasicos-de-cuero-en-habano.jpg",
+					"https://calzadosbatistella.com.ar/shop/88871-superlarge_default/borcegos-clasicos-de-cuero-en-habano.jpg"
+				],
+				"tallas": ["39", "41", "43", "45"],
+				"colores": ["habano"],
+				"Stock": {
+					"39": { "habano": 30 },
+					"41": { "habano": 30 },
+					"43": { "habano": 30 },
+					"45": { "habano": 30 }
+				}
+			},
+			{
+				"id": 21,
+				"nombre": "campera ambre",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 30.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "femenino",
+				"subcategoria": "prendaSuperior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/280452-1200-1440?v=638356749977970000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/280625-1200-1440?v=638356750547600000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/280840-1200-1440?v=638356751707570000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["S", "M", "L", "XL"],
+				"colores": ["blanco"],
+				"Stock": {
+					"S": { "blanco": 15 },
+					"M": { "blanco": 15 },
+					"L": { "blanco": 15 },
+					"XL": { "blanco": 15 }
+				}
+			},
+			{
+				"id": 22,
+				"nombre": "pantalón kenia",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 10.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "femenino",
+				"subcategoria": "prendaInferior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/249518-1200-1440?v=637971115599930000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/281472-1200-1440?v=638370292502300000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/283162-1200-1440?v=638429225674200000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["004", "010", "014", "020"],
+				"colores": ["negro", "blanco", "azul"],
+				"Stock": {
+					"004": { "negro": 10, "blanco": 15, "azul": 15 },
+					"010": { "negro": 10, "blanco": 15, "azul": 15 },
+					"014": { "negro": 10, "blanco": 15, "azul": 15 },
+					"020": { "negro": 10, "blanco": 15, "azul": 15 }
+				}
+			}
+		]
 	}
 ]

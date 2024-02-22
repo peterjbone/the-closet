@@ -20,18 +20,13 @@ function ProductCard({
 
 	/* prettier-ignore */
 	return (
-    <Link href={`/product/${nombreParam}`}>
-      <div className="bg-purple-500 text-2xl font-semibold flex flex-row justify-center items-center w-[200px] h-[200px] m-6">
-        <p>
-          {nombre}
-        </p>
-      </div>
-				{/* <div className="flex flex-col gap-3 items-start justify-center bg-slate-200 p-4">
-					<img src={} alt={} className="mb-5" />
-					<p className="font-bold text-2xl">{}</p>
-					<p className="text-xl">{}</p>
-					<p className="text-xl">{}</p>
-				</div> */}
+    <Link href={`/producto/${nombreParam}`}>
+				<div className="flex flex-col gap-3 items-start justify-center bg-slate-200 p-4">
+					<img src={imagen[0]} alt={nombre} className="mb-5" />
+					<p className="font-bold text-2xl">{nombre}</p>
+					<p className="text-xl">{colores}</p>
+					<p className="text-xl">{precio}</p>
+				</div>
 			</Link>
 	);
 }

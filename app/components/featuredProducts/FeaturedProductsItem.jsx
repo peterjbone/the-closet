@@ -2,20 +2,40 @@
 
 import Link from "next/link";
 
-function NewProductItem({ imgOne, label, price, color, param }) {
+function NewProductItem({
+	id,
+	nombre,
+	marca,
+	descripcion,
+	precio,
+	inOferta,
+	oferta,
+	categoria,
+	genero,
+	imagen,
+	tallas,
+	colores
+}) {
+	const nombreParam = nombre
+		.split(" ")
+		.join("-")
+		.toLowerCase()
+		.normalize("NFD")
+		.replace(/[\u0300-\u036f]/g, "");
+
 	/* prettier-ignore */
 	return (  
-    <Link href={`/product/${param}`}>
-      <div className="flex flex-col gap-3 items-start justify-center bg-slate-200 p-4">
-        <img src={imgOne} alt={label} className="mb-5" />
+    <Link href={`/producto/${nombreParam}`}>
+      <div className="flex flex-col gap-3 items-start justify-center bg-slate-600 p-4">
+        <img src={imagen[0]} alt={nombre} className="mb-5 w-[260px] h-[310px]" />
         <p className="font-bold text-2xl">
-          {label}
+          {nombre}
         </p>
         <p className="text-xl">
-          Color: {color}
+          Color: {colores}
         </p>
         <p className="text-xl">
-          Price: {price}
+          Precio: {precio}
         </p>
       </div>
     </Link>
