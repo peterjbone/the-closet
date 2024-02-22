@@ -5,7 +5,7 @@ import Link from "next/link";
 import { MdOutlineArrowForwardIos } from "react-icons/md";
 import { useRef } from "react";
 
-function CategoryItem({ link, src, alt, label }) {
+function CategoryItem({ param, src, alt, label }) {
 	const layerRef = useRef(null);
 	function showOverlay() {
 		layerRef.current.style.opacity = "1";
@@ -16,7 +16,7 @@ function CategoryItem({ link, src, alt, label }) {
 
 	/* prettier-ignore */
 	return (
-    <Link href={link}>
+    <Link href={`/categoria${param}`}>
       
 			<div className="relative block" onMouseOver={showOverlay} onMouseOut={hideOverlay}>
 				<img src={src} alt={alt} />

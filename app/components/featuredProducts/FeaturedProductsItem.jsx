@@ -3,7 +3,6 @@
 import Link from "next/link";
 
 function NewProductItem({ imgOne, label, price, color, param }) {
-	console.log(param);
 	/* prettier-ignore */
 	return (  
     <Link href={`/product/${param}`}>
