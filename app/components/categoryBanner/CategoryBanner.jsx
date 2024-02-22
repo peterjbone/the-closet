@@ -14,7 +14,7 @@ function CategoryBanner() {
             src={item.src}
             alt={item.label}
             label={item.label}
-            link={item.link}
+            param={item.param}
           />
         ))
       }

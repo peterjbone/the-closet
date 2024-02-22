@@ -1,6 +1,6 @@
 import HeroTrend from "./components/heroTrend/HeroTrend";
 import CategoryBanner from "./components/categoryBanner/CategoryBanner";
-import NewProducts from "./components/newProducts/NewProducts";
+import FeaturedProducts from "./components/featuredProducts/FeaturedProducts";
 
 function Home() {
 	/* prettier-ignore*/
@@ -8,7 +8,7 @@ function Home() {
 		<>
       <HeroTrend />	
       <CategoryBanner /> 
-      <NewProducts/>
+      <FeaturedProducts/>
 		</>
 	);
 }

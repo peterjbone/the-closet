@@ -1,0 +1,920 @@
+[
+	{
+		"categoria": "hombres",
+		"productos": [
+			{
+				"id": 1,
+				"nombre": "chomba falabe",
+				"marca": "falabela",
+				"descripcion": "algo hay que poner",
+				"precio": 10.5,
+				"inOferta": true,
+				"oferta": 15,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "prendaSuperior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/250819/04478_603X3.jpg?v=637989524558130000",
+					"https://acdn.mitiendanube.com/stores/001/160/124/products/southfox_dic-451-567bef1aba1a1eb47b16910779498511-1024-1024.jpg",
+					"https://chombas.com.ar/wp-content/uploads/2016/02/chombas-con-logo-5-4.jpg"
+				],
+				"tallas": ["S", "M", "L", "XL"],
+				"colores": ["rojo", "negro", "blanco"],
+				"Stock": {
+					"S": { "rojo": 2, "negro": 5, "blanco": 5 },
+					"M": { "rojo": 2, "negro": 5, "blanco": 5 },
+					"L": { "rojo": 2, "negro": 5, "blanco": 5 },
+					"XL": { "rojo": 2, "negro": 5, "blanco": 5 }
+				}
+			},
+			{
+				"id": 2,
+				"nombre": "campera invierno",
+				"marca": "falabela",
+				"descripcion": "algo hay que poner",
+				"precio": 20.5,
+				"inOferta": true,
+				"oferta": 15,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "prendaSuperior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/243475-1200-1440?v=637934911423800000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/243476-1200-1440?v=637934911902700000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/243477-1200-1440?v=637934912260670000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["S", "M", "L", "XL"],
+				"colores": ["negro", "blanco"],
+				"Stock": {
+					"S": { "negro": 10, "blanco": 15 },
+					"M": { "negro": 10, "blanco": 15 },
+					"L": { "negro": 10, "blanco": 15 },
+					"XL": { "negro": 10, "blanco": 15 }
+				}
+			},
+			{
+				"id": 3,
+				"nombre": "campera fenix",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 15.5,
+				"inOferta": true,
+				"oferta": 5,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "prendaSuperior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/268925-1200-1440?v=638224393555230000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/268926-1200-1440?v=638224394288900000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/268927-1200-1440?v=638224396646130000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["S", "M", "L", "XL"],
+				"colores": ["negro", "blanco"],
+				"Stock": {
+					"S": { "negro": 10, "blanco": 15 },
+					"M": { "negro": 10, "blanco": 15 },
+					"L": { "negro": 10, "blanco": 15 },
+					"XL": { "negro": 10, "blanco": 15 }
+				}
+			},
+			{
+				"id": 4,
+				"nombre": "campera pablo",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 12.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "prendaSuperior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/279725-1200-1440?v=638345443183630000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/279726-1200-1440?v=638345443304900000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/279728-1200-1440?v=638345443703100000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["S", "M", "L", "XL"],
+				"colores": ["negro", "blanco"],
+				"Stock": {
+					"S": { "negro": 10, "blanco": 15 },
+					"M": { "negro": 10, "blanco": 15 },
+					"L": { "negro": 10, "blanco": 15 },
+					"XL": { "negro": 10, "blanco": 15 }
+				}
+			},
+			{
+				"id": 5,
+				"nombre": "remera owen",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 7.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "prendaSuperior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/274382-1200-1440?v=638294376572800000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/274418-1200-1440?v=638294377121030000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/274454-1200-1440?v=638294377695500000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["S", "M", "L", "XL"],
+				"colores": ["negro", "blanco"],
+				"Stock": {
+					"S": { "negro": 10, "blanco": 15 },
+					"M": { "negro": 10, "blanco": 15 },
+					"L": { "negro": 10, "blanco": 15 },
+					"XL": { "negro": 10, "blanco": 15 }
+				}
+			},
+			{
+				"id": 6,
+				"nombre": "remera christian",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 5.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "prendaSuperior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/281584-1200-1440?v=638370386851570000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/281585-1200-1440?v=638370386970500000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/281586-1200-1440?v=638370387102100000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["S", "M", "L", "XL"],
+				"colores": ["negro", "blanco"],
+				"Stock": {
+					"S": { "negro": 10, "blanco": 15 },
+					"M": { "negro": 10, "blanco": 15 },
+					"L": { "negro": 10, "blanco": 15 },
+					"XL": { "negro": 10, "blanco": 15 }
+				}
+			},
+			{
+				"id": 7,
+				"nombre": "jean bates",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 20.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "prendaInferior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/282841-1200-1440?v=638425000292130000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/282930-1200-1440?v=638425001523970000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/283012-1200-1440?v=638425002891470000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["30", "34", "38", "40"],
+				"colores": ["azul", "negro"],
+				"Stock": {
+					"30": { "azul": 10, "negro": 15 },
+					"34": { "azul": 10, "negro": 15 },
+					"38": { "azul": 10, "negro": 15 },
+					"40": { "azul": 10, "negro": 15 }
+				}
+			},
+			{
+				"id": 8,
+				"nombre": "jean mastergold",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 15.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "pprendaInferior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/282812-1200-1440?v=638424999896170000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/282901-1200-1440?v=638425001081200000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/282983-1200-1440?v=638425002326900000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["30", "34", "38", "40"],
+				"colores": ["azul", "blanco"],
+				"Stock": {
+					"30": { "negro": 10, "blanco": 15 },
+					"34": { "negro": 10, "blanco": 15 },
+					"38": { "negro": 10, "blanco": 15 },
+					"40": { "negro": 10, "blanco": 15 }
+				}
+			},
+			{
+				"id": 9,
+				"nombre": "jean zarar",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 30.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "prendaInferior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/281789-1200-1440?v=638380948476100000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/281790-1200-1440?v=638380948611100000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/281791-1200-1440?v=638380948759370000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["30", "34", "38", "40"],
+				"colores": ["negro", "marron"],
+				"Stock": {
+					"30": { "negro": 10, "marron": 15 },
+					"34": { "negro": 10, "marron": 15 },
+					"38": { "negro": 10, "marron": 15 },
+					"40": { "negro": 10, "marron": 15 }
+				}
+			},
+			{
+				"id": 10,
+				"nombre": "bermuda zlin",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 20.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "prendaInferior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/235474-1200-1440?v=637685380288230000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/235508-1200-1440?v=637685380780900000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/235542-1200-1440?v=637685381313700000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["30", "34", "38", "40"],
+				"colores": ["azul", "gris"],
+				"Stock": {
+					"30": { "azul": 10, "gris": 15 },
+					"34": { "azul": 10, "gris": 15 },
+					"38": { "azul": 10, "gris": 15 },
+					"40": { "azul": 10, "gris": 15 }
+				}
+			},
+			{
+				"id": 11,
+				"nombre": "bermuda brand",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 55.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "prendaInferior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/281883-1200-1440?v=638386855039200000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/281902-1200-1440?v=638386855315770000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/281921-1200-1440?v=638386855619730000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["30", "34", "38", "40"],
+				"colores": ["negro", "marron"],
+				"Stock": {
+					"30": { "negro": 10, "marron": 15 },
+					"34": { "negro": 10, "marron": 15 },
+					"38": { "negro": 10, "marron": 15 },
+					"40": { "negro": 10, "marron": 15 }
+				}
+			},
+			{
+				"id": 12,
+				"nombre": "zapatillas clásicas",
+				"marca": "batistella",
+				"descripcion": "algo hay que poner",
+				"precio": 15.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "calsado",
+				"imagen": [
+					"https://calzadosbatistella.com.ar/shop/85715-superlarge_default/zapatillas-clasicas-de-cuero-en-azul.jpg",
+					"https://calzadosbatistella.com.ar/shop/85711-superlarge_default/zapatillas-clasicas-de-cuero-en-azul.jpg",
+					"https://calzadosbatistella.com.ar/shop/85712-superlarge_default/zapatillas-clasicas-de-cuero-en-azul.jpg"
+				],
+				"tallas": ["39", "41", "43", "45"],
+				"colores": ["negro", "blanco"],
+				"Stock": {
+					"39": { "negro": 10, "blanco": 15 },
+					"41": { "negro": 10, "blanco": 15 },
+					"43": { "negro": 10, "blanco": 15 },
+					"45": { "negro": 10, "blanco": 15 }
+				}
+			},
+			{
+				"id": 13,
+				"nombre": "Borcegos clásicos",
+				"marca": "batistella",
+				"descripcion": "algo hay que poner",
+				"precio": 30.6,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "calsado",
+				"imagen": [
+					"https://calzadosbatistella.com.ar/shop/83106-superlarge_default/borcegos-clasicos-de-cuero-en-habano.jpg",
+					"https://calzadosbatistella.com.ar/shop/83107-superlarge_default/borcegos-clasicos-de-cuero-en-habano.jpg",
+					"https://calzadosbatistella.com.ar/shop/83108-superlarge_default/borcegos-clasicos-de-cuero-en-habano.jpg"
+				],
+				"tallas": ["39", "41", "43", "45"],
+				"colores": ["marron"],
+				"Stock": {
+					"39": { "marron": 30 },
+					"41": { "marron": 30 },
+					"43": { "marron": 30 },
+					"45": { "marron": 30 }
+				}
+			},
+			{
+				"id": 14,
+				"nombre": "Borcegos de cuero en habano",
+				"marca": "batistella",
+				"descripcion": "algo hay que poner",
+				"precio": 10.4,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "calsado",
+				"imagen": [
+					"https://calzadosbatistella.com.ar/shop/88875-superlarge_default/borcegos-clasicos-de-cuero-en-habano.jpg",
+					"https://calzadosbatistella.com.ar/shop/88870-superlarge_default/borcegos-clasicos-de-cuero-en-habano.jpg",
+					"https://calzadosbatistella.com.ar/shop/88871-superlarge_default/borcegos-clasicos-de-cuero-en-habano.jpg"
+				],
+				"tallas": ["39", "41", "43", "45"],
+				"colores": ["habano"],
+				"Stock": {
+					"39": { "habano": 30 },
+					"41": { "habano": 30 },
+					"43": { "habano": 30 },
+					"45": { "habano": 30 }
+				}
+			},
+			{
+				"id": 15,
+				"nombre": "Franciscanas de cuero negro",
+				"marca": "batistella",
+				"descripcion": "algo hay que poner",
+				"precio": 27.4,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "calsado",
+				"imagen": [
+					"https://calzadosbatistella.com.ar/shop/80952-superlarge_default/sandalias-de-cuero-para-hombre.jpg",
+					"https://calzadosbatistella.com.ar/shop/80954-superlarge_default/sandalias-de-cuero-para-hombre.jpg",
+					"https://calzadosbatistella.com.ar/shop/80955-superlarge_default/sandalias-de-cuero-para-hombre.jpg"
+				],
+				"tallas": ["39", "41", "43", "45"],
+				"colores": ["negro"],
+				"Stock": {
+					"39": { "negro": 20 },
+					"41": { "negro": 20 },
+					"43": { "negro": 20 },
+					"45": { "negro": 20 }
+				}
+			},
+			{
+				"id": 16,
+				"nombre": "Zapatillas urbanas",
+				"marca": "batistella",
+				"descripcion": "algo hay que poner",
+				"precio": 10.44,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "calsado",
+				"imagen": [
+					"https://calzadosbatistella.com.ar/shop/94628-superlarge_default/zapatillas-urbanas-de-cuero-en-blanco-combinado.jpg",
+					"https://calzadosbatistella.com.ar/shop/94624-superlarge_default/zapatillas-urbanas-de-cuero-en-blanco-combinado.jpg",
+					"https://calzadosbatistella.com.ar/shop/94626-superlarge_default/zapatillas-urbanas-de-cuero-en-blanco-combinado.jpg"
+				],
+				"tallas": ["39", "41", "43", "45"],
+				"colores": ["blanco"],
+				"Stock": {
+					"39": { "blanco": 15 },
+					"41": { "blanco": 15 },
+					"43": { "blanco": 15 },
+					"45": { "blanco": 15 }
+				}
+			}
+		]
+	},
+	{
+		"categoria": "mujeres",
+		"productos": [
+			{
+				"id": 17,
+				"nombre": "remera steps",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 10.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "femenino",
+				"subcategoria": "prendaSuperior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/283174-1200-1440?v=638429231594330000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/283170-1200-1440?v=638429230288800000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/283172-1200-1440?v=638429230540270000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["S", "M", "L", "XL"],
+				"colores": ["negro", "blanco"],
+				"Stock": {
+					"S": { "negro": 10, "blanco": 15 },
+					"M": { "negro": 10, "blanco": 15 },
+					"L": { "negro": 10, "blanco": 15 },
+					"XL": { "negro": 10, "blanco": 15 }
+				}
+			},
+			{
+				"id": 18,
+				"nombre": "Remera kori",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 15.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "femenino",
+				"subcategoria": "prendaSuperior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/281952-1200-1440?v=638388477253230000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/281989-1200-1440?v=638388477767600000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/282026-1200-1440?v=638388478310100000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["S", "M", "L", "XL"],
+				"colores": ["negro", "blanco"],
+				"Stock": {
+					"S": { "negro": 10, "blanco": 15 },
+					"M": { "negro": 10, "blanco": 15 },
+					"L": { "negro": 10, "blanco": 15 },
+					"XL": { "negro": 10, "blanco": 15 }
+				}
+			},
+			{
+				"id": 19,
+				"nombre": "camisa lissa",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 20.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "femenino",
+				"subcategoria": "prendaSuperior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/279625-1200-1440?v=638343707657400000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/279626-1200-1440?v=638343707791100000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/279628-1200-1440?v=638343708267800000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["S", "M", "L", "XL"],
+				"colores": ["negro", "blanco"],
+				"Stock": {
+					"S": { "negro": 10, "blanco": 15 },
+					"M": { "negro": 10, "blanco": 15 },
+					"L": { "negro": 10, "blanco": 15 },
+					"XL": { "negro": 10, "blanco": 15 }
+				}
+			},
+			{
+				"id": 20,
+				"nombre": "campera palmas",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 25.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "femenino",
+				"subcategoria": "prendaSuperior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/274616-1200-1440?v=638297098426700000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/281231-1200-1440?v=638368671019970000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/281234-1200-1440?v=638368680248400000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["S", "M", "L", "XL"],
+				"colores": ["rojo", "amarillo", "verde"],
+				"Stock": {
+					"S": { "rojo": 10, "amarillo": 15, "verde": 15 },
+					"M": { "rojo": 10, "amarillo": 15, "verde": 15 },
+					"L": { "rojo": 10, "amarillo": 15, "verde": 15 },
+					"XL": { "rojo": 10, "amarillo": 15, "verde": 15 }
+				}
+			},
+			{
+				"id": 21,
+				"nombre": "campera ambre",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 30.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "femenino",
+				"subcategoria": "prendaSuperior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/280452-1200-1440?v=638356749977970000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/280625-1200-1440?v=638356750547600000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/280840-1200-1440?v=638356751707570000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["S", "M", "L", "XL"],
+				"colores": ["blanco"],
+				"Stock": {
+					"S": { "blanco": 15 },
+					"M": { "blanco": 15 },
+					"L": { "blanco": 15 },
+					"XL": { "blanco": 15 }
+				}
+			},
+			{
+				"id": 22,
+				"nombre": "pantalón kenia",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 10.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "femenino",
+				"subcategoria": "prendaInferior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/249518-1200-1440?v=637971115599930000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/281472-1200-1440?v=638370292502300000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/283162-1200-1440?v=638429225674200000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["004", "010", "014", "020"],
+				"colores": ["negro", "blanco", "azul"],
+				"Stock": {
+					"004": { "negro": 10, "blanco": 15, "azul": 15 },
+					"010": { "negro": 10, "blanco": 15, "azul": 15 },
+					"014": { "negro": 10, "blanco": 15, "azul": 15 },
+					"020": { "negro": 10, "blanco": 15, "azul": 15 }
+				}
+			},
+			{
+				"id": 23,
+				"nombre": "pantalón jagger",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 15.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "femenino",
+				"subcategoria": "prendaInferior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/282450-1200-1440?v=638417825131430000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/282452-1200-1440?v=638417828304030000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/282453-1200-1440?v=638417828744370000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["004", "010", "014", "020"],
+				"colores": ["cobre"],
+				"Stock": {
+					"004": { "cobre": 20 },
+					"010": { "cobre": 20 },
+					"014": { "cobre": 20 },
+					"020": { "cobre": 20 }
+				}
+			},
+			{
+				"id": 24,
+				"nombre": "pantalón kirvi",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 20.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "femenino",
+				"subcategoria": "prendaInferior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/259677-1200-1440?v=638138786681900000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/261880-1200-1440?v=638170116071070000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/262110-1200-1440?v=638170118889200000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["004", "010", "014", "020"],
+				"colores": ["negro", "mate"],
+				"Stock": {
+					"004": { "negro": 10, "mate": 15 },
+					"010": { "negro": 10, "mate": 15 },
+					"014": { "negro": 10, "mate": 15 },
+					"020": { "negro": 10, "mate": 15 }
+				}
+			},
+			{
+				"id": 25,
+				"nombre": "jean supremo",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 23.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "femenino",
+				"subcategoria": "prendaInferior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/282785-1200-1440?v=638424999544830000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/282874-1200-1440?v=638425000735330000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/249961-1200-1440?v=637974815159030000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/243731-1200-1440?v=637938512290300000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["004", "010", "014", "020"],
+				"colores": ["negro", "gris", "azul"],
+				"Stock": {
+					"004": { "negro": 10, "gris": 15, "azul": 15 },
+					"010": { "negro": 10, "gris": 15, "azul": 15 },
+					"014": { "negro": 10, "gris": 15, "azul": 15 },
+					"020": { "negro": 10, "gris": 15, "azul": 15 }
+				}
+			},
+			{
+				"id": 26,
+				"nombre": "jean reason",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 30.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "femenino",
+				"subcategoria": "prendaInferior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/270730-1200-1440?v=638249436245500000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/270928-1200-1440?v=638249437980570000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/266144-1200-1440?v=638211598525630000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/279143-1200-1440?v=638337568949770000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/279178-1200-1440?v=638337569492570000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["004", "010", "014", "020"],
+				"colores": ["negro", "blanco", "azul"],
+				"Stock": {
+					"004": { "negro": 10, "blanco": 15, "azul": 15 },
+					"010": { "negro": 10, "blanco": 15, "azul": 15 },
+					"014": { "negro": 10, "blanco": 15, "azul": 15 },
+					"020": { "negro": 10, "blanco": 15, "azul": 15 }
+				}
+			},
+			{
+				"id": 27,
+				"nombre": "zuecos BATI",
+				"marca": "batistella",
+				"descripcion": "algo hay que poner",
+				"precio": 20.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "femenino",
+				"subcategoria": "calsado",
+				"imagen": [
+					"https://calzadosbatistella.com.ar/shop/96833-superlarge_default/zuecos-bati-de-goma-en-ambar.jpg",
+					"https://calzadosbatistella.com.ar/shop/96585-superlarge_default/zuecos-bati-de-goma-en-ambar.jpg",
+					"https://calzadosbatistella.com.ar/shop/96583-superlarge_default/zuecos-bati-de-goma-en-ambar.jpg"
+				],
+				"tallas": ["37-38", "39-40", "41-42", "43-44"],
+				"colores": ["marron", "blanco"],
+				"Stock": {
+					"37-38": { "marron": 10, "blanco": 15 },
+					"39-40": { "marron": 10, "blanco": 15 },
+					"41-42": { "marron": 10, "blanco": 15 },
+					"43-44": { "marron": 10, "blanco": 15 }
+				}
+			},
+			{
+				"id": 28,
+				"nombre": "zuecos de cuero",
+				"marca": "batistella",
+				"descripcion": "algo hay que poner",
+				"precio": 25.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "femenino",
+				"subcategoria": "calsado",
+				"imagen": [
+					"https://calzadosbatistella.com.ar/shop/86579-superlarge_default/zuecos-de-cuero-reptil-en-negro.jpg",
+					"https://calzadosbatistella.com.ar/shop/86580-superlarge_default/zuecos-de-cuero-reptil-en-negro.jpg",
+					"https://calzadosbatistella.com.ar/shop/86582-superlarge_default/zuecos-de-cuero-reptil-en-negro.jpg"
+				],
+				"tallas": ["37-38", "39-40", "41-42", "43-44"],
+				"colores": ["negro", "cobre"],
+				"Stock": {
+					"37-38": { "negro": 10, "cobre": 15 },
+					"39-40": { "negro": 10, "cobre": 15 },
+					"41-42": { "negro": 10, "cobre": 15 },
+					"43-44": { "negro": 10, "cobre": 15 }
+				}
+			},
+			{
+				"id": 29,
+				"nombre": "sandalias bajas",
+				"marca": "batistella",
+				"descripcion": "algo hay que poner",
+				"precio": 30.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "femenino",
+				"subcategoria": "calsado",
+				"imagen": [
+					"https://calzadosbatistella.com.ar/shop/95515-superlarge_default/sandalias-bajas-de-cuero-metalizado-natural.jpg",
+					"https://calzadosbatistella.com.ar/shop/95513-superlarge_default/sandalias-bajas-de-cuero-metalizado-natural.jpg",
+					"https://calzadosbatistella.com.ar/shop/95514-superlarge_default/sandalias-bajas-de-cuero-metalizado-natural.jpg"
+				],
+				"tallas": ["37-38", "39-40", "41-42", "43-44"],
+				"colores": ["negro", "blanco"],
+				"Stock": {
+					"37-38": { "negro": 10, "blanco": 15 },
+					"39-40": { "negro": 10, "blanco": 15 },
+					"41-42": { "negro": 10, "blanco": 15 },
+					"43-44": { "negro": 10, "blanco": 15 }
+				}
+			},
+			{
+				"id": 30,
+				"nombre": "botas cortas bajas de cuero",
+				"marca": "batistella",
+				"descripcion": "algo hay que poner",
+				"precio": 35.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "femenino",
+				"subcategoria": "calsado",
+				"imagen": [
+					"https://calzadosbatistella.com.ar/shop/82966-superlarge_default/botas-cortas-bajas-de-cuero-en-suela-con-cierres.jpg",
+					"https://calzadosbatistella.com.ar/shop/82968-superlarge_default/botas-cortas-bajas-de-cuero-en-suela-con-cierres.jpg",
+					"https://calzadosbatistella.com.ar/shop/82969-superlarge_default/botas-cortas-bajas-de-cuero-en-suela-con-cierres.jpg"
+				],
+				"tallas": ["37-38", "39-40", "41-42", "43-44"],
+				"colores": ["cuero"],
+				"Stock": {
+					"37-38": { "cuero": 10 },
+					"39-40": { "cuero": 10 },
+					"41-42": { "cuero": 10 },
+					"43-44": { "cuero": 10 }
+				}
+			},
+			{
+				"id": 31,
+				"nombre": "botas cortas abuchonadas",
+				"marca": "batistella",
+				"descripcion": "algo hay que poner",
+				"precio": 55.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "femenino",
+				"subcategoria": "calsado",
+				"imagen": [
+					"https://calzadosbatistella.com.ar/shop/89459-superlarge_default/botas-cortas-abuchonadas-de-cuero-suela.jpg",
+					"https://calzadosbatistella.com.ar/shop/89455-superlarge_default/botas-cortas-abuchonadas-de-cuero-suela.jpg",
+					"https://calzadosbatistella.com.ar/shop/89456-superlarge_default/botas-cortas-abuchonadas-de-cuero-suela.jpg"
+				],
+				"tallas": ["37-38", "39-40", "41-42", "43-44"],
+				"colores": ["cuero"],
+				"Stock": {
+					"37-38": { "cuero": 10 },
+					"39-40": { "cuero": 10 },
+					"41-42": { "cuero": 10 },
+					"43-44": { "cuero": 10 }
+				}
+			}
+		]
+	},
+	{
+		"categoria": "destacados",
+		"productos": [
+			{
+				"id": 4,
+				"nombre": "campera pablo",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 12.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "prendaSuperior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/279725-1200-1440?v=638345443183630000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/279726-1200-1440?v=638345443304900000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/279728-1200-1440?v=638345443703100000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["S", "M", "L", "XL"],
+				"colores": ["negro", "blanco"],
+				"Stock": {
+					"S": { "negro": 10, "blanco": 15 },
+					"M": { "negro": 10, "blanco": 15 },
+					"L": { "negro": 10, "blanco": 15 },
+					"XL": { "negro": 10, "blanco": 15 }
+				}
+			},
+			{
+				"id": 13,
+				"nombre": "Borcegos clásicos",
+				"marca": "batistella",
+				"descripcion": "algo hay que poner",
+				"precio": 30.6,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "calsado",
+				"imagen": [
+					"https://calzadosbatistella.com.ar/shop/83106-superlarge_default/borcegos-clasicos-de-cuero-en-habano.jpg",
+					"https://calzadosbatistella.com.ar/shop/83107-superlarge_default/borcegos-clasicos-de-cuero-en-habano.jpg",
+					"https://calzadosbatistella.com.ar/shop/83108-superlarge_default/borcegos-clasicos-de-cuero-en-habano.jpg"
+				],
+				"tallas": ["39", "41", "43", "45"],
+				"colores": ["marron"],
+				"Stock": {
+					"39": { "marron": 30 },
+					"41": { "marron": 30 },
+					"43": { "marron": 30 },
+					"45": { "marron": 30 }
+				}
+			},
+			{
+				"id": 14,
+				"nombre": "Borcegos de cuero en habano",
+				"marca": "batistella",
+				"descripcion": "algo hay que poner",
+				"precio": 10.4,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "calsado",
+				"imagen": [
+					"https://calzadosbatistella.com.ar/shop/88875-superlarge_default/borcegos-clasicos-de-cuero-en-habano.jpg",
+					"https://calzadosbatistella.com.ar/shop/88870-superlarge_default/borcegos-clasicos-de-cuero-en-habano.jpg",
+					"https://calzadosbatistella.com.ar/shop/88871-superlarge_default/borcegos-clasicos-de-cuero-en-habano.jpg"
+				],
+				"tallas": ["39", "41", "43", "45"],
+				"colores": ["habano"],
+				"Stock": {
+					"39": { "habano": 30 },
+					"41": { "habano": 30 },
+					"43": { "habano": 30 },
+					"45": { "habano": 30 }
+				}
+			},
+			{
+				"id": 21,
+				"nombre": "campera ambre",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 30.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "femenino",
+				"subcategoria": "prendaSuperior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/280452-1200-1440?v=638356749977970000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/280625-1200-1440?v=638356750547600000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/280840-1200-1440?v=638356751707570000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["S", "M", "L", "XL"],
+				"colores": ["blanco"],
+				"Stock": {
+					"S": { "blanco": 15 },
+					"M": { "blanco": 15 },
+					"L": { "blanco": 15 },
+					"XL": { "blanco": 15 }
+				}
+			},
+			{
+				"id": 22,
+				"nombre": "pantalón kenia",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 10.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "femenino",
+				"subcategoria": "prendaInferior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/249518-1200-1440?v=637971115599930000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/281472-1200-1440?v=638370292502300000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/283162-1200-1440?v=638429225674200000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["004", "010", "014", "020"],
+				"colores": ["negro", "blanco", "azul"],
+				"Stock": {
+					"004": { "negro": 10, "blanco": 15, "azul": 15 },
+					"010": { "negro": 10, "blanco": 15, "azul": 15 },
+					"014": { "negro": 10, "blanco": 15, "azul": 15 },
+					"020": { "negro": 10, "blanco": 15, "azul": 15 }
+				}
+			}
+		]
+	}
+]
