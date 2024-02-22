@@ -1,7 +1,7 @@
 export const productos = [
   {
     id: 47,
-    nombre: "354",
+    nombre: "354 ",
     marca: "mambo",
     descripcion: "algo hay que poner",
     precio: 5.5,

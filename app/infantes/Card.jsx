@@ -1,5 +1,6 @@
 import { FaCartShopping } from "react-icons/fa6";
 import { Inter } from "next/font/google";
+import Link from "next/link";
 const inter = Inter({
   subsets: ["latin"],
   weight: ["300", "400", "700"],
@@ -9,18 +10,20 @@ const Card = ({ producto }) => {
   return (
     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 xl:grid-cols-1 shadow-2xl max-w-xs mb-20 max-h-fit transform transition-transform duration-300 ease-in-out hover:scale-110">
       {/* <h1>{producto.genero}</h1> */}
-      <div>
-        <img
-          src={producto.imagen[0]}
-          alt={producto.nombre}
-          className="object-fill h-full"
-        />
-      </div>
+      <Link href={`/infantes/${producto.id}`}>
+        <div>
+          <img
+            src={producto?.imagen[0]}
+            alt={producto?.nombre}
+            className="object-fill h-full"
+          />
+        </div>
+      </Link>
       <div>
         <div className="flex gap-3 pr-6 pl-6 pb-6 h-full items-end">
           <div>
             <h1 className="font-bold flex text-xl mb-2">
-              {producto.marca.toUpperCase()}
+              {producto?.marca.toUpperCase()}
             </h1>
             {/* <h1 className="font-bold flex flex-row gap-1 ">
               Tallas:
@@ -33,7 +36,7 @@ const Card = ({ producto }) => {
               ))}
             </h1> */}
             <h1 className="flex">
-              {producto.colores.map((color, index) => (
+              {producto?.colores.map((color, index) => (
                 <span
                   key={index}
                   className={`flex flex-row h-6 w-6 rounded-full mr-2 ${
@@ -79,10 +82,11 @@ const Card = ({ producto }) => {
           </div>
           <div className="flex w-full justify-end">
             <h1 className={`font-black text-right text-xl ${inter.className}`}>
-              $ {producto.precio}
+              $ {producto?.precio}
             </h1>
           </div>
         </div>
+
         <div className="flex flex-grow">
           <h1 className="bg-blue-400 hover:bg-blue-800 text-white w-full text-center text-2xl p-3 flex justify-center gap-4 items-center transition duration-300 ease-in-out cursor-pointer">
             Agregar
