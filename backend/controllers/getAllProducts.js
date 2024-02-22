@@ -7,19 +7,16 @@ const getAllProducts = async (req, res) => {
         if(allProducts.length){
             const formattedProducts = allProducts.map(product =>({
                 id:product.id,
-                nombre: product.nombre,
-                marca: product.marca,
-                descripcion: product.descripcion,
-                precio: product.precio,
-                inOferta: product.inOferta,
-                oferta: product.oferta,
-                genero: product.genero,
-                categoria: product.categoria,
-                subcategoria:product.subcategoria,
-                imagen: product.imagen,
-                tallas: product.tallas,
-                colores: product.colores,
-                stock: product.stock,
+                name: product.name,
+                image: product.image,
+                size: product.size,
+                price: product.price,
+                onSale: product.inSale,
+                sale: product.sale,
+                newArrival: product.newArrival
+                
+                
+                
             }))
 
             res.status(200).send(formattedProducts) 

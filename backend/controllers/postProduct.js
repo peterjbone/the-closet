@@ -2,35 +2,38 @@ const Producto = require('../db')
 
 const postProduct = async (req, res) => {
     let  {
-    nombre,
-    marca,
-    descripcion,
-    precio,
-    inOferta,
-    oferta,
-    categoria,
-    genero,
-    subcategoriag,
-    imagen,
-    tallas,
-    colores,
-    stock
+    name,
+    brand,
+    description,
+    price,
+    onSale,
+    sale,
+    category,
+    gender,
+    subCategory,
+    image,
+    size,
+    options,
+    isActive,
+    newArrival
+
     } = req.body
 
     let newProduct = new Producto({
-    nombre,
-    marca,
-    descripcion,
-    precio,
-    inOferta,
-    oferta,
-    categoria,
-    genero,
-    subcategoriag,
-    imagen,
-    tallas,
-    colores,
-    stock
+        name,
+        brand,
+        description,
+        price,
+        onSale,
+        sale,
+        category,
+        gender,
+        subCategory,
+        image,
+        size,
+        options,
+        isActive,
+        newArrival
     })
 
     try {

@@ -9,24 +9,28 @@ mongoose
   .catch((err) => console.log("Error", err));
 
 const productoSchema = new mongoose.Schema({
-  nombre: String,
-  marca: String,
-  descripcion: String,
-  precio: Number,
-  inOferta: Boolean,
-  oferta: Number,
-  categoria: String,
-  genero: String,
-  subcategoria: String,
-  imagen: [String],
-  tallas: [String],
-  colores: [String],
-  stock: {
-    S: { negro: Number, blanco: Number },
-    M: { negro: Number, blanco: Number },
-    L: { negro: Number, blanco: Number },
-    XL: { negro: Number, blanco: Number },
-  },
+  name: String,
+  brand: String,
+  description: String,
+  price: Number,
+  onSale: Boolean,
+  sale: Number,
+  category: String,
+  gender: String,
+  subCategory: String,
+  image: [String],
+  size: [String],
+  // colores: [String],
+  // stock: {
+  //   S: { negro: Number, blanco: Number },
+  //   M: { negro: Number, blanco: Number },
+  //   L: { negro: Number, blanco: Number },
+  //   XL: { negro: Number, blanco: Number },
+
+  // },
+  options: [Object],
+  isActive: {type: Boolean, default: false},
+  newArrival: {type: Boolean, default: false},
 });
 
 const Producto = mongoose.model("Products", productoSchema);
