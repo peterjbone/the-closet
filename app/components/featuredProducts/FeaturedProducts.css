@@ -1,12 +1,13 @@
 .featureProducts-grid {
 	display: grid;
-	grid-template-columns: repeat(2, minmax(0, 1fr));
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 	grid-template-rows: 1fr;
 
-	align-items: stretch;
+	align-items: center;
+	justify-content: start;
 	gap: 1rem;
 }
-
+/* 
 @media (min-width: 768px) {
 	.md\:grid-cols-3 {
 		grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -18,3 +19,4 @@
 		grid-template-columns: repeat(5, minmax(0, 1fr));
 	}
 }
+ */

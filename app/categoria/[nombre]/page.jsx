@@ -11,7 +11,7 @@ function Page({ params }) {
 	return (
     <div className="text-center font-bold text-5xl">
       <h1 className="mb-5">Categoria de {categoria}</h1>
-      <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2 gap-4">
+      <div className="grid md:grid-cols-4 grid-cols-2 gap-4">
         {
           productos.map(item => (
             <ProductCard
