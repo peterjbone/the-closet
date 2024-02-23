@@ -13,15 +13,15 @@ function FeaturedProducts() {
 	return (  
     <div className="py-4 px-6">
       <div className="flex flex-row items-center justify-between py-6">
-        <h2 className="text-3xl font-bold">Productos destacados</h2>
+        <h2 className="text-3xl font-bold">Productos destacados ⭐</h2>
         <Link href={"/categoria/destacados"}>
           <p className="text-gray-400 hover:text-gray-700 text-xl font-semibold">Ver todo</p>
         </Link>
       </div>
-      <div className="featureProducts-grid">
+      <div className="featureProducts-grid bg-gray-50">
         {
           productos.map((item, index) => {
-            if (index <= 5) {
+            if (index <= 3) {
               return (
                 <FeaturedProductItem
 								key={item.nombre}

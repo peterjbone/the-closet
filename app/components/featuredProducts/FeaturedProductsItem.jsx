@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import "./FeaturedProductsItem.css";
 
 function NewProductItem({
 	id,
@@ -25,17 +26,26 @@ function NewProductItem({
 
 	/* prettier-ignore */
 	return (  
-    <Link href={`/producto/${nombreParam}`}>
-      <div className="flex flex-col gap-3 items-center justify-center bg-slate-600 p-4 text-white">
-        <img src={imagen[0]} alt={nombre} className="mb-5 w-[260px] h-[310px]" />
-        <p className="font-bold text-2xl">
-          {nombre}
+    <Link href={`/producto/${nombreParam}`} className="block h-[100%]">
+      <div className="
+      p-4
+      h-[100%]
+      flex
+      flex-col
+      gap-2
+      items-center
+      justify-center
+      text-black"
+      >
+        <div className="mb-5 img-area">
+          <img src={imagen[1]} alt={nombre} className="new-product-image img-back" />
+          <img src={imagen[0]} alt={nombre} className="new-product-image img-front" />
+        </div>
+        <p className="font-bold text-2xl text-left">
+          {nombre.toLowerCase()}
         </p>
         <p className="text-xl">
-          Color: {colores}
-        </p>
-        <p className="text-xl">
-          Precio: {precio}
+          ${precio} USD
         </p>
       </div>
     </Link>

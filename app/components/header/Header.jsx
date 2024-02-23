@@ -13,14 +13,13 @@ const Header = () => {
         flex
         flex-row
         justify-between
-        py-6"
+        py-4"
       >
         <Link href={"/"} className="font-bold text-[2rem] text-black">The closet</Link>
         <nav className="text-gray-800 text-xl flex flex-row items-center gap-6">
-          <Link href={"/productos"}>Todos los Productos</Link>
-          <Link href={"/zapatos"}>Zapatos</Link>
-          <Link href={"/ropa"}>Ropa</Link>
-          <Link href={"/descuento"}>En descuento</Link>
+          <Link href={"/zapatos"}>Hombre</Link>
+          <Link href={"/ropa"}>Mujer</Link>
+          <Link href={"/descuento"}>Niños y Niñas</Link>
         </nav>
         <div className="flex flex-row items-center gap-4">
           <FaRegHeart size={30}/>

@@ -1,6 +1,6 @@
 import "./styles.css";
 
-import HeroTrend from "./components/heroTrend/HeroTrend";
+import HeroSection from "./components/heroSection/HeroSection";
 import CategoryBanner from "./components/categoryBanner/CategoryBanner";
 import FeaturedProducts from "./components/featuredProducts/FeaturedProducts";
 
@@ -8,7 +8,7 @@ function Home() {
 	/* prettier-ignore*/
 	return (
 		<>
-      <HeroTrend />	
+      <HeroSection />	
       <CategoryBanner /> 
       <FeaturedProducts/>
 		</>

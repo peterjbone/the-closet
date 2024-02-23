@@ -6,7 +6,7 @@ import Header from "./components/header/Header";
 //? Main font
 const lato = Lato({
 	subsets: ["latin"],
-	weight: ["300", "400", "700"],
+	weight: ["300", "400", "700", "900"],
 	style: ["normal", "italic"]
 });
 
