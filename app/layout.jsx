@@ -6,19 +6,19 @@ import Footer from "./components/footer/Footer";
 
 //? Main font
 const lato = Lato({
-  subsets: ["latin"],
-  weight: ["300", "400", "700"],
-  style: ["normal", "italic"],
+	subsets: ["latin"],
+	weight: ["300", "400", "700", "900"],
+	style: ["normal", "italic"]
 });
 
 //? Metadata
 export const metadata = {
-  title: "The closet",
+	title: "The closet"
 };
 
 export default function RootLayout({ children }) {
-  /* prettier-ignore*/
-  return (
+	/* prettier-ignore*/
+	return (
 		<html lang="es">
       <body className={lato.className}>
         <Header/>

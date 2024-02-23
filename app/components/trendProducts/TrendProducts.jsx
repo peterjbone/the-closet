@@ -1,20 +1,20 @@
 "use client";
 
-import "./FeaturedProducts.css";
+import "./TrendProducts.css";
 import data from "@/app/utils/db.json"; //? Base de datos demo
 import Link from "next/link";
-import FeaturedProductItem from "./FeaturedProductsItem";
+import TrendProductItems from "./TrendProductsItems";
 
-function FeaturedProducts() {
-	const currentCategory = data.find((item) => item.categoria === "destacados");
+function TrendProducts() {
+	const currentCategory = data.find((item) => item.categoria === "tendencias");
 	const { productos } = currentCategory;
 
 	/* prettier-ignore */
 	return (  
     <div className="py-4 px-6">
       <div className="flex flex-row items-center justify-between py-6">
-        <h2 className="text-3xl font-bold">Productos destacados ⭐</h2>
-        <Link href={"/categoria/destacados"}>
+        <h2 className="text-3xl font-bold">Productos en Tendencia ⭐</h2>
+        <Link href={"/categoria/tendencias"}>
           <p className="text-gray-400 hover:text-gray-700 text-xl font-semibold">Ver todo</p>
         </Link>
       </div>
@@ -23,7 +23,7 @@ function FeaturedProducts() {
           productos.map((item, index) => {
             if (index <= 3) {
               return (
-                <FeaturedProductItem
+                <TrendProductItems
 								key={item.nombre}
 								id={item.id}
 								nombre={item.nombre}
@@ -47,4 +47,4 @@ function FeaturedProducts() {
   );
 }
 
-export default FeaturedProducts;
+export default TrendProducts;

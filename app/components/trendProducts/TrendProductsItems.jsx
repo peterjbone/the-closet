@@ -1,9 +1,9 @@
 "use client";
 
 import Link from "next/link";
-import "./FeaturedProductsItem.css";
+import "./TrendProductsItems.css";
 
-function NewProductItem({
+function TrendProductItems({
 	id,
 	nombre,
 	marca,
@@ -52,4 +52,4 @@ function NewProductItem({
   );
 }
 
-export default NewProductItem;
+export default TrendProductItems;
