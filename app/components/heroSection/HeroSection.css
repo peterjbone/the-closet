@@ -124,6 +124,8 @@
 }
 
 .hero-btn {
+	position: relative;
+
 	width: fit-content;
 	padding: 1.3rem 1rem;
 	border: medium solid #fff;
@@ -135,4 +137,28 @@
 	display: inline-flex;
 	align-items: center;
 	gap: 1rem;
+
+	overflow: hidden;
+	transition-duration: 0.8s;
+}
+
+.hero-btn:hover {
+	color: orangered;
+}
+
+.hero-btn::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 0%;
+	border-radius: 50% 50% 0 0;
+	background-color: #fff;
+	transition-duration: 0.8s;
+}
+
+.hero-btn:hover::before {
+	height: 180%;
 }

@@ -1,38 +1,73 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import "./HeroSection.css";
+import Link from "next/link";
 import { FaShoppingBag } from "react-icons/fa";
 
 function HeroSection() {
-	let counter = 1;
+	const [index, setIndex] = useState(0);
 
-	setInterval(() => {
-		document.getElementById("radio" + counter).checked = true;
-		counter++;
-		if (counter > 4) {
-			counter = 1;
-		}
-	}, 6000);
+	//? otra forma de hacerlo (esto va en el interval)
+	const nextSlide = () => {
+		setIndex((prevIndex) => (prevIndex === 3 ? 0 : prevIndex + 1));
+	};
+
+	useEffect(() => {
+		const interval = setInterval(() => {
+			//? el "% 4" evita que vaya a un slide 5 y vuelve al slide 1
+			setIndex((prevIndex) => (prevIndex + 1) % 4);
+		}, 5000);
+
+		//? Limpia el intervalo cuando se desmonte
+		return () => clearInterval(interval);
+	}, []);
 
 	/* prettier-ignore */
 	return (
 		<div className="mb-10 bg-purple-500 slider">
 			<div className="hero-content">
-        <h1 className="text-7xl font-black text-white">All stock 🔥</h1>
-        <p className="text-3xl text-white">
-          Descubre todas nuestras categorías en solo lugar.
+				<h1 className="text-7xl font-black text-white">All stock 🔥</h1>
+				<p className="text-3xl text-white">
+					Descubre todas nuestras categorías en solo lugar.
         </p>
-        <button className="hero-btn">
-          Comprar ahora <FaShoppingBag size={30}/>
-        </button>
+        <Link href={"/categoria/todos"}>
+				<button className="hero-btn">
+					Comprar ahora <FaShoppingBag size={30} />
+				</button>
+        </Link>
 			</div>
 
 			<div className="slides">
 				{/* Radio buttons */}
-				<input type="radio" name="radio-btn" id="radio1" />
-				<input type="radio" name="radio-btn" id="radio2" />
-				<input type="radio" name="radio-btn" id="radio3" />
-				<input type="radio" name="radio-btn" id="radio4" />
+				<input
+					type="radio"
+					name="radio-btn"
+          id="radio1"
+          checked={index === 0}
+          onChange={() => setIndex(0)}
+          />
+				<input
+					type="radio"
+					name="radio-btn"
+					id="radio2"
+          checked={index === 1}
+          onChange={() => setIndex(1)}
+          />
+				<input
+					type="radio"
+					name="radio-btn"
+					id="radio3"
+          checked={index === 2}
+          onChange={() => setIndex(2)}
+          />
+				<input
+					type="radio"
+					name="radio-btn"
+					id="radio4"
+          checked={index === 3}
+          onChange={() => setIndex(3)}
+				/>
 
 				{/* Images slides */}
 				<div className="slide first">
