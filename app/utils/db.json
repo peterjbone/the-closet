@@ -1626,5 +1626,110 @@
 				}
 			}
 		]
+	},
+	{
+		"categoria": "tendencias",
+		"productos": [
+			{
+				"id": 9,
+				"nombre": "jean zarar",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 30.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "prendaInferior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/281789-1200-1440?v=638380948476100000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/281790-1200-1440?v=638380948611100000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/281791-1200-1440?v=638380948759370000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["30", "34", "38", "40"],
+				"colores": ["negro", "marron"],
+				"Stock": {
+					"30": { "negro": 10, "marron": 15 },
+					"34": { "negro": 10, "marron": 15 },
+					"38": { "negro": 10, "marron": 15 },
+					"40": { "negro": 10, "marron": 15 }
+				}
+			},
+			{
+				"id": 10,
+				"nombre": "bermuda zlin",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 20.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "prendaInferior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/235474-1200-1440?v=637685380288230000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/235508-1200-1440?v=637685380780900000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/235542-1200-1440?v=637685381313700000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["30", "34", "38", "40"],
+				"colores": ["azul", "gris"],
+				"Stock": {
+					"30": { "azul": 10, "gris": 15 },
+					"34": { "azul": 10, "gris": 15 },
+					"38": { "azul": 10, "gris": 15 },
+					"40": { "azul": 10, "gris": 15 }
+				}
+			},
+			{
+				"id": 11,
+				"nombre": "bermuda brand",
+				"marca": "taverniti",
+				"descripcion": "algo hay que poner",
+				"precio": 55.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "prendaInferior",
+				"imagen": [
+					"https://taverniti.vtexassets.com/arquivos/ids/281883-1200-1440?v=638386855039200000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/281902-1200-1440?v=638386855315770000&width=1200&height=1440&aspect=true",
+					"https://taverniti.vtexassets.com/arquivos/ids/281921-1200-1440?v=638386855619730000&width=1200&height=1440&aspect=true"
+				],
+				"tallas": ["30", "34", "38", "40"],
+				"colores": ["negro", "marron"],
+				"Stock": {
+					"30": { "negro": 10, "marron": 15 },
+					"34": { "negro": 10, "marron": 15 },
+					"38": { "negro": 10, "marron": 15 },
+					"40": { "negro": 10, "marron": 15 }
+				}
+			},
+			{
+				"id": 12,
+				"nombre": "zapatillas clásicas",
+				"marca": "batistella",
+				"descripcion": "algo hay que poner",
+				"precio": 15.5,
+				"inOferta": false,
+				"oferta": 0,
+				"categoria": "adulto",
+				"genero": "masculino",
+				"subcategoria": "calsado",
+				"imagen": [
+					"https://calzadosbatistella.com.ar/shop/85715-superlarge_default/zapatillas-clasicas-de-cuero-en-azul.jpg",
+					"https://calzadosbatistella.com.ar/shop/85711-superlarge_default/zapatillas-clasicas-de-cuero-en-azul.jpg",
+					"https://calzadosbatistella.com.ar/shop/85712-superlarge_default/zapatillas-clasicas-de-cuero-en-azul.jpg"
+				],
+				"tallas": ["39", "41", "43", "45"],
+				"colores": ["negro", "blanco"],
+				"Stock": {
+					"39": { "negro": 10, "blanco": 15 },
+					"41": { "negro": 10, "blanco": 15 },
+					"43": { "negro": 10, "blanco": 15 },
+					"45": { "negro": 10, "blanco": 15 }
+				}
+			}
+		]
 	}
 ]
