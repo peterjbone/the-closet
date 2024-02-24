@@ -6,7 +6,7 @@
 				"id": 1,
 				"nombre": "chomba falabe",
 				"marca": "falabela",
-				"descripcion": "algo hay que poner",
+				"descripcion": "Confeccionada en algodón 100%. Su tejido suave y respirable la hace ideal para el día a día. Posee un diseño clásico con cuello redondo y mangas largas. Cuidado: Lavar a máquina con agua fría y ciclo delicado. No usar blanqueador. Secar a la sombra. Planchar a temperatura baja",
 				"precio": 10.5,
 				"inOferta": true,
 				"oferta": 15,
@@ -25,13 +25,14 @@
 					"M": { "rojo": 2, "negro": 5, "blanco": 5 },
 					"L": { "rojo": 2, "negro": 5, "blanco": 5 },
 					"XL": { "rojo": 2, "negro": 5, "blanco": 5 }
-				}
+				},
+				"reseña": "Esta prenda me encantó. El diseño es simple pero elegante, y la tela es suave y cómoda. La he usado varias veces y se ha mantenido en perfecto estado. La recomiendo totalmente."
 			},
 			{
 				"id": 2,
 				"nombre": "campera invierno",
 				"marca": "falabela",
-				"descripcion": "algo hay que poner",
+				"descripcion": "Abrigada campera para el invierno, fabricada con materiales repelentes al agua y al viento. Cuenta con un relleno de plumón que te mantendrá cálido en los días más fríos. Posee bolsillos con cierre para mayor seguridad y capucha desmontable. Cuidado: Lavar a mano con agua fría y jabón suave. No usar secadora. Secar al aire libre.",
 				"precio": 20.5,
 				"inOferta": true,
 				"oferta": 15,
@@ -56,7 +57,7 @@
 				"id": 3,
 				"nombre": "campera fenix",
 				"marca": "taverniti",
-				"descripcion": "algo hay que poner",
+				"descripcion": "Campera de estilo casual urbano, confeccionada en tela softshell resistente al agua y al viento. Posee un diseño moderno con capucha y bolsillos con cierre. Cuidado: Lavar a máquina con agua fría y ciclo delicado. No usar blanqueador. Secar a la sombra. Planchar a temperatura baja.",
 				"precio": 15.5,
 				"inOferta": true,
 				"oferta": 5,
@@ -125,7 +126,9 @@
 					"M": { "negro": 10, "blanco": 15 },
 					"L": { "negro": 10, "blanco": 15 },
 					"XL": { "negro": 10, "blanco": 15 }
-				}
+				},
+				"reseña": "Suave y cómoda, con un diseño clásico que combina con todo. Perfecta para el día a día."
+				
 			},
 			{
 				"id": 6,
@@ -150,7 +153,8 @@
 					"M": { "negro": 10, "blanco": 15 },
 					"L": { "negro": 10, "blanco": 15 },
 					"XL": { "negro": 10, "blanco": 15 }
-				}
+				},
+				"reseña": "Un estilo más urbano y moderno, ideal para salir con amigos o ir a eventos casuales. La tela es de buena calidad y se ajusta muy bien al cuerpo."
 			},
 			{
 				"id": 7,
@@ -300,7 +304,8 @@
 					"41": { "negro": 10, "blanco": 15 },
 					"43": { "negro": 10, "blanco": 15 },
 					"45": { "negro": 10, "blanco": 15 }
-				}
+				},
+				"reseña": "Un básico que no puede faltar en tu armario. Son cómodas, versátiles y combinan con todo tipo de looks. La calidad es excelente y duran mucho tiempo."
 			},
 			{
 				"id": 13,
@@ -605,7 +610,9 @@
 					"010": { "negro": 10, "mate": 15 },
 					"014": { "negro": 10, "mate": 15 },
 					"020": { "negro": 10, "mate": 15 }
-				}
+				},
+				"reseña": " Elegante y cómodo, perfecto para ocasiones especiales o para ir a trabajar. La tela es de muy buena calidad y el corte es favorecedor."
+				
 			},
 			{
 				"id": 25,
@@ -631,7 +638,8 @@
 					"010": { "negro": 10, "gris": 15, "azul": 15 },
 					"014": { "negro": 10, "gris": 15, "azul": 15 },
 					"020": { "negro": 10, "gris": 15, "azul": 15 }
-				}
+				},
+				"reseña": "Estos jeans son increíbles. La tela es suave y cómoda, y el corte es perfecto. Me encanta que se ajusten a la cintura y a las piernas sin ser demasiado apretados. ¡Los recomiendo encarecidamente!"
 			},
 			{
 				"id": 26,
@@ -758,7 +766,8 @@
 					"39-40": { "cuero": 10 },
 					"41-42": { "cuero": 10 },
 					"43-44": { "cuero": 10 }
-				}
+				},
+				"reseña": "Estas botas son elegantes y cómodas. El cuero es de alta calidad y se adapta perfectamente a mis pies. Son perfectas para usar tanto con jeans como con vestidos."
 			},
 			{
 				"id": 31,
@@ -884,7 +893,8 @@
 					"6": { "negro": 10, "blanco": 15 },
 					"8": { "negro": 10, "blanco": 15 },
 					"10": { "negro": 10, "blanco": 15 }
-				}
+				},
+				"reseña": "Este buzo es muy cómodo y abrigado. La tela es suave y el diseño es simple pero elegante. Es perfecto para usar en casa o para salir con amigos."
 			},
 			{
 				"id": 36,
@@ -998,7 +1008,8 @@
 					"4": { "negro": 10, "francia": 15 },
 					"6": { "negro": 10, "francia": 15 },
 					"8": { "negro": 10, "francia": 15 }
-				}
+				},
+				"reseña": "Este jogging es muy cómodo y práctico. La tela es suave y el diseño es simple. Es perfecto para hacer ejercicio o para estar en casa."
 			},
 			{
 				"id": 41,
@@ -1261,7 +1272,8 @@
 					"6": { "gris": 10, "rosa": 15 },
 					"8": { "gris": 10, "rosa": 15 },
 					"10": { "gris": 10, "rosa": 15 }
-				}
+				},
+				"reseña": " Esta campera es muy linda y abrigada. La tela es suave y el diseño es simple. Es perfecta para las niñas en los días fríos."
 			},
 			{
 				"id": 52,

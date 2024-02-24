@@ -47,8 +47,16 @@ function Page({ params }) {
     producto.imagen[0]
   );
   const [tallaSeleccionada, setTallaSeleccionada] = useState("");
-
   const [counter, setCounter] = useState(1);
+  const [mostrarDescripcion, setMostrarDescripcion] = useState(true);
+
+  const toggleMostrarDescripcion = () => {
+    setMostrarDescripcion(true);
+  };
+
+  const toggleMostrarResena = () => {
+    setMostrarDescripcion(false);
+  };
 
   const handleImagenClick = (imagen) => {
     setImagenSeleccionada(imagen);
@@ -64,24 +72,42 @@ function Page({ params }) {
       setCounter(counter - 1);
     }
   };
+
   /* prettier-ignore*/
   return (  
 
 	<div>
-    <div className="w-full h-[60vh] flex flex-row justify-center items-center gap-5 border mb-8">
-    <div className="flex flex-col items-start gap-4 mb-44">
+    <div className="w-[60vw] h-[60vh] flex flex-row m-auto justify-center items-center gap-10 border-2 mb-8 mt-3 shadow-lg">
+      <div className="flex flex-col items-start gap-4 mb-44">
     
     {/*Imágenes*/}
 
-      <img src={producto.imagen[0]} alt={producto.nombre} className="w-50 h-16 cursor-pointer" onClick={()=> handleImagenClick(producto.imagen[0])} /> 
-      <img src={producto.imagen[1]} alt={producto.nombre} className="w-50 h-16 cursor-pointer" onClick={()=> handleImagenClick(producto.imagen[1])} />
-      <img src={producto.imagen[2]} alt={producto.nombre} className="w-50 h-16 cursor-pointer" onClick={() => handleImagenClick(producto.imagen[2])} />
+       <img 
+       src={producto.imagen[0]} 
+       alt={producto.nombre}   
+       className={`w-50 h-16 cursor-pointer ${imagenSeleccionada === producto.imagen[0] ? 'border-2 border-gray-400' : ''}`} 
+       onClick={() => {handleImagenClick(producto.imagen[0])}} /> 
+       {producto.imagen[1] && (
+          <img 
+          src={producto.imagen[1]} alt={producto.nombre} 
+          className={`w-50 h-16 cursor-pointer ${imagenSeleccionada === producto.imagen[1] ? 'border-2 border-gray-400' : ''}`} 
+          onClick={() => handleImagenClick(producto.imagen[1])} />
+       )}
+       {producto.imagen[2] && (
+         <img 
+         src={producto.imagen[2]} 
+         alt={producto.nombre} 
+         className={`w-50 h-16 cursor-pointer ${imagenSeleccionada === producto.imagen[2] ? 'border-2 border-gray-400' : ''}`} 
+         onClick={() => handleImagenClick(producto.imagen[2])} />
+       )}
+      
      </div>
 	  <div className="mb-7">
-      <img src={imagenSeleccionada} alt={producto.nombre} className="w-70 h-96"/>
+      <img src={imagenSeleccionada} alt={producto.nombre} className="w-70 h-96" />
 	  </div>
     
-    <div className="flex flex-col border p-5 bg-slate-100 shadow-md w-96">
+    {/*Marca, nombre, precio y estrellas*/}
+    <div className="flex flex-col p-5 w-96 justify-center">
       <div className="text-left pb-3 ">
 		<div className="flex justify-between align-middle place-content-center">
 			<h3 className="text-3xl font-bold">{finalBrands}</h3>
@@ -93,10 +119,13 @@ function Page({ params }) {
         {finalName}
       	</h2>
       </div>
-	  <h2 className="flex mt-4">{finalColors.map((color)=> (
+
+    {/* Colores */}
+
+	  <h2 className="flex mt-4 bg-gray-200 place-content-start pt-1">{finalColors.map((color)=> (
 		<span
 		key={color}
-		className={`flex flex-row h-6 w-6 rounded-full mr-2 mb-3 ${
+		className={`flex flex-row h-6 w-6 rounded-full mr-2 mb-2 mt-1 ml-5  ${
 		  color === "blanco"
 			? "bg-white"
 			: color === "verde"
@@ -144,7 +173,7 @@ function Page({ params }) {
 	  ></span>
 		
 	  ))}</h2>
-		<p className="border-b-2 mt-1">Selecciona una talla</p>
+		<p className="border-b-2 mt-3">Selecciona una talla</p>
     
     {/*Tallas*/}
 
@@ -171,15 +200,14 @@ function Page({ params }) {
 	  </div>
     </div>
 
-    <div className="mx-auto flex flex-col  flexplace-content-center justify-center border shadow-xl p-4 mb-12 w-2/4 justify-items-center">
-    <p className="mt-5 font-bold text-left border-b-2">Reseñas (1)</p>
-        <p className="font-light text-xl  rounded-md mt-2 text-gray-600 bg-white p-1">
-              Los pantalones de la marca Mambo son una opción versátil y
-              elegante para cualquier ocasión casual. Confeccionados con
-              materiales de alta calidad, estos pantalones ofrecen comodidad y
-              estilo a partes iguales. Brindan una calidez y confort únicos.
-         </p>
-      
+    <div className="mx-auto flex flex-col  flexplace-content-center justify-center border shadow-xl mb-12 w-2/4 justify-items-center">
+    <div className="font-bold text-left border-b-2 flex gap-2 cursor-pointer">
+    <p onClick={toggleMostrarDescripcion} className={`p-4 ${mostrarDescripcion ? 'bg-black text-white' : ''}`}>Descripción</p>
+    <p onClick={toggleMostrarResena} className={`p-4 ${!mostrarDescripcion ? 'bg-black text-white' : ''}`}>Reseña</p>
+    </div>
+      <p className="font-light text-xl rounded-md mt-2 text-gray-600 bg-white p-5">
+        {mostrarDescripcion ? (producto.descripcion ? producto.descripcion : "Aún no hay descripción...") : (producto.reseña ? producto.reseña : "Aún no hay reseñas...")}
+      </p>
     </div>
 	</div>
 
