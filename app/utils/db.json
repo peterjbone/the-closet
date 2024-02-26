@@ -691,7 +691,8 @@
 					"39-40": { "marron": 10, "blanco": 15 },
 					"41-42": { "marron": 10, "blanco": 15 },
 					"43-44": { "marron": 10, "blanco": 15 }
-				}
+				},
+				"reseña": "Hace unos meses compre unos zuecos BATI y me han encantado. Son realmente cómodos, tanto para estar en casa como para salir a la calle. El material es de buena calidad y se ajusta perfectamente al pie. Además, el diseño es moderno y elegante, lo que me permite combinarlos con diferentes estilos de ropa."
 			},
 			{
 				"id": 28,
@@ -1647,7 +1648,7 @@
 				"id": 9,
 				"nombre": "jean zarar",
 				"marca": "taverniti",
-				"descripcion": "algo hay que poner",
+				"descripcion": "Luce un look trendy y sofisticado con el jean Zarar. Confeccionado en denim elástico con un corte skinny fit, este pantalón te brindará una figura estilizada y un gran confort. Su diseño con detalles como rasgados y tachuelas te dará un toque moderno y atrevido.",
 				"precio": 30.5,
 				"inOferta": false,
 				"oferta": 0,
@@ -1666,13 +1667,14 @@
 					"34": { "negro": 10, "marron": 15 },
 					"38": { "negro": 10, "marron": 15 },
 					"40": { "negro": 10, "marron": 15 }
-				}
+				},
+				"reseña" : "Me compré un jean Zarar hace un par de meses y estoy muy contento con él. El calce es perfecto, la tela es de muy buena calidad y no se ha desgastado con el uso. Además, el precio me pareció muy razonable. ¡Lo recomiendo sin dudas!"
 			},
 			{
 				"id": 10,
 				"nombre": "bermuda zlin",
 				"marca": "taverniti",
-				"descripcion": "algo hay que poner",
+				"descripcion": "Disfruta del verano con la bermuda Zlin. Confeccionada en tela de algodón liviana y transpirable, esta prenda te ofrece frescura y comodidad en los días más cálidos. Su diseño con bolsillos cargo y cinturón ajustable te permite llevar todo lo que necesitas a mano.",
 				"precio": 20.5,
 				"inOferta": false,
 				"oferta": 0,
@@ -1691,13 +1693,14 @@
 					"34": { "azul": 10, "gris": 15 },
 					"38": { "azul": 10, "gris": 15 },
 					"40": { "azul": 10, "gris": 15 }
-				}
+				},
+				"reseña": "Compré una bermuda Zlin para el verano y me encantó. Es fresca, cómoda y muy versátil. La puedo usar tanto para ir a la playa como para salir a comer con amigos. Además, el precio es muy accesible. ¡Muy recomendable!"
 			},
 			{
 				"id": 11,
 				"nombre": "bermuda brand",
 				"marca": "taverniti",
-				"descripcion": "algo hay que poner",
+				"descripcion": "Aventúrate con la bermuda Brand. Confeccionada en tela ripstop resistente y repelente al agua, esta prenda te ofrece la máxima funcionalidad para tus actividades al aire libre. Su diseño con múltiples bolsillos y cierre de velcro te permite llevar todo lo que necesitas con seguridad.",
 				"precio": 55.5,
 				"inOferta": false,
 				"oferta": 0,
@@ -1716,13 +1719,14 @@
 					"34": { "negro": 10, "marron": 15 },
 					"38": { "negro": 10, "marron": 15 },
 					"40": { "negro": 10, "marron": 15 }
-				}
+				},
+				"reseña": "Me regalaron una bermuda Brand para mi cumpleaños y la verdad es que me sorprendió gratamente. La tela es muy suave y cómoda, y el diseño es muy moderno. La puedo usar tanto para ir a trabajar como para salir con amigos. ¡Estoy muy contento con ella!"
 			},
 			{
 				"id": 12,
 				"nombre": "zapatillas clásicas",
 				"marca": "batistella",
-				"descripcion": "algo hay que poner",
+				"descripcion": "Camina con estilo y comodidad con las zapatillas clásicas. Confeccionadas en piel de alta calidad con una suela de goma resistente, estas zapatillas te brindarán un look casual y elegante. Su diseño atemporal te permite combinarlas con todo tipo de ropa.",
 				"precio": 15.5,
 				"inOferta": false,
 				"oferta": 0,
@@ -1741,7 +1745,8 @@
 					"41": { "negro": 10, "blanco": 15 },
 					"43": { "negro": 10, "blanco": 15 },
 					"45": { "negro": 10, "blanco": 15 }
-				}
+				},
+				"reseña": "Estaba buscando unas zapatillas clásicas de hombre color negro y encontré estas en una tienda online. Me gustaron mucho porque son muy cómodas y combinan con todo. Además, el precio me pareció muy bueno. ¡Las recomiendo!"
 			}
 		]
 	}

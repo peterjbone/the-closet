@@ -200,7 +200,7 @@ function Page({ params }) {
 	  </div>
     </div>
 
-    <div className="mx-auto flex flex-col  flexplace-content-center justify-center border shadow-xl mb-12 w-2/4 justify-items-center">
+    <div className="mx-auto flex flex-col  flexplace-content-center justify-center border shadow-xl mb-12 w-[60vw] h-[30vh]justify-items-center">
     <div className="font-bold text-left border-b-2 flex gap-2 cursor-pointer">
     <p onClick={toggleMostrarDescripcion} className={`p-4 ${mostrarDescripcion ? 'bg-black text-white' : ''}`}>Descripción</p>
     <p onClick={toggleMostrarResena} className={`p-4 ${!mostrarDescripcion ? 'bg-black text-white' : ''}`}>Reseña</p>
