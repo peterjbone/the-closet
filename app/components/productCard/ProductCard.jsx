@@ -16,12 +16,21 @@ function ProductCard({
 	tallas,
 	colores
 }) {
-	const nombreParam = nombre
-		.split(" ")
-		.join("-")
-		.toLowerCase()
-		.normalize("NFD")
-		.replace(/[\u0300-\u036f]/g, "");
+	console.log(nombre);
+
+	let nombreParam = "";
+
+	if (nombre && typeof nombre === "string") {
+		nombreParam = nombre
+			.split(" ")
+			.join("-")
+			.toLowerCase()
+			.normalize("NFD")
+			.replace(/[\u0300-\u036f]/g, "");
+	}
+
+	console.log(nombreParam);
+
 	const coloresFiltrado = colores.join(" / ");
 
 	/* prettier-ignore */

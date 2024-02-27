@@ -1,8 +1,10 @@
 const Producto = require("../db");
 
-const getAllProducts = async (req, res) => {
+const getMenProducts = async (req, res) => {
 	try {
-		const allProducts = await Producto.find();
+		const allProducts = await Producto.find({
+			genero: "masculino"
+		});
 
 		if (allProducts.length) {
 			res.status(200).json(allProducts);
@@ -14,4 +16,4 @@ const getAllProducts = async (req, res) => {
 	}
 };
 
-module.exports = getAllProducts;
+module.exports = getMenProducts;
