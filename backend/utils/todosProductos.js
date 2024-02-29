@@ -1,3 +1,7 @@
+//? Aquí estan "todos los productos" hasta el momento
+//? hay 61 productos
+//? Esto sirve para insertarlo en la base de datos "thecloset" en la colección "productos"
+
 const productos = [
 	{
 		id: 1,

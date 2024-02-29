@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-//const data = require("./utils/data.js");
+//const data = require("./utils/todosProductos.js");
 
 // Conección con la base de datos "thecloset"
 async function connectToDatabase() {

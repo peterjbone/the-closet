@@ -1,0 +1,22 @@
+.recommended-flex {
+	display: flex;
+	margin-left: 1.2rem;
+}
+
+.recommended-title {
+	margin: 1.2rem 0 1.2rem 1.2rem;
+	font-size: 1.2rem;
+	text-align: start;
+}
+
+.btns {
+	padding: 10px 20px;
+	margin-right: 0.5rem;
+	border: none;
+	border: thin solid #ccc;
+	border-radius: 10px;
+	font-size: 1.2rem;
+	color: #323232;
+	background-color: transparent;
+	cursor: pointer;
+}

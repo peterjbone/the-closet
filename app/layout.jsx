@@ -1,6 +1,5 @@
 import "./globals.css";
 import { Lato } from "next/font/google";
-import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 
 //? Main font
@@ -19,7 +18,6 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="es">
 			<body className={lato.className}>
-				<Header />
 				{children}
 				<Footer />
 			</body>

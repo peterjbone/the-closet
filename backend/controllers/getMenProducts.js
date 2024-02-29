@@ -1,8 +1,9 @@
-const Producto = require("../db");
+const Producto = require("../db.js");
 
 const getMenProducts = async (req, res) => {
 	try {
 		const allProducts = await Producto.find({
+			categoria: "adulto",
 			genero: "masculino"
 		});
 
