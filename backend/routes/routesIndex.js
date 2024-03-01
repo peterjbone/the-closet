@@ -5,6 +5,8 @@ const postProduct = require("../controllers/postProduct");
 const getProductsById = require("../controllers/getProductsById");
 const updateProduct = require("../controllers/updateProducts");
 const getMenProducts = require("../controllers/getMenProducts");
+const getWomenProducts = require("../controllers/getWomenProducts");
+const getChildrenProducts = require("../controllers/getChildrenProducts");
 
 const router = Router();
 
@@ -14,7 +16,8 @@ router.get("/allproducts", getAllProducts);
 router.get("/menproducts", getMenProducts);
 router.get("/producto/:nombre", getProductByName);
 router.get("/producto/:id", getProductsById);
-
+router.get("/womenproducts", getWomenProducts);
 router.put("/producto/:id", updateProduct);
+router.get("/childrenproducts", getChildrenProducts);
 
 module.exports = router;
