@@ -6,7 +6,7 @@ function Recommended({ handleBtnClick }) {
 	return (  
     <>
       <div>
-        <h2 className="recommended-title">Recommended</h2>
+        <h2 className="recommended-title">Filtra por marcas</h2>
         <div className="recommended-flex">
           <Button onClickHandler={handleBtnClick} value="mambo" title="Mambo" />
           <Button onClickHandler={handleBtnClick} value="batistella" title="Batistella" />
