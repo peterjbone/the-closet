@@ -176,6 +176,46 @@
         {
             "id":"marc000",
             "nombre":"falabela"
+        },
+        {
+            "id":"marc001",
+            "nombre":"taverniti"
+        },
+        {
+            "id":"marc002",
+            "nombre":"batistella"
+        },
+        {
+            "id":"marc003",
+            "nombre":"mambo"
+        },
+        {
+            "id":"marc004",
+            "nombre":"adidas"
+        },
+        {
+            "id":"marc005",
+            "nombre":"copmlot"
+        },
+        {
+            "id":"marc006",
+            "nombre":"eyelit"
+        },
+        {
+            "id":"marc007",
+            "nombre":"casa-chic"
+        },
+        {
+            "id":"toche",
+            "nombre":"falabela"
+        },
+        {
+            "id":"marc009",
+            "nombre":"jarvec"
+        },
+        {
+            "id":"marc010",
+            "nombre":"Cinzento"
         }
     ]
 }

@@ -4068,6 +4068,1145 @@
                     ]
                 }
             ]
+        },
+        {
+            "id": 62,
+            "nombre": "CALZAS LARGAS FAST IMPACT X-CITY REFLECT AT NIGHT",
+            "marca": "adidas",
+            "descripcion": "algo hay que poner",
+            "precio": 25.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": false,
+            "categoria": "adulto",
+            "genero": "femenino",
+            "subcategoria": "Leggings y Pantalones Deportivos",
+            "imagen": [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/130549ee9918469facf4af1100100867_faec/Calzas_largas_Fast_Impact_X-City_Reflect_At_Night_Negro_HS5442_HM1.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/ee8520b0d9e84ea9be95af100172ffc9_faec/Calzas_largas_Fast_Impact_X-City_Reflect_At_Night_Negro_HS5442_HM3_hover.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/5dc4e337415a4f24a517af9b01045a2c_9366/Calzas_largas_Fast_Impact_X-City_Reflect_At_Night_Negro_HS5442_HM1.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/767c9182fdf240f69fa9af10016e0d93_faec/Calzas_largas_Fast_Impact_X-City_Reflect_At_Night_Negro_HS5442_HM4.jpg"
+            ],
+            "tallas": [
+                "S",
+                "M",
+                "L"
+            ],
+            "colores": [
+                "negro"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#000000",
+                        "nombreColor": "negro"
+                    },
+                    "talles": [
+                        {
+                            "talla": "S",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "M",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "L",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 63,
+            "nombre": "PANTALON PIJAMA ESTOCOLMO",
+            "marca": "copmlot",
+            "descripcion": "PANTALON DE PIJAMA ESCOCES CON ELASTICO EN CINTURA Y CORDON PARA PERMITIR EL AJUSTE",
+            "precio": 14.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": false,
+            "categoria": "adulto",
+            "genero": "femenino",
+            "subcategoria": "Pantalones de Pijama",
+            "imagen": [
+                "https://complot.com.ar/media/catalog/product/cache/479c9cdc016090c3dba85230b5b617b2/c/o/complot_01053504_azul_1_p.jpg",
+                "https://complot.com.ar/media/catalog/product/cache/479c9cdc016090c3dba85230b5b617b2/c/o/complot_01053504_azul_4_e.jpg",
+                "https://complot.com.ar/media/catalog/product/cache/479c9cdc016090c3dba85230b5b617b2/c/o/complot_01053504_negro_1_p.jpg",
+                "https://complot.com.ar/media/catalog/product/cache/479c9cdc016090c3dba85230b5b617b2/c/o/complot_01053504_negro_3_e.jpg"
+            ],
+            "tallas": [
+                "S",
+                "M",
+                "X"
+            ],
+            "colores": [
+                "azul",
+                "negro"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#0000ff",
+                        "nombreColor": "azul"
+                    },
+                    "talles": [
+                        {
+                            "talla": "S",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "M",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "L",
+                            "stock": 20
+                        }
+                    ]
+                },
+                {
+                    "color": {
+                        "codHexadecimal": "#000000",
+                        "nombreColor": "negro"
+                    },
+                    "talles": [
+                        {
+                            "talla": "S",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "M",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "L",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 64,
+            "nombre": "Pantalón pijama 1850",
+            "marca": "eyelit",
+            "descripcion": "Pantalón con bolsillo y cordón en cintura. Tejido suave e hipoalergénico. Prenda suelta y cómoda",
+            "precio": 11.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": false,
+            "categoria": "adulto",
+            "genero": "masculino",
+            "subcategoria": "Pantalones de Pijama",
+            "imagen": [
+                "https://eyelit.com.ar/cdn/shop/products/1850P0A.05.3.jpg?v=1607110658&width=600",
+                "https://eyelit.com.ar/cdn/shop/products/1850P0A.05.2.jpg?v=1607110659&width=600",
+                "https://eyelit.com.ar/cdn/shop/products/1850P0A.12.3.jpg?v=1607110658&width=600",
+                "https://eyelit.com.ar/cdn/shop/products/1850P0A.12.2.jpg?v=1607110659&width=600"
+            ],
+            "tallas": [
+                "S",
+                "M",
+                "L"
+            ],
+            "colores": [
+                "blanco",
+                "negro"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#FFFFFF",
+                        "nombreColor": "blanco"
+                    },
+                    "talles": [
+                        {
+                            "talla": "S",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "M",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "L",
+                            "stock": 20
+                        }
+                    ]
+                },
+                {
+                    "color": {
+                        "codHexadecimal": "#000000",
+                        "nombreColor": "negro"
+                    },
+                    "talles": [
+                        {
+                            "talla": "S",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "M",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "L",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 65,
+            "nombre": "Pantalón pijama 1851",
+            "marca": "eyelit",
+            "descripcion": "Pantalón con bolsillo y cordón en cintura. Tejido suave e hipoalergénico. Prenda suelta y cómoda",
+            "precio": 13.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": false,
+            "categoria": "adulto",
+            "genero": "femenino",
+            "subcategoria": "Pantalones de Pijama",
+            "imagen": [
+                "https://eyelit.com.ar/cdn/shop/files/1850P0A.05.1.UNISEX.jpg?v=1695381377&width=600",
+                "https://eyelit.com.ar/cdn/shop/files/1850P0A.05.2.UNISEX.jpg?v=1695381377&width=600",
+                "https://eyelit.com.ar/cdn/shop/files/1850P0A.12.1.UNISEX.jpg?v=1695381376&width=600",
+                "https://eyelit.com.ar/cdn/shop/files/1850P0A.12.2.UNISEX.jpg?v=1695381377&width=600"
+            ],
+            "tallas": [
+                "S",
+                "M",
+                "L"
+            ],
+            "colores": [
+                "blanco",
+                "negro"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#FFFFFF",
+                        "nombreColor": "blanco"
+                    },
+                    "talles": [
+                        {
+                            "talla": "S",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "M",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "L",
+                            "stock": 20
+                        }
+                    ]
+                },
+                {
+                    "color": {
+                        "codHexadecimal": "#000000",
+                        "nombreColor": "negro"
+                    },
+                    "talles": [
+                        {
+                            "talla": "S",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "M",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "L",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 66,
+            "nombre": "PANTALON PIJAMA ALICE",
+            "marca": "casa-chic",
+            "descripcion": "Pantalon pijama en simil seda estampada. Cintura elastizada con lazo regulable. Calce overzise. Bolsillos laterales. Ideal para dormir oestar comoda en casa. Lo podes combinar con la bata Alice. Referencia modelo: Altura 1,76. Talle pantalón: 26. Parte de arriba: S.",
+            "precio": 35.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": true,
+            "categoria": "adulto",
+            "genero": "femenino",
+            "subcategoria": "Pantalones de Pijama",
+            "imagen": [
+                "https://www.casa-chic.com/media/catalog/product/2/2/220926_ksk8785-_1_.jpgw.jpg?optimize=low&fit=bounds&height=2760&width=1845",
+                "https://www.casa-chic.com/media/catalog/product/2/2/220926_ksk8788-_1_.jpgw.jpg?optimize=low&fit=bounds&height=2760&width=1845",
+                "https://www.casa-chic.com/media/catalog/product/2/2/220926_ksk8791-_1_.jpgw.jpg?optimize=low&fit=bounds&height=2760&width=1845",
+                "https://www.casa-chic.com/media/catalog/product/2/2/220926_ksk8793-_1_.jpgw.jpg?optimize=low&fit=bounds&height=2760&width=1845"
+            ],
+            "tallas": [
+                "S",
+                "M",
+                "L"
+            ],
+            "colores": [
+                "ocre"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#b9935a",
+                        "nombreColor": "ocre"
+                    },
+                    "talles": [
+                        {
+                            "talla": "S",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "M",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "L",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 67,
+            "nombre": "Pantalón Elías 1 Pinza",
+            "marca": "toche",
+            "descripcion": "Pantalón de vestir liso; finished like S´100. Tiro medio, regular fit, con una pinza. Posee bolsillos laterales y bolsillos traseros con dos vivos. Acceso con cierre, botón y gancho metálico.",
+            "precio": 50.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": true,
+            "categoria": "adulto",
+            "genero": "masculino",
+            "subcategoria": "Pantalones Formales",
+            "imagen": [
+                "https://www.toche.com.ar/wp-content/uploads/2023/05/01-1227-2-scaled.jpg",
+                "https://www.toche.com.ar/wp-content/uploads/2023/05/01-1227-4-scaled.jpg",
+                "https://www.toche.com.ar/wp-content/uploads/2023/05/01-1227-9-scaled.jpg"
+            ],
+            "tallas": [
+                "40",
+                "44",
+                "48"
+            ],
+            "colores": [
+                "negro"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#000000",
+                        "nombreColor": "negro"
+                    },
+                    "talles": [
+                        {
+                            "talla": "40",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "44",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "48",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 68,
+            "nombre": "Pantalón Alpaca 1 Pinza",
+            "marca": "toche",
+            "descripcion": "Pantalón 1 Pinza c/ Relojero",
+            "precio": 51.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": true,
+            "categoria": "adulto",
+            "genero": "masculino",
+            "subcategoria": "Pantalones Formales",
+            "imagen": [
+                "https://www.toche.com.ar/wp-content/uploads/2023/05/01-0100-4-1-scaled.jpg",
+                "https://www.toche.com.ar/wp-content/uploads/2023/09/010100_w2.jpg",
+                "https://www.toche.com.ar/wp-content/uploads/2023/09/010100_w3.jpg"
+            ],
+            "tallas": [
+                "40",
+                "44",
+                "48"
+            ],
+            "colores": [
+                "gris topo"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#646b63",
+                        "nombreColor": "gris topo"
+                    },
+                    "talles": [
+                        {
+                            "talla": "40",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "44",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "48",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 69,
+            "nombre": "POLLERA ORIGINALS MOMENTS TRIFOLIO HOUNDSTOOTH",
+            "marca": "adidas",
+            "descripcion": "Seguramente reconocés el diseño de pata de gallo como un clásico del estilo que ha estado presente a través del tiempo desde los años 30. Este clásico reconocido en el mundo de la alta costura, le imprime un toque de lujo a esta pollera adidas con estilo deportivo. Combiná esta pollera con otros estilos de la colección o usala para ocasiones especiales. Tiene lo mejor de ambos mundos y le inyecta un toque distinguido a tus días",
+            "precio": 44.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": false,
+            "categoria": "adulto",
+            "genero": "femenino",
+            "subcategoria": "Faldas",
+            "imagen": [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/167f91b89e544cbbb362af00008b6284_9366/Pollera_Originals_Moments_Trifolio_Houndstooth_Negro_IB7716_21_model.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/cb51cc9d1c7b4208b7e5af00008b6aca_9366/Pollera_Originals_Moments_Trifolio_Houndstooth_Negro_IB7716_23_hover_model.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/d00dd27e29b946018391af00008b7308_9366/Pollera_Originals_Moments_Trifolio_Houndstooth_Negro_IB7716_25_model.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/614ac5dfcfaa42ec8f0aaf00008ba12b_9366/Pollera_Originals_Moments_Trifolio_Houndstooth_Negro_IB7716_01_laydown.jpg"
+            ],
+            "tallas": [
+                "12",
+                "14",
+                "16"
+            ],
+            "colores": [
+                "blanco"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#FFFFFF",
+                        "nombreColor": "blanco"
+                    },
+                    "talles": [
+                        {
+                            "talla": "12",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "14",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "16",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 70,
+            "nombre": "POLLERA ALWAYS ORIGINAL LACED",
+            "marca": "adidas",
+            "descripcion": "Cada día representa una nueva oportunidad, y esta pollera de adidas te motiva a aprovecharla con estilo. Presenta un panel lateral con cordones que te permite personalizar su abertura y adaptar la silueta a tu cuerpo consiguiendo un look más ceñido. Cambia de look tantas veces como quieras al día.",
+            "precio": 38.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": false,
+            "categoria": "adulto",
+            "genero": "femenino",
+            "subcategoria": "Faldas",
+            "imagen": [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/bd216f44ad03484182f2ae8a0084f61e_9366/Pollera_Always_Original_Laced_Negro_HK5059_21_model.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/c31cb93f02f840eb9cc8ae8a00852469_9366/Pollera_Always_Original_Laced_Negro_HK5059_23_hover_model.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/716eb61bebd4412fa9ffae8a00852e02_9366/Pollera_Always_Original_Laced_Negro_HK5059_25_model.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/b1b2b759e1094d39834eae990144a77d_9366/Pollera_Always_Original_Laced_Negro_HK5059_01_laydown.jpg"
+            ],
+            "tallas": [
+                "12",
+                "14",
+                "16"
+            ],
+            "colores": [
+                "negro"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#000000",
+                        "nombreColor": "negro"
+                    },
+                    "talles": [
+                        {
+                            "talla": "12",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "14",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "16",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 71,
+            "nombre": "CALZA CICLISMO PARA MUJER JAR VEC ROBINSON CON BADANA",
+            "marca": "jarvec",
+            "descripcion": "CALZA CORTA JAR VEC MODELO ROBINSON CON BADANA PARA CICLISTA. Calza diseñada para el uso confortable de tu bici. Ideal para entrenamientos o todo tipo de competencias, incluso para uso recreativo. Apta Ciclismo / Spinning / Indoor Cycling / MTB / Paseo Mountain Bike.",
+            "precio": 30.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": false,
+            "categoria": "adulto",
+            "genero": "femenino",
+            "subcategoria": "Pantalones Cortos de Ciclismo",
+            "imagen": [
+                "https://http2.mlstatic.com/D_NQ_NP_680670-MLA72124321655_102023-O.webp",
+                "https://http2.mlstatic.com/D_NQ_NP_932759-MLA72065027422_102023-O.webp",
+                "https://http2.mlstatic.com/D_NQ_NP_689827-MLA72124515711_102023-O.webp",
+                "https://http2.mlstatic.com/D_NQ_NP_798150-MLA72124505675_102023-O.webp"
+            ],
+            "tallas": [
+                "S",
+                "M",
+                "L"
+            ],
+            "colores": [
+                "negro"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#000000",
+                        "nombreColor": "negro"
+                    },
+                    "talles": [
+                        {
+                            "talla": "S",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "M",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "L",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 72,
+            "nombre": "CALZA CICLISMO PARA HOMBRE JAR VEC MAES CON BADANA",
+            "marca": "jarvec",
+            "descripcion": "CALZA CORTA JAR VEC MODELO MAES CON BADANA PARA CICLISTA. Calza diseñada para el uso confortable de tu bici. Ideal para entrenamientos o todo tipo de competencias, incluso para uso recreativo. Apta Ciclismo / Spinning / Indoor Cycling / MTB / Paseo Mountain Bike.",
+            "precio": 29.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": false,
+            "categoria": "adulto",
+            "genero": "masculino",
+            "subcategoria": "Pantalones Cortos de Ciclismo",
+            "imagen": [
+                "https://http2.mlstatic.com/D_NQ_NP_791867-MLA72158747873_102023-O.webp",
+                "https://http2.mlstatic.com/D_NQ_NP_757839-MLA72741988598_112023-O.webp",
+                "https://http2.mlstatic.com/D_NQ_NP_667179-MLA72158747851_102023-O.webp",
+                "https://http2.mlstatic.com/D_NQ_NP_937515-MLA72158767119_102023-O.webp"
+            ],
+            "tallas": [
+                "S",
+                "M",
+                "L"
+            ],
+            "colores": [
+                "negro"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#000000",
+                        "nombreColor": "negro"
+                    },
+                    "talles": [
+                        {
+                            "talla": "S",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "M",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "L",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 73,
+            "nombre": "Chinelos rosa",
+            "marca": "Cinzento",
+            "descripcion": "Flip-flops de dormitorio con una original plantilla removible. ¡Máximo confort sin olvidar la estética! En una escala del 1 al 10, ¿cómo describirías el momento en que llegas a casa y cambias tus zapatos por tus flip-flops de dormitorio?",
+            "precio": 20.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": false,
+            "categoria": "adulto",
+            "genero": "femenino",
+            "subcategoria": "Zapatillas de Casa",
+            "imagen": [
+                "https://womensecret.com/dw/image/v2/AAYL_PRD/on/demandware.static/-/Sites-gc-ws-master-catalog/default/dwd33dec32/images/hi-res/P_499760071FM.jpg?sw=800&sh=1200&sm=fit&q=50",
+                "https://womensecret.com/dw/image/v2/AAYL_PRD/on/demandware.static/-/Sites-gc-ws-master-catalog/default/dw7e7d1021/images/hi-res/P_499760071TM.jpg?sw=800&sh=1200&sm=fit&q=50",
+                "https://womensecret.com/dw/image/v2/AAYL_PRD/on/demandware.static/-/Sites-gc-ws-master-catalog/default/dw09c80559/images/hi-res/P_499760071D1.jpg?sw=800&sh=1200&sm=fit&q=50",
+                "https://womensecret.com/dw/image/v2/AAYL_PRD/on/demandware.static/-/Sites-gc-ws-master-catalog/default/dw8e1f1929/images/hi-res/P_499760071D2.jpg?sw=800&sh=1200&sm=fit&q=50"
+            ],
+            "tallas": [
+                "37-38",
+                "39-40",
+                "41-42"
+            ],
+            "colores": [
+                "rosa"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#FFC0CB",
+                        "nombreColor": "rosa"
+                    },
+                    "talles": [
+                        {
+                            "talla": "37-38",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "39-40",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "41-42",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 74,
+            "nombre": "Chinelos cinzento",
+            "marca": "Cinzento",
+            "descripcion": "Pantuflas de dormitorio con una original plantilla removible. ¡Máximo confort sin olvidar la estética! En una escala del 1 al 10, ¿cómo describirías el momento en que llegas a casa y cambias tus zapatos por tus pantuflas de dormitorio?",
+            "precio": 22.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": false,
+            "categoria": "adulto",
+            "genero": "femenino",
+            "subcategoria": "Zapatillas de Casa",
+            "imagen": [
+                "https://womensecret.com/dw/image/v2/AAYL_PRD/on/demandware.static/-/Sites-gc-ws-master-catalog/default/dw7d78eabd/images/hi-res/P_499759944FM.jpg?sw=800&sh=1200&sm=fit&q=50",
+                "https://womensecret.com/dw/image/v2/AAYL_PRD/on/demandware.static/-/Sites-gc-ws-master-catalog/default/dwe5d18c59/images/hi-res/P_499759944TM.jpg?sw=800&sh=1200&sm=fit&q=50",
+                "https://womensecret.com/dw/image/v2/AAYL_PRD/on/demandware.static/-/Sites-gc-ws-master-catalog/default/dw5095b16a/images/hi-res/P_499759944D1.jpg?sw=800&sh=1200&sm=fit&q=50",
+                "https://womensecret.com/dw/image/v2/AAYL_PRD/on/demandware.static/-/Sites-gc-ws-master-catalog/default/dwd87de3f8/images/hi-res/P_499759944D2.jpg?sw=800&sh=1200&sm=fit&q=50"
+            ],
+            "tallas": [
+                "37-38",
+                "39-40",
+                "41-42"
+            ],
+            "colores": [
+                "gris ceniza"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#808080",
+                        "nombreColor": "gris ceniza"
+                    },
+                    "talles": [
+                        {
+                            "talla": "37-38",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "39-40",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "41-42",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 75,
+            "nombre": "Chinelos de Snoopy coração",
+            "marca": "Cinzento",
+            "descripcion": "Zapatillas de estar por casa con pelo y diseños de Snoopy y sus amigos. Diseñadas para que tus pies descansen. ¡Celebra el amor con estas zapatillas de dormitorio tan divertidas y románticas!",
+            "precio": 24.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": false,
+            "categoria": "adulto",
+            "genero": "femenino",
+            "subcategoria": "Zapatillas de Casa",
+            "imagen": [
+                "https://womensecret.com/dw/image/v2/AAYL_PRD/on/demandware.static/-/Sites-gc-ws-master-catalog/default/dw80f960b7/images/hi-res/P_499758571FM.jpg?sw=800&sh=1200&sm=fit&q=50",
+                "https://womensecret.com/dw/image/v2/AAYL_PRD/on/demandware.static/-/Sites-gc-ws-master-catalog/default/dwe16ffffe/images/hi-res/P_499758571TM.jpg?sw=800&sh=1200&sm=fit&q=50"
+            ],
+            "tallas": [
+                "37-38",
+                "39-40",
+                "41-42"
+            ],
+            "colores": [
+                "rosa"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#FFC0CB",
+                        "nombreColor": "rosa"
+                    },
+                    "talles": [
+                        {
+                            "talla": "37-38",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "39-40",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "41-42",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 76,
+            "nombre": "Botas de caña arrugada de cuero negro",
+            "marca": "batistella",
+            "descripcion": "Las botas altas  son ideales para acompañarte esta temporada. Las botas altas son de cuero con detalle de arrugas en la caña, una de las grandes tendencias del invierno. La planta es de goma, con un taco ancho de 6 cms. En la cara interior tiene un cierre para mejor acceso. Ideales para todo andar. El diseño es simple pero a la vez canchero. No te pierdas este modelo súper original!",
+            "precio": 50.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": false,
+            "categoria": "adulto",
+            "genero": "femenino",
+            "subcategoria": "Botas",
+            "imagen": [
+                "https://calzadosbatistella.com.ar/shop/89666-superlarge_default/botas-de-cana-arrugada-de-cuero-negro.jpg",
+                "https://calzadosbatistella.com.ar/shop/89662-superlarge_default/botas-de-cana-arrugada-de-cuero-negro.jpg",
+                "https://calzadosbatistella.com.ar/shop/89667-medium_default/botas-de-cana-arrugada-de-cuero-negro.jpg",
+                "https://calzadosbatistella.com.ar/shop/89665-superlarge_default/botas-de-cana-arrugada-de-cuero-negro.jpg"
+            ],
+            "tallas": [
+                "36",
+                "38",
+                "40"
+            ],
+            "colores": [
+                "negro"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#000000",
+                        "nombreColor": "negro"
+                    },
+                    "talles": [
+                        {
+                            "talla": "36",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "38",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "40",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 77,
+            "nombre": "Botas altas caña arrugada de cuero natural",
+            "marca": "batistella",
+            "descripcion": "Las botas altas  son ideales para acompañarte esta temporada. Las botas altas son de cuero con detalle de arrugas en la caña, una de las grandes tendencias del invierno. La planta es de goma, con un taco ancho de 6 cms. En la cara interior tiene un cierre para mejor acceso. Ideales para todo andar. El diseño es simple pero a la vez canchero. No te pierdas este modelo súper original!",
+            "precio": 60.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": false,
+            "categoria": "adulto",
+            "genero": "femenino",
+            "subcategoria": "Botas",
+            "imagen": [
+                "https://calzadosbatistella.com.ar/shop/91323-superlarge_default/botas-altas-cana-arrugada-de-cuero-natural.jpg",
+                "https://calzadosbatistella.com.ar/shop/92078-medium_default/botas-altas-cana-arrugada-de-cuero-natural.jpg",
+                "https://calzadosbatistella.com.ar/shop/91324-superlarge_default/botas-altas-cana-arrugada-de-cuero-natural.jpg",
+                "https://calzadosbatistella.com.ar/shop/91322-medium_default/botas-altas-cana-arrugada-de-cuero-natural.jpg"
+            ],
+            "tallas": [
+                "36",
+                "38",
+                "40"
+            ],
+            "colores": [
+                "blanco"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#FFFFFF",
+                        "nombreColor": "blanco"
+                    },
+                    "talles": [
+                        {
+                            "talla": "36",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "38",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "40",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 78,
+            "nombre": "Zapatos de vestir de cuero negro acordonados",
+            "marca": "batistella",
+            "descripcion": "Material: Cuero - Suela: Goma - Color: Negro - Terminación: Cosido y Pegado",
+            "precio": 45.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": false,
+            "categoria": "adulto",
+            "genero": "masculino",
+            "subcategoria": "Zapatos",
+            "imagen": [
+                "https://calzadosbatistella.com.ar/shop/49396-superlarge_default/zapatos-de-vestir-de-cuero-negro-acordonados.jpg",
+                "https://calzadosbatistella.com.ar/shop/49397-medium_default/zapatos-de-vestir-de-cuero-negro-acordonados.jpg",
+                "https://calzadosbatistella.com.ar/shop/49399-medium_default/zapatos-de-vestir-de-cuero-negro-acordonados.jpg"
+            ],
+            "tallas": [
+                "40",
+                "41",
+                "43"
+            ],
+            "colores": [
+                "negro"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#000000",
+                        "nombreColor": "negro"
+                    },
+                    "talles": [
+                        {
+                            "talla": "40",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "41",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "43",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 79,
+            "nombre": "Zapatos de vestir de cuero suela",
+            "marca": "batistella",
+            "descripcion": "Zapatos de vestir de hombres. Confeccionados en cuero suela con detalles de pintado en la puntera. La base es de goma antideslizante. Está forrado en cuero y su acceso es mediante cordones.",
+            "precio": 48.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": false,
+            "categoria": "adulto",
+            "genero": "masculino",
+            "subcategoria": "Zapatos",
+            "imagen": [
+                "https://calzadosbatistella.com.ar/shop/74509-superlarge_default/zapatos-de-vestir-de-cuero-suela.jpg",
+                "https://calzadosbatistella.com.ar/shop/74508-superlarge_default/zapatos-de-vestir-de-cuero-suela.jpg",
+                "https://calzadosbatistella.com.ar/shop/74511-superlarge_default/zapatos-de-vestir-de-cuero-suela.jpg"
+            ],
+            "tallas": [
+                "40",
+                "41",
+                "43"
+            ],
+            "colores": [
+                "cuero"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#804000",
+                        "nombreColor": "cuero"
+                    },
+                    "talles": [
+                        {
+                            "talla": "40",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "41",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "43",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 80,
+            "nombre": "ZAPATILLAS DROPSET 2",
+            "marca": "adidas",
+            "descripcion": "La sensación de la barra en las manos, el ruido de los platos, el sonido de la campana al romper un récord personal. Nada supera a una buena sesión de levantamiento de pesas, y estas zapatillas de training adidas te proporcionan rendimiento durante tus entrenamientos de fuerza. El drop de 6 mm de la mediasuela proporciona una plataforma plana y estable la cual ayuda a encontrar la posición correcta en todos tus levantamientos. La mediasuela de doble densidad proporciona comodidad y estabilidad, y la suela Traxion de gran agarre mantiene tu pie seguro.",
+            "precio": 30.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": false,
+            "categoria": "adulto",
+            "genero": "femenino",
+            "subcategoria": "Zapatillas Deportivas",
+            "imagen": [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/da96729060a24406930b616630e8aea9_9366/Zapatillas_Dropset_2_Granate_HQ8777_01_standard.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/7b0d56f47ab3414e9e0a3eae77d0de7a_9366/Zapatillas_Dropset_2_Granate_HQ8777_02_standard_hover.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/e0f890619ffb4e31a296e691ff6fbf6b_9366/Zapatillas_Dropset_2_Violeta_IF9909_01_standard.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/a066bd8e59a640c7ac91e729a4134004_9366/Zapatillas_Dropset_2_Violeta_IF9909_04_standard.jpg"
+            ],
+            "tallas": [
+                "38",
+                "39",
+                "40"
+            ],
+            "colores": [
+                "rojo",
+                "violeta"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#FF0000",
+                        "nombreColor": "rojo"
+                    },
+                    "talles": [
+                        {
+                            "talla": "38",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "39",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "40",
+                            "stock": 20
+                        }
+                    ]
+                },
+                {
+                    "color": {
+                        "codHexadecimal": "#78288C",
+                        "nombreColor": "violeta"
+                    },
+                    "talles": [
+                        {
+                            "talla": "38",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "39",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "40",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 81,
+            "nombre": "ZAPATILLAS EVERYSET",
+            "marca": "adidas",
+            "descripcion": "Entrenar es un viaje. Estas zapatillas de training adidas se han diseñado para ayudarte a alcanzar todas tus objetivos. El tejido exterior es suave, transpirable y muy cómodo. La mediasuela de doble densidad con espuma EVA más firme en el exterior y un interior de EVA más suave te ofrecen el equilibrio perfecto sin renunciar a la comodidad. La forma plana crea una sensación de estabilidad, para que puedas concentrarte en tu ejercicio. La suela de caucho con tración multidireccional ofrece un agarre excelente para que cambies la carga de la barra siempre que lo necesites.",
+            "precio": 60.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": false,
+            "categoria": "adulto",
+            "genero": "femenino",
+            "subcategoria": "Zapatillas Deportivas",
+            "imagen": [
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/5ae668a4e81749d6aa8c88dfee7c9882_9366/Zapatillas_Everyset_Negro_ID4989_01_standard.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/ed6015a9a8214bb48d6582ee776db0ad_9366/Zapatillas_Everyset_Negro_ID4989_02_standard_hover.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/fa381b4241c440e7a8c7525bdab5b557_9366/Zapatillas_Everyset_Blanco_ID4990_01_standard.jpg",
+                "https://assets.adidas.com/images/h_840,f_auto,q_auto,fl_lossy,c_fill,g_auto/4c9678e3f7f847dcb034d32fd0576862_9366/Zapatillas_Everyset_Blanco_ID4990_02_standard_hover.jpg"
+            ],
+            "tallas": [
+                "38",
+                "39",
+                "40"
+            ],
+            "colores": [
+                "negro",
+                "blanco"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#000000",
+                        "nombreColor": "negro"
+                    },
+                    "talles": [
+                        {
+                            "talla": "38",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "39",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "40",
+                            "stock": 20
+                        }
+                    ]
+                },
+                {
+                    "color": {
+                        "codHexadecimal": "#FFFFFF",
+                        "nombreColor": "blanco"
+                    },
+                    "talles": [
+                        {
+                            "talla": "38",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "39",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "40",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
         }
 
 
