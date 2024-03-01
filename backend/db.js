@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-//const data = require("./utils/todosProductos.js");
 
 // Conección con la base de datos "thecloset"
 async function connectToDatabase() {
@@ -12,14 +11,15 @@ async function connectToDatabase() {
 }
 connectToDatabase();
 
-// Importando la colección "Productos" de MongoDB
-const ModeloProducto = require("./models/Productos.js");
+/*
+Insertar documentos a la colección "Productos" de MongoDB
 
-// Insertar documentos a la colección "Productos" de MongoDB
-/* 
+const data = require("./utils/todosProductos.js");
+const Producto = require("./models/Productos.js");
+
 async function insertarProductos() {
 	try {
-		await ModeloProducto.insertMany(data);
+		await Producto.insertMany(data);
 		console.log("Documentos insertados correctamente");
 	} catch (error) {
 		console.log("Error al insertar documentos:", error);
@@ -27,5 +27,3 @@ async function insertarProductos() {
 }
 insertarProductos();
  */
-
-module.exports = ModeloProducto;

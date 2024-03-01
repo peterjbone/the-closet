@@ -1,4 +1,4 @@
-const { Schema, model, models } = require("mongoose");
+import { Schema, model, models } from "mongoose";
 
 const UserSchema = new Schema({
 	email: {
@@ -21,6 +21,6 @@ const UserSchema = new Schema({
 });
 
 // La lógica aqui evita que se cree un nuevo modelo cada vez que una ruta lo llama
-// Mongoose pluraliza automáticamente a Usuarios (pero solo se vera reflejado en MongoDB)
+// Mongoose pluraliza automáticamente a "Usuarios" (pero solo se vera reflejado en MongoDB)
 const Usuario = models.Usuario || model("Usuario", UserSchema);
-Module.exports = Usuario;
+export default Usuario;
