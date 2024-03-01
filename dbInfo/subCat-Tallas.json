@@ -59,7 +59,7 @@
             "nombre":"Zapatillas Deportivas"
         },{
             "id": "sc19",
-            "nombre":"Zapatos Casuales"
+            "nombre":"Zapatillas Casuales"
         },{
             "id": "sc20",
             "nombre":"Zapatos Formales"
@@ -72,9 +72,15 @@
         },{
             "id": "sc23",
             "nombre":"Zapatillas de Casa"
+        },{
+            "id":"sc24",
+            "nombre":"Botin"
+        },{
+            "id":"sc25",
+            "nombre":"Botas Cortas"
         }
     ],
-    "Talles":[
+    "talles":[
         {
             "id":"tall00",
             "nombre":"S"
@@ -165,5 +171,11 @@
         }
 
         
+    ],
+    "marcas":[
+        {
+            "id":"marc000",
+            "nombre":"falabela"
+        }
     ]
 }
