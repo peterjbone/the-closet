@@ -1,7 +1,5 @@
 import "./globals.css";
 import { Lato } from "next/font/google";
-
-import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
 
 //? Main font
@@ -17,14 +15,12 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-	/* prettier-ignore*/
 	return (
 		<html lang="es">
-      <body className={lato.className}>
-        <Header/>
-        {children}
-        <Footer />
-      </body>
+			<body className={lato.className}>
+				{children}
+				<Footer />
+			</body>
 		</html>
 	);
 }
