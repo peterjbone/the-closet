@@ -1,19 +1,32 @@
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import axios from "axios";
+import { toast } from "react-hot-toast";
+import "animate.css";
 
 function RegisterPage() {
-	function handleSubmit(e) {
+	const [error, setError] = useState();
+
+	async function handleSubmit(e) {
 		e.preventDefault();
 
 		const formData = new FormData(e.currentTarget);
 
-		const email = formData.get("email");
-		const password = formData.get("password");
-		const fullname = formData.get("fullname");
+		try {
+			const res = await axios.post("/api/auth/signup", {
+				fullname: formData.get("fullname"),
+				email: formData.get("email"),
+				password: formData.get("password")
+			});
+			console.log(res);
+		} catch (error) {
+			console.log(error);
 
-		console.log(email, password, fullname);
+			//toast.error(error.response.data.message);
+
+			setError(error.response.data.message);
+		}
 	}
 
 	/* prettier-ignore */
@@ -35,14 +48,25 @@ function RegisterPage() {
 					type="text"
 					placeholder="John Doe"
 					name="fullname"
-					className="bg-zinc-800 px-4 py-2 block"
-				/>
+          className="
+            bg-zinc-800
+            px-4
+            py-2
+            block
+            "/>
 				<input
 					type="email"
 					placeholder="pablito@gmail.com"
 					name="email"
-					className="bg-zinc-800 px-4 py-2 block"
-				/>
+          className={`
+          bg-zinc-800 
+            px-4 
+            py-2 
+            block
+            animate__animated
+            ${error ? "animate__shakeX" : null}
+            ${error ? "border-red-600 border-[5px]" : null}
+            `}/>
 				<input
 					type="password"
 					placeholder="***********"

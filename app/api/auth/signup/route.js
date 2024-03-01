@@ -5,7 +5,6 @@ import { connectDB } from "@/app/libs/mongodb.js";
 
 export async function POST(request) {
 	const { fullname, email, password } = await request.json();
-	//console.log(fullname, email, password);
 
 	// Validando password
 	if (!password || password.length < 6) {
@@ -43,9 +42,12 @@ export async function POST(request) {
 			password: hashedPassword
 		});
 		const savedUser = await user.save();
-		console.log(savedUser);
 
-		return NextResponse.json(savedUser);
+		return NextResponse.json({
+			id: savedUser._id,
+			fullname: savedUser.fullname,
+			email: savedUser.email
+		});
 	} catch (error) {
 		console.log(error);
 		return NextResponse.json(

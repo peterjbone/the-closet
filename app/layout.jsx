@@ -1,6 +1,7 @@
 import "./globals.css";
 import { Lato } from "next/font/google";
 import Footer from "./components/footer/Footer";
+import { Toaster } from "react-hot-toast";
 
 //? Main font
 const lato = Lato({
@@ -18,6 +19,7 @@ export default function RootLayout({ children }) {
 	return (
 		<html lang="es">
 			<body className={lato.className}>
+				<Toaster />
 				{children}
 				<Footer />
 			</body>
