@@ -216,6 +216,28 @@
         {
             "id":"marc010",
             "nombre":"Cinzento"
+        },
+        {
+            "id":"marc011",
+            "nombre":"topper"
+        },
+        {
+            "id":"marc012",
+            "nombre":"Salpa"
+        },
+        {
+            "id":"marc013",
+            "nombre":"Snauwaert"
+        },
+        {
+            "id":"marc014",
+            "nombre":"Vitnik"
+        },
+        {
+            "id":"marc015",
+            "nombre":"mini-granada"
         }
+
+        
     ]
 }

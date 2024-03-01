@@ -4,7 +4,7 @@
             "id": 1,
             "nombre": "chomba falabe",
             "marca": "falabela",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Chomba básica de jersey de algodón gamuzado, calce regular fit y manga corta con puños que permiten un excelente ajuste. Presenta un cuello polo en un tejido de algodón con botones. Lleva un pequeño logotipo bordado en el pecho y una estampa con textura en relieve en la manga derecha. -Composición colores lisos 100% algodón. Colores granizados 50% algodón, 50% poliéster -El modelo viste un talle M -Talle M: ancho de pecho de 53 cm (medida tomada 2 cm por debajo de la sisa), largo de espalda de 72 cm aprox. (medida tomada desde el centro del cuello hasta el borde inferior del ruedo). Las medidas pueden variar +/- 1 cm -Producto nacional",
             "precio": 10.50,
             "oferta": {
                 "offActiva": false,
@@ -110,7 +110,7 @@
             "id": 2,
             "nombre": "campera invierno",
             "marca": "falabela",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Un clásico con un toque distinto, nuestra Sherpa Trucker es la versión acogedora de nuestra Trucker Jacket original que está construida con un forro de sherpa para mayor calidez. Este básico increíblemente versátil combina lo fresco y lo acogedor, mateniéndose tan auténtica como su homónima. Nuestra chaqueta de denim atemporal, mejorada con un cálido forro de sherpa, posee un forro suave acolchado en mangas. Este esencial icónico realmente se ve bien en todos, incluso cuando se aumenta o se reduce de talla. Mejora con el tiempo debido al desgaste natural con decoloración, manchas y agujeros. Fabricado con nuestras técnicas sostenibles Water Less, 36136-0000",
             "precio": 20.50,
             "oferta": {
                 "offActiva": false,
@@ -191,7 +191,7 @@
             "id": 3,
             "nombre": "campera fenix",
             "marca": "taverniti",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Campera moda combinada en dos colores, de calce regular fit confeccionada en una suave frisa elastizada. Posee capucha y cuello alto, bolsillos con cierre invis",
             "precio": 15.50,
             "oferta": {
                 "offActiva": false,
@@ -272,7 +272,7 @@
             "id": 4,
             "nombre": "campera pablo",
             "marca": "taverniti",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Campera básica de calce regular fit confeccionada en una suave frisa de algodón con efecto granizado negro. Manga raglan con puños, cintura y cuello alto en un tejido rayado elastizado. Posee bolsillos a los laterales del cuerpo y una grifa de simil cuero con el logo de la marca. -Composición 70% algodón, 30% poliéster - El modelo viste un talle M -Talle M, ancho de pecho de 56 cm aprox. (medida tomada 2 cm por debajo de la sisa) largo de espalda de 71 cm aprox. (medida tomada desde el centro del cuello hasta el borde inferior del ruedo), largo de manga de 85 cm aprox. (medida desde unión de hombro hasta el final del puño) - las medidas pueden variar +/- 1 cm -Producto nacional",
             "precio": 12.50,
             "oferta": {
                 "offActiva": false,
@@ -328,7 +328,7 @@
             "id": 5,
             "nombre": "remera owen",
             "marca": "taverniti",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Remera rayada en suave jersey de algodón. Calce regular fit, manga corta y escote redondo con cuello en tejido elastizado. Lleva una grifa de goma de la marca",
             "precio": 7.50,
             "oferta": {
                 "offActiva": false,
@@ -384,7 +384,7 @@
             "id": 6,
             "nombre": "remera christian",
             "marca": "taverniti",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Remera estampada de jersey de algodón. Calce regular fit, manga corta y escote redondo, con cuello en tejido elastizado. Es una prenda muy cómoda y durable. Co",
             "precio": 5.50,
             "oferta": {
                 "offActiva": false,
@@ -462,10 +462,118 @@
             ]
         },
         {
+            "id": 7,
+            "nombre": "Chaleco Unisex CHAL-UNIX 101",
+            "marca": "topper",
+            "descripcion": "Queremos comprometernos con el futuro y los diseños de vanguardia, es por eso que creamos este chaleco sin género en matelase de colores vibrantes. Una propuesta desafiante que invita a quienes nos eligen a llevar la aventura al siguiente nivel.",
+            "precio": 30.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": true,
+            "categoria": "adulto",
+            "genero": "unisex",
+            "subcategoria": "Chalecos",
+            "imagen": [
+                "https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_600/https://freyasport.com/wp-content/uploads/2021/11/chaleco-unisex-deportivo-freyasport.com-7.jpg",
+                "https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_600,h_1050/https://freyasport.com/wp-content/uploads/2021/11/chaleco-unisex-deportivo-freyasport.com-10.jpg",
+                "https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_600,h_1050/https://freyasport.com/wp-content/uploads/2021/11/chaleco-unisex-deportivo-freyasport.com-1.jpg",
+                "https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_600/https://freyasport.com/wp-content/uploads/2021/11/chaleco-unisex-deportivo-freyasport.com-7.jpg",
+                "https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_600/https://freyasport.com/wp-content/uploads/2021/11/chaleco-unisex-deportivo-freyasport.com-3.jpg"
+            ],
+            "tallas": [
+                "30",
+                "34",
+                "38",
+                "40"
+            ],
+            "colores": [
+                "gris",
+                "azul",
+                "rojo"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#808080",
+                        "nombreColor": "gris"
+                    },
+                    "talles": [
+                        {
+                            "talla": "30",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "34",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "38",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "40",
+                            "stock": 20
+                        }
+                    ]
+                },
+                {
+                    "color": {
+                        "codHexadecimal": "#0000FF",
+                        "nombreColor": "azul"
+                    },
+                    "talles": [
+                        {
+                            "talla": "30",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "34",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "38",
+                            "stock": 20
+                        },
+                        {
+                            "talla": "40",
+                            "stock": 10
+                        }
+                    ]
+                },
+                {
+                    "color": {
+                        "codHexadecimal": "#FF0000",
+                        "nombreColor": "rojo"
+                    },
+                    "talles": [
+                        {
+                            "talla": "30",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "34",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "38",
+                            "stock": 20
+                        },
+                        {
+                            "talla": "40",
+                            "stock": 10
+                        }
+                    ]
+                }
+            ]
+        },
+        {
             "id": 8,
             "nombre": "jean mastergold",
             "marca": "taverniti",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Jean tiro intermedio, calce Slim. Cartera con cierre. Tejido de peso medio. Serie Mastergold. .Elastizado, Composición 98% algodón 2% elastano.",
             "precio": 15.50,
             "oferta": {
                 "offActiva": false,
@@ -546,7 +654,7 @@
             "id": 9,
             "nombre": "jean zarar",
             "marca": "taverniti",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Pantalón chino de garbardina tiro intermedio y calce slim con doble pinzas en trasero. • Elastizado • 98 % algodón - 2 % elastano",
             "precio": 30.50,
             "oferta": {
                 "offActiva": false,
@@ -602,7 +710,7 @@
             "id": 10,
             "nombre": "bermuda zlin",
             "marca": "taverniti",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Bermuda de denim tiro Bajo calce Chupin. • Elastizado • Composición: 98 % algodón - 2 % elastano",
             "precio": 20.50,
             "oferta": {
                 "offActiva": false,
@@ -658,7 +766,7 @@
             "id": 11,
             "nombre": "bermuda brand",
             "marca": "taverniti",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Bermuda cargo de garbardina calce slim.Elastizado.98 % algodón 2 % elastano",
             "precio": 55.50,
             "oferta": {
                 "offActiva": false,
@@ -714,7 +822,7 @@
             "id": 12,
             "nombre": "zapatillas clásicas",
             "marca": "batistella",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Zapatillas urbanas de hombre confeccionadas en cuero en azul. Con estilo que mezcla lo deportivo con lo urbano, son ideales para actividades como ir al trabajo y de esta manera estar cómodos pero más formales. Su planta es de goma y tiene costuras reforzadas. Está forrada en símil cuero y tienen plantilla anatómica. Son liviana y cómodas para usarlas todo el día!",
             "precio": 15.50,
             "oferta": {
                 "offActiva": false,
@@ -795,7 +903,7 @@
             "id": 13,
             "nombre": "Borcegos clásicos",
             "marca": "batistella",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Los borcegos de cuero brindan comodidad y practicidad a la hora de marcar tendencia. Los borcegos mezclan recortes y costuras que le dan un toque personal al diseño. De look informal  debido a lo crudo del material las cuales se presentan con detalles propios del cuero original. No te lo pierdas!",
             "precio": 30.60,
             "oferta": {
                 "offActiva": false,
@@ -851,7 +959,7 @@
             "id": 14,
             "nombre": "Borcegos de cuero en habano",
             "marca": "batistella",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Los borcegos de cuero brindan comodidad y practicidad a la hora de marcar tendencia. Los borcegos mezclan recortes y costuras que le dan un toque personal al diseño. De look informal  debido a lo crudo del material las cuales se presentan con detalles propios del cuero original. No te lo pierdas!",
             "precio": 10.40,
             "oferta": {
                 "offActiva": false,
@@ -907,7 +1015,7 @@
             "id": 15,
             "nombre": "Franciscanas de cuero negro",
             "marca": "batistella",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Las sandalias son de cuero. La planta es de goma y el acceso es a través de velcro, el cual regula el agarre del pie. El diseño presenta detalles de calado en la capellada, conjuntamente con costuras reforzadas. Está forrada en cuero. No te pierdas este modelo, súper cómodo!",
             "precio": 27.40,
             "oferta": {
                 "offActiva": false,
@@ -963,7 +1071,7 @@
             "id": 16,
             "nombre": "Zapatillas urbanas",
             "marca": "batistella",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Las zapas se reinventan para que vos puedas usarlas en toda ocasión. Las zapas de diseño clásico y toques de color neutros hacen que se destaquen por la base blanca elevada permitiendo un andar cómodo y seguro. Para que vos te luzcas en todos tus looks, este modelo es el ideal..",
             "precio": 10.44,
             "oferta": {
                 "offActiva": false,
@@ -1019,7 +1127,7 @@
             "id": 17,
             "nombre": "remera steps",
             "marca": "taverniti",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Remera calce regular con estampa en frente. Jersey 100% algodón.",
             "precio": 10.50,
             "oferta": {
                 "offActiva": false,
@@ -1100,7 +1208,7 @@
             "id": 18,
             "nombre": "Remera kori",
             "marca": "taverniti",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Remera silueta oversize cuello redondo y manga corta por encima del codo en jersey liviano melange color. Estampa Road to Nowhere, paisaje nocturno del desierto",
             "precio": 15.50,
             "oferta": {
                 "offActiva": false,
@@ -1181,7 +1289,7 @@
             "id": 19,
             "nombre": "camisa lissa",
             "marca": "taverniti",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Camisa manga larga de simil tencel con cuello mao y detalle en hombros. Botones al tono y chapita marcaria,",
             "precio": 20.50,
             "oferta": {
                 "offActiva": false,
@@ -1262,7 +1370,7 @@
             "id": 20,
             "nombre": "campera palmas",
             "marca": "taverniti",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Campera básica con capucha en frisa liviana de algodón elastizada. Bolsillo canguro en delantero. Puños con elástico interno. • calce regular • Cordón con mensa",
             "precio": 25.50,
             "oferta": {
                 "offActiva": false,
@@ -1368,7 +1476,7 @@
             "id": 21,
             "nombre": "campera ambre",
             "marca": "taverniti",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Campera de moda, corta. Elastizada 98% algodón 2% elastano",
             "precio": 30.50,
             "oferta": {
                 "offActiva": false,
@@ -1424,7 +1532,7 @@
             "id": 22,
             "nombre": "pantalón kenia",
             "marca": "taverniti",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Pantalon estrecho de color tiro alto con bolsillo tipo chino. Remate de bolsillos delanteros envivados - elastizado - composicion 98% algodón - 2% elastano",
             "precio": 10.50,
             "oferta": {
                 "offActiva": false,
@@ -1530,7 +1638,7 @@
             "id": 23,
             "nombre": "pantalón jagger",
             "marca": "taverniti",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Pantalón de nylon estilo parachute, tiro alto pierna holgada. Cintura elástica y con cordón ajustable. Puño de bota con elástico y tanca ajustable. Composición",
             "precio": 15.50,
             "oferta": {
                 "offActiva": false,
@@ -1586,7 +1694,7 @@
             "id": 24,
             "nombre": "pantalón kirvi",
             "marca": "taverniti",
-            "descripcion": "algo hay que poner",
+            "descripcion": "composición 98% algodón , 2% elastano",
             "precio": 20.50,
             "oferta": {
                 "offActiva": false,
@@ -1667,7 +1775,7 @@
             "id": 25,
             "nombre": "jean supremo",
             "marca": "taverniti",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Jeans chupin tiro alto 5 bolsillos. Detalle de abertura en bota y aplique en bolsillo trasero.",
             "precio": 23.50,
             "oferta": {
                 "offActiva": false,
@@ -1774,7 +1882,7 @@
             "id": 26,
             "nombre": "jean reason",
             "marca": "taverniti",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Jeans chupin tiro intermedio 5 bolsillos con detalle bordado en lurex sobre bolsillos traseros.",
             "precio": 30.50,
             "oferta": {
                 "offActiva": false,
@@ -1882,7 +1990,7 @@
             "id": 27,
             "nombre": "zuecos BATI",
             "marca": "batistella",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Porque la comodidad es el must de esta temporada, este modelo es el complemento ideal para tus salidas. De diseño simple permite que las combines como vos quieras. Porque destacamos la frescura.... no te puede faltar!",
             "precio": 20.50,
             "oferta": {
                 "offActiva": false,
@@ -1963,7 +2071,7 @@
             "id": 28,
             "nombre": "zuecos de cuero",
             "marca": "batistella",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Para las más clásicas los zuecos son un buen complemento. Su diseño simple y muy cómodo permite versatilidad en su uso. La cinta ancha posee elástico que permite mejor el agarre. Este modelo es súper para que lo lleves todo el día...",
             "precio": 25.50,
             "oferta": {
                 "offActiva": false,
@@ -2044,7 +2152,7 @@
             "id": 29,
             "nombre": "sandalias bajas",
             "marca": "batistella",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Las sandalias bajas se reinventan esta temporada paras que vos puedas llevarlas. Las sandalias bajas con base de goma, le dan un toque urbano a tu estilo. La base súper liviana permite el contraste exacto entre elegancia y modernidad. Porque sabemos lo que vos necesitas!",
             "precio": 30.50,
             "oferta": {
                 "offActiva": false,
@@ -2100,7 +2208,7 @@
             "id": 30,
             "nombre": "botas cortas bajas de cuero",
             "marca": "batistella",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Las botas cortas son ideales para complementar tu vestuario en esta temporada. Las botas cortas son de cuero, completamente forradas en poliéster en su interior. La planta es de goma, súper livianas y para todo andar.El taco ancho de 3.5 cms, hacen que te luzcas más natural en tu estilo. El diseño combina lo clásico del modelo con cierres en los laterales de la misma. Ideales para que te sientas muy casual y fresca!",
             "precio": 35.50,
             "oferta": {
                 "offActiva": false,
@@ -2156,7 +2264,7 @@
             "id": 31,
             "nombre": "botas cortas abuchonadas",
             "marca": "batistella",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Este modelo es el must de esta temporada. El diseño de caña abuchonada el da un toque de distinción al modelo. Este calzado se destaca por le corte irregular del taco ancho que permite que puedas combinarlo como vos quieras. Porque sabemos de moda, este calzado no te puede faltar!",
             "precio": 55.50,
             "oferta": {
                 "offActiva": false,
@@ -2210,9 +2318,9 @@
         },
         {
             "id": 32,
-            "nombre": "218 POLERA LISA",
+            "nombre": "218 POLERA",
             "marca": "mambo",
-            "descripcion": "algo hay que poner",
+            "descripcion": "POLERA LISA",
             "precio": 10.50,
             "oferta": {
                 "offActiva": false,
@@ -2316,9 +2424,9 @@
         },
         {
             "id": 33,
-            "nombre": "7818",
+            "nombre": "7818 camisa",
             "marca": "mambo",
-            "descripcion": "algo hay que poner",
+            "descripcion": "camisa con 2 bolsillos ",
             "precio": 15.50,
             "oferta": {
                 "offActiva": false,
@@ -2370,9 +2478,9 @@
         },
         {
             "id": 34,
-            "nombre": "1807 BUZO NIÑO BORN CON CAPUCHA",
+            "nombre": "1807 BUZO",
             "marca": "mambo",
-            "descripcion": "algo hay que poner",
+            "descripcion": "BUZO NIÑO BORN CON CAPUCHA",
             "precio": 20.50,
             "oferta": {
                 "offActiva": false,
@@ -2425,9 +2533,9 @@
         },
         {
             "id": 35,
-            "nombre": "1815 BUZO CON CAPUCHA RUSTICO",
+            "nombre": "1815 BUZO",
             "marca": "mambo",
-            "descripcion": "algo hay que poner",
+            "descripcion": "BUZO CON CAPUCHA RUSTICO",
             "precio": 22.50,
             "oferta": {
                 "offActiva": false,
@@ -2505,9 +2613,9 @@
         },
         {
             "id": 36,
-            "nombre": "3775 CAMPERA RUSHER COMBINADA",
+            "nombre": "3775 CAMPERA RUSHER",
             "marca": "mambo",
-            "descripcion": "algo hay que poner",
+            "descripcion": "CAMPERA RUSHER COMBINADA CON FORRO POLAR",
             "precio": 25.50,
             "oferta": {
                 "offActiva": false,
@@ -2588,7 +2696,7 @@
             "id": 37,
             "nombre": "7761 PANTALON JEAN",
             "marca": "mambo",
-            "descripcion": "algo hay que poner",
+            "descripcion": "PANTALON JEAN AZUL",
             "precio": 5.50,
             "oferta": {
                 "offActiva": false,
@@ -2635,9 +2743,9 @@
         },
         {
             "id": 38,
-            "nombre": "4795 PANTALÓN DEPORTIVO FRIZADO",
+            "nombre": "4795 PANTALON",
             "marca": "mambo",
-            "descripcion": "algo hay que poner",
+            "descripcion": "PANTALÓN DEPORTIVO FRIZADO",
             "precio": 8.50,
             "oferta": {
                 "offActiva": false,
@@ -2706,9 +2814,9 @@
         },
         {
             "id": 39,
-            "nombre": "7765 PANTALON RUSTICO ESTAMPADO",
+            "nombre": "7765 PANTALON",
             "marca": "mambo",
-            "descripcion": "algo hay que poner",
+            "descripcion": "PANTALON RUSTICO ESTAMPADO",
             "precio": 10.50,
             "oferta": {
                 "offActiva": false,
@@ -2755,9 +2863,9 @@
         },
         {
             "id": 40,
-            "nombre": "7768 JOGGING FRIZA CON PUÑO",
+            "nombre": "7768 JOGGING",
             "marca": "mambo",
-            "descripcion": "algo hay que poner",
+            "descripcion": "JOGGING FRIZA CON PUÑO",
             "precio": 11.50,
             "oferta": {
                 "offActiva": false,
@@ -2804,9 +2912,9 @@
         },
         {
             "id": 41,
-            "nombre": "7774",
+            "nombre": "7774 Pantalon",
             "marca": "mambo",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Pantalon Cargo nautico",
             "precio": 15.50,
             "oferta": {
                 "offActiva": false,
@@ -2899,7 +3007,7 @@
             "id": 42,
             "nombre": "Zapatillas de símil en rojo",
             "marca": "batistella",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Los zapatillas son ideales para acompañarte esta temporada. Las zapatillas son de símil cuero en combinación con tela resistente tipo lona, forrados en su interior en poliéster. La planta es de goma, súper cómoda y livianas. El acceso es mediante cordones, la cual regula el agarre del pie. El diseño es clásico para que lo logres combinar en toda ocasión. No te pierdas este modelo súper canchero para tu hijo!",
             "precio": 5.50,
             "oferta": {
                 "offActiva": false,
@@ -2950,7 +3058,7 @@
             "id": 43,
             "nombre": "Zapatillas urbanas de símil en negro",
             "marca": "batistella",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Las zapatillas pisan fuerte esta temporada. Las zapatillas son de cuero, forradas en su interior. La planta es de goma y el acceso es mediante cordones. El diseño clásico permite la versatilidad en su uso. Es el calzado ideal para usar todo el día e inclusive permite un look un poco formal. No te las pierdas!",
             "precio": 7.50,
             "oferta": {
                 "offActiva": false,
@@ -3001,7 +3109,7 @@
             "id": 44,
             "nombre": "Zapatillas urbanas de cuero en azul",
             "marca": "batistella",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Las zapatillas urbanas son ideales para acompañar tu look. Las zapatillas son de cuero, forradas y la planta es de goma. El acceso es mediante cordones de la misma tonalidad de las zapatillas. El diseño combina lo clásico del modelo con el contraste de la base blanca. Ideales para todas tus salidas!",
             "precio": 10.50,
             "oferta": {
                 "offActiva": false,
@@ -3052,7 +3160,7 @@
             "id": 45,
             "nombre": "Zapatos combinados de cuero en negro",
             "marca": "batistella",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Porque sabemos que ellos también quieren estar a la moda, estos zapatos son ideales. Los zapatos son de cuero, la planta es de goma, súper livianas y el acceso es mediante cordones. El diseño clásico se complementa con detalles de recortes en al talonera. La cual le da un toque especial al modelo.",
             "precio": 12.50,
             "oferta": {
                 "offActiva": false,
@@ -3103,7 +3211,7 @@
             "id": 46,
             "nombre": "Zapatos combinados de cuero en suela",
             "marca": "batistella",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Porque sabemos que ellos también quieren estar a la moda, estos zapatos son ideales. Los zapatos son de cuero, la planta es de goma, súper livianas y el acceso es mediante cordones. El diseño clásico se complementa con detalles de recortes en al talonera. La cual le da un toque especial al modelo.",
             "precio": 20.50,
             "oferta": {
                 "offActiva": false,
@@ -3152,9 +3260,9 @@
         },
         {
             "id": 47,
-            "nombre": "354",
+            "nombre": "364",
             "marca": "mambo",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Remera estampada con moño atras",
             "precio": 5.50,
             "oferta": {
                 "offActiva": false,
@@ -3166,8 +3274,7 @@
             "genero": "femenino",
             "subcategoria": "Blusas y Tops",
             "imagen": [
-                "https://acdn.mitiendanube.com/stores/243/508/products/whatsapp-image-2023-08-10-at-12-56-51-11-5a1abb549a137ca8f916935121903194-480-0.webp",
-                "https://acdn.mitiendanube.com/stores/243/508/products/whatsapp-image-2023-08-10-at-12-57-53-11-ca3e0ed09bc35ec5b116935121901131-480-0.webp"
+                "https://acdn.mitiendanube.com/stores/243/508/products/whatsapp-image-2023-08-10-at-12-40-22-11-0ff9e94440a9fa17a716935130418383-1024-1024.webp"
             ],
             "tallas": [
                 "4",
@@ -3176,14 +3283,13 @@
                 "10"
             ],
             "colores": [
-                "verde",
-                "rosa"
+                "negro"
             ],
             "opcion": [
                 {
                     "color": {
-                        "codHexadecimal": "#008000",
-                        "nombreColor": "verde"
+                        "codHexadecimal": "#000000",
+                        "nombreColor": "negro"
                     },
                     "talles": [
                         {
@@ -3203,30 +3309,6 @@
                             "stock": 10
                         }
                     ]
-                },
-                {
-                    "color": {
-                        "codHexadecimal": "#FFC0CB",
-                        "nombreColor": "rosa"
-                    },
-                    "talles": [
-                        {
-                            "talla": "4",
-                            "stock": 12
-                        },
-                        {
-                            "talla": "6",
-                            "stock": 17
-                        },
-                        {
-                            "talla": "8",
-                            "stock": 22
-                        },
-                        {
-                            "talla": "10",
-                            "stock": 12
-                        }
-                    ]
                 }
             ]
         },
@@ -3234,7 +3316,7 @@
             "id": 48,
             "nombre": "8262",
             "marca": "mambo",
-            "descripcion": "algo hay que poner",
+            "descripcion": "remera UV mangas largas, salmon o rosa",
             "precio": 7.50,
             "oferta": {
                 "offActiva": false,
@@ -3314,7 +3396,7 @@
             "id": 49,
             "nombre": "6299",
             "marca": "mambo",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Buzo niña con capucha frisa 3 estampas over zise",
             "precio": 8.50,
             "oferta": {
                 "offActiva": false,
@@ -3392,9 +3474,9 @@
         },
         {
             "id": 50,
-            "nombre": "6265 BUZO NIÑA FRIZA TODAY",
+            "nombre": "6265",
             "marca": "mambo",
-            "descripcion": "algo hay que poner",
+            "descripcion": "BUZO NEGRO NIÑA FRIZA TODAY",
             "precio": 10.50,
             "oferta": {
                 "offActiva": false,
@@ -3446,9 +3528,9 @@
         },
         {
             "id": 51,
-            "nombre": "7330 CAMPERA FRIZA NIÑA LISA",
+            "nombre": "7330",
             "marca": "mambo",
-            "descripcion": "algo hay que poner",
+            "descripcion": "CAMPERA ROSA FRIZA NIÑA LISA",
             "precio": 11.50,
             "oferta": {
                 "offActiva": false,
@@ -3528,7 +3610,7 @@
             "id": 52,
             "nombre": "5396",
             "marca": "mambo",
-            "descripcion": "algo hay que poner",
+            "descripcion": "short rustico estampado con logo",
             "precio": 5.50,
             "oferta": {
                 "offActiva": false,
@@ -3577,7 +3659,7 @@
             "id": 53,
             "nombre": "7227 MINI JEAN DEGRADE",
             "marca": "mambo",
-            "descripcion": "algo hay que poner",
+            "descripcion": "mini jean degrade labrada",
             "precio": 7.50,
             "oferta": {
                 "offActiva": false,
@@ -3626,7 +3708,7 @@
             "id": 54,
             "nombre": "7645 JOGGING RUSTICO CORAZON",
             "marca": "mambo",
-            "descripcion": "algo hay que poner",
+            "descripcion": "PANTALON JOGUING RUSTICO PESADO CON LOGO DE CORAZON NIÑA",
             "precio": 8.50,
             "oferta": {
                 "offActiva": false,
@@ -3676,7 +3758,7 @@
             "id": 55,
             "nombre": "7654",
             "marca": "mambo",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Pantalon rustico con estampa y tiras en el puño niñas",
             "precio": 10.50,
             "oferta": {
                 "offActiva": false,
@@ -3725,7 +3807,7 @@
             "id": 56,
             "nombre": "7774",
             "marca": "mambo",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Pantalon Cargo nautico",
             "precio": 11.50,
             "oferta": {
                 "offActiva": false,
@@ -3818,7 +3900,7 @@
             "id": 57,
             "nombre": "Sandalias con brillo en símil blanco",
             "marca": "batistella",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Las sandalias son ideales para acompañar el look de las nenas. Las sandalias son de  símil cuero, la planta es de goma, la cual la hacer súper livianas al andar. El acceso es mediante velcro, para regular le agarre. El diseño clásico se combina con detalles de brillo en la capellada y en la suela, haciendo al modelo más delicado. No te pierdas estas sandalias súper combinables!",
             "precio": 7.50,
             "oferta": {
                 "offActiva": false,
@@ -3869,7 +3951,7 @@
             "id": 58,
             "nombre": "Sandalias con apliques de símil en blanco",
             "marca": "batistella",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Para darle un toque divertido a esta temporada... estas sandalias no le pueden faltar. Para ellas que quieren lucirse y darle un toque canchero a su estilo... De diseño original....y muy combinable.",
             "precio": 10.50,
             "oferta": {
                 "offActiva": false,
@@ -3920,7 +4002,7 @@
             "id": 59,
             "nombre": "Zapatillas de símil con tachas en plata",
             "marca": "batistella",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Las zapatillas marcan tendencia esta temporada. Las zapatillas son de símil cuero, totalmente forradas en su interior en poliéster. La planta es de goma y el acceso es mediante cordones, los cuales regulan el agarre del pie. El diseño combina lo metalizado que se impone esta temporada con detalles de tachas. Porque queremos que ellas se luzcan en sus looks. No te pierdas este modelo súper original!",
             "precio": 13.50,
             "oferta": {
                 "offActiva": false,
@@ -3971,7 +4053,7 @@
             "id": 60,
             "nombre": "Botas cortas de cuero con herrajes en oxido",
             "marca": "batistella",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Para las clásicas... se mantiene este diseño súper combinable. Las botas cortas con herraje le da un toque elegante al modelo simple. Además de su estilo excepcional, nuestras botas están diseñadas pensando en tu comodidad. Explora nuestra tienda en línea ahora y encuentra el par de botas cortas con herrajes que añadirá un toque de sofisticación y audacia a tu estilo personal. ¡Haz una declaración de moda audaz y elegante en cada paso que des!",
             "precio": 20.50,
             "oferta": {
                 "offActiva": false,
@@ -4022,7 +4104,7 @@
             "id": 61,
             "nombre": "Borcego con puño de símil en natural",
             "marca": "batistella",
-            "descripcion": "algo hay que poner",
+            "descripcion": "Los borcegos clásicos son de tipo alpino. La combinación con puño le da un toque más urbano. Porque sabemos lo que estas buscando para sentirte a la moda!",
             "precio": 25.50,
             "oferta": {
                 "offActiva": false,
@@ -4073,7 +4155,7 @@
             "id": 62,
             "nombre": "CALZAS LARGAS FAST IMPACT X-CITY REFLECT AT NIGHT",
             "marca": "adidas",
-            "descripcion": "algo hay que poner",
+            "descripcion": "La colección X-City Reflect At Night se ha diseñado para tu próxima carrera. Combina siluetas elegantes con elementos fluorescentes que brillan en la oscuridad para resaltar los movimientos del cuerpo y garantizar un estilo impecable. La biomoción aprovecha la capacidad innata de los humanos para reconocer a otros humanos por sus movimientos. — Benedikt Lüdke, diseñador sénior de prendas de running para hombre",
             "precio": 25.50,
             "oferta": {
                 "offActiva": false,
@@ -4396,7 +4478,7 @@
             "id": 67,
             "nombre": "Pantalón Elías 1 Pinza",
             "marca": "toche",
-            "descripcion": "Pantalón de vestir liso; finished like S´100. Tiro medio, regular fit, con una pinza. Posee bolsillos laterales y bolsillos traseros con dos vivos. Acceso con cierre, botón y gancho metálico.",
+            "descripcion": "Pantalón de vestir liso. Tiro medio, regular fit, con una pinza. Posee bolsillos laterales y bolsillos traseros con dos vivos. Acceso con cierre, botón y gancho metálico.",
             "precio": 50.50,
             "oferta": {
                 "offActiva": false,
@@ -5202,6 +5284,288 @@
                         },
                         {
                             "talla": "40",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 82,
+            "nombre": "Short Topper Unisex Rx3 Baumm Beige",
+            "marca": "topper",
+            "descripcion": "El Short Topper Rx3 Baumm es perfecto para los días en los que la comodidad es tu objetivo principal. La parte superior holgada y los bolsillos laterales marcan el diseño de este short. El detalle de la cinta tejida aplicada en el lateral exclusiva de la línea. El elástico y el cordón de ajuste te darán el calce perfecto.",
+            "precio": 30.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": true,
+            "categoria": "adulto",
+            "genero": "unisex",
+            "subcategoria": "Shorts",
+            "imagen": [
+                "https://sportotalar.vtexassets.com/arquivos/ids/411645-1600-1600?v=638128616963970000&width=1600&height=1600&aspect=true",
+                "https://sportotalar.vtexassets.com/arquivos/ids/411646-1600-1600?v=638128616979330000&width=1600&height=1600&aspect=true"
+            ],
+            "tallas": [
+                "S",
+                "M",
+                "L"
+            ],
+            "colores": [
+              "blanco"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#FFFFFF",
+                        "nombreColor": "blanco"
+                    },
+                    "talles": [
+                        {
+                            "talla": "S",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "M",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "L",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 83,
+            "nombre": "Remera Salpa Unisex Termica Pro Tecnica Blanca",
+            "marca": "Salpa",
+            "descripcion": "Remera termica",
+            "precio": 63.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": true,
+            "categoria": "adulto",
+            "genero": "unisex",
+            "subcategoria": "Camisetas de Deporte",
+            "imagen": [
+                "https://sportotalar.vtexassets.com/arquivos/ids/357487-1600-1600?v=637903169480030000&width=1600&height=1600&aspect=true"
+            ],
+            "tallas": [
+                "S",
+                "M",
+                "L"
+            ],
+            "colores": [
+                "blanco"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#FFFFFF",
+                        "nombreColor": "blanco"
+                    },
+                    "talles": [
+                        {
+                            "talla": "S",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "M",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "L",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 84,
+            "nombre": "Campera Snauwaert Unisex Lautel Gris/Amarillo",
+            "marca": "Snauwaert",
+            "descripcion": "Actividad: Training - Tipo de tela: Microfibra elastizada. - Composición: Poliester. - Temporada de lanzamiento: Otoño/ Invierno. - Usos recomendados: Deportivo,Urbano. - Es deportiva: Sí. - Con capucha: Sí. - Es impermeable: No. - Es térmica: No. - Es liviana: Sí.",
+            "precio": 50.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": true,
+            "categoria": "adulto",
+            "genero": "unisex",
+            "subcategoria": "Chaquetas y Abrigos",
+            "imagen": [
+                "https://sportotalar.vtexassets.com/arquivos/ids/434311-1600-1600?v=638225404373900000&width=1600&height=1600&aspect=true"
+            ],
+            "tallas": [
+                "S",
+                "M",
+                "L"
+            ],
+            "colores": [
+                "gris"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#808080",
+                        "nombreColor": "gris"
+                    },
+                    "talles": [
+                        {
+                            "talla": "S",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "M",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "L",
+                            "stock": 20
+                        }
+                    ]
+                },
+                {
+                    "color": {
+                        "codHexadecimal": "#FFFFFF",
+                        "nombreColor": "blanco"
+                    },
+                    "talles": [
+                        {
+                            "talla": "38",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "39",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "40",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 85,
+            "nombre": "Chaleco Vitnik Unisex Micropolar Cagliari Negro",
+            "marca": "Vitnik",
+            "descripcion": "Chaleco Cagliari. Micropolar negro, tiene bolsillo con cierre en espalda y apertura en laterales. Se pliega para guardarlo en los bolsillos del Jersey.",
+            "precio": 33.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": true,
+            "categoria": "adulto",
+            "genero": "unisex",
+            "subcategoria": "Chalecos",
+            "imagen": [
+                "https://sportotalar.vtexassets.com/arquivos/ids/408200-1600-1600?v=638103522804000000&width=1600&height=1600&aspect=true",
+                "https://sportotalar.vtexassets.com/arquivos/ids/408201-1600-1600?v=638103522889900000&width=1600&height=1600&aspect=true"
+            ],
+            "tallas": [
+                "S",
+                "M",
+                "L"
+            ],
+            "colores": [
+                "negro"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#000000",
+                        "nombreColor": "negro"
+                    },
+                    "talles": [
+                        {
+                            "talla": "S",
+                            "stock": 10
+                        },
+                        {
+                            "talla": "M",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "L",
+                            "stock": 20
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": 86,
+            "nombre": "CARDIGAN UNISEX",
+            "marca": "mini-granada",
+            "descripcion": "Cardigan de hilo de algodon UNISEX con botones y bolsillos en el frente. Idel para combinar con todas nuestras prendas. Es liviano y muy comodo. Viene en 2 colores dulce de leche y azulino.",
+            "precio": 10.50,
+            "oferta": {
+                "offActiva": false,
+                "Descuento": 0
+            },
+            "activo": true,
+            "productoNuevo": true,
+            "categoria": "adulto",
+            "genero": "unisex",
+            "subcategoria": "Cardigans y Suéteres",
+            "imagen": [
+                "https://dcdn.mitiendanube.com/stores/785/136/products/whatsapp-image-2021-12-10-at-18-35-361-e384235c063103109816392372840580-480-0.webp",
+                "https://dcdn.mitiendanube.com/stores/785/136/products/whatsapp-image-2021-12-10-at-18-35-36-11-19da62f77ac6a7d03016392372841507-640-0.webp",
+                "https://dcdn.mitiendanube.com/stores/785/136/products/whatsapp-image-2021-12-10-at-18-35-36-21-e0c8fdef775029dd0616392372840765-640-0.webp",
+                ""
+            ],
+            "tallas": [
+                "M",
+                "L"
+            ],
+            "colores": [
+                "dulce de leche",
+                "azulino"
+            ],
+            "opcion": [
+                {
+                    "color": {
+                        "codHexadecimal": "#d4c8b6",
+                        "nombreColor": "dulce de leche"
+                    },
+                    "talles": [
+                        {
+                            "talla": "M",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "L",
+                            "stock": 20
+                        }
+                    ]
+                },
+                {
+                    "color": {
+                        "codHexadecimal": "#191970",
+                        "nombreColor": "azulino"
+                    },
+                    "talles": [
+                        {
+                            "talla": "M",
+                            "stock": 15
+                        },
+                        {
+                            "talla": "L",
                             "stock": 20
                         }
                     ]
