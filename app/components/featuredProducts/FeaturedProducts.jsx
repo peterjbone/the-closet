@@ -6,6 +6,7 @@ import Link from "next/link";
 import FeaturedProductItem from "./FeaturedProductsItem";
 
 function FeaturedProducts() {
+	//! HARDCODEO, buscar productos en la DB
 	const currentCategory = data.find((item) => item.categoria === "destacados");
 	const { productos } = currentCategory;
 

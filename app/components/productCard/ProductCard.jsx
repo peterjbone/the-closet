@@ -16,7 +16,8 @@ function ProductCard({
 	genero,
 	imagen,
 	tallas,
-	colores
+	colores,
+	productoNuevo
 }) {
 	//? Formateando el nombre a parametro
 	let nombreParam = "";
@@ -45,11 +46,14 @@ function ProductCard({
 					src={imagen[0]}
 					alt={nombre}
 					className="card-img"
-				/>
+        />
         <div className="card-details">
           <section className="mb-6">
             <h3 className="text-2xl">{nombre.toUpperCase()}</h3>
             <p className="font-semibold italic">{marca}</p>
+            {
+              productoNuevo && <p className="text-red-600">NUEVO</p>
+            }
           </section>
           <p className="font-semibold"> {categoria} & {genero} </p>
           <p className="mb-4"> {coloresSintaxis} </p>

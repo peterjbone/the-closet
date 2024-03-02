@@ -19,20 +19,56 @@ function CategoryFilters({ handleRadioChange }) {
 				</label>
 				<InputFilters
 					handleRadioChange={handleRadioChange}
-					value="prendaSuperior"
-					title="Prenda Superior"
+					value="Camisetas y Polos"
+					title="Camisetas y Polos"
 					name="test"
 				/>
 				<InputFilters
 					handleRadioChange={handleRadioChange}
-					value="prendaInferior"
-					title="Prenda Inferior"
+					value="Chaquetas y Abrigos"
+					title="Chaquetas y Abrigos"
 					name="test"
 				/>
 				<InputFilters
 					handleRadioChange={handleRadioChange}
-					value="calsado"
-					title="Calzado"
+					value="Sudaderas y Hoodies"
+					title="Sudaderas y Hoodies"
+					name="test"
+				/>
+				<InputFilters
+					handleRadioChange={handleRadioChange}
+					value="Pantalones Cortos de Ciclismo"
+					title="Pantalones Cortos de Ciclismo"
+					name="test"
+				/>
+				<InputFilters
+					handleRadioChange={handleRadioChange}
+					value="Pantalones Formales"
+					title="Pantalones Formales"
+					name="test"
+				/>
+				<InputFilters
+					handleRadioChange={handleRadioChange}
+					value="Leggings y Pantalones Deportivos"
+					title="Leggings y Pantalones Deportivos"
+					name="test"
+				/>
+				<InputFilters
+					handleRadioChange={handleRadioChange}
+					value="Faldas"
+					title="Faldas"
+					name="test"
+				/>
+				<InputFilters
+					handleRadioChange={handleRadioChange}
+					value="Zapatillas de Casa"
+					title="Zapatillas de Casa"
+					name="test"
+				/>
+				<InputFilters
+					handleRadioChange={handleRadioChange}
+					value="Botas"
+					title="Botas"
 					name="test"
 				/>
 			</div>
