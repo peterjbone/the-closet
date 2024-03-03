@@ -25,6 +25,7 @@
     "zustand": "^4.5.1"
   },
   "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
     "@types/bcryptjs": "^2.4.6",
     "@types/react": "^18.2.57",
     "autoprefixer": "^10.0.1",
