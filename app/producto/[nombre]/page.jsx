@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FaCartShopping } from "react-icons/fa6";
 import { AiFillMinusSquare } from "react-icons/ai";
 import { RiAddBoxFill } from "react-icons/ri";
-import data from "@/app/utils/db.json";
+import data from "@/app/utils/todosProductos2";
 
 /**
  * Esta función busca un producto específico de
@@ -15,18 +15,16 @@ function findProduct(param) {
   let product = {};
 
   data.forEach((item) => {
-    item.productos.forEach((subitem) => {
-      const nombreParam = subitem.nombre
-        .split(" ")
-        .join("-")
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "");
+    const nombreParam = item.nombre
+      .split(" ")
+      .join("-")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
 
-      if (nombreParam === param) {
-        product = subitem;
-      }
-    });
+    if (nombreParam === param) {
+      product = item;
+    }
   });
 
   return product;
@@ -168,6 +166,14 @@ function Page({ params }) {
 			? "bg-orange-600"
 			: color == "amarillo"
 			? "bg-yellow-400"
+      : color == "salmon"
+			? "bg-rose-400"
+      : color == "mate"
+			? "bg-lime-600"
+      : color == "multiples"
+			? "bg-gradient-to-br from-black via-white to-blue-500"
+      : color == "gris ceniza"
+			? "bg-gray-300 border border-gray-400"
 			: ""
 		}`}
 	  ></span>
