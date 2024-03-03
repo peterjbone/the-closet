@@ -9,12 +9,8 @@ export const handler = NextAuth({
 		CredentialsProvider({
 			name: "credentials",
 			credentials: {
-				email: { label: "Email", type: "email", placeholder: "jsmith" },
-				password: {
-					label: "Password",
-					type: "password",
-					placeholder: "*********"
-				}
+				email: { label: "Email", type: "email" },
+				password: { label: "Password", type: "password" }
 			},
 			async authorize(credentials, req) {
 				await connectDB();
@@ -22,6 +18,7 @@ export const handler = NextAuth({
 				const userFound = await Usuario.findOne({
 					email: credentials.email
 				}).select("+password");
+
 				if (!userFound) throw new Error("Email no encontrado.");
 
 				const passwordMatch = await bcrypt.compare(

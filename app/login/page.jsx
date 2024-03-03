@@ -117,9 +117,9 @@ function LoginPage() {
       <form
         onSubmit={handleSubmit}
         className="
-        bg-slate-400  
-        text-xl
+        bg-slate-500 
         text-white
+        text-xl
         flex
         flex-col
         justify-center
@@ -137,12 +137,7 @@ function LoginPage() {
 					type="email"
 					placeholder="pablito@gmail.com"
 					name="email"
-          className={`
-          bg-zinc-800 
-            px-4 
-            py-2 
-            block
-            `}/>
+          className="bg-zinc-800 px-4 py-2 block"/>
         <input
           id="password"
 					type="password"

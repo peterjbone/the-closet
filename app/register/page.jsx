@@ -1,15 +1,44 @@
 "use client";
 
-//import { toast } from "react-hot-toast";
-//import "animate.css";
-import axios, { AxiosError } from "axios";
-import React, { useState } from "react";
+import "animate.css";
+import { toast } from "react-hot-toast";
+import axios from "axios";
+import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+import validation from "../utils/validation.js";
 
 function RegisterPage() {
 	const router = useRouter();
 
+	const [userData, setUserData] = useState({
+		fullname: "",
+		email: "",
+		password: ""
+	});
+
+	const [errors, setErrors] = useState({
+		fullname: "Ingrese su nombre.",
+		email: "Ingrese su correo.",
+		password: "Ingrese su contraseña"
+	});
+
+	//? Agarrandome el cambio de los inputs y validando inputs
+	function handleChange(event) {
+		const { name, value } = event.target;
+		setUserData({
+			...userData,
+			[name]: value
+		});
+		setErrors(
+			validation({
+				...userData,
+				[name]: value
+			})
+		);
+	}
+
+	//? Registro y Login para el boton submit
 	async function handleSubmit(e) {
 		e.preventDefault();
 
@@ -21,73 +50,128 @@ function RegisterPage() {
 				email: formData.get("email"),
 				password: formData.get("password")
 			});
-			console.log("Respuesta del backkend", signupResponse);
+			console.log("Respuesta del backend", signupResponse);
 
-			const res = await signIn("credentials", {
+			const loginResponse = await signIn("credentials", {
 				email: signupResponse.data.email,
 				password: formData.get("password"),
 				redirect: false
 			});
+			console.log("Respuesta del login de Next Auth", loginResponse);
 
-			console.log("Respuesta del signIn de Next Auth", res);
-
-			if (res.ok) return router.push("/");
+			if (loginResponse.ok) return router.push("/");
 		} catch (error) {
-			console.log(error);
-			if (error instanceof AxiosError) {
-				setError(error.response.data.message);
+			//console.log(error);
+			//console.log(error.response.data.message);
+
+			if (document.getElementById("notifyEmail") === null) {
+				const messageEmail = document.createElement("div");
+				messageEmail.id = "notifyEmail";
+				messageEmail.style.display = "none";
+				document
+					.getElementById("email")
+					.insertAdjacentElement("beforebegin", messageEmail);
 			}
+			const messageEmail = document.getElementById("notifyEmail");
+			messageEmail.textContent = error.response.data.message;
+			messageEmail.className =
+				"border-[5px] border-red-500 bg-red-500 text-white px-4 py-2";
+			messageEmail.style.display = "block";
+
+			const emailInput = document.getElementById("email");
+			emailInput.classList.add(
+				"border-[5px]",
+				"border-red-700",
+				"animate__animated",
+				"animate__shakeX"
+			);
+
+			emailInput.addEventListener("input", (e) => {
+				if ("block" === messageEmail.style.display) {
+					emailInput.classList.remove(
+						"border-[5px]",
+						"border-red-700",
+						"animate__animated",
+						"animate__shakeX"
+					);
+					messageEmail.style.display = "none";
+				}
+			});
 		}
 	}
 
 	/* prettier-ignore */
 	return (
-		<div className="h-[80vh] flex flex-row items-center justify-center">
-      <form
-        onSubmit={handleSubmit}
-        className="
-        bg-slate-400  
+		<div className="h-[100vh] flex flex-row items-center justify-center">
+			<form
+				onSubmit={handleSubmit}
+				className="
+       bg-slate-500 
+      text-white
         text-xl
-        text-white
-        p-6
         flex
         flex-col
+        justify-center
         gap-4
-        w-2/5 h-[400px]">
-
-				<h1 className="text-center text-2xl font-bold">Registro</h1>
+        w-2/5
+        min-w-[400px]
+        max-w-[450px]
+        py-12
+        px-6
+        ">
+				<h1 className="text-center text-4xl font-bold mb-6">Crea una cuenta</h1>
 				<input
+					id="fullname"
 					type="text"
-					placeholder="John Doe"
 					name="fullname"
-          className="
-            bg-zinc-800
-            px-4
-            py-2
-            block
-            "/>
-        <input
-          id="email"
-					type="email"
-					placeholder="pablito@gmail.com"
-					name="email"
-          className={`
-          bg-zinc-800 
-            px-4 
-            py-2 
-            block
-            `}/>
-				<input
-					type="password"
-					placeholder="***********"
-					name="password"
+					value={userData.fullname}
+					placeholder="John Doe"
+					onChange={handleChange}
 					className="bg-zinc-800 px-4 py-2 block"
 				/>
-        <button
-          type="submit"
-          className="bg-indigo-500 px-4 py-2">
-          Registrarse
-        </button>
+				<p className="text-center text-2xl text-[#fa0] font-bold -mt-4">
+					{errors.fullname && errors.fullname}
+				</p>
+				<input
+					id="email"
+					type="email"
+					name="email"
+					value={userData.email}
+					placeholder="john@gmail.com"
+					onChange={handleChange}
+					className="bg-zinc-800 px-4 py-2 block"
+				/>
+				<p className="text-center text-2xl text-[#fa0] font-bold -mt-4">
+					{errors.email && errors.email}
+				</p>
+				<input
+					id="password"
+					type="password"
+					name="password"
+					value={userData.password}
+					placeholder="***********"
+					onChange={handleChange}
+					className="bg-zinc-800 px-4 py-2 block"
+				/>
+				<p className="text-center text-2xl text-[#fa0] font-bold -mt-4">
+					{errors.password && errors.password}
+				</p>
+				<button
+					type="submit"
+					disabled={!errors.fullname && !errors.email && !errors.password ? false : true}
+					className={`
+          bg-indigo-500
+            px-4
+            py-2
+            transition
+            hover:cursor-pointer
+            hover:brightness-75
+            disabled:brightness-100
+            disabled:grayscale
+            disabled:cursor-default
+          `}>
+					Registrarse
+				</button>
 			</form>
 		</div>
 	);
