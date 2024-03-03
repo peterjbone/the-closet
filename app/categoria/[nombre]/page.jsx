@@ -2,13 +2,13 @@
 
 import "./style.css";
 import { useEffect, useState } from "react";
-import { useProductsStore } from "@/app/hooks/productsStore";
+import { useProductsStore } from "../../hooks/productsStore.js";
 
 //? Importando componentes a usar
-import ProductCard from "@/app/components/productCard/ProductCard";
-import CategoryNav from "@/app/components/categoryNav/CategoryNav";
-import Recommended from "@/app/components/recommended/Recommended";
-import Sidebar from "@/app/components/sideBar/Sidebar";
+import ProductCard from "../../components/productCard/ProductCard.jsx";
+import CategoryNav from "../../components/categoryNav/CategoryNav";
+import Recommended from "../../components/recommended/Recommended";
+import Sidebar from "../../components/sideBar/Sidebar";
 
 function Page({ params }) {
   /* prettier-ignore */
@@ -118,7 +118,7 @@ function Page({ params }) {
 
   //? Estos son todos los productos de determinada categoría (sin filtros aplicados)
   let productos = allProducts;
-  console.log(productos);
+  //console.log(productos);
 
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [query, setQuery] = useState("");

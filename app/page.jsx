@@ -4,6 +4,7 @@ import CategoryBanner from "./components/categoryBanner/CategoryBanner";
 import FeaturedProducts from "./components/featuredProducts/FeaturedProducts";
 import Collections from "./components/collections/Collections";
 import TrendProducts from "./components/trendProducts/TrendProducts";
+import Footer from "./components/footer/Footer";
 
 function Home() {
 	/* prettier-ignore*/
@@ -14,7 +15,8 @@ function Home() {
       <CategoryBanner /> 
       <FeaturedProducts />
       <Collections />
-      <TrendProducts/>
+      <TrendProducts />
+      <Footer/>
 		</>
 	);
 }

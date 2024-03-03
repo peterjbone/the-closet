@@ -8,9 +8,7 @@ if (!MONGODB_URI) {
 
 export async function connectDB() {
 	try {
-		const { connection } = await mongoose.connect(
-			"mongodb://localhost:27017/thecloset"
-		);
+		const { connection } = await mongoose.connect(MONGODB_URI);
 		if (connection.readyState === 1) {
 			console.log("MongoDB connected 👍");
 			return Promise.resolve(true);

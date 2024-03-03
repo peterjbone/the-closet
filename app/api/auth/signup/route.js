@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import bcrypt from "bcrypt";
-import Usuario from "@/app/models/Usuarios.js";
-import { connectDB } from "@/app/libs/mongodb.js";
+import Usuario from "../../../models/Usuarios.js";
+import { connectDB } from "../../../libs/mongodb.js";
 
 export async function POST(request) {
 	const { fullname, email, password } = await request.json();
@@ -26,7 +26,7 @@ export async function POST(request) {
 		if (userFound) {
 			return NextResponse.json(
 				{
-					message: "Email already exists"
+					message: "El email ya existe."
 				},
 				{ status: 409 }
 			);
@@ -35,7 +35,7 @@ export async function POST(request) {
 		// Encriptando contraseña
 		const hashedPassword = await bcrypt.hash(password, 12);
 
-		// Sino existe lo creamos / insertamos en la BD
+		// Se inserta el usuario en la BD
 		const user = new Usuario({
 			fullname,
 			email,
