@@ -1,17 +1,15 @@
-import { regexEmail, regexPassword, regexFullname } from "./constants.js";
+import { regexEmail, regexPassword, regexname } from "./constants.js";
 
 function validation(input) {
 	const errors = {};
 
-	//* fullname
-	if (!input.fullname) errors.fullname = "Debe ingresar un nombre.";
+	//* name
+	if (!input.name) errors.name = "Debe ingresar un nombre.";
 	else {
-		if (!regexFullname.test(input.fullname))
-			errors.fullname = "Ingrese un nombre válido.";
-		if (input.fullname.length < 3)
-			errors.fullname = "Debe tener más de 3 caracteres";
-		if (input.fullname.length > 30)
-			errors.fullname = "Debe tener menos de 30 caracteres";
+		if (!regexname.test(input.name)) errors.name = "Ingrese un nombre válido.";
+		if (input.name.length < 3) errors.name = "Debe tener más de 3 caracteres";
+		if (input.name.length > 30)
+			errors.name = "Debe tener menos de 30 caracteres";
 	}
 
 	//*email

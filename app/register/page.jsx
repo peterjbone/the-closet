@@ -7,18 +7,19 @@ import { useState } from "react";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import validation from "../utils/validation.js";
+import { FcGoogle } from "react-icons/fc";
 
 function RegisterPage() {
 	const router = useRouter();
 
 	const [userData, setUserData] = useState({
-		fullname: "",
+		name: "",
 		email: "",
 		password: ""
 	});
 
 	const [errors, setErrors] = useState({
-		fullname: "Ingrese su nombre.",
+		name: "Ingrese su nombre.",
 		email: "Ingrese su correo.",
 		password: "Ingrese su contraseña"
 	});
@@ -38,32 +39,44 @@ function RegisterPage() {
 		);
 	}
 
-	//? Registro y Login para el boton submit
-	async function handleSubmit(e) {
+	//? Registro y Login con CREDENCIALES
+	async function handleSubmitCrendentials(e) {
 		e.preventDefault();
 
 		const formData = new FormData(e.currentTarget);
 
 		try {
 			const signupResponse = await axios.post("/api/auth/signup", {
-				fullname: formData.get("fullname"),
+				name: formData.get("name"),
 				email: formData.get("email"),
 				password: formData.get("password")
 			});
-			console.log("Respuesta del backend", signupResponse);
+			console.log("BACKEND SIGNUP RESPONSE - CREDENTIALS");
+			console.log(signupResponse);
 
 			const loginResponse = await signIn("credentials", {
 				email: signupResponse.data.email,
 				password: formData.get("password"),
 				redirect: false
 			});
-			console.log("Respuesta del login de Next Auth", loginResponse);
+			console.log("NEXTAUTH SIGNIN RESPONSE - CREDENTIALS");
+			console.log(loginResponse);
 
-			if (loginResponse.ok) return router.push("/");
+			if (loginResponse.ok) {
+				router.push("/");
+				toast.promise(
+					new Promise((resolve) => setTimeout(() => resolve(true), 1000)),
+					{
+						loading: "Validando cuenta...",
+						success: <b>Sesión iniciada con éxito.</b>,
+						error: <b>Algo salió mal.</b>
+					}
+				);
+				return loginResponse.ok;
+			}
+
+			//* Entra a este error cuando el email ya existe.
 		} catch (error) {
-			//console.log(error);
-			//console.log(error.response.data.message);
-
 			if (document.getElementById("notifyEmail") === null) {
 				const messageEmail = document.createElement("div");
 				messageEmail.id = "notifyEmail";
@@ -100,11 +113,27 @@ function RegisterPage() {
 		}
 	}
 
+	//? Registro y login con GOOGLE
+	async function handleSubmitGoogle() {
+		try {
+			const loginResponse = await signIn("google");
+
+			console.log("NEXTAUTH SIGNUP AND SIGNIN RESPONSE - GOOGLE");
+			console.log(loginResponse);
+
+			if (loginResponse.ok) return router.push("/");
+
+			//* Entra por algún error interno de NextAuth o Google
+		} catch (error) {
+			console.log(error);
+		}
+	}
+
 	/* prettier-ignore */
 	return (
 		<div className="h-[100vh] flex flex-row items-center justify-center">
 			<form
-				onSubmit={handleSubmit}
+				onSubmit={handleSubmitCrendentials}
 				className="
        bg-slate-500 
       text-white
@@ -121,16 +150,16 @@ function RegisterPage() {
         ">
 				<h1 className="text-center text-4xl font-bold mb-6">Crea una cuenta</h1>
 				<input
-					id="fullname"
+					id="name"
 					type="text"
-					name="fullname"
-					value={userData.fullname}
+					name="name"
+					value={userData.name}
 					placeholder="John Doe"
 					onChange={handleChange}
 					className="bg-zinc-800 px-4 py-2 block"
 				/>
 				<p className="text-center text-2xl text-[#fa0] font-bold -mt-4">
-					{errors.fullname && errors.fullname}
+					{errors.name && errors.name}
 				</p>
 				<input
 					id="email"
@@ -158,7 +187,7 @@ function RegisterPage() {
 				</p>
 				<button
 					type="submit"
-					disabled={!errors.fullname && !errors.email && !errors.password ? false : true}
+					disabled={!errors.name && !errors.email && !errors.password ? false : true}
 					className={`
           bg-indigo-500
             px-4
@@ -171,7 +200,22 @@ function RegisterPage() {
             disabled:cursor-default
           `}>
 					Registrarse
-				</button>
+        </button>
+        <hr className="border-white" />
+        <button
+          onClick={handleSubmitGoogle}
+          className="
+           px-6
+           py-4
+         bg-white
+         text-black
+           rounded-lg
+           w-full
+           relative
+           hover:opacity-80">
+          <FcGoogle size={24} className="absolute top-5 left-4"/>
+          Registrarse con Google
+        </button>
 			</form>
 		</div>
 	);

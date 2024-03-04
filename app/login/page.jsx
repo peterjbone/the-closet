@@ -4,6 +4,7 @@ import "animate.css";
 import { toast } from "react-hot-toast";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
+//import { FcGoogle } from "react-icons/fc";
 
 function LoginPage() {
 	const router = useRouter();
@@ -11,8 +12,10 @@ function LoginPage() {
 	async function handleSubmit(e) {
 		e.preventDefault();
 
+		//* Referenciando el formulario
 		const formData = new FormData(e.currentTarget);
 
+		//* Enviando el email y password al signin de credenciales
 		const res = await signIn("credentials", {
 			email: formData.get("email"),
 			password: formData.get("password"),
@@ -30,7 +33,7 @@ function LoginPage() {
 					error: <b>Algo salió mal.</b>
 				}
 			);
-			return res.ok;
+			return res.ok; // para que no se ejecute los errores de abajo
 		}
 
 		//* Error por email
@@ -107,8 +110,9 @@ function LoginPage() {
 			});
 		}
 
-		//* Mensaje por consola
-		console.log("Respuesta del signIn de Next Auth", res);
+		//* Mensaje por consola - Errores
+		console.log("NEXTAUTH SIGNIN RESPONSE - CREDENTIALS");
+		console.log(res);
 	}
 
 	/* prettier-ignore */

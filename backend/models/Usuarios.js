@@ -12,11 +12,11 @@ const UserSchema = new Schema({
 		required: [true, "Password is required"],
 		select: false
 	},
-	fullname: {
+	name: {
 		type: String,
-		required: [true, "Fullname is required"],
-		minLength: [6, "Fullname must be at least 6 characters"],
-		maxLength: [35, "Fullname must be at most 35 characters"]
+		required: [true, "name is required"],
+		minLength: [6, "name must be at least 6 characters"],
+		maxLength: [35, "name must be at most 35 characters"]
 	}
 });
 

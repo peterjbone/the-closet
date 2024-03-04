@@ -1,23 +1,36 @@
 import { Schema, model, models } from "mongoose";
 
 const UserSchema = new Schema({
+	name: {
+		type: String,
+		required: true
+	},
 	email: {
 		type: String,
 		unique: true,
-		required: true,
-		match: [/^[^\s@]+@[^\s@]+\.[^\s@]+$/, "Email is not valid."]
+		required: true
 	},
-	password: {
-		type: String,
-		required: [true, "Password is required"],
-		select: false
+	emailVerified: {
+		type: Boolean,
+		unique: true
 	},
-	fullname: {
-		type: String,
-		required: [true, "Fullname is required"],
-		minLength: [4, "Fullname must be at least 4 characters"],
-		maxLength: [35, "Fullname must be at most 35 characters"]
-	}
+	password: String,
+	image: String,
+	createdAt: {
+		type: Date,
+		immutable: true,
+		default: () => Date.now()
+	},
+	updatedAt: {
+		type: Date,
+		default: () => Date.now()
+	},
+	accounts: [
+		{
+			type: Schema.Types.ObjectId,
+			ref: "Cuenta"
+		}
+	]
 });
 
 // La lógica aqui evita que se cree un nuevo modelo cada vez que una ruta lo llama

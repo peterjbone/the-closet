@@ -1,20 +1,14 @@
+//! Esto es solo para el SIGNUP CON CREDENCIALES
+
 import { NextResponse } from "next/server";
 import bcrypt from "bcrypt";
-import Usuario from "../../../models/Usuarios.js";
+
 import { connectDB } from "../../../libs/mongodb.js";
+import Usuario from "../../../models/Usuarios.js";
+import Cuentas from "../../../models/Cuentas.js";
 
 export async function POST(request) {
-	const { fullname, email, password } = await request.json();
-
-	//? Validando password
-	/* 	if (!password || password.length < 6) {
-		return NextResponse.json(
-			{
-				message: "The password must be at least 6 characters long."
-			},
-			{ status: 400 }
-		);
-	} */
+	const { name, email, password } = await request.json();
 
 	//? Inicio de los procesos asíncronos en MongoDB
 	try {
@@ -37,7 +31,7 @@ export async function POST(request) {
 
 		//? Se inserta el usuario en la BD
 		const user = new Usuario({
-			fullname,
+			name,
 			email,
 			password: hashedPassword
 		});
@@ -46,7 +40,7 @@ export async function POST(request) {
 		//? Devolviendo al Usuario si se creo en la base de datos
 		return NextResponse.json({
 			id: savedUser._id,
-			fullname: savedUser.fullname,
+			name: savedUser.name,
 			email: savedUser.email
 		});
 	} catch (error) {
