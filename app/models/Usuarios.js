@@ -10,10 +10,7 @@ const UserSchema = new Schema({
 		unique: true,
 		required: true
 	},
-	emailVerified: {
-		type: Boolean,
-		unique: true
-	},
+	emailVerified: Boolean,
 	password: String,
 	image: String,
 	createdAt: {

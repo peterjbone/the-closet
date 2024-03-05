@@ -20,7 +20,8 @@ export const authOptions = {
 	providers: [
 		GoogleProvider({
 			clientId: process.env.GOOGLE_CLIENT_ID,
-			clientSecret: process.env.GOOGLE_CLIENT_SECRET
+			clientSecret: process.env.GOOGLE_CLIENT_SECRET,
+			callbackUrl: "http://localhost:3000/api/auth/callback/google"
 		}),
 		CredentialsProvider({
 			name: "credentials",
@@ -53,8 +54,15 @@ export const authOptions = {
 			if (user) token.user = user;
 			return token;
 		},
-		session({ session, token, user, account, profile }) {
+		session({ session, token }) {
 			session.user = token.user;
+			console.log("SESSION");
+			console.log(session);
+			console.log("TOKEN");
+			console.log(token);
+			// user - no existe
+			// account - no existe
+			// profile - no existe
 			return token;
 		},
 		async signIn({ user, account, profile }) {
@@ -111,6 +119,9 @@ export const authOptions = {
 				console.log(error);
 			}
 			return true; // Devuelve true para permitir el inicio de sesión
+		},
+		async redirect({ url, baseUrl }) {
+			return baseUrl + "/";
 		}
 	},
 	pages: {

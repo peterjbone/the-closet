@@ -8,9 +8,12 @@ import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import validation from "../utils/validation.js";
 import { FcGoogle } from "react-icons/fc";
+import Link from "next/link";
+import PacmanLoader from "react-spinners/PacmanLoader";
 
 function RegisterPage() {
 	const router = useRouter();
+	const [isLoading, setIsLoading] = useState(false);
 
 	const [userData, setUserData] = useState({
 		name: "",
@@ -26,6 +29,7 @@ function RegisterPage() {
 
 	//? Agarrandome el cambio de los inputs y validando inputs
 	function handleChange(event) {
+		setIsLoading(false);
 		const { name, value } = event.target;
 		setUserData({
 			...userData,
@@ -45,6 +49,8 @@ function RegisterPage() {
 
 		const formData = new FormData(e.currentTarget);
 
+		setIsLoading(true);
+
 		try {
 			const signupResponse = await axios.post("/api/auth/signup", {
 				name: formData.get("name"),
@@ -63,20 +69,40 @@ function RegisterPage() {
 			console.log(loginResponse);
 
 			if (loginResponse.ok) {
-				router.push("/");
 				toast.promise(
-					new Promise((resolve) => setTimeout(() => resolve(true), 1000)),
+					new Promise((resolve) => setTimeout(() => resolve(true), 2000)),
 					{
-						loading: "Validando cuenta...",
-						success: <b>Sesión iniciada con éxito.</b>,
+						loading: "Creando cuenta...",
+						success: (
+							<b className="text-center text-lg">
+								Cuenta creada y sesión iniciada con éxito.
+							</b>
+						),
 						error: <b>Algo salió mal.</b>
+					},
+					{
+						success: {
+							style: {
+								border: "3px solid #0f0",
+								padding: "1rem"
+							}
+						},
+						error: {
+							style: {
+								border: "2px solid #f00",
+								padding: "1rem"
+							}
+						}
 					}
 				);
-				return loginResponse.ok;
+				router.push("/");
+				return loginResponse.ok; //para que no ejecute más codigo
 			}
 
 			//* Entra a este error cuando el email ya existe.
 		} catch (error) {
+			setIsLoading(false);
+
 			if (document.getElementById("notifyEmail") === null) {
 				const messageEmail = document.createElement("div");
 				messageEmail.id = "notifyEmail";
@@ -116,12 +142,7 @@ function RegisterPage() {
 	//? Registro y login con GOOGLE
 	async function handleSubmitGoogle() {
 		try {
-			const loginResponse = await signIn("google");
-
-			console.log("NEXTAUTH SIGNUP AND SIGNIN RESPONSE - GOOGLE");
-			console.log(loginResponse);
-
-			if (loginResponse.ok) return router.push("/");
+			await signIn("google");
 
 			//* Entra por algún error interno de NextAuth o Google
 		} catch (error) {
@@ -158,7 +179,7 @@ function RegisterPage() {
 					onChange={handleChange}
 					className="bg-zinc-800 px-4 py-2 block"
 				/>
-				<p className="text-center text-2xl text-[#fa0] font-bold -mt-4">
+				<p className="text-center text-xl text-[#fa0] font-bold -mt-4">
 					{errors.name && errors.name}
 				</p>
 				<input
@@ -170,7 +191,7 @@ function RegisterPage() {
 					onChange={handleChange}
 					className="bg-zinc-800 px-4 py-2 block"
 				/>
-				<p className="text-center text-2xl text-[#fa0] font-bold -mt-4">
+				<p className="text-center text-xl text-[#fa0] font-bold -mt-4">
 					{errors.email && errors.email}
 				</p>
 				<input
@@ -182,29 +203,53 @@ function RegisterPage() {
 					onChange={handleChange}
 					className="bg-zinc-800 px-4 py-2 block"
 				/>
-				<p className="text-center text-2xl text-[#fa0] font-bold -mt-4">
+				<p className="text-center text-xl text-[#fa0] font-bold -mt-4">
 					{errors.password && errors.password}
 				</p>
+				{/* Boton de Signup con credenciales */}
 				<button
 					type="submit"
-					disabled={!errors.name && !errors.email && !errors.password ? false : true}
+					disabled={
+						!errors.name && !errors.email && !errors.password ? false : true
+					}
 					className={`
-          bg-indigo-500
+          bg-indigo-600
             px-4
             py-2
+            w-[50%]
+            min-w-[200px]
+            mx-auto
             transition
-            hover:cursor-pointer
-            hover:brightness-75
-            disabled:brightness-100
             disabled:grayscale
-            disabled:cursor-default
+            hover:brightness-75
+            disabled:hover:brightness-100
+            hover:cursor-pointer
+            disabled:hover:cursor-default
+            ${isLoading ? "brightness-150" : ""}
+            ${isLoading ? "hover:brightness-150" : ""}
+            ${isLoading ? "hover:cursor-default" : ""}
           `}>
-					Registrarse
-        </button>
-        <hr className="border-white" />
-        <button
-          onClick={handleSubmitGoogle}
-          className="
+					{isLoading ? (
+						<PacmanLoader
+							color="#36d7b7"
+							size={15}
+							speedMultiplier={2}
+							loading={isLoading}
+							cssOverride={{
+								display: "block",
+								margin: "0 auto",
+								transform: "translateX(-50%)"
+							}}
+						/>
+					) : (
+						"Registrarse"
+					)}
+				</button>
+				<hr className="border-white" />
+				{/* Boton de Signup con Google */}
+				<button
+					onClick={handleSubmitGoogle}
+					className="
            px-6
            py-4
          bg-white
@@ -213,9 +258,23 @@ function RegisterPage() {
            w-full
            relative
            hover:opacity-80">
-          <FcGoogle size={24} className="absolute top-5 left-4"/>
-          Registrarse con Google
-        </button>
+					<FcGoogle size={24} className="absolute top-5 left-4" />
+					Registrarse con Google
+				</button>
+				{/* Redirección a Login si ya tiene cuenta */}
+				<div className="text-center text-neutral-100">
+					<div className="flex flex-row items-center justify-center gap-2">
+						<p>Ya tienes una cuenta?</p>
+						<div
+							className="
+            text-neutral-800 
+            cursor-pointer 
+            hover:underline 
+            ">
+							<Link href={"/login"}>Iniciar sesión</Link>
+						</div>
+					</div>
+				</div>
 			</form>
 		</div>
 	);

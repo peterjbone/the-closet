@@ -1,16 +1,23 @@
 "use client";
 
 import "animate.css";
+import { useState } from "react";
 import { toast } from "react-hot-toast";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
-//import { FcGoogle } from "react-icons/fc";
+import { FcGoogle } from "react-icons/fc";
+import Link from "next/link";
+import PacmanLoader from "react-spinners/PacmanLoader";
 
 function LoginPage() {
 	const router = useRouter();
+	const [isLoading, setIsLoading] = useState(false);
 
-	async function handleSubmit(e) {
+	//? Login con credenciales
+	async function handleSubmitCredentials(e) {
 		e.preventDefault();
+
+		setIsLoading(true);
 
 		//* Referenciando el formulario
 		const formData = new FormData(e.currentTarget);
@@ -22,7 +29,7 @@ function LoginPage() {
 			redirect: false
 		});
 
-		//* Exito
+		//* Exito del login
 		if (res.ok) {
 			router.push("/");
 			toast.promise(
@@ -38,6 +45,8 @@ function LoginPage() {
 
 		//* Error por email
 		if (res.error.includes("Email")) {
+			setIsLoading(false);
+
 			if (document.getElementById("notifyEmail") === null) {
 				const messageEmail = document.createElement("div");
 				messageEmail.id = "notifyEmail";
@@ -75,6 +84,8 @@ function LoginPage() {
 
 		//* Error por password
 		if (res.error.includes("Contraseña")) {
+			setIsLoading(false);
+
 			if (document.getElementById("notifyPassword") === null) {
 				const messagePassword = document.createElement("div");
 				messagePassword.id = "notifyPassword";
@@ -115,12 +126,23 @@ function LoginPage() {
 		console.log(res);
 	}
 
+	//? Login con google
+	async function handleSubmitGoogle() {
+		try {
+			await signIn("google");
+
+			//* Entra por algún error interno de NextAuth o Google
+		} catch (error) {
+			console.log(error);
+		}
+	}
+
 	/* prettier-ignore */
 	return (
 		<div className="h-[100vh] flex flex-row items-center justify-center">
-      <form
-        onSubmit={handleSubmit}
-        className="
+			<form
+				onSubmit={handleSubmitCredentials}
+				className="
         bg-slate-500 
         text-white
         text-xl
@@ -134,26 +156,89 @@ function LoginPage() {
         py-12
         px-6
         ">
-				<h1 className="text-center text-4xl font-bold mb-6">Entra a tu cuenta</h1>
-	
-        <input
-          id="email"
+				<h1 className="text-center text-4xl font-bold mb-6">
+					Entra a tu cuenta
+				</h1>
+
+				<input
+					id="email"
 					type="email"
-					placeholder="pablito@gmail.com"
+					placeholder="usuario@gmail.com"
 					name="email"
-          className="bg-zinc-800 px-4 py-2 block"/>
-        <input
-          id="password"
+					className="bg-zinc-800 px-4 py-2 block"
+				/>
+				<input
+					id="password"
 					type="password"
 					placeholder="***********"
 					name="password"
 					className="bg-zinc-800 px-4 py-2 block"
 				/>
-        <button
-          type="submit"
-          className="bg-indigo-500 px-4 py-3 min-w-[200px] w-[50%] mx-auto text-1xl hover:bg-indigo-700 transition">
-          Login
-        </button>
+				{/* Boton de registro con credenciales */}
+				<button
+					type="submit"
+					disabled={isLoading}
+					className={`
+          bg-indigo-600
+           px-4
+           py-2
+           w-[50%]
+           min-w-[200px]
+           mx-auto
+           transition
+           hover:cursor-pointer
+           hover:brightness-75
+           disabled:cursor-default
+          ${isLoading ? "brightness-125" : ""}
+          ${isLoading ? "hover:brightness-125" : ""}
+          ${isLoading ? "hover:cursor-default" : ""}
+           `}>
+					{isLoading ? (
+						<PacmanLoader
+							color="#36d7b7"
+							size={15}
+							speedMultiplier={2}
+							loading={isLoading}
+							cssOverride={{
+								display: "block",
+								margin: "0 auto",
+								transform: "translateX(-50%)"
+							}}
+						/>
+					) : (
+						"Iniciar sesión"
+					)}
+				</button>
+				<hr className="border-white" />
+				{/* Boton de Login con Google */}
+				<button
+					onClick={handleSubmitGoogle}
+					className="
+           px-6
+           py-4
+         bg-white
+         text-black
+           rounded-lg
+           w-full
+           relative
+           hover:opacity-80">
+					<FcGoogle size={24} className="absolute top-5 left-4" />
+					Iniciar sesión con Google
+				</button>
+				{/* Redirección a Registro si no tiene cuenta. */}
+				<div className="text-center text-neutral-100">
+					<div className="flex flex-row items-center justify-center gap-2">
+						<p>Primera vez aquí?</p>
+						<div
+							className="
+            text-neutral-800 
+            cursor-pointer 
+            hover:underline 
+            ">
+							<Link href={"/register"}>Registrate</Link>
+						</div>
+					</div>
+				</div>
 			</form>
 		</div>
 	);
