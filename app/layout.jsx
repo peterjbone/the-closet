@@ -1,8 +1,8 @@
 import "./globals.css";
 import { Lato } from "next/font/google";
-
-import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
+import { Toaster } from "react-hot-toast";
+import Providers from "./Providers";
+//import Footer from "./components/footer/Footer";
 
 //? Main font
 const lato = Lato({
@@ -17,14 +17,15 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-	/* prettier-ignore*/
 	return (
 		<html lang="es">
-      <body className={lato.className}>
-        <Header/>
-        {children}
-        <Footer />
-      </body>
+			<body className={lato.className}>
+				<Providers>
+					<Toaster />
+					{children}
+					{/* <Footer /> */}
+				</Providers>
+			</body>
 		</html>
 	);
 }

@@ -1,0 +1,50 @@
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+a {
+	text-decoration: none;
+}
+
+li {
+	list-style-type: none;
+}
+
+/* Estilos de Contenedor de productos */
+
+.card-container {
+	padding: 0 1rem;
+	margin-top: 1rem;
+	font-size: 1.2rem;
+	/* display: flex;
+	flex-wrap: wrap;
+	z-index: -2; */
+
+	display: grid;
+	row-gap: 1rem;
+	grid-template-columns: repeat(5, minmax(0, 1fr));
+	grid-auto-rows: 540px;
+	align-items: stretch;
+}
+
+@media (max-width: 1280px) {
+	.card-container {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 1024px) {
+	.card-container {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+	}
+}
+
+@media (max-width: 835px) {
+	.card-container {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+}

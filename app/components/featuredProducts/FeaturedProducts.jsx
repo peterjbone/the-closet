@@ -1,11 +1,12 @@
 "use client";
 
 import "./FeaturedProducts.css";
-import data from "@/app/utils/db.json"; //? Base de datos demo
+import data from "../../utils/db.json"; //? Base de datos demo
 import Link from "next/link";
 import FeaturedProductItem from "./FeaturedProductsItem";
 
 function FeaturedProducts() {
+	//! HARDCODEO, buscar productos en la DB
 	const currentCategory = data.find((item) => item.categoria === "destacados");
 	const { productos } = currentCategory;
 

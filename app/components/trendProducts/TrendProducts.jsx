@@ -1,7 +1,7 @@
 "use client";
 
 import "./TrendProducts.css";
-import data from "@/app/utils/db.json"; //? Base de datos demo
+import data from "../../utils/db.json"; //? Base de datos demo
 import Link from "next/link";
 import TrendProductItems from "./TrendProductsItems";
 
