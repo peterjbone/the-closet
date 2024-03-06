@@ -1,26 +1,36 @@
-const { Schema, model, models } = require("mongoose");
+import { Schema, model, models } from "mongoose";
 
 const UserSchema = new Schema({
+	name: {
+		type: String,
+		required: true
+	},
 	email: {
 		type: String,
 		unique: true,
-		required: true,
-		match: [/^[^\s@]+@[^\s@]+\.[^\s@]+$/, "Email is not valid."]
+		required: true
 	},
-	password: {
-		type: String,
-		required: [true, "Password is required"],
-		select: false
+	emailVerified: Boolean,
+	password: String,
+	image: String,
+	createdAt: {
+		type: Date,
+		immutable: true,
+		default: () => Date.now()
 	},
-	fullname: {
-		type: String,
-		required: [true, "Fullname is required"],
-		minLength: [6, "Fullname must be at least 6 characters"],
-		maxLength: [35, "Fullname must be at most 35 characters"]
-	}
+	updatedAt: {
+		type: Date,
+		default: () => Date.now()
+	},
+	accounts: [
+		{
+			type: Schema.Types.ObjectId,
+			ref: "Cuenta"
+		}
+	]
 });
 
 // La lógica aqui evita que se cree un nuevo modelo cada vez que una ruta lo llama
-// Mongoose pluraliza automáticamente a Usuarios (pero solo se vera reflejado en MongoDB)
+// Mongoose pluraliza automáticamente a "Usuarios" (pero solo se vera reflejado en MongoDB)
 const Usuario = models.Usuario || model("Usuario", UserSchema);
-Module.exports = Usuario;
+export default Usuario;

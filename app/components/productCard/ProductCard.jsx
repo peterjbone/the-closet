@@ -2,8 +2,8 @@
 
 import "./ProductCard.css";
 import Link from "next/link";
-import { FaStar } from "react-icons/fa";
 import { FaBagShopping } from "react-icons/fa6";
+import { FaHeart } from "react-icons/fa";
 
 function ProductCard({
 	id,
@@ -38,41 +38,46 @@ function ProductCard({
 		coloresSintaxis = colores.join();
 	}
 
+	function addToCart() {}
+
+	function addToWishlist() {}
+
 	/* prettier-ignore */
 	return (
 		<Link href={`/producto/${nombreParam}`}>
-			<section className="card">
-				<img
-					src={imagen[0]}
-					alt={nombre}
-					className="card-img"
-        />
-        <div className="card-details">
-          <section className="mb-6">
-            <h3 className="text-2xl">{nombre.toUpperCase()}</h3>
-            <p className="font-semibold italic">{marca}</p>
-            {
-              productoNuevo && <p className="text-red-600">NUEVO</p>
-            }
-          </section>
-          <p className="font-semibold"> {categoria} & {genero} </p>
-          <p className="mb-4"> {coloresSintaxis} </p>
-					<section className="card-reviews">
-						<FaStar className="ratings-star" />{" "}
-						<FaStar className="ratings-star" />{" "}
-						<FaStar className="ratings-star" />{" "}
-						<FaStar className="ratings-star" />
-						<span className="total-reviews">4</span>
-					</section>
-					<section className="card-price">
-						<div className="price text-start">
-							${precio}
-						</div>
-						<div className="bag">
-							<FaBagShopping className="bag-icon" />
-						</div>
-					</section>
-				</div>
+      <section className="card relative">
+        
+          <div className="absolute top-4 right-3">
+            <FaBagShopping size={25} color="#000" />
+          </div>
+          <div className="absolute top-4 left-3">
+            <FaHeart size={25} color="#000" />
+          </div>
+          
+          <img src={imagen[0]} alt={nombre} className="card-img" />
+        
+          <div className="card-details">
+            <section className="mb-2">
+              <h3 className="text-2xl">{nombre.toUpperCase()}</h3>
+              <div className="flex flex-row gap-4">
+                <p className="font-semibold italic">{marca}</p>
+                {productoNuevo && <p className="text-red-600">NUEVO</p>}
+              </div>
+            </section>
+            
+            <p className="font-semibold">
+              {categoria} & {genero}
+            </p>
+
+            <p className="mb-4">
+              {coloresSintaxis}
+            </p>
+    
+            <section className="flex flex-row items-center justify-center">
+              <div className="text-xl ">${precio}</div>
+            </section>
+          </div>
+        
 			</section>
 		</Link>
 	);
