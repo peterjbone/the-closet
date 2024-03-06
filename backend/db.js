@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 async function connectDB() {
 	try {
 		//mongoose.connect("mongodb://localhost:27017/thecloset");
-		await mongoose.connect("mongodb://127.0.0.1:27017/thecloset"); //Con esta uri me conecta a la base de datos.
+		await mongoose.connect("mongodb://localhost:27017/thecloset"); //Con esta uri me conecta a la base de datos.
 		console.log("Conexión establecida con la base de datos.");
 	} catch (error) {
 		console.log("Error al conectarse a la base de datos:", error);

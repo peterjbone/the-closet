@@ -23,4 +23,4 @@ const UserSchema = new Schema({
 // La lógica aqui evita que se cree un nuevo modelo cada vez que una ruta lo llama
 // Mongoose pluraliza automáticamente a Usuarios (pero solo se vera reflejado en MongoDB)
 const Usuario = models.Usuario || model("Usuario", UserSchema);
-Module.exports = Usuario;
+module.exports = Usuario;
