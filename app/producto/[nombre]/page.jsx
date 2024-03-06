@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FaCartShopping } from "react-icons/fa6";
 import { AiFillMinusSquare } from "react-icons/ai";
 import { RiAddBoxFill } from "react-icons/ri";
-import data from "@/app/utils/db.json";
+import data from "../../utils/db.json";
 
 /**
  * Esta función busca un producto específico de
@@ -12,69 +12,69 @@ import data from "@/app/utils/db.json";
  * @returns Devuelve un objeto del producto buscado.
  */
 function findProduct(param) {
-  let product = {};
+	let product = {};
 
-  data.forEach((item) => {
-    item.productos.forEach((subitem) => {
-      const nombreParam = subitem.nombre
-        .split(" ")
-        .join("-")
-        .toLowerCase()
-        .normalize("NFD")
-        .replace(/[\u0300-\u036f]/g, "");
+	data.forEach((item) => {
+		item.productos.forEach((subitem) => {
+			const nombreParam = subitem.nombre
+				.split(" ")
+				.join("-")
+				.toLowerCase()
+				.normalize("NFD")
+				.replace(/[\u0300-\u036f]/g, "");
 
-      if (nombreParam === param) {
-        product = subitem;
-      }
-    });
-  });
+			if (nombreParam === param) {
+				product = subitem;
+			}
+		});
+	});
 
-  return product;
+	return product;
 }
 
 //* PRODUCT PAGE
 function Page({ params }) {
-  const producto = findProduct(params.nombre);
+	const producto = findProduct(params.nombre);
 
-  // Limpia la información:
-  const finalBrands = producto.marca.toUpperCase();
-  const finalSizes = producto.tallas.map((talla) => talla);
-  const finalColors = producto.colores.map((color) => color);
-  const finalStars = Array(4).fill("⭐");
-  const finalName = producto.nombre.toUpperCase();
+	// Limpia la información:
+	const finalBrands = producto.marca.toUpperCase();
+	const finalSizes = producto.tallas.map((talla) => talla);
+	const finalColors = producto.colores.map((color) => color);
+	const finalStars = Array(4).fill("⭐");
+	const finalName = producto.nombre.toUpperCase();
 
-  const [imagenSeleccionada, setImagenSeleccionada] = useState(
-    producto.imagen[0]
-  );
-  const [tallaSeleccionada, setTallaSeleccionada] = useState("");
-  const [counter, setCounter] = useState(1);
-  const [mostrarDescripcion, setMostrarDescripcion] = useState(true);
+	const [imagenSeleccionada, setImagenSeleccionada] = useState(
+		producto.imagen[0]
+	);
+	const [tallaSeleccionada, setTallaSeleccionada] = useState("");
+	const [counter, setCounter] = useState(1);
+	const [mostrarDescripcion, setMostrarDescripcion] = useState(true);
 
-  const toggleMostrarDescripcion = () => {
-    setMostrarDescripcion(true);
-  };
+	const toggleMostrarDescripcion = () => {
+		setMostrarDescripcion(true);
+	};
 
-  const toggleMostrarResena = () => {
-    setMostrarDescripcion(false);
-  };
+	const toggleMostrarResena = () => {
+		setMostrarDescripcion(false);
+	};
 
-  const handleImagenClick = (imagen) => {
-    setImagenSeleccionada(imagen);
-  };
-  const handleTallaClick = (talla) => {
-    setTallaSeleccionada(talla);
-  };
-  const handleContadorSuma = () => {
-    setCounter(counter + 1);
-  };
-  const handleContadorResta = () => {
-    if (counter > 1) {
-      setCounter(counter - 1);
-    }
-  };
+	const handleImagenClick = (imagen) => {
+		setImagenSeleccionada(imagen);
+	};
+	const handleTallaClick = (talla) => {
+		setTallaSeleccionada(talla);
+	};
+	const handleContadorSuma = () => {
+		setCounter(counter + 1);
+	};
+	const handleContadorResta = () => {
+		if (counter > 1) {
+			setCounter(counter - 1);
+		}
+	};
 
-  /* prettier-ignore*/
-  return (  
+	/* prettier-ignore*/
+	return (  
 
 	<div>
     <div className="w-[60vw] h-[60vh] flex flex-row m-auto justify-center items-center gap-10 border-2 mb-8 mt-3 shadow-lg">
