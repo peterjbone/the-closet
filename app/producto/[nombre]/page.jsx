@@ -5,12 +5,10 @@ import { FaCartShopping } from "react-icons/fa6";
 import { AiFillMinusSquare } from "react-icons/ai";
 import { RiAddBoxFill } from "react-icons/ri";
 import { useProductsStore } from "../../hooks/productsStore";
-import { useRouter } from "next/navigation";
 import { useParams } from "next/navigation";
 import Header from "../../components/navbar/Navbar";
 
 const Page = () => {
-  const router = useRouter();
   const params = useParams();
   let nombre = params.nombre;
   const getAllProducts = useProductsStore((state) => state.getAllProducts);
@@ -20,11 +18,6 @@ const Page = () => {
     getAllProducts();
   }, [getAllProducts]);
 
-  console.log("Estos son todos los", allProducts);
-
-  const back = () => {
-    router.back();
-  };
   const normalizeName = (name) => {
     return name
       .normalize("NFD")
@@ -200,6 +193,10 @@ const Page = () => {
                     ? "bg-gray-700"
                     : color == "violeta"
                     ? "bg-purple-300"
+                    : color == "azulino"
+                    ? "bg-blue-300"
+                    : color == "dulce de leche"
+                    ? "bg-orange-200"
                     : color == "multiples"
                     ? "bg-gradient-to-br from-black via-white to-blue-500"
                     : color == "gris ceniza"
@@ -275,12 +272,6 @@ const Page = () => {
             ? producto?.reseña
             : "Aún no hay reseñas..."}
         </p>
-        {/* <button
-          className="bg-black hover:bg-red-800 text-white font-bold py-2 px-4 rounded"
-          onClick={back}
-        >
-          BACK
-        </button> */}
       </div>
     </div>
   );
