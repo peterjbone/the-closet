@@ -5,7 +5,6 @@ import bcrypt from "bcrypt";
 
 import { connectDB } from "../../../libs/mongodb.js";
 import Usuario from "../../../models/Usuarios.js";
-import Cuentas from "../../../models/Cuentas.js";
 
 export async function POST(request) {
 	const { name, email, password } = await request.json();

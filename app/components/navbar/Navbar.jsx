@@ -18,9 +18,7 @@ const Header = () => {
 
 	//? Mensaje por consola para saber si cargo el usuario
 	// console.log("SESSION:");
-	// console.log(session || "No hay sesión iniciada.");
-	// console.log("SESSION USER:");
-	// console.log(session?.user || "No hay sesión iniciada.");
+	// console.log(session);
 
 	//? Para abrir el menú de usuario
 	const toggleOpen = useCallback(() => {

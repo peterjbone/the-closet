@@ -57,16 +57,12 @@ function RegisterPage() {
 				email: formData.get("email"),
 				password: formData.get("password")
 			});
-			console.log("BACKEND SIGNUP RESPONSE - CREDENTIALS");
-			console.log(signupResponse);
 
 			const loginResponse = await signIn("credentials", {
 				email: signupResponse.data.email,
 				password: formData.get("password"),
 				redirect: false
 			});
-			console.log("NEXTAUTH SIGNIN RESPONSE - CREDENTIALS");
-			console.log(loginResponse);
 
 			if (loginResponse.ok) {
 				toast.promise(
@@ -85,6 +81,10 @@ function RegisterPage() {
 							style: {
 								border: "3px solid #0f0",
 								padding: "1rem"
+							},
+							iconTheme: {
+								primary: "#059e05",
+								secondary: "#fff"
 							}
 						},
 						error: {
@@ -95,47 +95,58 @@ function RegisterPage() {
 						}
 					}
 				);
-				router.push("/");
+
+				setTimeout(() => router.push("/"), 1000);
+
 				return loginResponse.ok; //para que no ejecute más codigo
 			}
 
 			//* Entra a este error cuando el email ya existe.
 		} catch (error) {
+			console.log(error.message);
+
 			setIsLoading(false);
 
-			if (document.getElementById("notifyEmail") === null) {
-				const messageEmail = document.createElement("div");
-				messageEmail.id = "notifyEmail";
-				messageEmail.style.display = "none";
-				document
-					.getElementById("email")
-					.insertAdjacentElement("beforebegin", messageEmail);
-			}
-			const messageEmail = document.getElementById("notifyEmail");
-			messageEmail.textContent = error.response.data.message;
-			messageEmail.className =
-				"border-[5px] border-red-500 bg-red-500 text-white px-4 py-2";
-			messageEmail.style.display = "block";
-
-			const emailInput = document.getElementById("email");
-			emailInput.classList.add(
-				"border-[5px]",
-				"border-red-700",
-				"animate__animated",
-				"animate__shakeX"
-			);
-
-			emailInput.addEventListener("input", (e) => {
-				if ("block" === messageEmail.style.display) {
-					emailInput.classList.remove(
-						"border-[5px]",
-						"border-red-700",
-						"animate__animated",
-						"animate__shakeX"
-					);
+			if (
+				formData.get("name") &&
+				formData.get("email") &&
+				formData.get("password")
+			) {
+				if (document.getElementById("notifyEmail") === null) {
+					const messageEmail = document.createElement("div");
+					messageEmail.id = "notifyEmail";
 					messageEmail.style.display = "none";
+					document
+						.getElementById("email")
+						.insertAdjacentElement("beforebegin", messageEmail);
 				}
-			});
+
+				const messageEmail = document.getElementById("notifyEmail");
+				messageEmail.textContent = error.response.data.message;
+				messageEmail.className =
+					"border-[5px] border-red-500 bg-red-500 text-white px-4 py-2";
+				messageEmail.style.display = "block";
+
+				const emailInput = document.getElementById("email");
+				emailInput.classList.add(
+					"border-[5px]",
+					"border-red-700",
+					"animate__animated",
+					"animate__shakeX"
+				);
+
+				emailInput.addEventListener("input", (e) => {
+					if ("block" === messageEmail.style.display) {
+						emailInput.classList.remove(
+							"border-[5px]",
+							"border-red-700",
+							"animate__animated",
+							"animate__shakeX"
+						);
+						messageEmail.style.display = "none";
+					}
+				});
+			}
 		}
 	}
 
@@ -221,13 +232,11 @@ function RegisterPage() {
             mx-auto
             transition
             disabled:grayscale
-            hover:brightness-75
             disabled:hover:brightness-100
-            hover:cursor-pointer
             disabled:hover:cursor-default
-            ${isLoading ? "brightness-150" : ""}
-            ${isLoading ? "hover:brightness-150" : ""}
-            ${isLoading ? "hover:cursor-default" : ""}
+            ${isLoading ? "brightness-150" : "brightness-100"}
+            ${isLoading ? "hover:brightness-150" : "hover:brightness-75"}
+            ${isLoading ? "hover:cursor-default" : "hover:cursor-pointer"}
           `}>
 					{isLoading ? (
 						<PacmanLoader

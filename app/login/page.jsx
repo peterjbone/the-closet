@@ -22,6 +22,15 @@ function LoginPage() {
 		//* Referenciando el formulario
 		const formData = new FormData(e.currentTarget);
 
+		if (!formData.get("email")) {
+			setIsLoading(false);
+			return toast.error("Debe ingresar un email");
+		}
+		if (!formData.get("password")) {
+			setIsLoading(false);
+			return toast.error("Debe ingresar una contraseña");
+		}
+
 		//* Enviando el email y password al signin de credenciales
 		const res = await signIn("credentials", {
 			email: formData.get("email"),
@@ -186,12 +195,9 @@ function LoginPage() {
            min-w-[200px]
            mx-auto
            transition
-           hover:cursor-pointer
-           hover:brightness-75
-           disabled:cursor-default
-          ${isLoading ? "brightness-125" : ""}
-          ${isLoading ? "hover:brightness-125" : ""}
-          ${isLoading ? "hover:cursor-default" : ""}
+          ${isLoading ? "brightness-150" : "brightness-100"}
+          ${isLoading ? "hover:brightness-150" : "hover:brightness-75"}
+          ${isLoading ? "hover:cursor-default" : "hover:cursor-pointer"}
            `}>
 					{isLoading ? (
 						<PacmanLoader
