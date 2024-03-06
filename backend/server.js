@@ -17,5 +17,6 @@ server.use(express.json());
 server.use(morgan("dev"));
 
 //* Routes here 👇
+algo
 
 module.exports = server;

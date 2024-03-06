@@ -1,0 +1,246 @@
+<script>
+    
+    // JavaScript
+
+    var opciones = [];
+
+    function agregarOpcion() {
+        var nomColor = document.getElementById('nombreColorHidden').value.trim();
+        var tallasStock = document.getElementById('tallasStock').value.trim();
+        var colorExa = document.getElementById('exaColorHidden').value.trim();
+
+        var entradas = tallasStock.split(',');
+        var tallas = [];
+
+        entradas.forEach(function(entrada) {
+            var partes = entrada.split(':');
+            var talla = partes[0].trim();
+            var stock = parseInt(partes[1].trim());
+            tallas.push({ talla: talla, stock: stock });
+        });
+
+        var opcion = { color: {codHexadecimal: colorExa, nombreColor: nomColor }, tallas: tallas };
+        opciones.push(opcion);
+
+        actualizarFormulario();
+        document.getElementById('opcionesInput').value = JSON.stringify(opciones);
+    }
+
+    function borrarOpcion(index) {
+        opciones.splice(index, 1);
+        actualizarFormulario();
+        document.getElementById('opcionesInput').value = JSON.stringify(opciones);
+    }
+
+    function actualizarFormulario() {
+        var opcionesContainer = document.getElementById('opcionesContainer');
+        opcionesContainer.innerHTML = '';
+
+        opciones.forEach(function(opcion, index) {
+            var div = document.createElement('div');
+            div.innerHTML = `
+                <div>
+                    <strong>Color:</strong> ${opcion.color.nombreColor}
+                    <br>
+                    <strong>Tallas:</strong> ${opcion.tallas.map(function(t) { return `${t.talla}: ${t.stock}`; }).join(', ')}
+                    <button type="button" onclick="borrarOpcion(${index})">Borrar</button>
+                </div>
+                <hr>
+            `;
+            opcionesContainer.appendChild(div);
+        });
+    }
+
+    function actualizarCampoTexto() {
+        var nombreColorSelect = document.getElementById('nombreColorSelect');
+        var nombreColorHidden = document.getElementById('nombreColorHidden');
+        var exaColorHidden = document.getElementById('exaColorHidden');
+
+        // Obtener el valor seleccionado en la lista desplegable
+        var selectedValue = nombreColorSelect.value;
+        var hexValue = nombreColorSelect.options[nombreColorSelect.selectedIndex].dataset.hex;
+
+        // Actualizar el campo de entrada de texto oculto con el valor seleccionado
+        nombreColorHidden.value = selectedValue;
+        exaColorHidden.value = hexValue;
+    }
+    console.log(opciones)
+    //console.log(ListColores)
+</script>
+
+<div class="col-md-12 mx-auto">
+    <div class="card text-center">
+        <div class="card-header">
+            <h3>Producto Nuevo</h3>
+        </div>
+        
+        <div class="card-body">
+            <form action="/products/nuev-prod" method="POST">
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="form-group">
+                            <input type="text" name="nombre" id="nombre" class="form-control" placeholder="Nombre" autofocus>
+                        </div>
+
+                        <div class="form-group">
+                            <select name="marca" class="form-select form-control" size="2" aria-label="Size 3 select example">
+                                {{#each ListaMarcas}}
+                                    <option value="{{nombre}}">{{nombre}}</option>
+                                {{/each}}
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <textarea name="descripcion" id="descripcion" placeholder="Descripcion" class="form-control"></textarea>
+                        </div>
+
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">$</span>
+                                <span class="input-group-text">0.00</span>
+                            </div>
+                            <input name="precio" placeholder="Precio" type="text" class="form-control" aria-label="Dollar amount (with dot and two decimal places)">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="offActiva">Oferta Activa:</label>
+                            <input type="checkbox" id="offActiva" name="offActiva">
+                            <label for="activo">Producto Activo:</label>
+                            <input type="checkbox" id="activo" name="activo">
+                            <label for="productoNuevo">Producto Nuevo</label>
+                            <input type="checkbox" id="productoNuevo" name="productoNuevo">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="descuento">Descuento (%):</label>
+                            <input type="number" id="descuento" name="descuento" min="0" max="100" step="1">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="categoria">Categoria:</label>
+                            <select name="categoria" id="categoria" class="form-control">
+                                <option value="adulto">Adulto</option>
+                                <option value="infante">Infante</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="genero">Genero:</label>
+                            <select name="genero" id="genero" class="form-control">
+                                <option value="masculino">Masculino</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="unisex">Unisex</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subcategoria">Subcategoria:</label>
+                            <select name="subcategoria" class="form-select form-control" size="2" aria-label="Size 2 select example">
+                                {{#each ListaSubCategorias}}
+                                    <option value="{{nombre}}">{{nombre}}</option>
+                                {{/each}}
+                            </select>
+                            
+                        </div>
+
+
+                    
+                    </div>
+                    <div class="col-sm">
+                    
+                        <div class="form-group">
+                            <input type="file" name="photos" multiple="'true">
+                        </div>
+
+
+                    </div>
+                    <div class="col-sm">
+                    
+
+                        <div id="opcionForm">
+                            <div class="form-group">
+                                <label for="nombreColor">Seleccionar Color:</label>
+                                <select id="nombreColorSelect"class="form-select" aria-label="Default select example" onchange="actualizarCampoTexto()">
+                                    <option selected>Lista de Colores</option>
+                                    {{#each ListColores}}
+                                    <option value="{{nombreColor}}" data-hex="{{codHexadecimal}}">{{nombreColor}}</option>
+                                    {{/each}}
+                                </select>
+                                <input type="hidden" id="nombreColorHidden" name="nombreColor">
+                                <input type="hidden" id="exaColorHidden" name="exaColor">
+                            </div>
+                            <div class="form-group">
+                                <label for="tallasStock">Stock por talla (separadas por coma, en el formato Talla:Stock):</label>
+                                <input type="text" id="tallasStock" class="form-control">
+                            </div>
+                        <button type="button" onclick="agregarOpcion()">Agregar Opción</button>
+                        </div>
+                        
+                        <input type="hidden" id="opcionesInput" name="opciones">
+
+                        <div id="opcionesContainer"></div>
+
+
+                    
+                    </div>
+                </div>
+            </div>
+
+                
+
+
+
+                
+                {{!-- <div class="form-group">
+                    <div id="stockInputs">sssssssssssssss</div>
+                </div> --}}
+                
+
+                
+
+                {{!-- <div class="form-group">
+                        {{#each productosalgo}}
+                    <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox{{@index}}" value="{{valor}}">
+                            <label class="form-check-label" for="inlineCheckbox{{@index}}">{{valor}}</label>
+                    </div>
+                        {{/each}}
+                </div>
+                <div class="form-group">
+                    <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                    <label class="form-check-label" for="inlineCheckbox1">155555</label>
+                    </div>
+                </div>
+                
+                
+                
+                
+                
+                
+                <div class="form-group">
+                    <label for="imagen">Imagen:</label>
+                    <input type="text" name="imagen" class="form-control" placeholder="URL de la imagen">
+                </div>
+                <div class="form-group">
+                    <label for="tallas">Tallas:</label>
+                    <input type="text" name="tallas" class="form-control" placeholder="Tallas separadas por coma">
+                </div>
+                <div class="form-group">
+                    <label for="colores">Colores:</label>
+                    <input type="text" name="colores" class="form-control" placeholder="Colores separados por coma">
+                </div>
+                <input type="hidden" id="prod1" name="prod1"> --}}
+
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block">
+                        Guardar
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+</div>
