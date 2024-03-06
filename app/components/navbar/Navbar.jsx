@@ -17,15 +17,16 @@ const Header = () => {
 	const { data: session } = useSession();
 
 	//? Mensaje por consola para saber si cargo el usuario
-	console.log(session?.user || "No hay sesión iniciada.");
+	// console.log("SESSION:");
+	// console.log(session);
 
-	//? Para abrir el menú desplegable
+	//? Para abrir el menú de usuario
 	const toggleOpen = useCallback(() => {
 		setIsOpen((value) => !value);
 	}, []);
 
 	//? Para salir de la sesión
-	async function handleSignout() {
+	function handleSignout() {
 		toast
 			.promise(
 				new Promise((resolve) => setTimeout(() => resolve(true), 2000)),
@@ -33,6 +34,11 @@ const Header = () => {
 					loading: "Cerrando sesión...",
 					success: <b>Haz cerrado tu sesión.</b>,
 					error: <b>Algo salió mal.</b>
+				},
+				{
+					success: {
+						duration: 1000
+					}
 				}
 			)
 			.then(() => signOut());
@@ -57,12 +63,21 @@ const Header = () => {
 					<Link href={"/ropa"}>Mujer</Link>
 					<Link href={"/descuento"}>Niños y Niñas</Link>
 				</nav>
-				<div className="flex flex-row items-center gap-4 relative">
-					<FaRegHeart size={30} />
-					<MdOutlineShoppingCart size={35} />
-					<div onClick={toggleOpen}>
-						<Avatar />
+        <div className="flex flex-row items-center gap-4 relative">
+          <div className="hover:cursor-pointer hover:text-red-600">
+					  <FaRegHeart size={30} />
           </div>
+          <div>
+		  			<MdOutlineShoppingCart size={35} />
+          </div>
+					<div className="hover:cursor-pointer" onClick={toggleOpen}>
+						<Avatar src={session?.picture}/>
+          </div>
+          {
+            session?.user && (
+              <p className="text-xl underline"> {session?.user.name} </p>
+            )
+          }
           
           {isOpen && (
             <div className="absolute z-10 top-12 left-28 border-black border-[5px]">

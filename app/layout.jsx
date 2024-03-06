@@ -1,8 +1,8 @@
 import "./globals.css";
 import { Lato } from "next/font/google";
-import Footer from "./components/footer/Footer";
 import { Toaster } from "react-hot-toast";
 import Providers from "./Providers";
+//import Footer from "./components/footer/Footer";
 
 //? Main font
 const lato = Lato({

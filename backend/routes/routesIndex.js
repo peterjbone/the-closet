@@ -13,6 +13,9 @@ const getNewProducts = require("../controllers/getNewProducts");
 const postCompra = require('../controllers/PostCompra')
 const simuCompra = require('../controllers/simulacionCompra')
 const compra = require('../controllers/mpPreference')
+const getHoodiesProducts = require("../controllers/getHoddiesProducts");
+const getTshirtsProducts = require("../controllers/getTshirtsProducts");
+const getJoggersProducts = require("../controllers/getJoggersProducts");
 
 const router = Router();
 
@@ -21,6 +24,9 @@ router.get("/menproducts", getMenProducts);
 router.get("/womenproducts", getWomenProducts);
 router.get("/childrenproducts", getChildrenProducts);
 router.get("/newproducts", getNewProducts);
+router.get("/hoodies", getHoodiesProducts);
+router.get("/t-shirts", getTshirtsProducts);
+router.get("/joggers", getJoggersProducts);
 
 router.get('/simular', simuCompra )
 
