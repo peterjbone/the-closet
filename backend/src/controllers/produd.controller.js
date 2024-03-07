@@ -8,14 +8,14 @@ prodCtrl.renderProdForm = (req, res) => {
     "nombreColor": "rojo"}];
     const ListaMarcas = [{"nombre":"falabela"},{"nombre":"taverniti"},{"nombre":"batistella"},{"nombre":"mambo"},{"nombre":"adidas"},{"nombre":"copmlot"}];
     const ListaSubCategorias = [{"nombre":"Camisetas y Polos"},{"id": "sc01","nombre":"Camisas"},{"nombre":"Sudaderas y Hoodies"},{"nombre":"Chaquetas y Abrigos"},{"nombre":"Chalecos"},{"nombre":"Blusas y Tops"},{"nombre":"Cardigans y Suéteres"},{"nombre":"Camisetas de Deporte"}]
-    
-    data = {ListColores, ListaMarcas, ListaSubCategorias};
+    const ListaDeTallas = [{"nombre":"S"},{"nombre":"M"},{"nombre":"L"},{"nombre":"XL"},{"nombre":"XXL"},{"nombre":"30"},{"nombre":"34"},{"nombre":"36"},{"nombre":"38"}];
+    data = {ListColores, ListaMarcas, ListaSubCategorias, ListaDeTallas};
     res.render('products/new-prod', data);
     //res.send('nuevo producto')
 };
 
 prodCtrl.createNewProd = async (req, res) => {
-    const {nombre, marca, descripcion, genero, categoria, subcategoria, prod1} = req.body;
+    const {nombre, marca, descripcion, genero, categoria, subcategoria, prod1, opciones2} = req.body;
     const newProd = new Prod({nombre, marca, descripcion, prod1});
     //console.log(newProd);
     console.log(req.body);

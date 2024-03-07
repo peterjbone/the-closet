@@ -1,0 +1,17 @@
+
+.circulo{
+    
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+}
+.card-stock-titulo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.card-stock-titulo{
+    border-radius: 10px;
+    border: solid 2px;
+}

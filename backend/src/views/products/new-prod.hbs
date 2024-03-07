@@ -1,70 +1,113 @@
 <script>
     
     // JavaScript
+    const opciones = [];
+    const opciones2 = [{"color": {
+                        "codHexadecimal": "#000000",
+                        "nombreColor": "negro"},"talles": [{
+                            "talla": "S",
+                            "stock": 15},{
+                            "talla": "L",
+                            "stock": 15}]},{
+                    "color": {
+                        "codHexadecimal": "#FFFFFF",
+                        "nombreColor": "blanco"},
+                    "talles": [{
+                            "talla": "S",
+                            "stock": 15},{
+                            "talla": "L",
+                            "stock": 15}]}];
 
-    var opciones = [];
+    // FUNCINO PARA AGREGAR LA TALLA CON INPUT Y BOTON DE BORRADO
 
     function agregarOpcion() {
-        var nomColor = document.getElementById('nombreColorHidden').value.trim();
-        var tallasStock = document.getElementById('tallasStock').value.trim();
-        var colorExa = document.getElementById('exaColorHidden').value.trim();
+        //opciones2.push({name:23,casa:"hola"})
+    var nomColor = document.getElementById('nombreColorHidden').value;
+    var colorExa = document.getElementById('exaColorHidden').value;
+    var talla = document.getElementById('tallaHidden').value;;
+    var stock = document.getElementById('stock').value;;
+    console.log(stock);
+    console.log(talla);
 
-        var entradas = tallasStock.split(',');
-        var tallas = [];
+    var opcionExistente = opciones.find(opcion => opcion.color.nombreColor === nomColor);
+    if (opcionExistente) {
+        var talleExistente = opcionExistente.talles.find(t => t.talla === talla);
+        if (!talleExistente) {
+            opcionExistente.talles.push({ talla: talla, stock: stock });
+        }
+    } else {
+        var nuevaOpcion = { color: { codHexadecimal: colorExa, nombreColor: nomColor }, talles: [{ talla: talla, stock: stock }] };
+        opciones.push(nuevaOpcion);
+    }
 
-        entradas.forEach(function(entrada) {
-            var partes = entrada.split(':');
-            var talla = partes[0].trim();
-            var stock = parseInt(partes[1].trim());
-            tallas.push({ talla: talla, stock: stock });
+
+    actualizarFormulario();
+    console.log(opciones);
+}
+
+function actualizarFormulario() {
+    var opcionesContainer = document.getElementById('opcionesContainer');
+    opcionesContainer.innerHTML = '';
+
+    opciones.forEach(function (opcion, index) {
+        var div = document.createElement('div');
+        var tallesHTML = '';
+        opcion.talles.forEach(function(talle, tIndex) {
+            tallesHTML += `
+                <label>Talla: ${talle.talla}, Stock: ${talle.stock}</label>
+                <button type="button" onclick="borrarTalla(${index}, ${tIndex})">Talla X</button><br>`;
         });
+        div.innerHTML = `
+            <div class="card-stock-titulo">
+                <label>${opcion.color.nombreColor}</label>
+                <div>${tallesHTML}</div>
+                <button type="button" onclick="borrarOpcion(${index})">Opción X</button>   
+            </div>
+            <div class="card-info" id="tallasContainer${index}">
+                
+            </div>
+            <hr>
+        `;
+        opcionesContainer.appendChild(div);
+    });
+}
+// Función para eliminar una opción
+function borrarOpcion(index) {
+    // Remover la opción del array 'opciones'
+    opciones.splice(index, 1);
+    // Volver a generar el formulario
+    actualizarFormulario();
+}
+function borrarTalla(index, tIndex) {
+    // Remover la talla del array de talles de la opción
+    opciones[index].talles.splice(tIndex, 1);
+    // Volver a generar el formulario
+    actualizarFormulario();
+}
 
-        var opcion = { color: {codHexadecimal: colorExa, nombreColor: nomColor }, tallas: tallas };
-        opciones.push(opcion);
 
-        actualizarFormulario();
-        document.getElementById('opcionesInput').value = JSON.stringify(opciones);
-    }
+function actualizarCampoTexto() {
+    var nombreColorSelect = document.getElementById('nombreColorSelect');
+    var nombreColorHidden = document.getElementById('nombreColorHidden');
+    var exaColorHidden = document.getElementById('exaColorHidden');
+    var nombreTalleSelect = document.getElementById('nombreTalleSelect');
 
-    function borrarOpcion(index) {
-        opciones.splice(index, 1);
-        actualizarFormulario();
-        document.getElementById('opcionesInput').value = JSON.stringify(opciones);
-    }
 
-    function actualizarFormulario() {
-        var opcionesContainer = document.getElementById('opcionesContainer');
-        opcionesContainer.innerHTML = '';
+    var selectedValue = nombreColorSelect.value;
+    var hexValue = nombreColorSelect.options[nombreColorSelect.selectedIndex].dataset.hex;
+    var tallhi = nombreTalleSelect.value;
 
-        opciones.forEach(function(opcion, index) {
-            var div = document.createElement('div');
-            div.innerHTML = `
-                <div>
-                    <strong>Color:</strong> ${opcion.color.nombreColor}
-                    <br>
-                    <strong>Tallas:</strong> ${opcion.tallas.map(function(t) { return `${t.talla}: ${t.stock}`; }).join(', ')}
-                    <button type="button" onclick="borrarOpcion(${index})">Borrar</button>
-                </div>
-                <hr>
-            `;
-            opcionesContainer.appendChild(div);
-        });
-    }
+    nombreColorHidden.value = selectedValue;
+    exaColorHidden.value = hexValue;
 
-    function actualizarCampoTexto() {
-        var nombreColorSelect = document.getElementById('nombreColorSelect');
-        var nombreColorHidden = document.getElementById('nombreColorHidden');
-        var exaColorHidden = document.getElementById('exaColorHidden');
-
-        // Obtener el valor seleccionado en la lista desplegable
-        var selectedValue = nombreColorSelect.value;
-        var hexValue = nombreColorSelect.options[nombreColorSelect.selectedIndex].dataset.hex;
-
-        // Actualizar el campo de entrada de texto oculto con el valor seleccionado
-        nombreColorHidden.value = selectedValue;
-        exaColorHidden.value = hexValue;
-    }
+    tallaHidden.value = tallhi;
+}
+    
     console.log(opciones)
+
+    
+
+    
     //console.log(ListColores)
 </script>
 
@@ -148,18 +191,40 @@
 
                     
                     </div>
-                    <div class="col-sm">
-                    
+                        <div class="col-sm">
+                        <h3>Variantes:</h3>
+
                         <div class="form-group">
-                            <input type="file" name="photos" multiple="'true">
+                            <label for="nombreColor">Color:</label>
+                            <select id="nombreColorSelect" class="form-select" aria-label="Default select example" onchange="actualizarCampoTexto()">
+                                {{#each ListColores}}
+                                <option value="{{nombreColor}}" data-hex="{{codHexadecimal}}">{{nombreColor}}</option>
+                                {{/each}}
+                            </select>
+                            <label for="nombreColor">Talla</label>
+                            <select id="nombreTalleSelect" class="form-select" aria-label="Default select example" onchange="actualizarCampoTexto()">
+                                {{#each ListaDeTallas}}
+                                    <option value="{{nombre}}" data-hex="">{{nombre}}</option>
+                                {{/each}}
+                            </select>
+                            <input type="number" name="stock" id="stock" class="" placeholder="stock">
+                            <button type="button" onclick="agregarOpcion()">Agregar Opción</button>
+                            <input type="hidden" id="nombreColorHidden" value="negro" name="nombreColor">
+                            <input type="hidden" id="exaColorHidden" value="#FFFFFF" name="exaColor">
+                            <input type="hidden" id="tallaHidden" value="S" name="talla">
                         </div>
 
+                        <div id="opcionesContainer"></div>
 
                     </div>
                     <div class="col-sm">
+
+                        {{!-- <div class="form-group">
+                            <input type="file" name="photos" multiple="'true">
+                        </div> --}}
                     
 
-                        <div id="opcionForm">
+                        {{!-- <div id="opcionForm">
                             <div class="form-group">
                                 <label for="nombreColor">Seleccionar Color:</label>
                                 <select id="nombreColorSelect"class="form-select" aria-label="Default select example" onchange="actualizarCampoTexto()">
@@ -180,7 +245,7 @@
                         
                         <input type="hidden" id="opcionesInput" name="opciones">
 
-                        <div id="opcionesContainer"></div>
+                        <div id="opcionesContainer"></div> --}}
 
 
                     
