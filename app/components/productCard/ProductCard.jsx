@@ -43,17 +43,12 @@ function ProductCard({
 		coloresSintaxis = colores.join();
 	}
 
-	//if (nombre === "chomba falabe") console.log(imagen);
-
 	/* prettier-ignore */
 	return (
     <section className="card relative">
         
-          <div className="absolute top-4 right-3">
-            <FaBagShopping size={25} color="#000" />
-          </div>
-          <div className="absolute top-4 left-3">
-            <FaHeart size={25} color="#000" />
+          <div className="absolute top-3 right-2">
+            {<FaHeart size={25} color="#000" />}
           </div>
           
           <Link href={`/producto/${nombreParam}`}>
