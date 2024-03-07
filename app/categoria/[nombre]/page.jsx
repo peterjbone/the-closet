@@ -7,7 +7,7 @@ import { useProductsStore } from "../../hooks/productsStore.js";
 //? Importando componentes a usar
 import ProductCard from "../../components/productCard/ProductCard.jsx";
 import CategoryNav from "../../components/categoryNav/CategoryNav";
-import Recommended from "../../components/recommended/Recommended";
+import Brands from "../../components/brands/Brands";
 import Sidebar from "../../components/sideBar/Sidebar";
 
 function Page({ params }) {
@@ -83,6 +83,8 @@ function Page({ params }) {
 		default:
 			break;
 	}
+
+	//* -------------------MANIPULACION DE LOS PRODUCTOS-------------------
 
 	//? Estos son todos los productos de determinada categoría (sin filtros aplicados)
 	let productos = allProducts;
@@ -175,7 +177,7 @@ function Page({ params }) {
 			<div className="flex flex-row">
         <Sidebar handleRadioChange={handleRadioChange}/>
 				<div>
-          <Recommended handleBtnClick={handleBtnClick} />
+          <Brands handleBtnClick={handleBtnClick} />
           {/* Products container */}
 					<section className="card-container">
             {resultado}

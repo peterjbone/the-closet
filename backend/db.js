@@ -21,7 +21,7 @@ const Opcion = require("./models/Opciones.js");
 async function insertarInfo() {
 	try {
 		await Producto.insertMany(todosProductos);
-		await Opcion.insertMany(opcionesProducto);
+		//await Opcion.insertMany(opcionesProducto);
 		console.log("Documentos insertados correctamente");
 	} catch (error) {
 		console.log("Error al insertar documentos:", error);
