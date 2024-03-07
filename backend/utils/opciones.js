@@ -1,6 +1,6 @@
 const opciones = [
 	{
-		nombre: "tipos",
+		nombre: "subcategorias",
 		contenido: [
 			{
 				id: "sc00",

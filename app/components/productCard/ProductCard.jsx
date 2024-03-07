@@ -58,7 +58,7 @@ function ProductCard({
         
           <div className="card-details">
             <section className="mb-2">
-              <h3 className="text-2xl">{nombre.toUpperCase()}</h3>
+              <h3 className="text-xl">{nombre.toUpperCase()}</h3>
               <div className="flex flex-row gap-4">
                 <p className="font-semibold italic">{marca}</p>
                 {productoNuevo && <p className="text-red-600">NUEVO</p>}

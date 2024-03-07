@@ -10,13 +10,14 @@ async function connectDB() {
 		console.log("Error al conectarse a la base de datos:", error);
 	}
 }
-//connectDB();
 
 //? Insertar documentos necesarios en MongoDB
-/* const todosProductos = require("./utils/todosProductos2.js");
+const todosProductos = require("./utils/todosProductos2.js");
 const opcionesProducto = require("./utils/opciones.js");
+
 const Producto = require("./models/Productos.js");
 const Opcion = require("./models/Opciones.js");
+
 async function insertarInfo() {
 	try {
 		await Producto.insertMany(todosProductos);
@@ -26,10 +27,10 @@ async function insertarInfo() {
 		console.log("Error al insertar documentos:", error);
 	}
 }
-insertarInfo(); */
+//insertarInfo();
 
 //? Cambiar el nombre de la propiedad en todos los documentos
-/* const Producto = require("./models/Productos.js");
+//const Producto = require("./models/Productos.js");
 async function cambiarValorPropiedad() {
 	try {
 		await Producto.updateMany(
@@ -41,6 +42,6 @@ async function cambiarValorPropiedad() {
 		console.log("Error al cambiar el valor:", error);
 	}
 }
-cambiarValorPropiedad(); */
+//cambiarValorPropiedad();
 
 module.exports = { connectDB };
