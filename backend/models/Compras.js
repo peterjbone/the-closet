@@ -10,11 +10,19 @@ const CompraSchema = new mongoose.Schema({
         producto: {
             type: mongoose.Schema.Types.Number,
             ref: 'Producto' 
+
             
         },
         cantidad: {
             type: Number,
             default: 0
+        },
+        talle: {
+            type: String,
+
+        },
+        color:{
+            type: String,
         }
     }],
     },

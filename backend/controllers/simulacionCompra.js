@@ -1,4 +1,4 @@
-const preferenciaDePago = require('./mpPreference')
+const preferenciaDePago = require('./getMpPreference')
 const Producto = require('../models/Productos')
 
 const simuCompra = async () => {

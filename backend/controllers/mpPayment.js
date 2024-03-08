@@ -3,16 +3,22 @@ const {ACCESS_TOKEN} = process.env;
 
 const client = new MercadoPagoConfig({ accessToken: ACCESS_TOKEN })
 
-const paymentControl = (req, res) => {
+const paymentControl = async (req, res) => {
     const pay = req.body
-    const payment = new Payment(client)
-
-    payment.get({
+    
+    const payment = await new Payment(client).get({
         id: pay.data.id,
-        amount: pay.amount        
     })
+    console.log(payment);
+    const receipt = {
+        id: payment.id,
+        precio: payment.transaction_amount,
+        
+    }
 
-
+    res.status(200).send('llego bien')
 
 
 }
+
+module.exports = paymentControl

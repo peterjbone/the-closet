@@ -12,10 +12,11 @@ const getChildrenProducts = require("../controllers/getChildrenProducts");
 const getNewProducts = require("../controllers/getNewProducts");
 const postCompra = require('../controllers/PostCompra')
 const simuCompra = require('../controllers/simulacionCompra')
-const compra = require('../controllers/mpPreference')
 const getHoodiesProducts = require("../controllers/getHoddiesProducts");
 const getTshirtsProducts = require("../controllers/getTshirtsProducts");
 const getJoggersProducts = require("../controllers/getJoggersProducts");
+const getMpPreference = require('../controllers/getMpPreference')
+const paymentControl = require('../controllers/mpPayment')
 
 const router = Router();
 
@@ -27,16 +28,12 @@ router.get("/newproducts", getNewProducts);
 router.get("/hoodies", getHoodiesProducts);
 router.get("/t-shirts", getTshirtsProducts);
 router.get("/joggers", getJoggersProducts);
+router.get("/preference", getMpPreference)
 
-router.get('/simular', simuCompra )
+router.post("/preference", getMpPreference)
+router.post('/payment', paymentControl )
 
-// const productos = [
-   
-//     {nombre: 'Remera', precio: 2, cantidad: 1}
 
-// ]
-// const compraId = 'compra1'
-router.post("/compra", compra.compra)
 
 /* 
 router.post("/producto", postProduct);

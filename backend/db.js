@@ -12,8 +12,8 @@ async function connectDB() {
 }
 //connectDB();
 
-//? Insertar documentos necesarios en MongoDB
-/* const todosProductos = require("./utils/todosProductos2.js");
+// //? Insertar documentos necesarios en MongoDB
+ const todosProductos = require("./utils/todosProductos2.js");
 const opcionesProducto = require("./utils/opciones.js");
 const Producto = require("./models/Productos.js");
 const Opcion = require("./models/Opciones.js");
@@ -26,7 +26,7 @@ async function insertarInfo() {
 		console.log("Error al insertar documentos:", error);
 	}
 }
-insertarInfo(); */
+//insertarInfo(); 
 
 //? Cambiar el nombre de la propiedad en todos los documentos
 /* const Producto = require("./models/Productos.js");
