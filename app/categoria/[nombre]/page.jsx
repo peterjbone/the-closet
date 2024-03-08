@@ -11,119 +11,179 @@ import Recommended from "../../components/recommended/Recommended";
 import Sidebar from "../../components/sideBar/Sidebar";
 
 function Page({ params }) {
-	/* prettier-ignore */
-	const { nombre } = params;
-	const getAllProducts = useProductsStore((state) => state.getAllProducts);
-	const removeAllProducts = useProductsStore(
-		(state) => state.removeAllProducts
-	);
-	const getMenProducts = useProductsStore((state) => state.getMenProducts);
-	const getWomenProducts = useProductsStore((state) => state.getWomenProducts);
-	const getChildrenProducts = useProductsStore(
-		(state) => state.getChildrenProducts
-	);
-	const getNewProducts = useProductsStore((state) => state.getNewProducts);
-	const allProducts = useProductsStore((state) => state.allProducts);
+  /* prettier-ignore */
+  const { nombre } = params;
+  const getAllProducts = useProductsStore((state) => state.getAllProducts);
+  const removeAllProducts = useProductsStore(
+    (state) => state.removeAllProducts
+  );
+  const getMenProducts = useProductsStore((state) => state.getMenProducts);
+  const getWomenProducts = useProductsStore((state) => state.getWomenProducts);
+  const getChildrenProducts = useProductsStore(
+    (state) => state.getChildrenProducts
+  );
+  const getHoodiesProducts = useProductsStore(
+    (state) => state.getHoodiesProducts
+  );
+  const getTshirtsProducts = useProductsStore(
+    (state) => state.getTshirtsProducts
+  );
+  const getJoggersProducts = useProductsStore(
+    (state) => state.getJoggersProducts
+  );
+  const getShoes = useProductsStore((state) => state.getShoes);
+  const getJeans = useProductsStore((state) => state.getJeans);
+  const getShorts = useProductsStore((state) => state.getShorts);
+  const getNewProducts = useProductsStore((state) => state.getNewProducts);
+  const allProducts = useProductsStore((state) => state.allProducts);
 
-	//? Definiendo cuales productos traer al estado global
-	//? ejecuta cierta "action" dependiendo de la params que llego.
-	useEffect(() => {
-		switch (nombre) {
-			case "todos":
-				getAllProducts();
-				break;
+  //? Definiendo cuales productos traer al estado global
+  //? ejecuta cierta "action" dependiendo de la params que llego.
+  useEffect(() => {
+    switch (nombre) {
+      case "todos":
+        getAllProducts();
+        break;
 
-			case "hombres":
-				getMenProducts();
-				break;
+      case "hombres":
+        getMenProducts();
+        break;
 
-			case "mujeres":
-				getWomenProducts();
-				break;
+      case "mujeres":
+        getWomenProducts();
+        break;
 
-			case "infantes":
-				getChildrenProducts();
-				break;
+      case "infantes":
+        getChildrenProducts();
+        break;
 
-			case "nuevos":
-				getNewProducts();
-				break;
+      case "nuevos":
+        getNewProducts();
+        break;
 
-			default:
-				return null;
-		}
-		return () => {
-			removeAllProducts();
-		};
-	}, []);
+      case "hoodies":
+        getHoodiesProducts();
+        break;
 
-	//? Definiendo el título de la categoría, dependiendo del params
-	let titulo = "";
-	switch (nombre) {
-		case "todos":
-			titulo = "Todos nuestros productos, en un solo lugar 👑";
-			break;
+      case "camisetas":
+        getTshirtsProducts();
+        break;
 
-		case "hombres":
-			titulo = "Categoría Masculino / Adulto 🤵";
-			break;
+      case "joggers":
+        getJoggersProducts();
+        break;
 
-		case "mujeres":
-			titulo = "Categoría Femenina / Adulta 👠";
-			break;
+      case "zapatos":
+        getShoes();
+        break;
 
-		case "infantes":
-			titulo = "Categoría infantil / Niños y Niñas 🧒";
-			break;
+      case "jeans":
+        getJeans();
+        break;
 
-		case "nuevos":
-			titulo = "Categoría de nuevos productos 😎";
-			break;
+      case "shorts":
+        getShorts();
+        break;
 
-		default:
-			break;
-	}
+      default:
+        return null;
+    }
+    return () => {
+      removeAllProducts();
+    };
+  }, []);
 
-	//? Estos son todos los productos de determinada categoría (sin filtros aplicados)
-	let productos = allProducts;
-	//console.log(productos);
+  //? Definiendo el título de la categoría, dependiendo del params
+  let titulo = "";
+  switch (nombre) {
+    case "todos":
+      titulo = "Todos nuestros productos, en un solo lugar 👑";
+      break;
 
-	const [selectedCategory, setSelectedCategory] = useState(null);
-	const [query, setQuery] = useState("");
+    case "hombres":
+      titulo = "Categoría Masculino / Adulto 🤵";
+      break;
 
-	//? ----------Input filter (Custom search) ----------------
-	function handleInputChange(event) {
-		setQuery(event.target.value);
-	}
+    case "mujeres":
+      titulo = "Categoría Femenina / Adulta 👠";
+      break;
 
-	//prettier-ignore
-	const filteredItems = productos.filter(
+    case "infantes":
+      titulo = "Categoría infantil / Niños y Niñas 🧒";
+      break;
+
+    case "nuevos":
+      titulo = "Categoría de nuevos productos 😎";
+      break;
+
+    case "hoodies":
+      titulo = "Hoodies & Sudaderas";
+      break;
+
+    case "camisetas":
+      titulo = "T-Shirts 👕";
+      break;
+
+    case "joggers":
+      titulo = "Joggers & Leggings";
+      break;
+
+    case "zapatos":
+      titulo = "Zapatos & Botas 👟 👢";
+      break;
+
+    case "jeans":
+      titulo = "Pantalones & Jeans 👖";
+      break;
+
+    case "jeans":
+      titulo = "Faldas y Shorts 🩳";
+      break;
+
+    default:
+      break;
+  }
+
+  //? Estos son todos los productos de determinada categoría (sin filtros aplicados)
+  let productos = allProducts;
+  //console.log(productos);
+
+  const [selectedCategory, setSelectedCategory] = useState(null);
+  const [query, setQuery] = useState("");
+
+  //? ----------Input filter (Custom search) ----------------
+  function handleInputChange(event) {
+    setQuery(event.target.value);
+  }
+
+  //prettier-ignore
+  const filteredItems = productos.filter(
 		(producto) =>
 			producto.nombre.toLowerCase().indexOf(query.toLowerCase()) !== -1
 	);
 
-	//? -----------Radio filter (for categories) -----------------
-	function handleRadioChange(e) {
-		setSelectedCategory(e.target.value);
-	}
+  //? -----------Radio filter (for categories) -----------------
+  function handleRadioChange(e) {
+    setSelectedCategory(e.target.value);
+  }
 
-	//? ------------ Button filter (for brands) -------------
-	function handleBtnClick(e) {
-		setSelectedCategory(e.target.value);
-	}
+  //? ------------ Button filter (for brands) -------------
+  function handleBtnClick(e) {
+    setSelectedCategory(e.target.value);
+  }
 
-	//* -------- Creación de las cards y filtración de productos (si las hay)-----------
-	function filteredData(products, selected, query) {
-		let filteredProducts = products;
+  //* -------- Creación de las cards y filtración de productos (si las hay)-----------
+  function filteredData(products, selected, query) {
+    let filteredProducts = products;
 
-		// Filtrando: Input items
-		if (query) {
-			filteredProducts = filteredItems;
-		}
+    // Filtrando: Input items
+    if (query) {
+      filteredProducts = filteredItems;
+    }
 
-		// Filtrando: Selecter filter
-		//prettier-ignore
-		if (selected) {
+    // Filtrando: Selecter filter
+    //prettier-ignore
+    if (selected) {
 			filteredProducts = filteredProducts.filter(
 				({ subcategoria, colores, marca, precio }) =>
 					subcategoria === selected ||
@@ -133,8 +193,8 @@ function Page({ params }) {
 			);
 		}
 
-		//prettier-ignore
-		const result = filteredProducts.map(
+    //prettier-ignore
+    const result = filteredProducts.map(
 			(
 				{
 					imagen,
@@ -144,7 +204,8 @@ function Page({ params }) {
 					categoria,
 					genero,
 					marca,
-					productoNuevo
+					productoNuevo,
+          subcategoria,
 				},
 				index
 			) => (
@@ -158,17 +219,18 @@ function Page({ params }) {
 					genero={genero}
 					marca={marca}
 					productoNuevo={productoNuevo}
+          subcategoria={subcategoria}
 				/>
 			)
 		);
 
-		return result;
-	}
+    return result;
+  }
 
-	const resultado = filteredData(productos, selectedCategory, query);
+  const resultado = filteredData(productos, selectedCategory, query);
 
-	/* prettier-ignore */
-	return (
+  /* prettier-ignore */
+  return (
 		<div>
       <CategoryNav query={query} handleInputChange={handleInputChange} />
       <h1 className="text-2xl text-center mb-6 font-bold">{titulo}</h1>
