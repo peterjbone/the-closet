@@ -13,6 +13,8 @@ import Sidebar from "../../components/sideBar/Sidebar";
 function Page({ params }) {
 	/* prettier-ignore */
 	const { nombre } = params;
+
+	//* Trayendo las funciones que modifican el estado global
 	const getAllProducts = useProductsStore((state) => state.getAllProducts);
 	const removeAllProducts = useProductsStore(
 		(state) => state.removeAllProducts
@@ -35,7 +37,6 @@ function Page({ params }) {
 	const getJeans = useProductsStore((state) => state.getJeans);
 	const getShorts = useProductsStore((state) => state.getShorts);
 	const getNewProducts = useProductsStore((state) => state.getNewProducts);
-	const allProducts = useProductsStore((state) => state.allProducts);
 
 	//? Definiendo cuales productos traer al estado global
 	//? ejecuta cierta "action" dependiendo de la params que llego.
@@ -147,6 +148,7 @@ function Page({ params }) {
 	//* -------------------MANIPULACION DE LOS PRODUCTOS-------------------
 
 	//? Estos son todos los productos de determinada categoría (sin filtros aplicados)
+	const allProducts = useProductsStore((state) => state.allProducts);
 	let productos = allProducts;
 	//console.log(productos);
 
