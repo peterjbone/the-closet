@@ -5,23 +5,29 @@ import { FaFacebook } from "react-icons/fa";
 import { FaSquareInstagram } from "react-icons/fa6";
 import { PiTiktokLogoFill } from "react-icons/pi";
 import { RiTwitterXFill } from "react-icons/ri";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <>
-      <div className="bg-blue-950 flex text-white p-2 pt-7 pb-7 place-content-evenly font-bold">
+      <div className="bg-black flex text-white p-2 pt-7 pb-7 place-content-evenly font-bold">
         <div>
           <p className="text-center mb-2">Explora</p>
-          <div className="flex list-none gap-3 font-light">
+          <div className="flex flex-col list-none font-light">
             <div>
-              <li>Jeans</li>
-              <li>Blusas</li>
-              <li>Vestidos</li>
+              <Link href="/categoria/jeans">
+                <li>Jeans y Pantalones</li>
+              </Link>
             </div>
             <div>
-              <li>Camisas</li>
-              <li>Poleras</li>
-              <li>Zapatos</li>
+              <Link href="/categoria/zapatos">
+                <li>Zapatos</li>
+              </Link>
+            </div>
+            <div>
+              <Link href="/categoria/shorts">
+                <li>Faldas y Shorts</li>
+              </Link>
             </div>
           </div>
         </div>
@@ -33,14 +39,7 @@ const Footer = () => {
             <li>Historia</li>
           </div>
         </div>
-        <div className="text-center">
-          <p>Suscripciones</p>
-          <div className="list-none font-light mt-3">
-            <li>Diamante</li>
-            <li>Platino</li>
-            <li>Oro</li>
-          </div>
-        </div>
+
         <div>
           <p className="mb-2 text-center">Contacto</p>
           <div className="list-none font-light">
