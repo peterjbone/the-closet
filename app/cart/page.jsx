@@ -1,36 +1,40 @@
 "use client";
 
-import "./Cart.css"
+import "./Cart.css";
 
-import {useEffect} from "react"
+import { useEffect } from "react";
 
-import Link from "next/link"
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
 
-import { useCartStore } from "../hooks/cartStore.js"
+import { useCartStore } from "../hooks/cartStore.js";
 
 import Navbar from "../components/navbar/Navbar";
+import PayButton from "../components/PayButton";
 
 function Cart() {
-  const addToCart = useCartStore((state) => state.addToCart)
-  const removeFromCart = useCartStore((state) => state.removeFromCart)
-  const clearCart = useCartStore((state) => state.clearCart)
-  const getTotals = useCartStore((state) => state.getTotals)
+	//? Trayendo las "actions"
+	const addToCart = useCartStore((state) => state.addToCart);
+	const removeFromCart = useCartStore((state) => state.removeFromCart);
+	const decreaseCart = useCartStore((state) => state.decreaseCart);
+	const clearCart = useCartStore((state) => state.clearCart);
+	const getTotals = useCartStore((state) => state.getTotals);
 
-  //? Obteniendo el total al cargar el componente
-    useEffect(() => {
-      getTotals()
-    })
-  
-  const productsCart = useCartStore((state) => state.productsCart)
-  const total = useCartStore((state) => state.total)
+	//? Generando el precio total al cargar el componente
+	useEffect(() => {
+		getTotals();
+	});
 
+	//? Obteniendo los estados globales
+	const cartItems = useCartStore((state) => state.cartItems);
+	const cartTotalQuantity = useCartStore((state) => state.cartTotalQuantity);
+	const cartTotalAmount = useCartStore((state) => state.cartTotalAmount);
 
-  const router = useRouter()
+	const router = useRouter();
 	const { data: session, status } = useSession();
-	// console.log("SESSION", session);
-	// console.log("STATUS", status);
+	console.log("SESSION", session);
+	console.log("STATUS", status);
 
 	/* prettier-ignore */
 	return (
@@ -41,9 +45,9 @@ function Cart() {
         <h1 className="text-start text-3xl font-bold ml-5 mt-4">Mi Carrito 🛒</h1>
         {
           productsCart.length === 0 ? (
-            <div className="">
+            <div className="cart-empty">
                 <p>Tu carrito esta vacío por el momento.</p>
-                <div className="">
+                <div className="start-shopping">
                   <Link to="/">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -65,57 +69,57 @@ function Cart() {
           ) : (
             <div>
               <div className="titles">
-                <h3 className="product-title">Product</h3>
-                <h3 className="price">Price</h3>
-                <h3 className="quantity">Quantity</h3>
+                <h3 className="product-title">Producto</h3>
+                <h3 className="price">Precio</h3>
+                <h3 className="quantity">Cantidad</h3>
                 <h3 className="total">Total</h3>
               </div>
               <div className="cart-items">
-                {productsCart &&
-                  productsCart.map((cartItem) => (
+                {cartItems &&
+                  cartItems.map((cartItem) => (
                     <div className="cart-item" key={cartItem._id}>
                       <div className="cart-product">
-                        <img src={cartItem.image?.url} alt={cartItem.name} />
+                        <img src={cartItem.imagen[0]} alt={cartItem.nombre} />
                         <div>
-                          <h3>{cartItem.name}</h3>
-                          <p>{cartItem.desc}</p>
-                          <button onClick={() => handleRemoveFromCart(cartItem)}>
-                            Remove
+                          <h3>{cartItem.nombre}</h3>
+                         {/*  <p>{cartItem.desc}</p> */}
+                          <button onClick={() => removeFromCart(cartItem)}>
+                            Eliminar
                           </button>
                         </div>
                       </div>
-                      <div className="cart-product-price">${cartItem.price}</div>
+                      <div className="cart-product-price">${cartItem.precio}</div>
                       <div className="cart-product-quantity">
-                        <button onClick={() => handleDecreaseCart(cartItem)}>
+                        <button onClick={() => decreaseCart(cartItem)}>
                           -
                         </button>
                         <div className="count">{cartItem.cartQuantity}</div>
-                        <button onClick={() => handleAddToCart(cartItem)}>+</button>
+                        <button onClick={() => addToCart(cartItem)}>+</button>
                       </div>
                       <div className="cart-product-total-price">
-                        ${cartItem.price * cartItem.cartQuantity}
+                        ${cartItem.precio * cartItem.cartQuantity}
                       </div>
                     </div>
                   ))}
               </div>
               <div className="cart-summary">
-                <button className="clear-btn" onClick={() => handleClearCart()}>
-                  Clear Cart
+                <button className="clear-btn" onClick={() => clearCart()}>
+                  Vaciar carrito
                 </button>
                 <div className="cart-checkout">
                   <div className="subtotal">
                     <span>Subtotal</span>
-                    <span className="amount">${cart.cartTotalAmount}</span>
+                    <span className="amount">${cartTotalAmount}</span>
                   </div>
-                  <p>Taxes and shipping calculated at checkout</p>
-                  {auth._id ? (
-                    <PayButton productsCart={productsCart} />
+                  <p>Impuestos y envío calculados al finalizar la compra</p>
+                  {session.name ? (
+                    <PayButton cartItems={cartItems} />
                   ) : (
                     <button
                       className="cart-login"
                       onClick={() => router.push("/login")}
                     >
-                      Inicia sesión para hacer el pago.
+                      Inicia sesión para hacer el pago
                     </button>
                   )}
 
@@ -134,7 +138,7 @@ function Cart() {
                           d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z"
                         />
                       </svg>
-                      <span>Continue Shopping</span>
+                      <span>Seguir comprando</span>
                     </Link>
                   </div>
                 </div>
@@ -150,7 +154,7 @@ function Cart() {
 export default Cart;
 
 //*******************VERSION DE YOUTUBE*****************
-
+/* 
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -296,4 +300,5 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export default Cart; 
+*/

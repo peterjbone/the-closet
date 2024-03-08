@@ -1,15 +1,15 @@
-const mongoose = require("mongoose");
+const { Schema, model, models } = require("mongoose");
 
-const ProductSchema = new mongoose.Schema({
+const ProductSchema = new Schema({
 	nombre: String,
 	marca: String,
-	description: String,
+	descripcion: String,
 	precio: Number,
 	oferta: {
-		type: mongoose.Schema.Types.Mixed,
+		type: Schema.Types.Mixed,
 		default: {}
 	},
-	Activo: Boolean,
+	activo: Boolean,
 	productoNuevo: Boolean,
 	categoria: String,
 	genero: String,
@@ -18,9 +18,10 @@ const ProductSchema = new mongoose.Schema({
 	tallas: [String],
 	colores: [String],
 	opcion: {
-		type: mongoose.Schema.Types.Mixed,
+		type: Schema.Types.Mixed,
 		default: []
 	}
 });
 
-module.exports = mongoose.model("Producto", ProductSchema);
+const Producto = models.Producto || model("Producto", ProductSchema);
+module.exports = Producto;

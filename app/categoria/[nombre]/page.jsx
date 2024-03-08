@@ -139,27 +139,39 @@ function Page({ params }) {
 		const result = filteredProducts.map(
 			(
 				{
-					imagen,
 					nombre,
-					precio,
-					colores,
-					categoria,
-					genero,
 					marca,
-					productoNuevo
+					descripcion,
+          precio,
+          oferta,
+          activo,
+          productoNuevo,
+					categoria,
+          genero,
+          subcategoria,
+          imagen,
+          tallas,
+					colores,
+					opcion
 				},
 				index
 			) => (
 				<ProductCard
 					key={index}
 					nombre={nombre}
-					imagen={imagen}
+					marca={marca}
+					descripcion={descripcion}
 					precio={precio}
-					colores={colores}
+          oferta={oferta}
+          activo={activo}
+          productoNuevo={productoNuevo}
 					categoria={categoria}
 					genero={genero}
-					marca={marca}
-					productoNuevo={productoNuevo}
+					subcategoria={subcategoria}
+					imagen={imagen}
+					tallas={tallas}
+					colores={colores}
+					opcion={opcion}
 				/>
 			)
 		);

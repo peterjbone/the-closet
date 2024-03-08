@@ -1,32 +1,36 @@
 import { create } from "zustand";
 
 export const useCartStore = create((set) => ({
-	productsCart: [],
-	total: 0,
+	cartItems: [],
+	cartTotalQuantity: 0,
+	cartTotalAmount: 0,
 	addToCart: async (product) => {
 		set((state) => ({
 			...state,
-			selectedProducts: [product, ...state.productsCart]
+			cartItems: [product, ...state.cartItems]
 		}));
 	},
-	removeFromCart: async (id) => {
+	removeFromCart: async (product) => {
 		set((state) => ({
 			...state,
-			productsCart: [
-				...state.productsCart.filter((product) => product.id !== id)
-			]
+			cartItems: [...state.cartItems.filter((cartItem) => product.id !== id)]
+		}));
+	},
+	decreaseCart: async (product) => {
+		set((state) => ({
+			...state
 		}));
 	},
 	clearCart: async () => {
 		set((state) => ({
 			...state,
-			productsCart: []
+			cartItems: []
 		}));
 	},
 	getTotals: async () => {
 		set((state) => ({
 			...state,
-			total: state.productsCart.reduce(
+			cartTotalAmount: state.cartItems.reduce(
 				(prevProduct, product) => prevProduct.precio + product.precio,
 				0
 			)
