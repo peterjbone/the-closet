@@ -70,6 +70,30 @@ export const useProductsStore = create((set) => ({
       allProducts: [...data],
     }));
   },
+  getShoes: async () => {
+    const { data } = await axios.get("http://localhost:3001/zapatos");
+    set((state) => ({
+      ...state,
+      selectedProducts: [...data],
+      allProducts: [...data],
+    }));
+  },
+  getJeans: async () => {
+    const { data } = await axios.get("http://localhost:3001/jeans");
+    set((state) => ({
+      ...state,
+      selectedProducts: [...data],
+      allProducts: [...data],
+    }));
+  },
+  getShorts: async () => {
+    const { data } = await axios.get("http://localhost:3001/shorts");
+    set((state) => ({
+      ...state,
+      selectedProducts: [...data],
+      allProducts: [...data],
+    }));
+  },
   removeAllProducts: () => {
     set((state) => ({
       ...state,

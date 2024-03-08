@@ -31,6 +31,9 @@ function Page({ params }) {
   const getJoggersProducts = useProductsStore(
     (state) => state.getJoggersProducts
   );
+  const getShoes = useProductsStore((state) => state.getShoes);
+  const getJeans = useProductsStore((state) => state.getJeans);
+  const getShorts = useProductsStore((state) => state.getShorts);
   const getNewProducts = useProductsStore((state) => state.getNewProducts);
   const allProducts = useProductsStore((state) => state.allProducts);
 
@@ -70,6 +73,18 @@ function Page({ params }) {
         getJoggersProducts();
         break;
 
+      case "zapatos":
+        getShoes();
+        break;
+
+      case "jeans":
+        getJeans();
+        break;
+
+      case "shorts":
+        getShorts();
+        break;
+
       default:
         return null;
     }
@@ -106,12 +121,25 @@ function Page({ params }) {
       break;
 
     case "camisetas":
-      titulo = "T-Shirts";
+      titulo = "T-Shirts 👕";
+      break;
 
     case "joggers":
       titulo = "Joggers & Leggings";
-
       break;
+
+    case "zapatos":
+      titulo = "Zapatos & Botas 👟 👢";
+      break;
+
+    case "jeans":
+      titulo = "Pantalones & Jeans 👖";
+      break;
+
+    case "jeans":
+      titulo = "Faldas y Shorts 🩳";
+      break;
+
     default:
       break;
   }
@@ -176,7 +204,8 @@ function Page({ params }) {
 					categoria,
 					genero,
 					marca,
-					productoNuevo
+					productoNuevo,
+          subcategoria,
 				},
 				index
 			) => (
@@ -190,6 +219,7 @@ function Page({ params }) {
 					genero={genero}
 					marca={marca}
 					productoNuevo={productoNuevo}
+          subcategoria={subcategoria}
 				/>
 			)
 		);

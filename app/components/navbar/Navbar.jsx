@@ -12,40 +12,40 @@ import Avatar from "./Avatar";
 import MenuItem from "./MenuItem";
 
 const Header = () => {
-	const router = useRouter();
-	const [isOpen, setIsOpen] = useState(false);
-	const { data: session } = useSession();
+  const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
+  const { data: session } = useSession();
 
-	//? Mensaje por consola para saber si cargo el usuario
-	// console.log("SESSION:");
-	// console.log(session);
+  //? Mensaje por consola para saber si cargo el usuario
+  // console.log("SESSION:");
+  // console.log(session);
 
-	//? Para abrir el menú de usuario
-	const toggleOpen = useCallback(() => {
-		setIsOpen((value) => !value);
-	}, []);
+  //? Para abrir el menú de usuario
+  const toggleOpen = useCallback(() => {
+    setIsOpen((value) => !value);
+  }, []);
 
-	//? Para salir de la sesión
-	function handleSignout() {
-		toast
-			.promise(
-				new Promise((resolve) => setTimeout(() => resolve(true), 2000)),
-				{
-					loading: "Cerrando sesión...",
-					success: <b>Haz cerrado tu sesión.</b>,
-					error: <b>Algo salió mal.</b>
-				},
-				{
-					success: {
-						duration: 1000
-					}
-				}
-			)
-			.then(() => signOut());
-	}
+  //? Para salir de la sesión
+  function handleSignout() {
+    toast
+      .promise(
+        new Promise((resolve) => setTimeout(() => resolve(true), 2000)),
+        {
+          loading: "Cerrando sesión...",
+          success: <b>Haz cerrado tu sesión.</b>,
+          error: <b>Algo salió mal.</b>,
+        },
+        {
+          success: {
+            duration: 1000,
+          },
+        }
+      )
+      .then(() => signOut());
+  }
 
-	/* prettier-ignore */
-	return (
+  /* prettier-ignore */
+  return (
 		<header className="font-semibold border-b-gray-500">
 			<div
 				className="
@@ -59,9 +59,9 @@ const Header = () => {
 					The closet
 				</Link>
 				<nav className="text-gray-800 text-xl flex flex-row items-center gap-6">
-					<Link href={"/zapatos"}>Hombre</Link>
-					<Link href={"/ropa"}>Mujer</Link>
-					<Link href={"/descuento"}>Niños y Niñas</Link>
+					<Link href={"/categoria/hombres"}>Hombre</Link>
+					<Link href={"/categoria/mujeres"}>Mujer</Link>
+					<Link href={"/categoria/infantes"}>Niños y Niñas</Link>
 				</nav>
         <div className="flex flex-row items-center gap-4 relative">
           <div className="hover:cursor-pointer hover:text-red-600">
