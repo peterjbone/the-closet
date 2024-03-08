@@ -1,7 +1,8 @@
 const express = require("express");
 const server = express();
 const morgan = require("morgan");
-const router = require("./routes/routesIndex");
+const router = require("./routes/routesIndex.js");
+const stripeRouter = require("./routes/stripe.js");
 
 server.use((req, res, next) => {
 	res.header("Access-Control-Allow-Origin", "*");
@@ -18,5 +19,6 @@ server.use(express.json());
 
 // Rutas
 server.use("/", router);
+server.use("/api/stripe", stripeRouter);
 
 module.exports = server;
