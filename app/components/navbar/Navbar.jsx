@@ -46,7 +46,7 @@ const Header = () => {
 
 	/* prettier-ignore */
 	return (
-		<header className="font-semibold border-b-gray-500">
+		<header className="font-semibold border-b-gray-300 border-[3px]">
 			<div
 				className="
         max-w-screen-xl
@@ -54,7 +54,8 @@ const Header = () => {
         flex
         flex-row
         justify-between
-        py-4">
+        py-4
+        ">
 				<Link href={"/"} className="font-bold text-[2rem] text-black">
 					The closet
 				</Link>
@@ -63,45 +64,50 @@ const Header = () => {
 					<Link href={"/ropa"}>Mujer</Link>
 					<Link href={"/descuento"}>Niños y Niñas</Link>
 				</nav>
-        <div className="flex flex-row items-center gap-4 relative">
-          <div className="hover:cursor-pointer hover:text-red-600">
-					  <FaRegHeart size={30} />
-          </div>
+				<div className="flex flex-row items-center gap-4 relative">
+					<div className="hover:cursor-pointer hover:text-red-600">
+						<FaRegHeart size={30} />
+					</div>
           <div>
-		  			<MdOutlineShoppingCart size={35} />
-          </div>
+            <Link href={"/cart"}>
+						  <MdOutlineShoppingCart size={35} />
+            </Link>
+					</div>
 					<div className="hover:cursor-pointer" onClick={toggleOpen}>
-						<Avatar src={session?.picture}/>
-          </div>
-          {
-            session?.user && (
-              <p className="text-xl underline"> {session?.user.name} </p>
-            )
-          }
-          
-          {isOpen && (
-            <div className="absolute z-10 top-12 left-28 border-black border-[5px]">
-              <div className="flex flex-col cursor-pointer">
-                {
-                  session?.user ? (
-                    <>
-                    <MenuItem onClick={() => {}} label="Editar perfil"/>
-                    <MenuItem onClick={() => {}} label="Historial de compras"/>
-                    <MenuItem onClick={() => handleSignout()} label="Salir de la sesión"/>
-                    </>
-                  ) : (
-                    <>
-                      <MenuItem onClick={()=> router.push("/login")} label="Login"/>
-                      <MenuItem onClick={()=> router.push("/register")} label="Sign up" />
-                    </> 
-                  )
-                }
-              </div>
-            </div>
-          )}
+						<Avatar src={session?.picture} />
+					</div>
+					{session?.user && (
+						<p className="text-xl underline"> {session?.user.name} </p>
+					)}
 
+					{isOpen && (
+						<div className="absolute z-10 top-12 left-28 border-black border-[5px]">
+							<div className="flex flex-col cursor-pointer">
+								{session?.user ? (
+									<>
+										<MenuItem onClick={() => {}} label="Editar perfil" />
+										<MenuItem onClick={() => {}} label="Historial de compras" />
+										<MenuItem
+											onClick={() => handleSignout()}
+											label="Salir de la sesión"
+										/>
+									</>
+								) : (
+									<>
+										<MenuItem
+											onClick={() => router.push("/login")}
+											label="Login"
+										/>
+										<MenuItem
+											onClick={() => router.push("/register")}
+											label="Sign up"
+										/>
+									</>
+								)}
+							</div>
+						</div>
+					)}
 				</div>
-
 			</div>
 		</header>
 	);
