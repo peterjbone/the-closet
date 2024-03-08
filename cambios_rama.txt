@@ -1,0 +1,4 @@
+- Elimine en libs/ el archivo DBmongo (innecesario)
+- Cambiar el nombre de recommended a brands
+- Creacion de componente productImage
+- Funcionalidad para cambiar de imagenes

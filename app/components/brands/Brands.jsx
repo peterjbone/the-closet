@@ -1,7 +1,7 @@
-import "./Recommended.css";
+import "./Brands.css";
 import Button from "./Button";
 
-function Recommended({ handleBtnClick }) {
+function Brands({ handleBtnClick }) {
 	/* prettier-ignore*/
 	return (  
     <>
@@ -25,4 +25,4 @@ function Recommended({ handleBtnClick }) {
   );
 }
 
-export default Recommended;
+export default Brands;
