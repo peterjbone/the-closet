@@ -1,9 +1,20 @@
-function ProductImage({ imgUrl, changeBigImage, bigImage }) {
+"use client";
+
+import { useEffect } from "react";
+
+function ProductImage({ imgUrl, changeBigImage, bigImage, index }) {
 	function handleClick() {
 		if (bigImage !== imgUrl) {
 			changeBigImage(imgUrl);
 		}
 	}
+
+	//? Hace que siempre al renderizar la imagen grande sea igual a la primera imagen
+	useEffect(() => {
+		if (index === 0) {
+			changeBigImage(imgUrl);
+		}
+	}, []);
 
 	/* prettier-ignore */
 	return ( 

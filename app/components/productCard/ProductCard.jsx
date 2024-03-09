@@ -2,27 +2,34 @@
 
 import "./ProductCard.css";
 import Link from "next/link";
-import { FaBagShopping } from "react-icons/fa6";
 import { FaHeart } from "react-icons/fa";
 import ProductImage from "./ProductImage.jsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function ProductCard({
-	id,
 	nombre,
 	marca,
+	descripcion,
 	precio,
-	inOferta,
 	oferta,
+	activo,
+	productoNuevo,
 	categoria,
 	genero,
+	subcategoria,
 	imagen,
 	tallas,
 	colores,
-	productoNuevo
+	opcion
 }) {
 	//? estado local para las imagenes
 	const [bigImage, setBigImage] = useState(imagen[0]);
+
+	useEffect(() => {
+		setBigImage(imagen[0]);
+
+		return () => setBigImage(null);
+	}, []);
 
 	//? Formateando el nombre a parametro (en minuscula, guiones medios y sin acentos)
 	let nombreParam = "";
@@ -45,17 +52,16 @@ function ProductCard({
 
 	/* prettier-ignore */
 	return (
-    <section className="card relative">
-        
-          <div className="absolute top-3 right-2">
-            {<FaHeart size={25} color="#000" />}
-          </div>
-          
-          <Link href={`/producto/${nombreParam}`}>
-            <img src={bigImage} alt={nombre} className="card-img" />
-          </Link>
-          <div
-            className="
+		<section className="card relative">
+			<div className="absolute top-3 right-2">
+				{<FaHeart size={25} color="#000" />}
+			</div>
+
+			<Link href={`/producto/${nombreParam}`}>
+				<img src={bigImage} alt={nombre} className="card-img" />
+			</Link>
+			<div
+				className="
             flex
             flex-row
             items-center
@@ -65,58 +71,45 @@ function ProductCard({
             w-full
             px-4
             mb-3">
-            {
-              imagen.map((img) => {
-                  return (
-                    <ProductImage
-                      key={img}
-                      imgUrl={img}
-                      changeBigImage={(image) => setBigImage(image)}
-                      bigImage={bigImage}
-                    />
-                  )
-              })
-            }
-          </div>
-        
-          <Link href={`/producto/${nombreParam}`}>
-              <div className="card-details">
-                <section className="mb-2">
-                  <h3 className="text-xl">{nombre.toUpperCase()}</h3>
-                  <div className="flex flex-row gap-4">
-                    <p className="font-semibold italic">{marca}</p>
-                    {productoNuevo && <p className="text-red-600">NUEVO</p>}
-                  </div>
-                </section>
-                
-                <p className="font-semibold">
-                  {categoria} & {genero}
-                </p>
+				{imagen.map((img, index) => {
+					return (
+						<ProductImage
+              key={img}
+              index={index}
+							imgUrl={img}
+							changeBigImage={(image) => setBigImage(image)}
+							bigImage={bigImage}
+						/>
+					);
+				})}
+			</div>
 
-                <p className="mb-4">
-                  {coloresSintaxis}
-                </p>
-        
-                <section className="flex flex-row items-center justify-center">
-                  <div className="text-xl ">${precio}</div>
-                </section>
-              </div>
-           </Link>  
-        
-			</section>
+			<Link href={`/producto/${nombreParam}`}>
+				<div className="card-details">
+					<section className="mb-2">
+						<h3 className="text-lg">{nombre.toUpperCase()}</h3>
+						<div className="flex flex-row gap-4">
+							<p className="font-semibold italic">{marca}</p>
+							{productoNuevo && <p className="text-red-600">NUEVO</p>}
+						</div>
+					</section>
+
+					<div className="flex flex-row justify-between">
+						<div>
+							<p className="font-semibold">
+								{categoria} & {genero}
+							</p>
+							<p className="mb-4">{coloresSintaxis}</p>
+						</div>
+            <section className="flex flex-row items-center justify-center">
+              <div className="text-xl ">${precio}</div>
+            </section>
+					</div>
+
+				</div>
+			</Link>
+		</section>
 	);
 }
 
 export default ProductCard;
-
-/* 
-FIRST CODE - BACKUP
-      <Link href={`/producto/${nombreParam}`}>
-				<div className="flex flex-col gap-3 items-center justify-center bg-slate-200 p-4">
-					<img src={imagen[0]} alt={nombre} className="mb-5 w-[250px] h-[300px]" />
-					<p className="font-bold text-2xl">{nombre}</p>
-					<p className="text-xl">{coloresFiltrado}</p>
-					<p className="text-xl">${precio}</p>
-				</div>
-			</Link>
-*/

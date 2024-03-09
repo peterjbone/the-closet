@@ -138,7 +138,8 @@ function Page({ params }) {
 		//prettier-ignore
 		const result = filteredProducts.map(
 			(
-				{
+        {
+          _id,
 					nombre,
 					marca,
 					descripcion,
@@ -157,7 +158,8 @@ function Page({ params }) {
 				index
 			) => (
 				<ProductCard
-					key={index}
+          key={index}
+          _id={_id}
 					nombre={nombre}
 					marca={marca}
 					descripcion={descripcion}

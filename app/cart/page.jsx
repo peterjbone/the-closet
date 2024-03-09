@@ -33,8 +33,8 @@ function Cart() {
 
 	const router = useRouter();
 	const { data: session, status } = useSession();
-	console.log("SESSION", session);
-	console.log("STATUS", status);
+	// console.log("SESSION", session);
+	// console.log("STATUS", status);
 
 	/* prettier-ignore */
 	return (
@@ -44,11 +44,11 @@ function Cart() {
 
         <h1 className="text-start text-3xl font-bold ml-5 mt-4">Mi Carrito 🛒</h1>
         {
-          productsCart.length === 0 ? (
+          cartItems.length === 0 ? (
             <div className="cart-empty">
                 <p>Tu carrito esta vacío por el momento.</p>
                 <div className="start-shopping">
-                  <Link to="/">
+                  <Link href={"/"}>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="20"
