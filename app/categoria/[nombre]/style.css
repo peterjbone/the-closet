@@ -14,7 +14,7 @@ li {
 	list-style-type: none;
 }
 
-/* Estilos de Contenedor de productos */
+/** Estilos de Contenedor de productos **/
 
 .card-container {
 	padding: 0 1rem;

@@ -60,9 +60,9 @@ const Header = () => {
 					The closet
 				</Link>
 				<nav className="text-gray-800 text-xl flex flex-row items-center gap-6">
-					<Link href={"/zapatos"}>Hombre</Link>
-					<Link href={"/ropa"}>Mujer</Link>
-					<Link href={"/descuento"}>Niños y Niñas</Link>
+					<Link href={"/categoria/hombres"}>Hombre</Link>
+					<Link href={"/categoria/mujeres"}>Mujer</Link>
+					<Link href={"/categoria/infantes"}>Niños y Niñas</Link>
 				</nav>
 				<div className="flex flex-row items-center gap-4 relative">
 					<div className="hover:cursor-pointer hover:text-red-600">

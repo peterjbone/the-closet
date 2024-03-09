@@ -13,6 +13,8 @@ import Sidebar from "../../components/sideBar/Sidebar";
 function Page({ params }) {
 	/* prettier-ignore */
 	const { nombre } = params;
+
+	//* Trayendo las funciones que modifican el estado global
 	const getAllProducts = useProductsStore((state) => state.getAllProducts);
 	const removeAllProducts = useProductsStore(
 		(state) => state.removeAllProducts
@@ -22,8 +24,19 @@ function Page({ params }) {
 	const getChildrenProducts = useProductsStore(
 		(state) => state.getChildrenProducts
 	);
+	const getHoodiesProducts = useProductsStore(
+		(state) => state.getHoodiesProducts
+	);
+	const getTshirtsProducts = useProductsStore(
+		(state) => state.getTshirtsProducts
+	);
+	const getJoggersProducts = useProductsStore(
+		(state) => state.getJoggersProducts
+	);
+	const getShoes = useProductsStore((state) => state.getShoes);
+	const getJeans = useProductsStore((state) => state.getJeans);
+	const getShorts = useProductsStore((state) => state.getShorts);
 	const getNewProducts = useProductsStore((state) => state.getNewProducts);
-	const allProducts = useProductsStore((state) => state.allProducts);
 
 	//? Definiendo cuales productos traer al estado global
 	//? ejecuta cierta "action" dependiendo de la params que llego.
@@ -47,6 +60,30 @@ function Page({ params }) {
 
 			case "nuevos":
 				getNewProducts();
+				break;
+
+			case "hoodies":
+				getHoodiesProducts();
+				break;
+
+			case "camisetas":
+				getTshirtsProducts();
+				break;
+
+			case "joggers":
+				getJoggersProducts();
+				break;
+
+			case "zapatos":
+				getShoes();
+				break;
+
+			case "jeans":
+				getJeans();
+				break;
+
+			case "shorts":
+				getShorts();
 				break;
 
 			default:
@@ -80,6 +117,30 @@ function Page({ params }) {
 			titulo = "Categoría de nuevos productos 😎";
 			break;
 
+		case "hoodies":
+			titulo = "Hoodies & Sudaderas";
+			break;
+
+		case "camisetas":
+			titulo = "T-Shirts 👕";
+			break;
+
+		case "joggers":
+			titulo = "Joggers & Leggings";
+			break;
+
+		case "zapatos":
+			titulo = "Zapatos & Botas 👟 👢";
+			break;
+
+		case "jeans":
+			titulo = "Pantalones & Jeans 👖";
+			break;
+
+		case "jeans":
+			titulo = "Faldas y Shorts 🩳";
+			break;
+
 		default:
 			break;
 	}
@@ -87,6 +148,7 @@ function Page({ params }) {
 	//* -------------------MANIPULACION DE LOS PRODUCTOS-------------------
 
 	//? Estos son todos los productos de determinada categoría (sin filtros aplicados)
+	const allProducts = useProductsStore((state) => state.allProducts);
 	let productos = allProducts;
 	//console.log(productos);
 
@@ -203,56 +265,3 @@ function Page({ params }) {
 }
 
 export default Page;
-
-/*
-FIRST VERSION CODE BACKUP
- <h1 className="mb-5">{categoria}</h1>
-      <div className="grid md:grid-cols-4 grid-cols-2 gap-4">
-        {
-          productos.map((item, index) => (
-            <ProductCard
-              key={index}
-              id={item.id}
-              nombre={item.nombre}
-              marca={item.marca}
-              precio={item.precio}
-              oferta={item.oferta}
-              activo={item.Activo}
-              productoNuevo={item.productoNuevo}
-              categoria={item.categoria}
-              genero={item.genero}
-              subcategoria={item.subcategoria}
-              imagen={item.imagen}
-              tallas={item.tallas}
-              colores={item.colores}
-              opcion={item.opcion}
-            />
-          ))
-        }
-      </div>
-*/
-
-/*
-SECOND CODE - BACKUP
- {
-              resultado.map((item, index) => (
-							<ProductCard
-								key={index}
-								id={item.id}
-								nombre={item.nombre}
-								marca={item.marca}
-								precio={item.precio}
-								oferta={item.oferta}
-								activo={item.Activo}
-								productoNuevo={item.productoNuevo}
-								categoria={item.categoria}
-								genero={item.genero}
-								subcategoria={item.subcategoria}
-								imagen={item.imagen}
-								tallas={item.tallas}
-								colores={item.colores}
-								opcion={item.opcion}
-							/>
-              ))
-            }
-*/

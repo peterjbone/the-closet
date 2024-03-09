@@ -3,7 +3,7 @@ const { Schema, model, models } = require("mongoose");
 const ProductSchema = new Schema({
 	nombre: String,
 	marca: String,
-	descripcion: String,
+	descripcion: String, // Cambiado a minúsculas pq no se insertó a la base de datos.
 	precio: Number,
 	oferta: {
 		type: Schema.Types.Mixed,
