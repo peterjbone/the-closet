@@ -4843,7 +4843,7 @@ const productos = [
   },
   {
     id: 84,
-    nombre: "Campera Snauwaert Unisex Lautel Gris/Amarillo",
+    nombre: "Campera Snauwaert Unisex Lautel",
     marca: "Snauwaert",
     descripcion:
       "Actividad: Training - Tipo de tela: Microfibra elastizada. - Composición: Poliester. - Temporada de lanzamiento: Otoño/ Invierno. - Usos recomendados: Deportivo,Urbano. - Es deportiva: Sí. - Con capucha: Sí. - Es impermeable: No. - Es térmica: No. - Es liviana: Sí.",
