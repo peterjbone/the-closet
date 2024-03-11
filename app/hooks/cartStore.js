@@ -24,7 +24,7 @@ export const useCartStore = create((set, get) => ({
 				...state,
 				cartItems: [...updatedCartItems]
 			}));
-			toast.info("Se ha incrementado la cantidad del producto");
+			toast.success("Se ha incrementado la cantidad del producto");
 		} else {
 			let tempProductItem = { ...product, cartQuantity: 1 };
 			set((state) => ({
@@ -47,7 +47,7 @@ export const useCartStore = create((set, get) => ({
 				...state,
 				cartItems: [...decreaseCartItems]
 			}));
-			toast.info("Se disminuyó la cantidad del producto");
+			toast.success("Se disminuyó la cantidad del producto");
 		} else if (cartItems[itemIndex].cartQuantity === 1) {
 			const nextCartItems = cartItems.filter(
 				(item) => item._id !== product._id
@@ -56,10 +56,10 @@ export const useCartStore = create((set, get) => ({
 				...state,
 				cartItems: [...nextCartItems]
 			}));
-			toast.info("El producto fue removido del carrito");
+			toast.success("El producto fue removido del carrito");
 		}
 		cartItems = get().cartItems;
-		localStorage.setItem("cartItems", JSON.stringify(state.cartItems));
+		localStorage.setItem("cartItems", JSON.stringify(cartItems));
 	},
 	removeFromCart: (product) => {
 		let cartItems = get().cartItems;
@@ -74,13 +74,13 @@ export const useCartStore = create((set, get) => ({
 					cartItems: [...nextCartItems]
 				}));
 
-				toast.info("El producto fue removido del carrito");
+				toast.success("El producto fue removido del carrito");
 			}
 			cartItems = get().cartItems;
 			localStorage.setItem("cartItems", JSON.stringify(cartItems));
 		});
 	},
-	getTotals: async () => {
+	getTotals: () => {
 		let cartItems = get().cartItems;
 		let { total, quantity } = cartItems.reduce(
 			(cartTotal, cartItem) => {

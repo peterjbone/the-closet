@@ -119,7 +119,6 @@ const Page = () => {
 		}
 
 		addToCart(productInfo);
-		//localStorage.setItem("cartItems", JSON.stringify(cartItems));
 	}
 	console.log(cartItems);
 
