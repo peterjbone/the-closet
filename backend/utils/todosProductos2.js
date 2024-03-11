@@ -2109,7 +2109,7 @@ const productos = [
   },
   {
     id: 32,
-    nombre: "Polera Basica Algodon",
+    nombre: "Polera Básica Algodón",
     marca: "mambo",
     descripcion:
       "Polera básica de algodón para niños de la marca MAMBO KIDS, excelente calidad.",
@@ -2207,7 +2207,7 @@ const productos = [
   },
   {
     id: 33,
-    nombre: "Camisa de Lino de Manga Corta",
+    nombre: "Camisa de Lino Manga Corta",
     marca: "mambo",
     descripcion:
       "Camisa con 2 bolsillos, manga corta, tela suave, fresca y liviana, ideal para el verano. ",
@@ -2306,7 +2306,7 @@ const productos = [
     nombre: "Buzo con capucha rústico",
     marca: "mambo",
     descripcion:
-      "Buzo Niños Mambo Kids en algodon rustico de exelente calidad viene con las mangas combinadas y con estampas en ambas aparte de su estampado en el frente del buzo. y tiene capucha.",
+      "Buzo Niños Mambo Kids en algodón rústico de excelente calidad, viene con las mangas combinadas y con estampas en el frente del buzo. Y tiene capucha.",
     precio: 22.5,
     oferta: {
       offActiva: false,
@@ -2379,7 +2379,7 @@ const productos = [
     nombre: "Campera Rusher",
     marca: "mambo",
     descripcion:
-      "Camperon combinado, confeccionado en Traker con forro polar. Viene con capucha y en el frente lleva una chapa de logo",
+      "Camperon combinado, confeccionado en Traker con forro polar. Viene con capucha y en el frente lleva una chapa de logo.",
     precio: 25.5,
     oferta: {
       offActiva: false,
@@ -2450,7 +2450,7 @@ const productos = [
   },
   {
     id: 37,
-    nombre: "Pantalon Jean",
+    nombre: "Pantalón Jean",
     marca: "mambo",
     descripcion: "Jean elastizado, tiro medio en color azul.",
     precio: 5.5,
@@ -2493,9 +2493,9 @@ const productos = [
   },
   {
     id: 38,
-    nombre: "Pantalon Deportivo",
+    nombre: "Pantalón Deportivo",
     marca: "mambo",
-    descripcion: "Pantalon deportivo frizado super cómodo.",
+    descripcion: "Pantalón deportivo frizado super cómodo.",
     precio: 8.5,
     oferta: {
       offActiva: false,
@@ -2557,7 +2557,7 @@ const productos = [
   },
   {
     id: 40,
-    nombre: "Pantalon Jogger",
+    nombre: "Pantalón Jogger",
     marca: "mambo",
     descripcion:
       "Jogger confeccionado en frisa, con cintura elastizada, cordón y puños en los tobillos. Se adapta al cuerpo y tiene un muy buen calce. Viene con 2 bolsillos y una estampa en la pierna en degrade",
@@ -2601,9 +2601,10 @@ const productos = [
   },
   {
     id: 41,
-    nombre: "7774 Pantalon",
+    nombre: "Pantalón Gabardina Ciruela",
     marca: "mambo",
-    descripcion: "Pantalon Cargo nautico",
+    descripcion:
+      "Pantalón Gabardina Ciruela Pañalero con broches metálicos, tela gruesa y resintente. ",
     precio: 15.5,
     oferta: {
       offActiva: false,
@@ -2615,17 +2616,17 @@ const productos = [
     genero: "masculino",
     subcategoria: "Pantalones",
     imagen: [
-      "https://acdn.mitiendanube.com/stores/243/508/products/whatsapp-image-2024-01-10-at-13-30-14-58cacf8cddf2b5ef0517050662179980-480-0.webp",
-      "https://acdn.mitiendanube.com/stores/243/508/products/whatsapp-image-2024-01-10-at-13-29-33-5c947ff99aafb0364817050662192036-480-0.webp",
-      "https://acdn.mitiendanube.com/stores/243/508/products/whatsapp-image-2024-01-10-at-13-28-32-03f9312e8440e4182817050662204120-480-0.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_702065-MLA73351986352_122023-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_719054-MLA49165754352_022022-F.webp",
+      "https://http2.mlstatic.com/D_NQ_NP_2X_738044-MLA49165766062_022022-F.webp",
     ],
     tallas: ["4", "6", "8"],
-    colores: ["ocre", "negro", "blanco"],
+    colores: ["ciruela"],
     opcion: [
       {
         color: {
-          codHexadecimal: "#CC7722",
-          nombreColor: "ocre",
+          codHexadecimal: "#7F1E57",
+          nombreColor: "ciruela",
         },
         talles: [
           {
@@ -2639,46 +2640,6 @@ const productos = [
           {
             talla: "8",
             stock: 24,
-          },
-        ],
-      },
-      {
-        color: {
-          codHexadecimal: "#000000",
-          nombreColor: "negro",
-        },
-        talles: [
-          {
-            talla: "4",
-            stock: 10,
-          },
-          {
-            talla: "6",
-            stock: 15,
-          },
-          {
-            talla: "8",
-            stock: 20,
-          },
-        ],
-      },
-      {
-        color: {
-          codHexadecimal: "#FFFFFF",
-          nombreColor: "blanco",
-        },
-        talles: [
-          {
-            talla: "4",
-            stock: 12,
-          },
-          {
-            talla: "6",
-            stock: 17,
-          },
-          {
-            talla: "8",
-            stock: 22,
           },
         ],
       },
@@ -2964,10 +2925,10 @@ const productos = [
   },
   {
     id: 48,
-    nombre: "Remera",
+    nombre: "Remera Mangan Ranglan",
     marca: "mambo",
     descripcion:
-      "remera UV mangas largas, salmon o rosa con un diseño racleado y colores vivos que le dan personalidad a tu remera.",
+      "Remera UV mangas largas, salmón o rosa con un diseño racleado y colores vivos que le dan personalidad a tu remera.",
     precio: 7.5,
     oferta: {
       offActiva: false,
