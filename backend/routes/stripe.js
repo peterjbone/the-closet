@@ -6,8 +6,8 @@ require("dotenv").config();
 const Stripe = require("stripe");
 const stripe = Stripe(process.env.STRIPE_KEY);
 
-const express = require("express");
-const stripeRouter = express.Router();
+const { Router } = require("express");
+const stripeRouter = Router();
 
 //const app = express();
 //app.use(express.static("public"));

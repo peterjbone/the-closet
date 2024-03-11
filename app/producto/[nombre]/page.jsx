@@ -1,6 +1,7 @@
 "use client";
 
 import "./styles.css";
+import { toast } from "react-hot-toast";
 import { useEffect, useState } from "react";
 import { FaCartShopping } from "react-icons/fa6";
 import { useProductsStore } from "../../hooks/productsStore";
@@ -9,6 +10,7 @@ import Header from "../../components/navbar/Navbar";
 import Images from "./Images";
 import ColorInput from "./ColorInput";
 import TallaInput from "./TallaInput";
+import { useCartStore } from "../../hooks/cartStore.js";
 
 const Page = () => {
 	//? obteniendo el nombre del producto por parametro
@@ -47,23 +49,6 @@ const Page = () => {
 	const finalBrands = producto?.marca.toUpperCase();
 	const finalStars = Array(4).fill("⭐");
 
-	//Manejando tallas
-	// const [tallaSeleccionada, setTallaSeleccionada] = useState("");
-	// const handleTallaClick = (talla) => {
-	// 	setTallaSeleccionada(talla);
-	// };
-
-	//Cantidad del producto
-	const [counter, setCounter] = useState(1);
-	const handleContadorSuma = () => {
-		setCounter(counter + 1);
-	};
-	const handleContadorResta = () => {
-		if (counter > 1) {
-			setCounter(counter - 1);
-		}
-	};
-
 	//? Para la descripcion
 	const [mostrarDescripcion, setMostrarDescripcion] = useState(true);
 	const toggleMostrarDescripcion = () => {
@@ -77,7 +62,12 @@ const Page = () => {
 
 	//? ------------ INFORMACION DEL PRODUCTO (que se enviara a la cart) -----------
 	const [productInfo, setProductInfo] = useState({
+		_id: producto?._id,
 		nombre: producto?.nombre,
+		marca: producto?.marca,
+		categoria: producto?.categoria,
+		genero: producto?.genero,
+		subcategoria: producto?.subcategoria,
 		imagen: producto?.imagen[0],
 		precio: producto?.precio,
 		color: "",
@@ -114,6 +104,24 @@ const Page = () => {
 			}
 		}
 	}
+
+	//? Trayendo las funciones y estados globales de la Cart
+	const addToCart = useCartStore((state) => state.addToCart);
+	const cartItems = useCartStore((state) => state.cartItems);
+
+	//? Funcion para enviar el producto a la Cart
+	function handleCartBtn() {
+		if (!productInfo.color) {
+			return toast.error("Debe seleccionar un color");
+		}
+		if (!productInfo.talla) {
+			return toast.error("Debe seleccionar una talla");
+		}
+
+		addToCart(productInfo);
+		//localStorage.setItem("cartItems", JSON.stringify(cartItems));
+	}
+	console.log(cartItems);
 
 	//* ------------------- PAGINA DETAIL DEL PRODUCTO ------------------------
 	/* prettier-ignore */
@@ -177,7 +185,7 @@ const Page = () => {
 					</div>
 				</div>
 
-				{/*Marca, nombre, precio y estrellas*/}
+				{/*Marca, nombre, precio, estrellas y el Boton de Carrito*/}
 				<div
 					className="
         h-full
@@ -193,7 +201,7 @@ const Page = () => {
 						<h3 className="text-xl font-bold mb-3">
 							{producto?.genero} & {producto?.categoria}
 						</h3>
-						<h2 className="text-yellow mt-1 mb-3">{finalStars} (3)</h2>
+						{/* <h2 className="text-yellow mt-1 mb-3">{finalStars} (3)</h2> */}
 						<h3 className="text-xl font-bold">{finalBrands}</h3>
 						<h2 className="text-xl">{producto?.precio} $</h2>
 					</div>
@@ -227,26 +235,28 @@ const Page = () => {
             }
           </div>
           
-          <h2 className="
+          <button
+            onClick={handleCartBtn}
+            className="
           bg-black
           text-white
-          min-w-[250px]
-          w-6/12 
-          mx-auto
-          text-center
-          text-2xl
-          p-3
-          flex
-          gap-4
-          justify-center
-          items-center
-          transition
-          cursor-pointer
-          mt-10
+            min-w-[250px]
+            w-6/12 
+            mx-auto
+            text-center
+            text-2xl
+            p-3
+            flex
+            gap-4
+            justify-center
+            items-center
+            transition
+            cursor-pointer
+            mt-10
           ">
 						Agregar
 						<FaCartShopping />
-					</h2>
+					</button>
 				</div>
 			</div>
 
