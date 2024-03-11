@@ -4,7 +4,7 @@ const CompraSchema = new mongoose.Schema({
 
     usuario: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'Usuario' 
+        ref: 'Usuario'
     },
     productos: [{
         producto: {
@@ -13,9 +13,13 @@ const CompraSchema = new mongoose.Schema({
 
             
         },
+        precio_unitario:{
+            type:Number,
+        },
+       
         cantidad: {
             type: Number,
-            default: 0
+            default: 1
         },
         talle: {
             type: String,
@@ -24,7 +28,10 @@ const CompraSchema = new mongoose.Schema({
         color:{
             type: String,
         }
-    }],
+    }], 
+    // precio_total:{
+    //     type:Number
+    // }
     },
     {
         timestamps: true

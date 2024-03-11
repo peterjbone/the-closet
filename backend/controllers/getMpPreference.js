@@ -12,36 +12,38 @@ const client = new MercadoPagoConfig({ accessToken: ACCESS_TOKEN })
                 id: prod.id,
                 title: prod.nombre,
                 quantity: prod.cantidad,
-                unit_price: prod.precio,
-                currency_id: "USD"
+                unit_price: prod.unit_price,
+                
                 }))
             const talla = productos.map(prod => prod.talla)
             const color = productos.map(prod => prod.color)
+            const payerName = productos.map(prod => prod.userName)
+            const email = productos.map(prod => prod.userEmail)
+            const payerId = productos.map(prod => prod.userId)
             
             const metadata = {
                 tallas: talla,
-                colores: color
+                colores: color,
+                payerId: payerId
             }
 
             const response = await preference.create({
                 body: {
                 items: producto,
                 metadata: metadata,
-            //     payer: {
-            //         name: "Juan",
-            //         surname: "Lopez",
-            //         email: "user@email.com",
-    
-            //     },
-            //     address: {
-            //         street_name: "Street",
-            //         street_number: 123,
-            // }
-        }})
-
-    
-            console.log('respuesta', response);
-            res.status(200).json({preferenceId: response.id})
+                payer: {
+                    name: payerName,
+                    email: email,
+                },
+                
+                
+        },
+            auto_return: "approved"
+            })
+            console.log('sepa 1')
+            console.log('response', response);
+            console.log('sepa 2');
+            res.status(200).json({ redirectUrl: response.sandbox_init_point });
         } catch (error) {
             console.error('Error al crear la preferencia:', error)
             res.status(500).json({error: 'Error interno'})
