@@ -56,10 +56,10 @@ export const authOptions = {
 		session({ session, token }) {
 			session.user = token.user;
 
-			console.log("SESSION");
-			console.log(session);
-			console.log("TOKEN");
-			console.log(token);
+			// console.log("SESSION");
+			// console.log(session);
+			// console.log("TOKEN");
+			// console.log(token);
 
 			// user - no existe
 			// account - no existe

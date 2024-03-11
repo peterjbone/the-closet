@@ -25,6 +25,9 @@ function ProductCard({
 	//? estado local para las imagenes
 	const [bigImage, setBigImage] = useState(imagen[0]);
 
+	//? estado del favorita
+	const [isFavorite, setIsFavorite] = useState(false);
+
 	useEffect(() => {
 		setBigImage(imagen[0]);
 
@@ -50,11 +53,22 @@ function ProductCard({
 		coloresSintaxis = colores.join();
 	}
 
+	//? Cambia el color del corazon y
+	//? el estado global de la wishlist
+	function handleFavorites() {
+		setIsFavorite(!isFavorite);
+	}
+	//if (isFavorite) console.log("It is favorite");
+
 	/* prettier-ignore */
 	return (
 		<section className="card relative">
 			<div className="absolute top-3 right-2">
-				{<FaHeart size={25} color="#000" />}
+        {<FaHeart
+          size={25}
+          className={`${isFavorite ? "text-[#f00]" : "text-[#000]"}`}
+          onClick={handleFavorites}
+        />}
 			</div>
 
 			<Link href={`/producto/${nombreParam}`}>
