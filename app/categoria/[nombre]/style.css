@@ -14,15 +14,12 @@ li {
 	list-style-type: none;
 }
 
-/* Estilos de Contenedor de productos */
+/** Estilos de Contenedor de productos **/
 
 .card-container {
 	padding: 0 1rem;
 	margin-top: 1rem;
 	font-size: 1.2rem;
-	/* display: flex;
-	flex-wrap: wrap;
-	z-index: -2; */
 
 	display: grid;
 	row-gap: 1rem;

@@ -1,19 +1,26 @@
 "use client";
 
+import axios from 'axios'
 import { useEffect, useState } from "react";
 import { FaCartShopping } from "react-icons/fa6";
 import { AiFillMinusSquare } from "react-icons/ai";
 import { RiAddBoxFill } from "react-icons/ri";
 import { useProductsStore } from "../../hooks/productsStore";
 import { useParams } from "next/navigation";
+import { initMercadoPago, Wallet } from "@mercadopago/sdk-react"
+import { useSession } from 'next-auth/react';
 import Header from "../../components/navbar/Navbar";
-import Payment from '../../components/payment/Payment'
+
+
+initMercadoPago('TEST-aaf6addf-8825-47b9-b75c-547fe0bf6533')
 
 const Page = () => {
   const params = useParams();
   let nombre = params.nombre;
   const getAllProducts = useProductsStore((state) => state.getAllProducts);
   const allProducts = useProductsStore((state) => state.allProducts);
+  const [preferenceId, setPreferenceId] = useState(null);
+  const [creatingPreference, setCreatingPreference] = useState(false)
 
   useEffect(() => {
     getAllProducts();
@@ -70,6 +77,45 @@ const Page = () => {
       setCounter(counter - 1);
     }
   };
+
+  const {data: session} = useSession()
+  const userId = session && session.user ? session.user._id : null;
+
+
+  
+  
+  
+  console.log(producto?.precio);
+  
+  
+  const handlePreference = async () => {
+    if( creatingPreference){
+      return
+    }
+    try {
+      setCreatingPreference(true)
+      console.log('hola soy la ropa', userId)
+      const infoProducto = [{
+         userId: userId,
+         userName: session.user.name,
+         userEmail: session.user.email,
+         id: producto._id,
+         nombre: producto.nombre,
+         cantidad: counter,
+         unit_price: producto?.precio,
+         talla: tallaSeleccionada
+      }]
+      
+      const postProduct = await axios.post('http://localhost:3001/preference', infoProducto);
+      const data = postProduct.data;
+      window.location.href = data.redirectUrl
+    } catch (error) {
+      console.log("Error al enviar la solicitud:", error);
+    } finally{
+      setCreatingPreference(false)
+    }
+  };
+
 
   return (
     <div>
@@ -244,6 +290,12 @@ const Page = () => {
             Agregar
             <FaCartShopping />
           </h2>
+          <div>
+            <button onClick={handlePreference} className="bg-black text-white w-full text-center text-2xl p-3 flex justify-center gap-4 items-center transition duration-300 ease-in-out cursor-pointer mt-10">
+              Comprar
+            <FaCartShopping />
+            </button>
+          </div>
         </div>
       </div>
 
@@ -274,8 +326,16 @@ const Page = () => {
             : "Aún no hay reseñas..."}
         </p>
       </div>
-      <Payment/>
+      
+      {/* <div id ='wallet_container'  disable={creatingPreference}>
+
+        <Wallet initialization={{ preferenceId: preferenceId, }}  customization={{ texts:{ valueProp: 'smart_option'}}}
+        onSubmit={handlePreference} />
+
+
+    </div> */}
     </div>
+                        //65eb3fe785987e4ed7385af9
   );
 };
 

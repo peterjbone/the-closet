@@ -1,5 +1,5 @@
 //? Aquí estan "todos los productos" hasta el momento
-//? hay 61 productos
+//? hay 86 productos
 //? Esto sirve para insertarlo en la base de datos "thecloset" en la colección "productos"
 
 const productos = [
@@ -21,7 +21,7 @@ const productos = [
 		subcategoria: "Camisetas y Polos",
 		imagen: [
 			"https://taverniti.vtexassets.com/arquivos/ids/250819/04478_603X3.jpg?v=637989524558130000",
-			"https://acdn.mitiendanube.com/stores/001/160/124/products/southfox_dic-451-567bef1aba1a1eb47b16910779498511-1024-1024.jpg",
+			"https://i.postimg.cc/k58vyPSQ/chompa-falabe-blanco.jpg",
 			"https://chombas.com.ar/wp-content/uploads/2016/02/chombas-con-logo-5-4.jpg"
 		],
 		tallas: ["S", "M", "L", "XL"],
@@ -443,7 +443,6 @@ const productos = [
 			"https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_600/https://freyasport.com/wp-content/uploads/2021/11/chaleco-unisex-deportivo-freyasport.com-7.jpg",
 			"https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_600,h_1050/https://freyasport.com/wp-content/uploads/2021/11/chaleco-unisex-deportivo-freyasport.com-10.jpg",
 			"https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_600,h_1050/https://freyasport.com/wp-content/uploads/2021/11/chaleco-unisex-deportivo-freyasport.com-1.jpg",
-			"https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_600/https://freyasport.com/wp-content/uploads/2021/11/chaleco-unisex-deportivo-freyasport.com-7.jpg",
 			"https://sp-ao.shortpixel.ai/client/to_auto,q_glossy,ret_img,w_600/https://freyasport.com/wp-content/uploads/2021/11/chaleco-unisex-deportivo-freyasport.com-3.jpg"
 		],
 		tallas: ["30", "34", "38", "40"],
@@ -2547,49 +2546,6 @@ const productos = [
 					{
 						talla: "8",
 						stock: 22
-					}
-				]
-			}
-		]
-	},
-	{
-		id: 39,
-		nombre: "7765 PANTALON",
-		marca: "mambo",
-		descripcion: "PANTALON RUSTICO ESTAMPADO",
-		precio: 10.5,
-		oferta: {
-			offActiva: false,
-			Descuento: 0
-		},
-		activo: true,
-		productoNuevo: false,
-		categoria: "infante",
-		genero: "masculino",
-		subcategoria: "Leggings y Pantalones Deportivos",
-		imagen: [
-			"https://acdn.mitiendanube.com/stores/243/508/products/77651-900cf7f77f0ee6811516542701926958-480-0.webp"
-		],
-		tallas: ["4", "6", "8"],
-		colores: ["bordo"],
-		opcion: [
-			{
-				color: {
-					codHexadecimal: "#800000",
-					nombreColor: "bordo"
-				},
-				talles: [
-					{
-						talla: "4",
-						stock: 10
-					},
-					{
-						talla: "6",
-						stock: 15
-					},
-					{
-						talla: "8",
-						stock: 20
 					}
 				]
 			}

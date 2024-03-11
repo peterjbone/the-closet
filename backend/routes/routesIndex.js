@@ -17,6 +17,9 @@ const getTshirtsProducts = require("../controllers/getTshirtsProducts");
 const getJoggersProducts = require("../controllers/getJoggersProducts");
 const getMpPreference = require('../controllers/getMpPreference')
 const paymentControl = require('../controllers/mpPayment')
+const getShoes = require("../controllers/getShoes");
+const getJeans = require("../controllers/getJeans");
+const getShorts = require("../controllers/getShorts");
 
 const router = Router();
 
@@ -34,6 +37,9 @@ router.post("/preference", getMpPreference)
 router.post('/payment', paymentControl )
 
 
+router.get("/zapatos", getShoes);
+router.get("/jeans", getJeans);
+router.get("/shorts", getShorts);
 
 /* 
 router.post("/producto", postProduct);
