@@ -11,6 +11,7 @@ import Images from "./Images";
 import ColorInput from "./ColorInput";
 import TallaInput from "./TallaInput";
 import { useCartStore } from "../../hooks/cartStore.js";
+import { v4 as uuidv4 } from "uuid";
 
 const Page = () => {
 	//? obteniendo el nombre del producto por parametro
@@ -58,10 +59,11 @@ const Page = () => {
 		setMostrarDescripcion(false);
 	};
 
-	//! ZONA IMPORTANTE
+	//! ****************ZONA IMPORTANTE*******************
 
 	//? ------------ INFORMACION DEL PRODUCTO (que se enviara a la cart) -----------
 	const [productInfo, setProductInfo] = useState({
+		cartId: uuidv4(),
 		_id: producto?._id,
 		nombre: producto?.nombre,
 		marca: producto?.marca,
@@ -82,7 +84,7 @@ const Page = () => {
 			[name]: value
 		});
 	}
-	console.log(productInfo);
+	console.log(productInfo); // Objeto del producto
 
 	//? ----------------- OPCIONES DE LA TALLA -------------------
 	let opcionesDeTallas = null;
@@ -105,11 +107,12 @@ const Page = () => {
 		}
 	}
 
-	//? Trayendo las funciones y estados globales de la Cart
+	//? ACTIONS Y ESTADOS GLOBALES DE LA CART
 	const addToCart = useCartStore((state) => state.addToCart);
+	const getTotals = useCartStore((state) => state.getTotals);
 	const cartItems = useCartStore((state) => state.cartItems);
 
-	//? Funcion para enviar el producto a la Cart
+	//? FUNCION PARA AGREGAR EL PRODUCTO A CARRITO Y ACTUALIZAR LOS TOTALES
 	function handleCartBtn() {
 		if (!productInfo.color) {
 			return toast.error("Debe seleccionar un color");
@@ -119,8 +122,23 @@ const Page = () => {
 		}
 
 		addToCart(productInfo);
+		getTotals();
+
+		setProductInfo({
+			cartId: uuidv4(),
+			_id: producto?._id,
+			nombre: producto?.nombre,
+			marca: producto?.marca,
+			categoria: producto?.categoria,
+			genero: producto?.genero,
+			subcategoria: producto?.subcategoria,
+			imagen: producto?.imagen[0],
+			precio: producto?.precio,
+			color: "",
+			talla: ""
+		});
 	}
-	console.log(cartItems);
+	console.log(cartItems); // imprimiendo el estado global de carts
 
 	//* ------------------- PAGINA DETAIL DEL PRODUCTO ------------------------
 	/* prettier-ignore */
@@ -224,7 +242,7 @@ const Page = () => {
 
 					{/*Tallas*/}
           <p className="font-semibold text-xl">Selecciona una talla</p>
-          <div className="flex flex-row items-center justify-center gap-6 p-4">
+          <div className="flex flex-row items-center justify-center gap-8 p-4">
             {
               productInfo.color
                 ? opcionesDeTallas  
