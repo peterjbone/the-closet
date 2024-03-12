@@ -200,30 +200,42 @@ function Page({ params }) {
 		//prettier-ignore
 		const result = filteredProducts.map(
 			(
-				{
-					imagen,
+        {
+          _id,
 					nombre,
-					precio,
-					colores,
-					categoria,
-					genero,
 					marca,
-					productoNuevo,
+					descripcion,
+          precio,
+          oferta,
+          activo,
+          productoNuevo,
+					categoria,
+          genero,
           subcategoria,
+          imagen,
+          tallas,
+					colores,
+					opcion
 				},
 				index
 			) => (
 				<ProductCard
-					key={index}
+          key={index}
+          _id={_id}
 					nombre={nombre}
-					imagen={imagen}
+					marca={marca}
+					descripcion={descripcion}
 					precio={precio}
-					colores={colores}
+          oferta={oferta}
+          activo={activo}
+          productoNuevo={productoNuevo}
 					categoria={categoria}
 					genero={genero}
-					marca={marca}
-					productoNuevo={productoNuevo}
-          subcategoria={subcategoria}
+					subcategoria={subcategoria}
+					imagen={imagen}
+					tallas={tallas}
+					colores={colores}
+					opcion={opcion}
 				/>
 			)
 		);
@@ -253,56 +265,3 @@ function Page({ params }) {
 }
 
 export default Page;
-
-/*
-FIRST VERSION CODE BACKUP
- <h1 className="mb-5">{categoria}</h1>
-      <div className="grid md:grid-cols-4 grid-cols-2 gap-4">
-        {
-          productos.map((item, index) => (
-            <ProductCard
-              key={index}
-              id={item.id}
-              nombre={item.nombre}
-              marca={item.marca}
-              precio={item.precio}
-              oferta={item.oferta}
-              activo={item.Activo}
-              productoNuevo={item.productoNuevo}
-              categoria={item.categoria}
-              genero={item.genero}
-              subcategoria={item.subcategoria}
-              imagen={item.imagen}
-              tallas={item.tallas}
-              colores={item.colores}
-              opcion={item.opcion}
-            />
-          ))
-        }
-      </div>
-*/
-
-/*
-SECOND CODE - BACKUP
- {
-              resultado.map((item, index) => (
-							<ProductCard
-								key={index}
-								id={item.id}
-								nombre={item.nombre}
-								marca={item.marca}
-								precio={item.precio}
-								oferta={item.oferta}
-								activo={item.Activo}
-								productoNuevo={item.productoNuevo}
-								categoria={item.categoria}
-								genero={item.genero}
-								subcategoria={item.subcategoria}
-								imagen={item.imagen}
-								tallas={item.tallas}
-								colores={item.colores}
-								opcion={item.opcion}
-							/>
-              ))
-            }
-*/
