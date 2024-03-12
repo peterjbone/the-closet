@@ -14,20 +14,20 @@ import { FaArrowLeft } from "react-icons/fa";
 
 function Cart() {
 	const getTotals = useCartStore((state) => state.getTotals);
-	//? Generando el precio total y la cantidad total (al cargar el componente)
+	// //? Generando el precio total y la cantidad total (al cargar el componente)
 	useEffect(() => {
-		getTotals();
-	}, []);
+		return () => getTotals();
+	});
 
 	//? Obteniendo las "actions"
 	const addToCart = useCartStore((state) => state.addToCart);
 	const decreaseCart = useCartStore((state) => state.decreaseCart);
 	const removeFromCart = useCartStore((state) => state.removeFromCart);
 	const clearCart = useCartStore((state) => state.clearCart);
+	//clearCart();
 
 	//? Obteniendo los "estados globales"
 	const cartItems = useCartStore((state) => state.cartItems);
-	//console.log(cartItems);
 	const cartTotalQuantity = useCartStore((state) => state.cartTotalQuantity);
 	const cartTotalAmount = useCartStore((state) => state.cartTotalAmount);
 
@@ -37,7 +37,7 @@ function Cart() {
 	//? Para coger la sesion de usuario
 	const { data: session, status } = useSession();
 	//console.log(session);
-
+  
 	//* -------------------------------- PAGINA CART -------------------------------- *//
 	/* prettier-ignore */
 	return (
@@ -70,14 +70,18 @@ function Cart() {
                   {
                   cartItems &&
                   cartItems.map((cartItem) => (
-                    <div className="cart-item" key={cartItem._id}>
+                    <div className="cart-item" key={cartItem._id + cartItem.color}>
                       {/* Producto */}
                       <div className="cart-product">
                         <img src={cartItem.imagen} alt={cartItem.nombre} />
                         <div>
-                          <h3 className="text-xl">{cartItem.nombre}</h3>
-                          <p className="text-lg font-semibold"> {cartItem.marca} </p>
+                          <h3 className="text-xl">{cartItem.nombre.toUpperCase()}</h3>
+                          <p className="text-lg font-semibold"> Marca: {cartItem.marca} </p>
                           <p className="text-lg"> Talla seleccionada: {cartItem.talla} </p>
+                          <p className="text-lg">
+                            Color seleccionados: {" "}
+                           <span className="font-semibold text-xl">{cartItem.color}</span> 
+                          </p>
                           <button onClick={() => removeFromCart(cartItem)}>
                             Eliminar
                           </button>

@@ -39,8 +39,8 @@ function TallaInput({
 				{label}
       </button>
       {/* STOCK */}
-      <div className="font-semibold text-xl">
-        {stock}
+      <div className="font-semibold text-lg">
+        stock: {stock}
       </div>
 		</div>
 	);

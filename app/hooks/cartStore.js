@@ -1,6 +1,8 @@
 import { create } from "zustand";
 import { toast } from "react-hot-toast";
 
+//var localStorage = Storage;
+
 export const useCartStore = create((set, get) => ({
 	cartItems: typeof window !== 'undefined' ? 
 	  (localStorage.getItem("cartItems") ? JSON.parse(localStorage.getItem("cartItems")) : []) 
@@ -10,7 +12,7 @@ export const useCartStore = create((set, get) => ({
 	addToCart: (product) => {
 		let cartItems = get().cartItems;
 		const existingIndex = cartItems.findIndex(
-			(item) => item._id === product._id
+			(item) => item.color === product.color && item._id === product._id
 		);
 		if (existingIndex >= 0) {
 			//? copia del estado
@@ -38,7 +40,9 @@ export const useCartStore = create((set, get) => ({
 	},
 	decreaseCart: (product) => {
 		let cartItems = get().cartItems;
-		const itemIndex = cartItems.findIndex((item) => item._id === product._id);
+		const itemIndex = cartItems.findIndex(
+			(item) => item.cartId === product.cartId
+		);
 
 		if (cartItems[itemIndex].cartQuantity > 1) {
 			const decreaseCartItems = [...cartItems];
@@ -50,7 +54,7 @@ export const useCartStore = create((set, get) => ({
 			toast.success("Se disminuyó la cantidad del producto");
 		} else if (cartItems[itemIndex].cartQuantity === 1) {
 			const nextCartItems = cartItems.filter(
-				(item) => item._id !== product._id
+				(item) => item.cartId !== product.cartId
 			);
 			set((state) => ({
 				...state,
@@ -66,8 +70,10 @@ export const useCartStore = create((set, get) => ({
 		let nextCartItems = [];
 
 		cartItems.forEach((cartItem) => {
-			if (cartItem._id === product._id) {
-				nextCartItems = cartItems.filter((item) => item._id !== cartItem._id);
+			if (cartItem.cartId === product.cartId) {
+				nextCartItems = cartItems.filter(
+					(item) => item.cartId !== cartItem.cartId
+				);
 
 				set((state) => ({
 					...state,

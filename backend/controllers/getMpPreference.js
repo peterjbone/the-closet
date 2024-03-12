@@ -37,8 +37,11 @@ const client = new MercadoPagoConfig({ accessToken: ACCESS_TOKEN })
                 },
                 
                 
-        },
-            auto_return: "approved"
+                back_urls:{
+                    success: 'http://localhost:3001/'
+                },
+                auto_return: "approved",
+            },
             })
             console.log('sepa 1')
             console.log('response', response);
