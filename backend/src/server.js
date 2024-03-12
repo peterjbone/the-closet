@@ -6,9 +6,15 @@ const methodOverride = require('method-override');
 const flash = require('connect-flash');
 const session = require('express-session');
 const passport = require('passport');
+const Handlebars = require('handlebars');
 
 // Inicializaciones
 const app = express();
+
+// Registrar el helper eq en Handlebars
+Handlebars.registerHelper('eq', function(a, b) {
+    return a === b;
+});
 
 // Settings
 app.set('port', process.env.PORT || 4000);
@@ -25,6 +31,7 @@ app.set('view engine', '.hbs');
 app.use(morgan('dev'));
 app.use(express.urlencoded({extended: true}));
 app.use(express.json());
+app.use(methodOverride('_method'))
 
 // Variables Globales
 

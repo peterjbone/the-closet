@@ -38,13 +38,42 @@ const ProductSchema = new Schema({
         type: Boolean,
         default: true
     },
-    // categoria:{},
-    // genero:{},
-    // subcategoria:{},
-    // imagen:[{}],
-    // tallas:[{}],
-    // colores:[{}],
-    // opciones:[{}]
+    categoria:{
+        type: String,
+        required: true,
+        default:'adulto'
+    },
+    genero:{
+        type: String,
+        required: true,
+        default:'unisex'
+    },
+    subcategoria:{
+        type: String,
+        required: true,
+        default:'Ninguna'
+    },
+    imagen:[String],
+    tallas:[String],
+    colores:[String],
+    opcion:[{
+        color: {
+            codHexadecimal: {
+                type: String
+            },
+            nombreColor: {
+                type: String
+            }
+        },
+        talles: [{
+            talla: {
+                type: String
+            },
+            stock: {
+                type: Number
+            }
+        }]
+    }]
 
 }, {
     timestamps: true

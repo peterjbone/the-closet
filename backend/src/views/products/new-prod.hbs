@@ -2,21 +2,6 @@
     
     // JavaScript
     const opciones = [];
-    const opciones2 = [{"color": {
-                        "codHexadecimal": "#000000",
-                        "nombreColor": "negro"},"talles": [{
-                            "talla": "S",
-                            "stock": 15},{
-                            "talla": "L",
-                            "stock": 15}]},{
-                    "color": {
-                        "codHexadecimal": "#FFFFFF",
-                        "nombreColor": "blanco"},
-                    "talles": [{
-                            "talla": "S",
-                            "stock": 15},{
-                            "talla": "L",
-                            "stock": 15}]}];
 
     // FUNCINO PARA AGREGAR LA TALLA CON INPUT Y BOTON DE BORRADO
 
@@ -26,23 +11,30 @@
     var colorExa = document.getElementById('exaColorHidden').value;
     var talla = document.getElementById('tallaHidden').value;;
     var stock = document.getElementById('stock').value;;
-    console.log(stock);
-    console.log(talla);
+    
 
     var opcionExistente = opciones.find(opcion => opcion.color.nombreColor === nomColor);
+    
     if (opcionExistente) {
         var talleExistente = opcionExistente.talles.find(t => t.talla === talla);
         if (!talleExistente) {
-            opcionExistente.talles.push({ talla: talla, stock: stock });
+            // Verificar si stock está definido
+            if (stock !== undefined && stock !== "") {
+                opcionExistente.talles.push({ talla: talla, stock: stock });
+            }
         }
     } else {
-        var nuevaOpcion = { color: { codHexadecimal: colorExa, nombreColor: nomColor }, talles: [{ talla: talla, stock: stock }] };
-        opciones.push(nuevaOpcion);
+        // Verificar si stock está definido
+        if (stock !== undefined && stock !== "") {
+            var nuevaOpcion = { color: { codHexadecimal: colorExa, nombreColor: nomColor }, talles: [{ talla: talla, stock: stock }] };
+            opciones.push(nuevaOpcion);
+        }
     }
 
 
     actualizarFormulario();
-    console.log(opciones);
+    //console.log(opciones);
+    document.getElementById('opcionesData').value = JSON.stringify(opciones);
 }
 
 function actualizarFormulario() {
@@ -103,10 +95,59 @@ function actualizarCampoTexto() {
     tallaHidden.value = tallhi;
 }
     
-    console.log(opciones)
+    //console.log(opciones)
 
+    // FUNCION DE AGREGAR IMGS
+        // Event listener para el clic en el botón de subir archivos
+    window.onload = function() {
+    // Event listener para el cambio en el input de archivos
+    document.getElementById('agreImg').addEventListener('change', function() {
+        const files = document.getElementById('agreImg').files;
+        procesarArchivos(files);
+    });
+
+    function procesarArchivos(files) {
+        const previewsContainer = document.getElementById('previews');
+
+        // Iterar sobre cada archivo seleccionado
+        for (let i = 0; i < files.length; i++) {
+            const file = files[i];
+            // Verificar si el archivo es una imagen
+            if (file.type.startsWith('image/')) {
+                const reader = new FileReader();
+
+                reader.onload = function(e) {
+                    // Crear un contenedor para cada imagen y su botón de eliminar
+                    const container = document.createElement('div');
+                    container.classList.add('imgContainer');
+
+                    const img = document.createElement('img');
+                    img.src = e.target.result;
+                    img.classList.add('prodImg');
+                    container.appendChild(img);
+
+                    const deleteButton = document.createElement('button');
+                    deleteButton.textContent = 'X';
+                    deleteButton.classList.add('btnBorrImg');
+                    deleteButton.addEventListener('click', function() {
+                        // Eliminar la imagen y su contenedor al hacer clic en el botón de eliminar
+                        previewsContainer.removeChild(container);
+                    });
+                    container.appendChild(deleteButton);
+
+                    // Agregar el contenedor al contenedor de previsualización
+                    previewsContainer.appendChild(container);
+                };
+
+                reader.readAsDataURL(file);
+            } else {
+                // Si no es una imagen, mostrar un mensaje de error o simplemente omitir el archivo
+                console.error('El archivo ' + file.name + ' no es una imagen. Se ha omitido.');
+            }
+        }
+    }
+};
     
-
     
     //console.log(ListColores)
 </script>
@@ -118,7 +159,7 @@ function actualizarCampoTexto() {
         </div>
         
         <div class="card-body">
-            <form action="/products/nuev-prod" method="POST">
+            <form action="/products/nuev-prod" method="POST" enctype="multipart/form-data">
 
             <div class="container">
                 <div class="row">
@@ -210,8 +251,9 @@ function actualizarCampoTexto() {
                             <input type="number" name="stock" id="stock" class="" placeholder="stock">
                             <button type="button" onclick="agregarOpcion()">Agregar Opción</button>
                             <input type="hidden" id="nombreColorHidden" value="negro" name="nombreColor">
-                            <input type="hidden" id="exaColorHidden" value="#FFFFFF" name="exaColor">
+                            <input type="text" id="exaColorHidden" value="#000000" name="exaColor">
                             <input type="hidden" id="tallaHidden" value="S" name="talla">
+                            <input type="hidden" id="opcionesData" name="opcionesData">
                         </div>
 
                         <div id="opcionesContainer"></div>
@@ -219,85 +261,18 @@ function actualizarCampoTexto() {
                     </div>
                     <div class="col-sm">
 
-                        {{!-- <div class="form-group">
-                            <input type="file" name="photos" multiple="'true">
-                        </div> --}}
-                    
-
-                        {{!-- <div id="opcionForm">
+                        <div class="col-sm contImagenesProd">
                             <div class="form-group">
-                                <label for="nombreColor">Seleccionar Color:</label>
-                                <select id="nombreColorSelect"class="form-select" aria-label="Default select example" onchange="actualizarCampoTexto()">
-                                    <option selected>Lista de Colores</option>
-                                    {{#each ListColores}}
-                                    <option value="{{nombreColor}}" data-hex="{{codHexadecimal}}">{{nombreColor}}</option>
-                                    {{/each}}
-                                </select>
-                                <input type="hidden" id="nombreColorHidden" name="nombreColor">
-                                <input type="hidden" id="exaColorHidden" name="exaColor">
+                                <input type="file" name="photos" id="agreImg" multiple="true" value="Algo">
                             </div>
-                            <div class="form-group">
-                                <label for="tallasStock">Stock por talla (separadas por coma, en el formato Talla:Stock):</label>
-                                <input type="text" id="tallasStock" class="form-control">
-                            </div>
-                        <button type="button" onclick="agregarOpcion()">Agregar Opción</button>
+                            <div id="previews" class="imgCont"></div>
                         </div>
-                        
-                        <input type="hidden" id="opcionesInput" name="opciones">
-
-                        <div id="opcionesContainer"></div> --}}
-
-
                     
                     </div>
                 </div>
             </div>
 
                 
-
-
-
-                
-                {{!-- <div class="form-group">
-                    <div id="stockInputs">sssssssssssssss</div>
-                </div> --}}
-                
-
-                
-
-                {{!-- <div class="form-group">
-                        {{#each productosalgo}}
-                    <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="checkbox" id="inlineCheckbox{{@index}}" value="{{valor}}">
-                            <label class="form-check-label" for="inlineCheckbox{{@index}}">{{valor}}</label>
-                    </div>
-                        {{/each}}
-                </div>
-                <div class="form-group">
-                    <div class="form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">155555</label>
-                    </div>
-                </div>
-                
-                
-                
-                
-                
-                
-                <div class="form-group">
-                    <label for="imagen">Imagen:</label>
-                    <input type="text" name="imagen" class="form-control" placeholder="URL de la imagen">
-                </div>
-                <div class="form-group">
-                    <label for="tallas">Tallas:</label>
-                    <input type="text" name="tallas" class="form-control" placeholder="Tallas separadas por coma">
-                </div>
-                <div class="form-group">
-                    <label for="colores">Colores:</label>
-                    <input type="text" name="colores" class="form-control" placeholder="Colores separados por coma">
-                </div>
-                <input type="hidden" id="prod1" name="prod1"> --}}
 
                 <div class="form-group">
                     <button class="btn btn-primary btn-block">
