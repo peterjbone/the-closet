@@ -23,6 +23,8 @@ const Page = () => {
 	const params = useParams();
 	const nombre = params.nombre;
 
+  
+
 	//? Llenando el estado global de "all products"
 	const getAllProducts = useProductsStore((state) => state.getAllProducts);
 	useEffect(() => {
@@ -43,7 +45,7 @@ const Page = () => {
 	const producto = allProducts.find(
 		(product) => normalizeName(product.nombre) === normalizeName(nombre)
 	);
-
+ console.log(producto);
 	// Manejando imágenes
 	const [imagenSeleccionada, setImagenSeleccionada] = useState(
 		producto?.imagen[0]
@@ -65,6 +67,11 @@ const Page = () => {
 	};
 
 	//! ZONA IMPORTANTE
+  const { data: session } = useSession();
+  const userId = session && session.user ? session.user._id : null;
+  const userName = session && session.user ? session.user.name : null;
+  const userEmail = session && session.user ? session.user.email : null;
+  
 
 	//? ------------ INFORMACION DEL PRODUCTO (que se enviara a la cart) -----------
 	const [productInfo, setProductInfo] = useState({
@@ -77,18 +84,22 @@ const Page = () => {
 		imagen: producto?.imagen[0],
 		precio: producto?.precio,
 		color: "",
-		talla: ""
+		talla: "",
+    userId: userId,
+    userName: userName,
+    userEmail: userEmail
 	});
 	function handleProductChange(event) {
 		event.preventDefault();
 
 		const { name, value } = event.target;
+    console.log('name v',name, value)
 		setProductInfo({
 			...productInfo,
-			[name]: value
+			[name]: value,
 		});
 	}
-	console.log(productInfo);
+	console.log('productos',producto, productInfo);
 
 	//? ----------------- OPCIONES DE LA TALLA -------------------
 	let opcionesDeTallas = null;
@@ -126,7 +137,7 @@ const Page = () => {
 
 		addToCart(productInfo);
 	}
-	console.log(cartItems);
+	console.log('ca',cartItems ,'p', producto,'pi', productInfo);
 
 	//* ------------------- PAGINA DETAIL DEL PRODUCTO ------------------------
 	/* prettier-ignore */

@@ -9,10 +9,10 @@ const client = new MercadoPagoConfig({ accessToken: ACCESS_TOKEN })
             const preference = await new Preference(client)
             
             const producto =  productos.map(prod => ({
-                id: prod.id,
+                id: prod._id,
                 title: prod.nombre,
-                quantity: prod.cantidad,
-                unit_price: prod.unit_price,
+                quantity: prod.cartQuantity,
+                unit_price: prod.precio,
                 
                 }))
             const talla = productos.map(prod => prod.talla)

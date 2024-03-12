@@ -17,7 +17,7 @@ function Cart() {
 	//? Generando el precio total y la cantidad total (al cargar el componente)
 	useEffect(() => {
 		getTotals();
-	});
+	}, []);
 
 	//? Obteniendo las "actions"
 	const addToCart = useCartStore((state) => state.addToCart);
@@ -75,7 +75,7 @@ function Cart() {
                       <div className="cart-product">
                         <img src={cartItem.imagen} alt={cartItem.nombre} />
                         <div>
-                          <h3 className="text-xl">{cartItem.nombre.toUpperCase()}</h3>
+                          <h3 className="text-xl">{cartItem.nombre}</h3>
                           <p className="text-lg font-semibold"> {cartItem.marca} </p>
                           <p className="text-lg"> Talla seleccionada: {cartItem.talla} </p>
                           <button onClick={() => removeFromCart(cartItem)}>

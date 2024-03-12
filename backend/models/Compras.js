@@ -1,14 +1,14 @@
 const mongoose = require("mongoose");
 
 const CompraSchema = new mongoose.Schema({
-
+    
     usuario: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Usuario'
     },
     productos: [{
         producto: {
-            type: mongoose.Schema.Types.Number,
+            type: mongoose.Schema.Types.ObjectId,
             ref: 'Producto' 
 
             

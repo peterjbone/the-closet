@@ -2,9 +2,9 @@ import { create } from "zustand";
 import { toast } from "react-hot-toast";
 
 export const useCartStore = create((set, get) => ({
-	cartItems: localStorage.getItem("cartItems")
-		? JSON.parse(localStorage.getItem("cartItems"))
-		: [],
+	cartItems: typeof window !== 'undefined' ? 
+	  (localStorage.getItem("cartItems") ? JSON.parse(localStorage.getItem("cartItems")) : []) 
+	  : [],
 	cartTotalQuantity: 0,
 	cartTotalAmount: 0,
 	addToCart: (product) => {
