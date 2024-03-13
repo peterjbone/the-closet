@@ -36,7 +36,7 @@ function Cart() {
 	//? Para coger la sesion de usuario
 	const { data: session, status } = useSession();
 	//console.log(session);
-
+  
 	//* -------------------------------- PAGINA CART -------------------------------- *//
 	/* prettier-ignore */
 	return (

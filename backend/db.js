@@ -2,13 +2,13 @@ const mongoose = require("mongoose");
 
 // Conección con la base de datos "thecloset"
 async function connectDB() {
-  try {
-    //mongoose.connect("mongodb://localhost:27017/thecloset");
-    await mongoose.connect("mongodb://127.0.0.1:27017/thecloset"); //Con esta uri me conecta a la base de datos.
-    console.log("Conexión establecida con la base de datos.");
-  } catch (error) {
-    console.log("Error al conectarse a la base de datos:", error);
-  }
+	try {
+		//mongoose.connect("mongodb://localhost:27017/thecloset");
+		await mongoose.connect("mongodb://localhost:27017/thecloset"); //Con esta uri me conecta a la base de datos.
+		console.log("Conexión establecida con la base de datos.");
+	} catch (error) {
+		console.log("Error al conectarse a la base de datos:", error);
+	}
 }
 
 //? Insertar documentos necesarios en MongoDB
