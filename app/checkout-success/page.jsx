@@ -28,13 +28,16 @@ const CheckoutSuccess = () => {
       flex-col
       items-center
       justify-center
+      text-2xl
     ">
-			<h2 className="text-green-500 mb-2">Checkout Successful</h2>
+			<h2 className="text-green-500 mb-2 font-bold text-3xl">
+				Checkout Successful
+			</h2>
 			<p>Your order might take some time to process. ⌛</p>
 			<p>Check your order status at your profile after about 10mins. 👀</p>
 			<p>
 				Incase of any inqueries contact the support at{" "}
-				<strong>support@onlineshop.com</strong>
+				<strong>thecloset@shop.com</strong>
 			</p>
 		</div>
 	);

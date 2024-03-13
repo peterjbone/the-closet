@@ -6,20 +6,32 @@ require("dotenv").config();
 const Stripe = require("stripe");
 const stripe = Stripe(process.env.STRIPE_KEY);
 
+//* STRIPE ROUTER
 const { Router } = require("express");
 const stripeRouter = Router();
-
-//const app = express();
-//app.use(express.static("public"));
-//const YOUR_DOMAIN = "http://localhost:4242";
 
 stripeRouter.post("/create-checkout-session", async (req, res) => {
 	const session = await stripe.checkout.sessions.create({
 		line_items: [
 			{
-				// Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-				price: "{{PRICE_ID}}",
-				quantity: 1
+				price_data: {
+					currency: "usd",
+					product_data: {
+						name: "T-shirt"
+					},
+					unit_amount: 4000
+				},
+				quantity: 2
+			},
+			{
+				price_data: {
+					currency: "usd",
+					product_data: {
+						name: "Phone"
+					},
+					unit_amount: 2000
+				},
+				quantity: 2
 			}
 		],
 		mode: "payment",
@@ -29,10 +41,5 @@ stripeRouter.post("/create-checkout-session", async (req, res) => {
 
 	res.send({ url: session.url });
 });
-
-//app.listen(4242, () => console.log("Running on port 4242"));
-
-function handler() {}
-stripeRouter.get("/", handler);
 
 module.exports = stripeRouter;

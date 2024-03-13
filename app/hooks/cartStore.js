@@ -1,18 +1,20 @@
 import { create } from "zustand";
 import { toast } from "react-hot-toast";
 
-//var localStorage = Storage;
-
 export const useCartStore = create((set, get) => ({
-	cartItems: localStorage.getItem("cartItems")
-		? JSON.parse(localStorage.getItem("cartItems"))
-		: [],
+	cartItems:
+		typeof localStorage !== "undefined" && localStorage.getItem("cartItems")
+			? JSON.parse(localStorage.getItem("cartItems"))
+			: [],
 	cartTotalQuantity: 0,
 	cartTotalAmount: 0,
 	addToCart: (product) => {
 		let cartItems = get().cartItems;
 		const existingIndex = cartItems.findIndex(
-			(item) => item.color === product.color && item._id === product._id
+			(item) =>
+				item.color === product.color &&
+				item._id === product._id &&
+				item.talla === product.talla
 		);
 		if (existingIndex >= 0) {
 			//? copia del estado

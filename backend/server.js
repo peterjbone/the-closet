@@ -1,9 +1,10 @@
 const express = require("express");
 const server = express();
 const morgan = require("morgan");
-const router = require("./routes/routesIndex.js");
+const indexRouter = require("./routes/routesIndex.js");
 const stripeRouter = require("./routes/stripe.js");
 
+//* MIDDLEWARES
 server.use((req, res, next) => {
 	res.header("Access-Control-Allow-Origin", "*");
 	res.header("Access-Control-Allow-Credentials", "true");
@@ -17,8 +18,8 @@ server.use((req, res, next) => {
 server.use(morgan("dev"));
 server.use(express.json());
 
-// Rutas
-server.use("/", router);
+//* ROUTES AND ROUTERS
+server.use("/", indexRouter);
 server.use("/api/stripe", stripeRouter);
 
 module.exports = server;

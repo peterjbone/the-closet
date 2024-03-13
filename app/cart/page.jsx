@@ -28,7 +28,6 @@ function Cart() {
 
 	//? Obteniendo los "estados globales"
 	const cartItems = useCartStore((state) => state.cartItems);
-	const cartTotalQuantity = useCartStore((state) => state.cartTotalQuantity);
 	const cartTotalAmount = useCartStore((state) => state.cartTotalAmount);
 
 	//? Para redirigir

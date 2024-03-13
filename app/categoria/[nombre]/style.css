@@ -17,6 +17,7 @@ li {
 /** Estilos de Contenedor de productos **/
 
 .card-container {
+	max-width: 100%;
 	padding: 0 1rem;
 	margin-top: 1rem;
 	font-size: 1.2rem;
@@ -26,22 +27,23 @@ li {
 	grid-template-columns: repeat(4, minmax(0, 1fr));
 	grid-auto-rows: 540px;
 	align-items: stretch;
+	justify-content: start;
 }
 
 @media (max-width: 1280px) {
 	.card-container {
-		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-template-columns: repeat(3, minmax(0, 300px));
 	}
 }
 
 @media (max-width: 1024px) {
 	.card-container {
-		grid-template-columns: repeat(2, minmax(0, 1fr));
+		grid-template-columns: repeat(2, minmax(0, 300px));
 	}
 }
 
 @media (max-width: 835px) {
 	.card-container {
-		grid-template-columns: repeat(1, minmax(0, 1fr));
+		grid-template-columns: repeat(1, minmax(0, 300px));
 	}
 }
