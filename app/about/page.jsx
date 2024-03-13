@@ -1,11 +1,19 @@
-import React from "react";
+"use client";
+
 import Header from "../components/navbar/Navbar";
-import image1 from "../../public/images/imagen1.jpg";
+import image1 from "../../public/images/about/imagen1.jpg";
+import image2 from "../../public/images/about/imagen2.png";
 import Image from "next/image";
+import { BackArrowButton } from "../components/buttons/back/BackButton";
 const AboutPage = () => {
   return (
     <div>
       <Header />
+      <div className="m-8">
+        {" "}
+        <BackArrowButton />
+      </div>
+
       <div className="flex flex-col justify-center align-middle items-center m-14 gap-6">
         <h1 className="text-5xl text-bold text-center">About The closet</h1>
         <div className="flex flex-row">
@@ -29,6 +37,20 @@ const AboutPage = () => {
             calzado, tenemos todo lo que necesitas para expresar tu estilo único
             y original
           </p>
+        </div>
+        <div className="flex gap-5">
+          <p className="font-medium text-2xl text-pretty">
+            Hace no mucho tiempo atrás, The closet con una clara visión y un
+            gusto exquisito, abrió sus puertas al mundo de la moda en un vasto
+            mundo digital. Un lugar donde puedes encontrar últimas novedades de
+            marcas reconocidas, tanto nacionales como internacionales. Desde sus
+            inicios The closet se destacó por su cuidadosa selección de prendas
+            de alta calidad y diseño vanguardista. Entre sus estantes virtuales
+            se puedenn encontrar marcas icónicas como Batistella, Taverniti
+            Mambo, Adidas y Falabella, que no solo ofrecían estilo, sino también
+            comodidad y durabilidad.
+          </p>
+          <Image src={image2} width={500} height={500} />
         </div>
       </div>
     </div>
