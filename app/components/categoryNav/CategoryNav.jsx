@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import Avatar from "../navbar/Avatar";
 import MenuItem from "../navbar/MenuItem";
 import { useCartStore } from "../../hooks/cartStore";
-
+import { useCounterStore } from "../../hooks/counterStore";
 function CategoryNav({ query, handleInputChange }) {
   const router = useRouter();
   const cartTotalQuantity = useCartStore((state) => state.cartTotalQuantity);
