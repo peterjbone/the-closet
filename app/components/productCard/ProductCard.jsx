@@ -4,7 +4,7 @@ import "./ProductCard.css";
 import Link from "next/link";
 import ProductImage from "./ProductImage.jsx";
 import { useEffect, useState } from "react";
-import Hearts from "../wishlist/hearts/Hearts";
+import Hearts from "../../components/hearts/Hearts.jsx";
 import { BiSolidTrash } from "react-icons/bi";
 import { useFavoritesStore } from "../../hooks/favoritesStore";
 import { useCounterStore } from "../../hooks/counterStore";

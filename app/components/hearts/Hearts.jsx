@@ -3,7 +3,7 @@
 import { useSession } from "next-auth/react";
 import { toast } from "react-hot-toast";
 
-import { Heart } from "../wishlist/heart/Heart";
+import { Heart } from "../../components/heart/Heart";
 import { useState } from "react";
 import { useCounterStore } from "../../hooks/counterStore";
 import { useFavoritesStore } from "../../hooks/favoritesStore";

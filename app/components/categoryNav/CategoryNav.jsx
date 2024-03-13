@@ -9,6 +9,7 @@ import MenuItem from "../navbar/MenuItem";
 import { useCartStore } from "../../hooks/cartStore";
 import { useCounterStore } from "../../hooks/counterStore";
 function CategoryNav({ query, handleInputChange }) {
+  const counter = useCounterStore((state) => state.counter);
   const router = useRouter();
   const cartTotalQuantity = useCartStore((state) => state.cartTotalQuantity);
 
@@ -62,7 +63,10 @@ function CategoryNav({ query, handleInputChange }) {
 					<Link
 						href={"/wishlist"}
 						className="hover:cursor-pointer hover:text-red-600">
-						<FaRegHeart size={32} />
+						<div className="flex flex-row gap-2">
+						  <FaRegHeart size={32} />
+						  <p className="rounded-full px-2 bg-orange-500 text-center h-5 justify-center align-middle items-center">{counter}</p>
+						</div>
 					</Link>
 					{/* CARRITO */}
 					<div className="relative">

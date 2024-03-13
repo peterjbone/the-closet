@@ -12,11 +12,12 @@ import { useSession, signOut } from "next-auth/react";
 import Avatar from "./Avatar";
 import MenuItem from "./MenuItem";
 import { useCartStore } from "../../hooks/cartStore";
+import { useCounterStore } from "../../hooks/counterStore";
 
 const Header = () => {
   //? Creando router
   const router = useRouter();
-
+  const counter = useCounterStore((state) => state.counter);
   //? Cargando datos de sesion de usuario
   const { data: session } = useSession();
 
@@ -74,7 +75,10 @@ const Header = () => {
 					<Link
 						href={"/wishlist"}
 						className="hover:cursor-pointer hover:text-red-600">
-						<FaRegHeart size={32} />
+						<div className="flex gap-2">
+						  <FaRegHeart size={32} />
+						  <p className="rounded-full px-2 bg-orange-500 text-center h-5 justify-center align-middle items-center">{counter}</p>
+						</div>
 					</Link>
 					<div className="relative" >
             <Link href={"/cart"} >
