@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-function ProductImage({ imgUrl, changeBigImage, bigImage, index }) {
+function Images({ imgUrl, changeBigImage, bigImage, index }) {
 	function handleClick() {
 		if (bigImage !== imgUrl) {
 			changeBigImage(imgUrl);
@@ -21,7 +21,7 @@ function ProductImage({ imgUrl, changeBigImage, bigImage, index }) {
     <div
       className={`
       h-full 
-      w-[40px]
+      w-[50px]
       transition
       cursor-pointer
       hover:border-2
@@ -33,12 +33,12 @@ function ProductImage({ imgUrl, changeBigImage, bigImage, index }) {
       <img
         src={imgUrl}
         alt="Product image"
-        width={40}
-        height={40}
+        width={50}
+        height={16}
         className="h-full w-full object-contain"
       />
     </div>
    );
 }
 
-export default ProductImage;
+export default Images;

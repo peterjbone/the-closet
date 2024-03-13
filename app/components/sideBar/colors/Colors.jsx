@@ -11,7 +11,7 @@ function Colors({ handleRadioChange }) {
 				<label className="sidebar-label-container">
 					<input
 						type="radio"
-						name="color"
+						name="colorFilter"
 						value=""
 						onChange={handleRadioChange}
 					/>
@@ -21,34 +21,34 @@ function Colors({ handleRadioChange }) {
 					handleRadioChange={handleRadioChange}
 					value="negro"
 					title="Negro"
-					name="color"
+					name="colorFilter"
 					color="black"
 				/>
 				<InputFilters
 					handleRadioChange={handleRadioChange}
 					value="azul"
 					title="Azul"
-					name="color"
+					name="colorFilter"
 					color="blue"
 				/>
 				<InputFilters
 					handleRadioChange={handleRadioChange}
 					value="rojo"
 					title="Rojo"
-					name="color"
+					name="colorFilter"
 					color="red"
 				/>
 				<InputFilters
 					handleRadioChange={handleRadioChange}
 					value="verde"
 					title="Verde"
-					name="color"
+					name="colorFilter"
 					color="green"
 				/>
 				<label className="sidebar-label-container">
 					<input
 						type="radio"
-						name="color"
+						name="colorFilter"
 						value="blanco"
 						onChange={handleRadioChange}
 					/>
