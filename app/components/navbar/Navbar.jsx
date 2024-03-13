@@ -10,42 +10,45 @@ import { useRouter } from "next/navigation";
 import { useSession, signOut } from "next-auth/react";
 import Avatar from "./Avatar";
 import MenuItem from "./MenuItem";
+import { useCounterStore } from "../../hooks/counterStore";
 
 const Header = () => {
-	const router = useRouter();
-	const [isOpen, setIsOpen] = useState(false);
-	const { data: session } = useSession();
+  const counter = useCounterStore((state) => state.counter);
 
-	//? Mensaje por consola para saber si cargo el usuario
-	// console.log("SESSION:");
-	// console.log(session);
+  const router = useRouter();
+  const [isOpen, setIsOpen] = useState(false);
+  const { data: session } = useSession();
 
-	//? Para abrir el menú de usuario
-	const toggleOpen = useCallback(() => {
-		setIsOpen((value) => !value);
-	}, []);
+  //? Mensaje por consola para saber si cargo el usuario
+  // console.log("SESSION:");
+  // console.log(session);
 
-	//? Para salir de la sesión
-	function handleSignout() {
-		toast
-			.promise(
-				new Promise((resolve) => setTimeout(() => resolve(true), 2000)),
-				{
-					loading: "Cerrando sesión...",
-					success: <b>Haz cerrado tu sesión.</b>,
-					error: <b>Algo salió mal.</b>
-				},
-				{
-					success: {
-						duration: 1000
-					}
-				}
-			)
-			.then(() => signOut());
-	}
+  //? Para abrir el menú de usuario
+  const toggleOpen = useCallback(() => {
+    setIsOpen((value) => !value);
+  }, []);
 
-	/* prettier-ignore */
-	return (
+  //? Para salir de la sesión
+  function handleSignout() {
+    toast
+      .promise(
+        new Promise((resolve) => setTimeout(() => resolve(true), 2000)),
+        {
+          loading: "Cerrando sesión...",
+          success: <b>Haz cerrado tu sesión.</b>,
+          error: <b>Algo salió mal.</b>,
+        },
+        {
+          success: {
+            duration: 1000,
+          },
+        }
+      )
+      .then(() => signOut());
+  }
+
+  /* prettier-ignore */
+  return (
 		<header className="font-semibold border-b-gray-300 border-[3px]">
 			<div
 				className="
@@ -66,7 +69,14 @@ const Header = () => {
 				</nav>
 				<div className="flex flex-row items-center gap-4 relative">
 					<div className="hover:cursor-pointer hover:text-red-600">
+				 {/* Es una ruta temporal */}
+					<Link href="/wishlist/[3]" as="/wishlist/3">
+						<div className="flex gap-2">
+							
 						<FaRegHeart size={30} />
+						  <p className="rounded-full bg-red-500 h-5 w-5 flex items-center justify-center text-white text-xs font-semibold">{counter}</p>
+						  </div>
+					 </Link>
 					</div>
           <div>
             <Link href={"/cart"}>

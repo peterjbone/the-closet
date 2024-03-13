@@ -1,25 +1,22 @@
 "use client";
-import { Heart } from "../heart/Heart";
-import { useState } from "react";
-import { useCounterStore } from "../../../hooks/counterStore";
-import { useFavoritesStore } from "../../../hooks/favoritesStore";
 
-const Hearts = (
-  nombre,
-  marca,
-  precio,
-  _id,
-  imagen,
-  categoria,
-  genero,
-  colores,
-  productoNuevo
-) => {
+import { useSession } from "next-auth/react";
+import { toast } from "react-hot-toast";
+
+import { Heart } from "../wishlist/heart/Heart";
+import { useState } from "react";
+import { useCounterStore } from "../../hooks/counterStore";
+import { useFavoritesStore } from "../../hooks/favoritesStore";
+
+const Hearts = (product) => {
+  const { data: session, status } = useSession();
+
   const [isFavorite, setIsFavorite] = useState(false);
   const addToFavorites = useFavoritesStore((state) => state.addFavorites);
   const removeFromFavorites = useFavoritesStore(
     (state) => state.removeFavorites
   );
+  const isAuthenticated = status === "authenticated";
 
   const [state, setState] = useState({
     black: true,
@@ -35,30 +32,14 @@ const Hearts = (
     });
     setIsFavorite(!isFavorite);
 
-    if (!isFavorite) {
-      addToFavorites(
-        nombre,
-        marca,
-        precio,
-        _id,
-        imagen,
-        categoria,
-        genero,
-        colores,
-        productoNuevo
-      );
+    if (isAuthenticated) {
+      if (!isFavorite) {
+        addToFavorites(product);
+      } else {
+        removeFromFavorites(product._id, product.nombre);
+      }
     } else {
-      removeFromFavorites(
-        nombre,
-        marca,
-        precio,
-        _id,
-        imagen,
-        categoria,
-        genero,
-        colores,
-        productoNuevo
-      );
+      toast.error("Debes iniciar sesión para ver tus favoritos.");
     }
 
     //Manejo el contador en base al color del ❤️.

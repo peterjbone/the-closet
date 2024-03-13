@@ -2,12 +2,12 @@
 
 import "./ProductCard.css";
 import Link from "next/link";
-import { FaHeart } from "react-icons/fa";
 import ProductImage from "./ProductImage.jsx";
 import { useEffect, useState } from "react";
 import Hearts from "../wishlist/hearts/Hearts";
 import { BiSolidTrash } from "react-icons/bi";
 import { useFavoritesStore } from "../../hooks/favoritesStore";
+import { useCounterStore } from "../../hooks/counterStore";
 
 function ProductCard({
   _id,
@@ -27,11 +27,17 @@ function ProductCard({
   opcion,
   isFavoritesScreen,
 }) {
+  //Quitar de favoritos:
+  const removeFromFavorites = useFavoritesStore(
+    (state) => state.removeFavorites
+  );
+  //Reducir el contador
+  const decrement = useCounterStore((state) => state.decrement);
+  //Estado para controlar la visibilidad de la card
+  const [isVisible, setIsVisible] = useState(true);
+
   //? estado local para las imagenes
   const [bigImage, setBigImage] = useState(imagen[0]);
-
-  //? estado del favorita
-  const [isFavorite, setIsFavorite] = useState(false);
 
   useEffect(() => {
     setBigImage(imagen[0]);
@@ -57,25 +63,20 @@ function ProductCard({
   } else {
     coloresSintaxis = colores.join();
   }
-
-  //? Cambia el color del corazon y
-  //? el estado global de la wishlist
-  function handleFavorites() {
-    setIsFavorite(!isFavorite);
-  }
-  //if (isFavorite) console.log("It is favorite");
+  const handleRemoveFromFavorites = () => {
+    removeFromFavorites(_id, nombre);
+    decrement();
+    setIsVisible(false);
+  };
 
   /* prettier-ignore */
   return (
+    <>
+    { isVisible && (
 		<section className="card relative">
 			<div className="absolute top-3 right-2">
-        {/* {<FaHeart
-          size={25}
-          className={`${isFavorite ? "text-[#f00]" : "text-[#000]"}`}
-          onClick={handleFavorites}
-        />} */}
 		       {isFavoritesScreen ? (
-              <BiSolidTrash size={25} color="#000" />
+              <BiSolidTrash size={25} color="#000" onClick={handleRemoveFromFavorites} />
             ): (
             <Hearts 
             nombre={nombre} 
@@ -87,6 +88,7 @@ function ProductCard({
             genero={genero}
             colores={colores}
             productoNuevo={productoNuevo}
+            
             />)}
 			</div>
 
@@ -141,7 +143,8 @@ function ProductCard({
 
 				</div>
 			</Link>
-		</section>
+		</section>)}
+  </>
 	);
 }
 
