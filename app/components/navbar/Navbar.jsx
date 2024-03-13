@@ -1,29 +1,27 @@
 "use client";
 
+//import "animate.css";
 import "./Navbar.css";
+import Link from "next/link";
+import { FaRegHeart } from "react-icons/fa";
+import { MdOutlineShoppingCart } from "react-icons/md";
 import { toast } from "react-hot-toast";
 import { useState, useCallback } from "react";
-import { MdOutlineShoppingCart } from "react-icons/md";
-import { FaRegHeart } from "react-icons/fa";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useSession, signOut } from "next-auth/react";
 import Avatar from "./Avatar";
 import MenuItem from "./MenuItem";
-import { useCounterStore } from "../../hooks/counterStore";
+import { useCartStore } from "../../hooks/cartStore";
 
 const Header = () => {
-  const counter = useCounterStore((state) => state.counter);
-
+  //? Creando router
   const router = useRouter();
-  const [isOpen, setIsOpen] = useState(false);
+
+  //? Cargando datos de sesion de usuario
   const { data: session } = useSession();
 
-  //? Mensaje por consola para saber si cargo el usuario
-  // console.log("SESSION:");
-  // console.log(session);
-
   //? Para abrir el menú de usuario
+  const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = useCallback(() => {
     setIsOpen((value) => !value);
   }, []);
@@ -47,10 +45,13 @@ const Header = () => {
       .then(() => signOut());
   }
 
+  //? trayendo el estado global de cart
+  const cartTotalQuantity = useCartStore((state) => state.cartTotalQuantity);
+
   /* prettier-ignore */
   return (
 		<header className="font-semibold border-b-gray-300 border-[3px]">
-			<div
+			<nav
 				className="
         max-w-screen-xl
         mx-auto
@@ -59,29 +60,48 @@ const Header = () => {
         justify-between
         py-4
         ">
+        {/* LOGO */}
 				<Link href={"/"} className="font-bold text-[2rem] text-black">
 					The closet
-				</Link>
-				<nav className="text-gray-800 text-xl flex flex-row items-center gap-6">
+        </Link>
+        {/* ENLACES */}
+				<div className="text-gray-800 text-xl flex flex-row items-center gap-6">
 					<Link href={"/categoria/hombres"}>Hombre</Link>
 					<Link href={"/categoria/mujeres"}>Mujer</Link>
 					<Link href={"/categoria/infantes"}>Niños y Niñas</Link>
-				</nav>
+				</div>
 				<div className="flex flex-row items-center gap-4 relative">
-					<div className="hover:cursor-pointer hover:text-red-600">
-				 {/* Es una ruta temporal */}
-					<Link href="/wishlist/[3]" as="/wishlist/3">
-						<div className="flex gap-2">
-							
-						<FaRegHeart size={30} />
-						  <p className="rounded-full bg-red-500 h-5 w-5 flex items-center justify-center text-white text-xs font-semibold">{counter}</p>
-						  </div>
-					 </Link>
-					</div>
-          <div>
-            <Link href={"/cart"}>
-						  <MdOutlineShoppingCart size={35} />
-            </Link>
+					<Link
+						href={"/wishlist"}
+						className="hover:cursor-pointer hover:text-red-600">
+						<FaRegHeart size={32} />
+					</Link>
+					<div className="relative" >
+            <Link href={"/cart"} >
+							  <MdOutlineShoppingCart size={32} />
+						</Link>
+						<div
+							onClick={() => router.push("/cart")}
+							className="
+              absolute
+              z-10
+              top-6
+              left-5
+              w-[25px]
+              h-[25px]
+              p-1
+              bg-orange-500
+              text-black
+              text-[1rem]
+              font-semibold
+              rounded-full
+              flex
+              items-center
+              justify-center
+              hover:cursor-pointer
+            ">
+							{cartTotalQuantity}
+						</div>
 					</div>
 					<div className="hover:cursor-pointer" onClick={toggleOpen}>
 						<Avatar src={session?.picture} />
@@ -118,7 +138,7 @@ const Header = () => {
 						</div>
 					)}
 				</div>
-			</div>
+			</nav>
 		</header>
 	);
 };

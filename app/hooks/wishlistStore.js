@@ -6,6 +6,11 @@ export const useWishlistStore = create((set, get) => ({
 		//! Abril asi se puede acceder a un estado global dentro de una funcion action
 		//! Asi puedes manipularlo antes de setearlo.
 		const favorites = get().favorites;
+
+		const repetido = favorites.find((item) => item._id === product._id);
+		if (repetido) {
+			return toast.error("Ese producto ya esta agregado!");
+		}
 	},
 	deleteFavorite: (product) => {},
 	clearFavorite: () => {}
