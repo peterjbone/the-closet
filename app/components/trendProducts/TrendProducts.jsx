@@ -1,16 +1,24 @@
 "use client";
 
 import "./TrendProducts.css";
-import data from "../../utils/db.json"; //? Base de datos demo
 import Link from "next/link";
 import TrendProductItems from "./TrendProductsItems";
+import { useProductsStore } from "../../hooks/productsStore";
+import { useEffect } from "react";
 
 function TrendProducts() {
-	const currentCategory = data.find((item) => item.categoria === "tendencias");
-	const { productos } = currentCategory;
+  const getTrendyProducts = useProductsStore(
+    (state) => state.getTrendyProducts
+  );
 
-	/* prettier-ignore */
-	return (  
+  useEffect(() => {
+    getTrendyProducts();
+  }, []);
+
+  const trendy = useProductsStore((state) => state.trendy);
+  console.log(trendy);
+  /* prettier-ignore */
+  return (  
     <div className="py-4 px-6">
       <div className="flex flex-row items-center justify-between py-6">
         <h2 className="text-3xl font-bold">Productos en Tendencia ⭐</h2>
@@ -20,7 +28,7 @@ function TrendProducts() {
       </div>
       <div className="featureProducts-grid bg-gray-50">
         {
-          productos.map((item, index) => {
+          trendy.map((item, index) => {
             if (index <= 3) {
               return (
                 <TrendProductItems

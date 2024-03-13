@@ -4,6 +4,7 @@ import axios from "axios";
 export const useProductsStore = create((set) => ({
   selectedProducts: [],
   allProducts: [],
+  trendy: [],
   getAllProducts: async () => {
     const endpoint = "http://localhost:3001/allproducts";
     const { data } = await axios.get(`${endpoint}`);
@@ -94,6 +95,24 @@ export const useProductsStore = create((set) => ({
       allProducts: [...data],
     }));
   },
+  getTrendyProducts: async () => {
+    const { data } = await axios.get("http://localhost:3001/tendencia");
+    set((state) => ({
+      ...state,
+      selectedProducts: [...data],
+      trendy: [...data],
+      //allProducts: [...data],
+    }));
+  },
+  getFeaturedProducts: async () => {
+    const { data } = await axios.get("http://localhost:3001/destacados");
+    set((state) => ({
+      ...state,
+      selectedProducts: [...data],
+      allProducts: [...data],
+    }));
+  },
+
   removeAllProducts: () => {
     set((state) => ({
       ...state,

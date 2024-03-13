@@ -13,6 +13,8 @@ const getJoggersProducts = require("../controllers/getJoggersProducts");
 const getShoes = require("../controllers/getShoes");
 const getJeans = require("../controllers/getJeans");
 const getShorts = require("../controllers/getShorts");
+const getFeaturedProducts = require("../controllers/getFeaturedProducts");
+const getTrendyProducts = require("../controllers/getTrendyProducts");
 
 //* Index router
 const router = Router();
@@ -30,5 +32,7 @@ router.get("/joggers", getJoggersProducts);
 router.get("/zapatos", getShoes);
 router.get("/jeans", getJeans);
 router.get("/shorts", getShorts);
+router.get("/destacados", getFeaturedProducts);
+router.get("/tendencia", getTrendyProducts);
 
 module.exports = router;

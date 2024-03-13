@@ -1,17 +1,27 @@
 "use client";
 
 import "./FeaturedProducts.css";
-import data from "../../utils/db.json"; //? Base de datos demo
+
 import Link from "next/link";
 import FeaturedProductItem from "./FeaturedProductsItem";
+import { useProductsStore } from "../../hooks/productsStore";
+import { useEffect } from "react";
 
 function FeaturedProducts() {
-	//! HARDCODEO, buscar productos en la DB
-	const currentCategory = data.find((item) => item.categoria === "destacados");
-	const { productos } = currentCategory;
+  const getFeaturedProducts = useProductsStore(
+    (state) => state.getFeaturedProducts
+  );
 
-	/* prettier-ignore */
-	return (  
+  useEffect(() => {
+    getFeaturedProducts();
+  }, []);
+
+  const allProducts = useProductsStore((state) => state.allProducts);
+  const productos = allProducts;
+  console.log(productos);
+
+  /* prettier-ignore */
+  return (  
     <div className="py-4 px-6">
       <div className="flex flex-row items-center justify-between py-6">
         <h2 className="text-3xl font-bold">Productos destacados ⭐</h2>
