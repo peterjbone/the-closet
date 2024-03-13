@@ -4970,6 +4970,1178 @@ const productos = [
       },
     ],
   },
+  {
+    id: 87,
+    nombre: "Polo clásico de algodón",
+    marca: "FashionStyle",
+    descripcion:
+      "Polo clásico confeccionado en algodón suave y transpirable. Cuenta con un diseño de cuello polo y botones en la parte delantera. El ajuste es regular fit para una comodidad óptima. Ideal para un look casual o deportivo. - Composición: 100% algodón. - El modelo lleva una talla M. - Talle M: ancho de pecho de 55 cm (medida tomada 2 cm por debajo de la sisa), largo de espalda de 70 cm aprox. (medida tomada desde el centro del cuello hasta el borde inferior del ruedo). Las medidas pueden variar +/- 1 cm.",
+    precio: 12.99,
+    oferta: {
+      offActiva: false,
+      Descuento: 0,
+    },
+    activo: true,
+    productoNuevo: false,
+    categoria: "adulto",
+    genero: "masculino",
+    subcategoria: "Destacado",
+    imagen: [
+      "https://m.media-amazon.com/images/I/51ENTyzHvbL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/51ymMleJoCL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61Ro7woD5xL._AC_SY741_.jpg",
+      "https://m.media-amazon.com/images/I/61i+4-7kwnL._AC_SY741_.jpg",
+    ],
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["negro", "azul", "rojo"],
+    opcion: [
+      {
+        color: {
+          codHexadecimal: "#000000",
+          nombreColor: "negro",
+        },
+        talles: [
+          { talla: "S", stock: 20 },
+          { talla: "M", stock: 20 },
+          { talla: "L", stock: 20 },
+          { talla: "XL", stock: 20 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#0000FF",
+          nombreColor: "azul",
+        },
+        talles: [
+          { talla: "S", stock: 15 },
+          { talla: "M", stock: 15 },
+          { talla: "L", stock: 15 },
+          { talla: "XL", stock: 15 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#FFFFFF",
+          nombreColor: "rojo",
+        },
+        talles: [
+          { talla: "S", stock: 25 },
+          { talla: "M", stock: 25 },
+          { talla: "L", stock: 25 },
+          { talla: "XL", stock: 25 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 88,
+    nombre: "Camisa de manga larga a cuadros",
+    marca: "TrendyLook",
+    descripcion:
+      "Camisa de manga larga con un diseño a cuadros moderno y versátil. Confeccionada en algodón suave para una sensación cómoda y fresca. Perfecta para un estilo casual o semi-formal. - Composición: 100% algodón. - El modelo lleva una talla L. - Talle L: ancho de pecho de 58 cm (medida tomada 2 cm por debajo de la sisa), largo de manga de 65 cm aprox. (medida tomada desde el hombro hasta el puño), largo de espalda de 78 cm aprox. (medida tomada desde el centro del cuello hasta el borde inferior del ruedo). Las medidas pueden variar +/- 1 cm.",
+    precio: 24.99,
+    oferta: {
+      offActiva: false,
+      Descuento: 0,
+    },
+    activo: true,
+    productoNuevo: true,
+    categoria: "adulto",
+    genero: "masculino",
+    subcategoria: "Tendencia",
+    imagen: [
+      "https://m.media-amazon.com/images/I/91c6vxrYDSL._AC_SX569_.jpg",
+      "https://m.media-amazon.com/images/I/9130TJCl1eL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/915TEGtRWVL._AC_SX569_.jpg",
+    ],
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["azul", "rojo", "verde"],
+    opcion: [
+      {
+        color: {
+          codHexadecimal: "#0000FF",
+          nombreColor: "azul",
+        },
+        talles: [
+          { talla: "S", stock: 20 },
+          { talla: "M", stock: 20 },
+          { talla: "L", stock: 20 },
+          { talla: "XL", stock: 20 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#FF0000",
+          nombreColor: "rojo",
+        },
+        talles: [
+          { talla: "S", stock: 15 },
+          { talla: "M", stock: 15 },
+          { talla: "L", stock: 15 },
+          { talla: "XL", stock: 15 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#008000",
+          nombreColor: "verde",
+        },
+        talles: [
+          { talla: "S", stock: 25 },
+          { talla: "M", stock: 25 },
+          { talla: "L", stock: 25 },
+          { talla: "XL", stock: 25 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 89,
+    nombre: "Sudadera con capucha de algodón",
+    marca: "UrbanStreet",
+    descripcion:
+      "Sudadera con capucha confeccionada en algodón suave y cómodo. Presenta un diseño clásico con bolsillo tipo canguro en la parte delantera y cordón ajustable en la capucha. Perfecta para mantenerse abrigado y lucir con estilo durante los días frescos. - Composición: 80% algodón, 20% poliéster. - El modelo lleva una talla M. - Talle M: ancho de pecho de 57 cm (medida tomada 2 cm por debajo de la sisa), largo de manga de 66 cm aprox. (medida tomada desde el hombro hasta el puño), largo de espalda de 72 cm aprox. (medida tomada desde el centro del cuello hasta el borde inferior del ruedo). Las medidas pueden variar +/- 1 cm.",
+    precio: 34.99,
+    oferta: {
+      offActiva: false,
+      Descuento: 0,
+    },
+    activo: true,
+    productoNuevo: false,
+    categoria: "adulto",
+    genero: "unisex",
+    subcategoria: "Destacado",
+    imagen: [
+      "https://m.media-amazon.com/images/I/61ViSa2uFkL._AC_SY741_.jpg",
+      "https://m.media-amazon.com/images/I/71b9+Awz7CL._AC_SY741_.jpg",
+      "https://m.media-amazon.com/images/I/711FZkGH9mL._AC_SY741_.jpg",
+    ],
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["negro", "gris", "azul"],
+    opcion: [
+      {
+        color: {
+          codHexadecimal: "#000000",
+          nombreColor: "negro",
+        },
+        talles: [
+          { talla: "S", stock: 15 },
+          { talla: "M", stock: 20 },
+          { talla: "L", stock: 20 },
+          { talla: "XL", stock: 15 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#808080",
+          nombreColor: "gris",
+        },
+        talles: [
+          { talla: "S", stock: 20 },
+          { talla: "M", stock: 25 },
+          { talla: "L", stock: 25 },
+          { talla: "XL", stock: 20 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#0000FF",
+          nombreColor: "azul",
+        },
+        talles: [
+          { talla: "S", stock: 15 },
+          { talla: "M", stock: 20 },
+          { talla: "L", stock: 20 },
+          { talla: "XL", stock: 15 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 90,
+    nombre: "Zapatillas deportivas de running",
+    marca: "Under Armour",
+    descripcion:
+      "Zapatillas deportivas diseñadas para correr, ofreciendo comodidad y rendimiento. Cuentan con una parte superior transpirable y flexible que se adapta al pie, proporcionando un ajuste cómodo. La suela exterior de goma duradera ofrece tracción en una variedad de superficies. - Material exterior: Malla transpirable y sintético. - Material de la suela: Goma. - Diseño ligero y flexible. - Disponible en varios colores y tallas.",
+    precio: 59.99,
+    oferta: {
+      offActiva: false,
+      Descuento: 0,
+    },
+    activo: true,
+    productoNuevo: true,
+    categoria: "adulto",
+    genero: "unisex",
+    subcategoria: "Tendencia",
+    imagen: [
+      "https://m.media-amazon.com/images/I/51IvIT8EnIL._AC_SY625_.jpg",
+      "https://m.media-amazon.com/images/I/71zH0bnqa9L._AC_SY625_.jpg",
+      "https://m.media-amazon.com/images/I/81gWD8ovH+L._AC_SX625_.jpg",
+    ],
+    tallas: ["39", "40", "41", "42", "43"],
+    colores: ["negro", "azul", "gris"],
+    opcion: [
+      {
+        color: {
+          codHexadecimal: "#000000",
+          nombreColor: "negro",
+        },
+        talles: [
+          { talla: "39", stock: 20 },
+          { talla: "40", stock: 25 },
+          { talla: "41", stock: 25 },
+          { talla: "42", stock: 25 },
+          { talla: "43", stock: 20 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#0000FF",
+          nombreColor: "azul",
+        },
+        talles: [
+          { talla: "39", stock: 20 },
+          { talla: "40", stock: 25 },
+          { talla: "41", stock: 25 },
+          { talla: "42", stock: 25 },
+          { talla: "43", stock: 20 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#808080",
+          nombreColor: "gris",
+        },
+        talles: [
+          { talla: "39", stock: 20 },
+          { talla: "40", stock: 25 },
+          { talla: "41", stock: 25 },
+          { talla: "42", stock: 25 },
+          { talla: "43", stock: 20 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 91,
+    nombre: "Chaqueta impermeable para senderismo",
+    marca: "OutdoorGear",
+    descripcion:
+      "Chaqueta impermeable diseñada para senderismo y actividades al aire libre. Fabricada con materiales de alta calidad que ofrecen protección contra el viento y la lluvia. Cuenta con múltiples bolsillos y capucha ajustable para mayor comodidad. Ideal para aventuras en la montaña o en entornos naturales. - Material exterior: Poliéster resistente al agua. - Forro interior de malla transpirable. - Cierre de cremallera frontal y solapa con botones a presión. - Disponible en varios colores y tallas.",
+    precio: 79.99,
+    oferta: {
+      offActiva: false,
+      Descuento: 0,
+    },
+    activo: true,
+    productoNuevo: true,
+    categoria: "adulto",
+    genero: "unisex",
+    subcategoria: "Destacado",
+    imagen: [
+      "https://m.media-amazon.com/images/I/61mo2pvNdEL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/814cvS8h3GL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61sM83ur1ZL._AC_SX679_.jpg",
+    ],
+    tallas: ["XS", "S", "M", "L", "XL"],
+    colores: ["negro", "azul", "verde"],
+    opcion: [
+      {
+        color: {
+          codHexadecimal: "#000000",
+          nombreColor: "negro",
+        },
+        talles: [
+          { talla: "XS", stock: 10 },
+          { talla: "S", stock: 15 },
+          { talla: "M", stock: 20 },
+          { talla: "L", stock: 20 },
+          { talla: "XL", stock: 10 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#0000FF",
+          nombreColor: "azul",
+        },
+        talles: [
+          { talla: "XS", stock: 10 },
+          { talla: "S", stock: 15 },
+          { talla: "M", stock: 20 },
+          { talla: "L", stock: 20 },
+          { talla: "XL", stock: 10 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#008000",
+          nombreColor: "verde",
+        },
+        talles: [
+          { talla: "XS", stock: 10 },
+          { talla: "S", stock: 15 },
+          { talla: "M", stock: 20 },
+          { talla: "L", stock: 20 },
+          { talla: "XL", stock: 10 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 92,
+    nombre: "Abrigo de invierno acolchado",
+    marca: "WinterWarm",
+    descripcion:
+      "Abrigo de invierno acolchado diseñado para mantenerte abrigado y cómodo durante los días fríos. Fabricado con materiales de alta calidad y relleno térmico para proporcionar aislamiento. Cuenta con capucha desmontable, cierre de cremallera y múltiples bolsillos. Perfecto para el uso diario en climas fríos. - Material exterior: Poliéster resistente al agua. - Relleno: 70% plumón de pato, 30% plumas. - Forro interior de poliéster suave. - Disponible en varios colores y tallas.",
+    precio: 129.99,
+    oferta: {
+      offActiva: false,
+      Descuento: 0,
+    },
+    activo: true,
+    productoNuevo: true,
+    categoria: "adulto",
+    genero: "unisex",
+    subcategoria: "Tendencia",
+    imagen: [
+      "https://m.media-amazon.com/images/I/81IbJuc-ShL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71Cfh7v00pL._AC_SX569_.jpg",
+      "https://m.media-amazon.com/images/I/71ptvNwifXL._AC_SX679_.jpg",
+    ],
+    tallas: ["XS", "S", "M", "L", "XL", "XXL", "XXXL"],
+    colores: ["negro", "gris", "azul"],
+    opcion: [
+      {
+        color: {
+          codHexadecimal: "#000000",
+          nombreColor: "negro",
+        },
+        talles: [
+          { talla: "XS", stock: 10 },
+          { talla: "S", stock: 15 },
+          { talla: "M", stock: 20 },
+          { talla: "L", stock: 20 },
+          { talla: "XL", stock: 15 },
+          { talla: "XXL", stock: 10 },
+          { talla: "XXXL", stock: 5 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#808080",
+          nombreColor: "gris",
+        },
+        talles: [
+          { talla: "XS", stock: 10 },
+          { talla: "S", stock: 15 },
+          { talla: "M", stock: 20 },
+          { talla: "L", stock: 20 },
+          { talla: "XL", stock: 15 },
+          { talla: "XXL", stock: 10 },
+          { talla: "XXXL", stock: 5 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#0000FF",
+          nombreColor: "azul",
+        },
+        talles: [
+          { talla: "XS", stock: 10 },
+          { talla: "S", stock: 15 },
+          { talla: "M", stock: 20 },
+          { talla: "L", stock: 20 },
+          { talla: "XL", stock: 15 },
+          { talla: "XXL", stock: 10 },
+          { talla: "XXXL", stock: 5 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 93,
+    nombre: "Chaqueta de cuero clásica",
+    marca: "LeatherCraft",
+    descripcion:
+      "Chaqueta de cuero clásica con un diseño atemporal que nunca pasa de moda. Fabricada con cuero genuino de alta calidad, esta chaqueta ofrece durabilidad y estilo. Cuenta con bolsillos con cremallera, cierre frontal y puños ajustables. Perfecta para lucir con un estilo elegante y rebelde. - Material: Cuero genuino. - Forro interior de poliéster suave. - Disponible en varios colores.",
+    precio: 199.99,
+    oferta: {
+      offActiva: false,
+      Descuento: 0,
+    },
+    activo: true,
+    productoNuevo: true,
+    categoria: "adulto",
+    genero: "unisex",
+    subcategoria: "Destacado",
+    imagen: [
+      "https://m.media-amazon.com/images/I/71ooNmT4eUL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71+hP7pEWyL._AC_SX679_.jpg",
+    ],
+    tallas: ["XS", "S", "M", "L", "XL"],
+    colores: ["negro", "marrón"],
+    opcion: [
+      {
+        color: {
+          codHexadecimal: "#000000",
+          nombreColor: "negro",
+        },
+        talles: [
+          { talla: "XS", stock: 10 },
+          { talla: "S", stock: 15 },
+          { talla: "M", stock: 20 },
+          { talla: "L", stock: 20 },
+          { talla: "XL", stock: 15 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#8B4513",
+          nombreColor: "marrón",
+        },
+        talles: [
+          { talla: "XS", stock: 10 },
+          { talla: "S", stock: 15 },
+          { talla: "M", stock: 20 },
+          { talla: "L", stock: 20 },
+          { talla: "XL", stock: 15 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 94,
+    nombre: "Sudadera con capucha y cierre",
+    marca: "UrbanTrend",
+    descripcion:
+      "Sudadera con capucha y cierre de cremallera para un estilo moderno y cómodo. Fabricada con una mezcla de algodón y poliéster suave al tacto, esta sudadera es perfecta para el uso diario. Cuenta con bolsillos delanteros tipo canguro y capucha ajustable con cordón. Ideal para combinar con jeans o pantalones deportivos. - Material: 80% algodón, 20% poliéster. - Cierre de cremallera frontal. - Disponible en varios colores y tallas.",
+    precio: 39.99,
+    oferta: {
+      offActiva: false,
+      Descuento: 0,
+    },
+    activo: true,
+    productoNuevo: false,
+    categoria: "adulto",
+    genero: "unisex",
+    subcategoria: "Tendencia",
+    imagen: [
+      "https://m.media-amazon.com/images/I/71i2+79VviL._AC_SY741_.jpg",
+      "https://m.media-amazon.com/images/I/71v5xzCnnpL._AC_SY741_.jpg",
+      "https://m.media-amazon.com/images/I/713V4qnWr3L._AC_SY741_.jpg",
+    ],
+    tallas: ["XS", "S", "M", "L", "XL"],
+    colores: ["negro", "gris", "azul"],
+    opcion: [
+      {
+        color: {
+          codHexadecimal: "#000000",
+          nombreColor: "negro",
+        },
+        talles: [
+          { talla: "XS", stock: 15 },
+          { talla: "S", stock: 20 },
+          { talla: "M", stock: 25 },
+          { talla: "L", stock: 25 },
+          { talla: "XL", stock: 20 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#808080",
+          nombreColor: "gris",
+        },
+        talles: [
+          { talla: "XS", stock: 15 },
+          { talla: "S", stock: 20 },
+          { talla: "M", stock: 25 },
+          { talla: "L", stock: 25 },
+          { talla: "XL", stock: 20 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#0000FF",
+          nombreColor: "azul",
+        },
+        talles: [
+          { talla: "XS", stock: 15 },
+          { talla: "S", stock: 20 },
+          { talla: "M", stock: 25 },
+          { talla: "L", stock: 25 },
+          { talla: "XL", stock: 20 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 95,
+    nombre: "Botas de senderismo impermeables",
+    marca: "TrailMaster",
+    descripcion:
+      "Botas de senderismo impermeables diseñadas para aventuras al aire libre en cualquier clima. Construidas con materiales resistentes al agua y una suela duradera para proporcionar tracción en terrenos variados. La tecnología de amortiguación ofrece comodidad durante largas caminatas. Ideales para excursionismo, trekking y actividades al aire libre. - Material exterior: Cuero sintético y malla impermeable. - Tecnología de amortiguación para una mayor comodidad. - Suela de goma antideslizante. - Disponible en varios colores y tallas.",
+    precio: 89.99,
+    oferta: {
+      offActiva: false,
+      Descuento: 0,
+    },
+    activo: true,
+    productoNuevo: true,
+    categoria: "adulto",
+    genero: "unisex",
+    subcategoria: "Destacado",
+    imagen: [
+      "https://m.media-amazon.com/images/I/81lMgmOkSXL._AC_SY625_.jpg",
+      "https://m.media-amazon.com/images/I/81PLmShkaSL._AC_SY625_.jpg",
+      "https://m.media-amazon.com/images/I/81cb4dAxYyL._AC_SY625_.jpg",
+    ],
+    tallas: ["36", "37", "38", "39", "40", "41", "42", "43", "44", "45"],
+    colores: ["negro", "marrón", "gris"],
+    opcion: [
+      {
+        color: {
+          codHexadecimal: "#000000",
+          nombreColor: "negro",
+        },
+        talles: [
+          { talla: "36", stock: 10 },
+          { talla: "37", stock: 15 },
+          { talla: "38", stock: 20 },
+          { talla: "39", stock: 20 },
+          { talla: "40", stock: 25 },
+          { talla: "41", stock: 25 },
+          { talla: "42", stock: 25 },
+          { talla: "43", stock: 20 },
+          { talla: "44", stock: 15 },
+          { talla: "45", stock: 10 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#8B4513",
+          nombreColor: "marrón",
+        },
+        talles: [
+          { talla: "36", stock: 10 },
+          { talla: "37", stock: 15 },
+          { talla: "38", stock: 20 },
+          { talla: "39", stock: 20 },
+          { talla: "40", stock: 25 },
+          { talla: "41", stock: 25 },
+          { talla: "42", stock: 25 },
+          { talla: "43", stock: 20 },
+          { talla: "44", stock: 15 },
+          { talla: "45", stock: 10 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#808080",
+          nombreColor: "gris",
+        },
+        talles: [
+          { talla: "36", stock: 10 },
+          { talla: "37", stock: 15 },
+          { talla: "38", stock: 20 },
+          { talla: "39", stock: 20 },
+          { talla: "40", stock: 25 },
+          { talla: "41", stock: 25 },
+          { talla: "42", stock: 25 },
+          { talla: "43", stock: 20 },
+          { talla: "44", stock: 15 },
+          { talla: "45", stock: 10 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 96,
+    nombre: "Pantalones cargo",
+    marca: "AdventureWear",
+    descripcion:
+      "Pantalones cargo diseñados para la aventura y la comodidad en movimiento. Estos pantalones están confeccionados con una mezcla de algodón y elastano para mayor flexibilidad y durabilidad. Cuentan con varios bolsillos, ideales para guardar tus pertenencias mientras exploras. Adecuados para actividades al aire libre, senderismo o simplemente para un look casual urbano. - Material: 98% algodón, 2% elastano. - Cierre de botón y cremallera. - Disponible en varios colores y tallas.",
+    precio: 49.99,
+    oferta: {
+      offActiva: false,
+      Descuento: 0,
+    },
+    activo: true,
+    productoNuevo: true,
+    categoria: "adulto",
+    genero: "unisex",
+    subcategoria: "Tendencia",
+    imagen: [
+      "https://m.media-amazon.com/images/I/61x0dZlZZuL._AC_SY741_.jpg",
+      "https://m.media-amazon.com/images/I/61HP4BFFzFL._AC_SY741_.jpg",
+      "https://m.media-amazon.com/images/I/61Mbxbq+KSL._AC_SY741_.jpg",
+    ],
+    tallas: ["XS", "S", "M", "L", "XL"],
+    colores: ["caqui", "verde", "negro"],
+    opcion: [
+      {
+        color: {
+          codHexadecimal: "#F0E68C",
+          nombreColor: "caqui",
+        },
+        talles: [
+          { talla: "XS", stock: 10 },
+          { talla: "S", stock: 15 },
+          { talla: "M", stock: 20 },
+          { talla: "L", stock: 20 },
+          { talla: "XL", stock: 15 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#008000",
+          nombreColor: "verde",
+        },
+        talles: [
+          { talla: "XS", stock: 10 },
+          { talla: "S", stock: 15 },
+          { talla: "M", stock: 20 },
+          { talla: "L", stock: 20 },
+          { talla: "XL", stock: 15 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#000000",
+          nombreColor: "negro",
+        },
+        talles: [
+          { talla: "XS", stock: 10 },
+          { talla: "S", stock: 15 },
+          { talla: "M", stock: 20 },
+          { talla: "L", stock: 20 },
+          { talla: "XL", stock: 15 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 97,
+    nombre: "Pantalones de yoga de cintura alta",
+    marca: "FlexFit",
+    descripcion:
+      "Pantalones de yoga de cintura alta diseñados para brindar comodidad y libertad de movimiento durante tus prácticas de yoga o cualquier actividad deportiva. Fabricados con una mezcla de materiales elásticos que se adaptan a tus movimientos, estos pantalones ofrecen un ajuste ceñido y favorecedor. La cintura alta proporciona soporte adicional y una sensación de seguridad. - Material: 85% poliéster, 15% spandex. - Diseño de cintura alta. - Disponible en varios colores y tallas.",
+    precio: 34.99,
+    oferta: {
+      offActiva: false,
+      Descuento: 0,
+    },
+    activo: true,
+    productoNuevo: true,
+    categoria: "adulto",
+    genero: "femenino",
+    subcategoria: "Destacado",
+    imagen: [
+      "https://m.media-amazon.com/images/I/71o3oAXrgyL._AC_SX569_.jpg",
+      "https://m.media-amazon.com/images/I/51f0BxmIglL._AC_SX569_.jpg",
+      "https://m.media-amazon.com/images/I/51eadMFx3ZL._AC_SX569_.jpg",
+    ],
+    tallas: ["XS", "S", "M", "L", "XL"],
+    colores: ["negro", "gris", "azul"],
+    opcion: [
+      {
+        color: {
+          codHexadecimal: "#000000",
+          nombreColor: "negro",
+        },
+        talles: [
+          { talla: "XS", stock: 20 },
+          { talla: "S", stock: 25 },
+          { talla: "M", stock: 30 },
+          { talla: "L", stock: 30 },
+          { talla: "XL", stock: 25 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#808080",
+          nombreColor: "gris",
+        },
+        talles: [
+          { talla: "XS", stock: 20 },
+          { talla: "S", stock: 25 },
+          { talla: "M", stock: 30 },
+          { talla: "L", stock: 30 },
+          { talla: "XL", stock: 25 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#0000FF",
+          nombreColor: "azul",
+        },
+        talles: [
+          { talla: "XS", stock: 20 },
+          { talla: "S", stock: 25 },
+          { talla: "M", stock: 30 },
+          { talla: "L", stock: 30 },
+          { talla: "XL", stock: 25 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 98,
+    nombre: "Zapatillas de running ultraligeras",
+    marca: "SpeedRunner",
+    descripcion:
+      "Zapatillas de running ultraligeras diseñadas para ofrecer velocidad y comodidad en cada paso. Fabricadas con materiales transpirables y suela amortiguada que proporciona una excelente absorción de impactos. La construcción sin costuras reduce el riesgo de irritación durante la carrera. Ideales para corredores que buscan mejorar su rendimiento. - Material exterior: Malla transpirable. - Suela de goma EVA. - Disponible en varios colores y tallas.",
+    precio: 79.99,
+    oferta: {
+      offActiva: false,
+      Descuento: 0,
+    },
+    activo: true,
+    productoNuevo: true,
+    categoria: "adulto",
+    genero: "unisex",
+    subcategoria: "Tendencia",
+    imagen: [
+      "https://m.media-amazon.com/images/I/71XYvTLrilL._AC_SX625_.jpg",
+      "https://m.media-amazon.com/images/I/61Bem9gVJEL._AC_SY625_.jpg",
+      "https://m.media-amazon.com/images/I/711m4WarSXL._AC_SX625_.jpg",
+    ],
+    tallas: ["36", "37", "38", "39", "40", "41", "42", "43", "44", "45"],
+    colores: ["negro", "azul", "rojo"],
+    opcion: [
+      {
+        color: {
+          codHexadecimal: "#000000",
+          nombreColor: "negro",
+        },
+        talles: [
+          { talla: "36", stock: 15 },
+          { talla: "37", stock: 20 },
+          { talla: "38", stock: 25 },
+          { talla: "39", stock: 25 },
+          { talla: "40", stock: 20 },
+          { talla: "41", stock: 15 },
+          { talla: "42", stock: 15 },
+          { talla: "43", stock: 10 },
+          { talla: "44", stock: 10 },
+          { talla: "45", stock: 5 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#0000FF",
+          nombreColor: "azul",
+        },
+        talles: [
+          { talla: "36", stock: 15 },
+          { talla: "37", stock: 20 },
+          { talla: "38", stock: 25 },
+          { talla: "39", stock: 25 },
+          { talla: "40", stock: 20 },
+          { talla: "41", stock: 15 },
+          { talla: "42", stock: 15 },
+          { talla: "43", stock: 10 },
+          { talla: "44", stock: 10 },
+          { talla: "45", stock: 5 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#FF0000",
+          nombreColor: "rojo",
+        },
+        talles: [
+          { talla: "36", stock: 15 },
+          { talla: "37", stock: 20 },
+          { talla: "38", stock: 25 },
+          { talla: "39", stock: 25 },
+          { talla: "40", stock: 20 },
+          { talla: "41", stock: 15 },
+          { talla: "42", stock: 15 },
+          { talla: "43", stock: 10 },
+          { talla: "44", stock: 10 },
+          { talla: "45", stock: 5 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 99,
+    nombre: "Mochila resistente al agua",
+    marca: "AdventureGear",
+    descripcion:
+      "Mochila resistente al agua diseñada para aventuras al aire libre. Fabricada con materiales duraderos y costuras selladas para proteger tus pertenencias de la lluvia y la humedad. Cuenta con múltiples compartimentos y bolsillos para organizar tus equipos. Ideal para excursiones, viajes y actividades al aire libre. - Material: Nylon resistente al agua. - Capacidad: 30 litros. - Correas acolchadas ajustables para mayor comodidad. - Disponible en varios colores.",
+    precio: 49.99,
+    oferta: {
+      offActiva: false,
+      Descuento: 0,
+    },
+    activo: true,
+    productoNuevo: true,
+    categoria: "adulto",
+    genero: "unisex",
+    subcategoria: "Destacado",
+    imagen: [
+      "https://m.media-amazon.com/images/I/91KfHhtiiwL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/916Qr2flGxL._AC_SL1500_.jpg",
+      "https://m.media-amazon.com/images/I/91iBoU-tU7L._AC_SL1500_.jpg",
+    ],
+    tallas: ["Única"],
+    colores: ["negro", "azul", "verde"],
+    opcion: [
+      {
+        color: {
+          codHexadecimal: "#000000",
+          nombreColor: "negro",
+        },
+        stock: 30,
+      },
+      {
+        color: {
+          codHexadecimal: "#0000FF",
+          nombreColor: "azul",
+        },
+        stock: 25,
+      },
+      {
+        color: {
+          codHexadecimal: "#008000",
+          nombreColor: "verde",
+        },
+        stock: 20,
+      },
+    ],
+  },
+  {
+    id: 100,
+    nombre: "Gorra de béisbol clásica",
+    marca: "CapMaster",
+    descripcion:
+      "Gorra de béisbol clásica, perfecta para completar tu look deportivo o casual. Fabricada con algodón de alta calidad, esta gorra es cómoda y transpirable. Cuenta con un cierre ajustable en la parte trasera para adaptarse a diferentes tamaños de cabeza. El diseño clásico de seis paneles y el visor curvo ofrecen un estilo atemporal. - Material: 100% algodón. - Talla única ajustable. - Disponible en varios colores.",
+    precio: 19.99,
+    oferta: {
+      offActiva: false,
+      Descuento: 0,
+    },
+    activo: true,
+    productoNuevo: false,
+    categoria: "adulto",
+    genero: "unisex",
+    subcategoria: "Tendencia",
+    imagen: [
+      "https://m.media-amazon.com/images/I/81xQf6Qz8dL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/51GIHefwrNL._AC_SX679_.jpg",
+    ],
+    tallas: ["Única"],
+    colores: ["negro", "azul", "rojo"],
+    opcion: [
+      {
+        color: {
+          codHexadecimal: "#000000",
+          nombreColor: "negro",
+        },
+        stock: 30,
+      },
+      {
+        color: {
+          codHexadecimal: "#0000FF",
+          nombreColor: "azul",
+        },
+        stock: 25,
+      },
+      {
+        color: {
+          codHexadecimal: "#FF0000",
+          nombreColor: "rojo",
+        },
+        stock: 20,
+      },
+    ],
+  },
+  {
+    id: 101,
+    nombre: "Chaleco acolchado para mujer",
+    marca: "WinterWarm",
+    descripcion:
+      "Chaleco acolchado para mujer, ideal para mantenerte abrigada durante los días fríos de invierno. Fabricado con materiales de alta calidad y un diseño ligero pero cálido. Cuenta con cierre frontal de cremallera y bolsillos laterales con cierre. Perfecto para combinar con tu atuendo casual o deportivo. - Material: Poliéster y plumón sintético. - Diseño sin mangas para mayor libertad de movimiento. - Disponible en varios colores y tallas.",
+    precio: 59.99,
+    oferta: {
+      offActiva: false,
+      Descuento: 0,
+    },
+    activo: true,
+    productoNuevo: true,
+    categoria: "adulto",
+    genero: "femenino",
+    subcategoria: "Destacado",
+    imagen: [
+      "https://m.media-amazon.com/images/I/813iaEXmNgL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/81kbkotz6FL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/81LDpdiYzDL._AC_SX569_.jpg",
+    ],
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["negro", "rojo", "azul"],
+    opcion: [
+      {
+        color: {
+          codHexadecimal: "#000000",
+          nombreColor: "negro",
+        },
+        talles: [
+          { talla: "S", stock: 20 },
+          { talla: "M", stock: 25 },
+          { talla: "L", stock: 25 },
+          { talla: "XL", stock: 20 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#FF0000",
+          nombreColor: "rojo",
+        },
+        talles: [
+          { talla: "S", stock: 15 },
+          { talla: "M", stock: 20 },
+          { talla: "L", stock: 20 },
+          { talla: "XL", stock: 15 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#0000FF",
+          nombreColor: "azul",
+        },
+        talles: [
+          { talla: "S", stock: 15 },
+          { talla: "M", stock: 20 },
+          { talla: "L", stock: 20 },
+          { talla: "XL", stock: 15 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 102,
+    nombre: "Camiseta deportiva de manga larga",
+    marca: "ActiveWear",
+    descripcion:
+      "Camiseta deportiva de manga larga diseñada para brindar comodidad y libertad de movimiento durante tus entrenamientos. Fabricada con tejido transpirable que ayuda a mantener la piel seca y fresca. El diseño de manga larga ofrece protección adicional contra el viento y el frío. Ideal para correr, hacer yoga, ir al gimnasio y más. - Material: 90% poliéster, 10% elastano. - Tecnología de secado rápido. - Disponible en varios colores y tallas.",
+    precio: 29.99,
+    oferta: {
+      offActiva: false,
+      Descuento: 0,
+    },
+    activo: true,
+    productoNuevo: true,
+    categoria: "adulto",
+    genero: "unisex",
+    subcategoria: "Tendencia",
+    imagen: [
+      "https://m.media-amazon.com/images/I/51cLJqfbSiL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61BuUtrHkiL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/51iKp30FD3L._AC_SX679_.jpg",
+    ],
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["negro", "gris", "azul"],
+    opcion: [
+      {
+        color: {
+          codHexadecimal: "#000000",
+          nombreColor: "negro",
+        },
+        talles: [
+          { talla: "S", stock: 20 },
+          { talla: "M", stock: 25 },
+          { talla: "L", stock: 25 },
+          { talla: "XL", stock: 20 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#808080",
+          nombreColor: "gris",
+        },
+        talles: [
+          { talla: "S", stock: 15 },
+          { talla: "M", stock: 20 },
+          { talla: "L", stock: 20 },
+          { talla: "XL", stock: 15 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#0000FF",
+          nombreColor: "azul",
+        },
+        talles: [
+          { talla: "S", stock: 15 },
+          { talla: "M", stock: 20 },
+          { talla: "L", stock: 20 },
+          { talla: "XL", stock: 15 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 102,
+    nombre: "Chaqueta acolchada con diseño reversible",
+    marca: "UrbanChic",
+    descripcion:
+      "Chaqueta acolchada con diseño reversible, versátil y moderna para lucir en diferentes ocasiones. Fabricada con materiales de alta calidad que ofrecen calidez y confort. Presenta un lado acolchado y otro liso para mayor versatilidad en tu outfit. Cuenta con cierre frontal de cremallera y bolsillos laterales con cierre. Ideal para complementar tu estilo urbano. - Material: Poliéster. - Disponible en varios colores y tallas.",
+    precio: 69.99,
+    oferta: {
+      offActiva: false,
+      Descuento: 0,
+    },
+    activo: true,
+    productoNuevo: true,
+    categoria: "adulto",
+    genero: "unisex",
+    subcategoria: "Destacado",
+    imagen: [
+      "https://m.media-amazon.com/images/I/71hjM+YWqhL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/61FMGZl96cL._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71-176X+q3L._AC_SX679_.jpg",
+    ],
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["negro", "azul", "rojo"],
+    opcion: [
+      {
+        color: {
+          codHexadecimal: "#000000",
+          nombreColor: "negro",
+        },
+        talles: [
+          { talla: "S", stock: 20 },
+          { talla: "M", stock: 25 },
+          { talla: "L", stock: 25 },
+          { talla: "XL", stock: 20 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#0000FF",
+          nombreColor: "azul",
+        },
+        talles: [
+          { talla: "S", stock: 15 },
+          { talla: "M", stock: 20 },
+          { talla: "L", stock: 20 },
+          { talla: "XL", stock: 15 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#FF0000",
+          nombreColor: "rojo",
+        },
+        talles: [
+          { talla: "S", stock: 15 },
+          { talla: "M", stock: 20 },
+          { talla: "L", stock: 20 },
+          { talla: "XL", stock: 15 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 103,
+    nombre: "Pantalones cargo estilo militar",
+    marca: "TacticalGear",
+    descripcion:
+      "Pantalones cargo estilo militar, diseñados para brindar funcionalidad y estilo en tus aventuras urbanas o al aire libre. Fabricados con tela resistente y duradera, cuentan con múltiples bolsillos para llevar tus objetos esenciales de forma segura. El diseño inspirado en el estilo militar ofrece un aspecto moderno y versátil. - Material: Algodón resistente. - Bolsillos con cierre y solapa. - Disponible en varios colores y tallas.",
+    precio: 49.99,
+    oferta: {
+      offActiva: false,
+      Descuento: 0,
+    },
+    activo: true,
+    productoNuevo: true,
+    categoria: "adulto",
+    genero: "unisex",
+    subcategoria: "Tendencia",
+    imagen: [
+      "https://m.media-amazon.com/images/I/715CrrikYkL._AC_SY741_.jpg",
+      "https://m.media-amazon.com/images/I/71p3H8c3IoL._AC_SY741_.jpg",
+    ],
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["negro", "verde", "camuflaje"],
+    opcion: [
+      {
+        color: {
+          codHexadecimal: "#000000",
+          nombreColor: "negro",
+        },
+        talles: [
+          { talla: "S", stock: 20 },
+          { talla: "M", stock: 25 },
+          { talla: "L", stock: 25 },
+          { talla: "XL", stock: 20 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#008000",
+          nombreColor: "verde",
+        },
+        talles: [
+          { talla: "S", stock: 15 },
+          { talla: "M", stock: 20 },
+          { talla: "L", stock: 20 },
+          { talla: "XL", stock: 15 },
+        ],
+      },
+      {
+        color: {
+          codHexadecimal: "#4B0082",
+          nombreColor: "camuflaje",
+        },
+        talles: [
+          { talla: "S", stock: 15 },
+          { talla: "M", stock: 20 },
+          { talla: "L", stock: 20 },
+          { talla: "XL", stock: 15 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 104,
+    nombre: "Camisa de lino con estampado tropical",
+    marca: "IslandStyle",
+    descripcion:
+      "Camisa de lino con estampado tropical, perfecta para lucir un look fresco y relajado en climas cálidos. Fabricada con tela ligera y transpirable que te mantendrá cómodo durante todo el día. Presenta un diseño de estampado tropical que evoca la sensación de vacaciones en la playa. Ideal para combinar con pantalones cortos o pantalones de lino. - Material: 100% lino. - Corte regular para un ajuste cómodo. - Disponible en varios colores y tallas.",
+    precio: 54.99,
+    oferta: {
+      offActiva: false,
+      Descuento: 0,
+    },
+    activo: true,
+    productoNuevo: true,
+    categoria: "adulto",
+    genero: "masculino",
+    subcategoria: "Destacado",
+    imagen: [
+      "https://m.media-amazon.com/images/I/71gW4dmjc7L._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/71cg61uCk7L._AC_SX679_.jpg",
+      "https://m.media-amazon.com/images/I/91unMRH+3vL._AC_SX679_.jpg",
+    ],
+    tallas: ["S", "M", "L", "XL"],
+    colores: ["azul"],
+    opcion: [
+      {
+        color: {
+          codHexadecimal: "#0000FF",
+          nombreColor: "azul",
+        },
+        talles: [
+          { talla: "S", stock: 20 },
+          { talla: "M", stock: 25 },
+          { talla: "L", stock: 25 },
+          { talla: "XL", stock: 20 },
+        ],
+      },
+    ],
+  },
 ];
 
 module.exports = productos;
