@@ -7,22 +7,23 @@ import { useRouter } from "next/navigation";
 import Avatar from "../navbar/Avatar";
 import MenuItem from "../navbar/MenuItem";
 import { useCartStore } from "../../hooks/cartStore";
-
+import { useCounterStore } from "../../hooks/counterStore";
 function CategoryNav({ query, handleInputChange }) {
-	const router = useRouter();
-	const cartTotalQuantity = useCartStore((state) => state.cartTotalQuantity);
+  const counter = useCounterStore((state) => state.counter);
+  const router = useRouter();
+  const cartTotalQuantity = useCartStore((state) => state.cartTotalQuantity);
 
-	//? Cargando datos de sesion de usuario
-	const { data: session } = useSession();
+  //? Cargando datos de sesion de usuario
+  const { data: session } = useSession();
 
-	//? Para abrir el menú de usuario
-	const [isOpen, setIsOpen] = useState(false);
-	const toggleOpen = useCallback(() => {
-		setIsOpen((value) => !value);
-	}, []);
+  //? Para abrir el menú de usuario
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleOpen = useCallback(() => {
+    setIsOpen((value) => !value);
+  }, []);
 
-	/* prettier-ignore*/
-	return (
+  /* prettier-ignore*/
+  return (
 		<header className="font-semibold border-b-gray-300 border-[3px] mb-5">
 			<nav
 				className="
@@ -62,7 +63,10 @@ function CategoryNav({ query, handleInputChange }) {
 					<Link
 						href={"/wishlist"}
 						className="hover:cursor-pointer hover:text-red-600">
-						<FaRegHeart size={32} />
+						<div className="flex flex-row gap-2">
+						  <FaRegHeart size={32} />
+						  <p className="rounded-full px-2 bg-orange-500 text-center h-5 justify-center align-middle items-center">{counter}</p>
+						</div>
 					</Link>
 					{/* CARRITO */}
 					<div className="relative">

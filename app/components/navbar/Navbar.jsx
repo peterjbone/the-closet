@@ -12,44 +12,45 @@ import { useSession, signOut } from "next-auth/react";
 import Avatar from "./Avatar";
 import MenuItem from "./MenuItem";
 import { useCartStore } from "../../hooks/cartStore";
+import { useCounterStore } from "../../hooks/counterStore";
 
 const Header = () => {
-	//? Creando router
-	const router = useRouter();
+  //? Creando router
+  const router = useRouter();
+  const counter = useCounterStore((state) => state.counter);
+  //? Cargando datos de sesion de usuario
+  const { data: session } = useSession();
 
-	//? Cargando datos de sesion de usuario
-	const { data: session } = useSession();
+  //? Para abrir el menú de usuario
+  const [isOpen, setIsOpen] = useState(false);
+  const toggleOpen = useCallback(() => {
+    setIsOpen((value) => !value);
+  }, []);
 
-	//? Para abrir el menú de usuario
-	const [isOpen, setIsOpen] = useState(false);
-	const toggleOpen = useCallback(() => {
-		setIsOpen((value) => !value);
-	}, []);
+  //? Para salir de la sesión
+  function handleSignout() {
+    toast
+      .promise(
+        new Promise((resolve) => setTimeout(() => resolve(true), 2000)),
+        {
+          loading: "Cerrando sesión...",
+          success: <b>Haz cerrado tu sesión.</b>,
+          error: <b>Algo salió mal.</b>,
+        },
+        {
+          success: {
+            duration: 1000,
+          },
+        }
+      )
+      .then(() => signOut());
+  }
 
-	//? Para salir de la sesión
-	function handleSignout() {
-		toast
-			.promise(
-				new Promise((resolve) => setTimeout(() => resolve(true), 2000)),
-				{
-					loading: "Cerrando sesión...",
-					success: <b>Haz cerrado tu sesión.</b>,
-					error: <b>Algo salió mal.</b>
-				},
-				{
-					success: {
-						duration: 1000
-					}
-				}
-			)
-			.then(() => signOut());
-	}
+  //? trayendo el estado global de cart
+  const cartTotalQuantity = useCartStore((state) => state.cartTotalQuantity);
 
-	//? trayendo el estado global de cart
-	const cartTotalQuantity = useCartStore((state) => state.cartTotalQuantity);
-
-	/* prettier-ignore */
-	return (
+  /* prettier-ignore */
+  return (
 		<header className="font-semibold border-b-gray-300 border-[3px]">
 			<nav
 				className="
@@ -74,7 +75,10 @@ const Header = () => {
 					<Link
 						href={"/wishlist"}
 						className="hover:cursor-pointer hover:text-red-600">
-						<FaRegHeart size={32} />
+						<div className="flex gap-2">
+						  <FaRegHeart size={32} />
+						  <p className="rounded-full px-2 bg-orange-500 text-center h-5 justify-center align-middle items-center">{counter}</p>
+						</div>
 					</Link>
 					<div className="relative" >
             <Link href={"/cart"} >
