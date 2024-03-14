@@ -18,7 +18,8 @@ const nextConfig = {
 		GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
 		SMTP_PASSWORD: process.env.SMTP_PASSWORD,
 		SMTP_EMAIL: process.env.SMTP_EMAIL
-	}
+	},
+	output: "standalone"
 };
 
 export default nextConfig;
