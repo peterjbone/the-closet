@@ -12,7 +12,6 @@ import Sidebar from "../../components/sideBar/Sidebar";
 import ScrollToTopButton from "../../components/buttons/toTop/ScrollTop";
 
 function Page({ params }) {
-	/* prettier-ignore */
 	const { nombre } = params;
 
 	//* Trayendo las funciones que modifican el estado global
@@ -174,9 +173,9 @@ function Page({ params }) {
 	//? Estos son todos los productos de determinada categoría (sin filtros aplicados)
 	const allProducts = useProductsStore((state) => state.allProducts);
 	const trendy = useProductsStore((state) => state.trendy);
+	const featured = useProductsStore((state) => state.featured);
 
-	let productos = [...allProducts, ...trendy];
-	//console.log(productos);
+	let productos = [...allProducts, ...trendy, ...featured];
 
 	const [selectedCategory, setSelectedCategory] = useState(null);
 	const [query, setQuery] = useState("");
@@ -206,12 +205,12 @@ function Page({ params }) {
 	function filteredData(products, selected, query) {
 		let filteredProducts = products;
 
-		// Filtrando: Input items
+		//? Filtrando: Input items
 		if (query) {
 			filteredProducts = filteredItems;
 		}
 
-		// Filtrando: Selecter filter
+		//? Filtrando: Selecter filter
 		//prettier-ignore
 		if (selected) {
 			filteredProducts = filteredProducts.filter(
@@ -271,6 +270,7 @@ function Page({ params }) {
 
 	const resultado = filteredData(productos, selectedCategory, query);
 
+	//* ---------------------- PAGINA DE CATEGORIAS PRINCIPALES ------------------------------
 	/* prettier-ignore */
 	return (
 		<div>

@@ -1,0 +1,25 @@
+/** Estilos para las tarjetas de los productos **/
+
+.card {
+	height: 100%;
+	border: medium solid #ededed;
+	cursor: pointer;
+
+	transition: border-color 0.5s ease-in-out;
+}
+
+.card:hover {
+	border: medium solid black;
+}
+
+.card-img {
+	width: 100%;
+	height: 285px;
+	margin-bottom: 0.4rem;
+	object-fit: contain;
+	object-position: center;
+}
+
+.card-details {
+	padding: 0 1rem;
+}

@@ -1,27 +1,32 @@
 "use client";
 
 import "./FeaturedProducts.css";
-
 import Link from "next/link";
 import FeaturedProductItem from "./FeaturedProductsItem";
 import { useProductsStore } from "../../hooks/productsStore";
 import { useEffect } from "react";
 
 function FeaturedProducts() {
-  const getFeaturedProducts = useProductsStore(
-    (state) => state.getFeaturedProducts
-  );
+	const getFeaturedProducts = useProductsStore(
+		(state) => state.getFeaturedProducts
+	);
+	const removeAllFeatured = useProductsStore(
+		(state) => state.removeAllFeatured
+	);
 
-  useEffect(() => {
-    getFeaturedProducts();
-  }, []);
+	useEffect(() => {
+		getFeaturedProducts();
 
-  const allProducts = useProductsStore((state) => state.allProducts);
-  const productos = allProducts;
-  console.log(productos);
+		return () => {
+			removeAllFeatured();
+		};
+	}, []);
 
-  /* prettier-ignore */
-  return (  
+	const featured = useProductsStore((state) => state.featured);
+	//console.log(featured);
+
+	/* prettier-ignore */
+	return (  
     <div className="py-4 px-6">
       <div className="flex flex-row items-center justify-between py-6">
         <h2 className="text-3xl font-bold">Productos destacados ⭐</h2>
@@ -31,7 +36,7 @@ function FeaturedProducts() {
       </div>
       <div className="featureProducts-grid bg-gray-50">
         {
-          productos.map((item, index) => {
+          featured.map((item, index) => {
             if (index <= 3) {
               return (
                 <FeaturedProductItem

@@ -1,18 +1,17 @@
 "use client";
 
-import "./ProductCard.css";
+import "./FavoriteImage.css";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
 import { FaHeart } from "react-icons/fa";
 import { toast } from "react-hot-toast";
-import { useRouter } from "next/navigation";
 import { useSession } from "next-auth/react";
-import { useFavoritesStore } from "../../hooks/favoritesStore";
+import { useFavoritesStore } from "../../hooks/favoritesStore.js";
 
-import ProductImage from "./ProductImage.jsx";
+import FavoriteImage from "./FavoriteImage";
 
-function ProductCard({
+function FavoriteCard({
 	_id,
 	nombre,
 	marca,
@@ -55,55 +54,16 @@ function ProductCard({
 		coloresSintaxis = colores.join();
 	}
 
-	//? --------------------------- MANEJANDO FAVORITOS ----------------------------
-	const router = useRouter();
-	const { data: session } = useSession();
-
-	const [isFavorite, setIsFavorite] = useState(false);
-	const addFavorite = useFavoritesStore((state) => state.addFavorite);
+	//? --------------------- MANEJANDO FAVORITOS -----------------------
+	const [isFavorite, setIsFavorite] = useState(true);
 	const removeFavorite = useFavoritesStore((state) => state.removeFavorite);
-	const favorites = useFavoritesStore((state) => state.favorites);
-	useEffect(() => {
-		// mantener favoritos al cargar el componente
-		favorites.forEach((item) => {
-			if (item._id === _id) {
-				setIsFavorite(true);
-			}
-		});
-	}, [favorites]);
+
+	const { data: session } = useSession();
 
 	const userId = session?.user._id;
 	const productId = _id;
-	const productForFavorite = {
-		_id,
-		nombre,
-		marca,
-		descripcion,
-		precio,
-		oferta,
-		activo,
-		productoNuevo,
-		categoria,
-		genero,
-		subcategoria,
-		imagen,
-		tallas,
-		colores,
-		opcion
-	};
 
 	function handleFavorites() {
-		if (!session?.user) {
-			return router.push("/login");
-		}
-
-		if (!isFavorite) {
-			addFavorite(userId, productForFavorite);
-			setIsFavorite(true);
-			toast.success("Se agrego a favoritos");
-			return true;
-		}
-
 		if (isFavorite) {
 			removeFavorite(userId, productId);
 			setIsFavorite(false);
@@ -112,10 +72,10 @@ function ProductCard({
 		}
 	}
 
-	//* ----------------------------- COMPONENTE "PRODUCTCARD" ----------------------------
+	//* -------------------------- COMPONENTE "FAVORITE-CARD" ------------------------
 	return (
 		<div className="card relative">
-			{/* Corazón de favoritos */}
+			{/*  Corazon de favorito */}
 			<div className="absolute top-3 right-2" onClick={handleFavorites}>
 				<FaHeart size={30} color={`${isFavorite ? "#f00" : "#000"}`}></FaHeart>
 			</div>
@@ -137,7 +97,7 @@ function ProductCard({
             mb-3">
 				{imagen.map((img, index) => {
 					return (
-						<ProductImage
+						<FavoriteImage
 							key={img}
 							index={index}
 							imgUrl={img}
@@ -176,4 +136,4 @@ function ProductCard({
 	);
 }
 
-export default ProductCard;
+export default FavoriteCard;

@@ -1,5 +1,5 @@
 export default function WelcomeEmail(name) {
-  return `
+	return `
     <style type="text/css">
   #outlook a {
       padding:0;
@@ -81,7 +81,7 @@ export default function WelcomeEmail(name) {
                         <td align="center" class="es-m-p0r es-m-p0l" style="Margin:0;padding-top:10px;padding-bottom:10px;padding-left:40px;padding-right:40px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:arial, 'helvetica neue', helvetica, sans-serif;line-height:24px;color:#333333;font-size:16px">Hola ${name}! Gracias por registrarte en <strong>The closet</strong>, estamos muy contentos por tu llegada 😊!</p></td>
                        </tr>
                        <tr>
-                        <td align="center" style="padding:0;Margin:0;padding-top:5px;padding-bottom:5px"><span class="es-button-border" style="border-style:solid;border-color:#2CB543;background:#f95853;border-width:0px;display:inline-block;border-radius:20px;width:auto"><a href="http://localhost:3000/" class="es-button es-button-1709976231884" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#FFFFFF;font-size:26px;padding:10px 30px;display:inline-block;background:#f95853;border-radius:20px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:31px;width:auto;text-align:center;mso-padding-alt:0;mso-border-alt:10px solid #f95853;text-decoration:none">GO SHOPPING</a></span></td>
+                        <td align="center" style="padding:0;Margin:0;padding-top:5px;padding-bottom:5px"><span class="es-button-border" style="border-style:solid;border-color:#2CB543;background:#f95853;border-width:0px;display:inline-block;border-radius:20px;width:auto"><a href="${process.env.FRONT_URL}" class="es-button es-button-1709976231884" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#FFFFFF;font-size:26px;padding:10px 30px;display:inline-block;background:#f95853;border-radius:20px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:31px;width:auto;text-align:center;mso-padding-alt:0;mso-border-alt:10px solid #f95853;text-decoration:none">GO SHOPPING</a></span></td>
                        </tr>
                      </table></td>
                    </tr>
@@ -318,7 +318,7 @@ export default function WelcomeEmail(name) {
                     <td align="center" valign="top" style="padding:0;Margin:0;width:560px">
                      <table cellpadding="0" cellspacing="0" width="100%" style="mso-table-lspace:0pt;mso-table-rspace:0pt;border-collapse:separate;border-spacing:0px;border-radius:5px" role="presentation">
                        <tr>
-                        <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:10px"><span class="es-button-border" style="border-style:solid;border-color:#2CB543;background:#f95853;border-width:0px;display:inline-block;border-radius:20px;width:auto"><a href="http://localhost:3000/" class="es-button es-button-1709976259694" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#FFFFFF;font-size:26px;padding:10px 30px;display:inline-block;background:#f95853;border-radius:20px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:31px;width:auto;text-align:center;mso-padding-alt:0;mso-border-alt:10px solid #f95853;text-decoration:none">START SHOPPING</a></span></td>
+                        <td align="center" style="padding:0;Margin:0;padding-top:10px;padding-bottom:10px"><span class="es-button-border" style="border-style:solid;border-color:#2CB543;background:#f95853;border-width:0px;display:inline-block;border-radius:20px;width:auto"><a href="${process.env.FRONT_URL}" class="es-button es-button-1709976259694" target="_blank" style="mso-style-priority:100 !important;text-decoration:none;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;color:#FFFFFF;font-size:26px;padding:10px 30px;display:inline-block;background:#f95853;border-radius:20px;font-family:arial, 'helvetica neue', helvetica, sans-serif;font-weight:normal;font-style:normal;line-height:31px;width:auto;text-align:center;mso-padding-alt:0;mso-border-alt:10px solid #f95853;text-decoration:none">START SHOPPING</a></span></td>
                        </tr>
                      </table></td>
                    </tr>

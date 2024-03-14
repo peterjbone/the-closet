@@ -1,20 +1,4 @@
-*,
-*::before,
-*::after {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-}
-
-a {
-	text-decoration: none;
-}
-
-li {
-	list-style-type: none;
-}
-
-/** Estilos de Contenedor de Productos **/
+/** Estilos de Contenedor de favoritos **/
 
 .card-container {
 	max-width: 100%;

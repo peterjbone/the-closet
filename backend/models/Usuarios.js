@@ -22,12 +22,14 @@ const UserSchema = new Schema({
 		type: Date,
 		default: () => Date.now()
 	},
-	accounts: [
-		{
-			type: Schema.Types.ObjectId,
-			ref: "Cuenta"
-		}
-	]
+	favorites: {
+		type: [Schema.Types.Mixed],
+		default: []
+	},
+	lastCart: {
+		type: [Schema.Types.Mixed],
+		default: []
+	}
 });
 
 // La lógica aqui evita que se cree un nuevo modelo cada vez que una ruta lo llama

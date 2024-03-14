@@ -1,29 +1,69 @@
-import { useState, useCallback } from "react";
+"use client";
+
+import { toast } from "react-hot-toast";
 import { FaRegHeart } from "react-icons/fa";
 import { MdOutlineShoppingCart } from "react-icons/md";
-import { useSession, signOut } from "next-auth/react";
+
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+
+import { useState, useCallback, useEffect } from "react";
+import { useSession, signOut } from "next-auth/react";
+
 import Avatar from "../navbar/Avatar";
 import MenuItem from "../navbar/MenuItem";
+
 import { useCartStore } from "../../hooks/cartStore";
-import { useCounterStore } from "../../hooks/counterStore";
+import { useFavoritesStore } from "../../hooks/favoritesStore";
+
 function CategoryNav({ query, handleInputChange }) {
-  const counter = useCounterStore((state) => state.counter);
-  const router = useRouter();
-  const cartTotalQuantity = useCartStore((state) => state.cartTotalQuantity);
+	//? Creando un router
+	const router = useRouter();
 
-  //? Cargando datos de sesion de usuario
-  const { data: session } = useSession();
+	//? Cargando datos de sesion de usuario
+	const { data: session } = useSession();
 
-  //? Para abrir el menú de usuario
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleOpen = useCallback(() => {
-    setIsOpen((value) => !value);
-  }, []);
+	//? Para abrir el menú de usuario
+	const [isOpen, setIsOpen] = useState(false);
+	const toggleOpen = useCallback(() => {
+		setIsOpen((value) => !value);
+	}, []);
 
-  /* prettier-ignore*/
-  return (
+	//? Para salir de la sesión
+	function handleSignout() {
+		toast
+			.promise(
+				new Promise((resolve) => setTimeout(() => resolve(true), 2000)),
+				{
+					loading: "Cerrando sesión...",
+					success: <b>Haz cerrado tu sesión.</b>,
+					error: <b>Algo salió mal.</b>
+				},
+				{
+					success: {
+						duration: 1000
+					}
+				}
+			)
+			.then(() => signOut());
+	}
+
+	//? Estado global de "Cart"
+	let cartTotalQuantity = useCartStore((state) => state.cartTotalQuantity);
+
+	//? Estado global de "favorites"
+	const defaultUserFavorites = useFavoritesStore(
+		(state) => state.defaultUserFavorites
+	);
+	useEffect(() => {
+		if (session?.user._id) defaultUserFavorites(session?.user._id);
+	}, [session?.user]);
+
+	let favorites = useFavoritesStore((state) => state.favorites);
+
+	//* ----------------- COMPONENTE CATEGORY-NAV ---------------------
+	/* prettier-ignore*/
+	return (
 		<header className="font-semibold border-b-gray-300 border-[3px] mb-5">
 			<nav
 				className="
@@ -35,7 +75,7 @@ function CategoryNav({ query, handleInputChange }) {
         items-center
         py-4
       ">
-				{/* VOLVER A CASA */}
+				{/* LOGO - VOLVER A CASA */}
 				<Link href={"/"} className="font-bold text-[2rem] text-black">
 					The closet
 				</Link>
@@ -58,17 +98,39 @@ function CategoryNav({ query, handleInputChange }) {
 					/>
 				</div>
 
-				<div className="flex flex-row gap-4 items-center">
-					{/* LISTA DE DESEOS */}
-					<Link
-						href={"/wishlist"}
-						className="hover:cursor-pointer hover:text-red-600">
-						<div className="flex flex-row gap-2">
-						  <FaRegHeart size={32} />
-						  <p className="rounded-full px-2 bg-orange-500 text-center h-5 justify-center align-middle items-center">{counter}</p>
+        {/*  ENLACES DE USUARIO */}
+				<div className="flex flex-row gap-4 items-center relative">
+					{/* Lista de deseos */}
+					<div className="relative">
+						<Link
+							href={`${session?.user ? "/wishlist" : "/login"}`}
+							className="hover:cursor-pointer hover:text-red-600">
+							<FaRegHeart size={32} />
+						</Link>
+						<div
+							onClick={() => router.push(`${session?.user ? "/wishlist" : "/login"}`)}
+							className="
+              absolute
+              z-10
+              top-6
+              left-5
+              w-[25px]
+              h-[25px]
+              p-1
+              bg-orange-500
+              text-black
+              text-[1rem]
+              font-semibold
+              rounded-full
+              flex
+              items-center
+              justify-center
+              hover:cursor-pointer
+            ">
+							{favorites.length}
 						</div>
-					</Link>
-					{/* CARRITO */}
+					</div>
+					{/* carrito */}
 					<div className="relative">
 						<Link href={"/cart"}>
 							<MdOutlineShoppingCart size={32} />
@@ -96,7 +158,7 @@ function CategoryNav({ query, handleInputChange }) {
 							{cartTotalQuantity}
 						</div>
 					</div>
-					{/* USUARIO */}
+					{/* cuenta de usuario */}
 					<div className="hover:cursor-pointer" onClick={toggleOpen}>
 						<Avatar src={session?.picture} />
 					</div>
@@ -119,11 +181,11 @@ function CategoryNav({ query, handleInputChange }) {
 									<>
 										<MenuItem
 											onClick={() => router.push("/login")}
-											label="Login"
+											label="Inicio sesión"
 										/>
 										<MenuItem
 											onClick={() => router.push("/register")}
-											label="Sign up"
+											label="Registro"
 										/>
 									</>
 								)}

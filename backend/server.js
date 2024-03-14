@@ -1,8 +1,8 @@
 const express = require("express");
 const server = express();
 const morgan = require("morgan");
+//? Importando routers
 const indexRouter = require("./routes/routesIndex.js");
-const stripeRouter = require("./routes/stripe.js");
 
 //* MIDDLEWARES
 server.use((req, res, next) => {
@@ -20,6 +20,5 @@ server.use(express.json());
 
 //* ROUTES AND ROUTERS
 server.use("/", indexRouter);
-server.use("/api/stripe", stripeRouter);
 
 module.exports = server;

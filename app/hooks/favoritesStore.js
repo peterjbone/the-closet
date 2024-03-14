@@ -1,29 +1,57 @@
+import axios from "axios";
 import { create } from "zustand";
 
-export const useFavoritesStore = create((set, getState) => ({
-  favorites: [],
-  addFavorites: (product) => {
-    const currentFavorites = getState().favorites;
-    //Verificar si ya esta en favoritos:
-    if (!currentFavorites.find((item) => item._id === product._id)) {
-      set({ favorites: [...currentFavorites, product] });
-      console.log("Producto agregado a favoritos:", product);
-    } else {
-      console.log("El producto ya está en favoritos:", product);
-    }
-  },
-  removeFavorites: (productId, name) => {
-    const currentFavorites = getState().favorites;
-    console.log("Productos antes de eliminar por ID: ", currentFavorites);
-    // Filtrar por ID y nombre
-    const updatedFavorites = currentFavorites.filter(
-      (item) => item._id !== productId || item.nombre !== name
-    );
-    console.log("Lista de favoritos después de eliminar:", updatedFavorites);
+export const useFavoritesStore = create((set, get) => ({
+	favorites: [],
+	favoriteTotalQuantity: 0,
+	//* DEFINIENDO SI HAY FAVORITOS GUARDADOS EN BD (si es así los guarda en base de datos)
+	defaultUserFavorites: async (userId) => {
+		const endpoint = `${process.env.BACK_URL}/getfavorites`;
+		const { data } = await axios.get(`${endpoint}?userid=${userId}`);
 
-    set({ favorites: updatedFavorites });
-
-    console.log("Producto quitado de favoritos: ", productId);
-    console.log(getState().favorites);
-  },
+		if (data.length === 0) {
+			set((state) => ({
+				...state,
+				favorites: [],
+				favoriteTotalQuantity: 0
+			}));
+		} else {
+			set((state) => ({
+				...state,
+				favorites: [...data],
+				favoriteTotalQuantity: data.length
+			}));
+		}
+	},
+	//* AÑADIENDO UN PRODUCTO A FAVORITOS (en estado global y en BD)
+	addFavorite: async (_id, product) => {
+		// Guardando en base de datos
+		const endpoint = `${process.env.BACK_URL}/postfavorite`;
+		const info = { _id, product };
+		await axios.post(`${endpoint}`, info);
+		// Guardando en estado global
+		const currentFavorites = get().favorites;
+		const currentQuantity = get().favorites.length + 1;
+		set((state) => ({
+			...state,
+			favorites: [...currentFavorites, product],
+			favoriteTotalQuantity: currentQuantity
+		}));
+	},
+	//* ELIMINANDO UN PRODUCTO DE FAVORITOS (en estado global y en BD)
+	removeFavorite: async (userId, productId) => {
+		// Eliminando en base de datos
+		const endpoint = `${process.env.BACK_URL}/removefavorite`;
+		await axios.delete(`${endpoint}?userid=${userId}&productid=${productId}`);
+		// Eliminando en estado global
+		const currentFavorites = get().favorites;
+		const updatedFavorites = currentFavorites.filter(
+			(item) => item._id !== productId
+		);
+		set((state) => ({
+			...state,
+			favorites: [...updatedFavorites],
+			favoriteTotalQuantity: updatedFavorites.length
+		}));
+	}
 }));

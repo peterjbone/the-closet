@@ -20,7 +20,7 @@ export const authOptions = {
 		GoogleProvider({
 			clientId: process.env.GOOGLE_CLIENT_ID,
 			clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-			callbackUrl: "http://localhost:3000/api/auth/callback/google"
+			callbackUrl: `${process.env.FRONT_URL}/api/auth/callback/google`
 		}),
 		CredentialsProvider({
 			name: "credentials",
@@ -47,7 +47,7 @@ export const authOptions = {
 			}
 		})
 	],
-	database: process.env.MONGODB_URI,
+	database: process.env.MONGODB_URL,
 	callbacks: {
 		jwt({ token, user }) {
 			if (user) token.user = user;

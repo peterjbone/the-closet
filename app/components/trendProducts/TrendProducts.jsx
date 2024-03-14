@@ -7,18 +7,24 @@ import { useProductsStore } from "../../hooks/productsStore";
 import { useEffect } from "react";
 
 function TrendProducts() {
-  const getTrendyProducts = useProductsStore(
-    (state) => state.getTrendyProducts
-  );
+	const getTrendyProducts = useProductsStore(
+		(state) => state.getTrendyProducts
+	);
+	const removeAllTrendy = useProductsStore((state) => state.removeAllTrendy);
 
-  useEffect(() => {
-    getTrendyProducts();
-  }, []);
+	useEffect(() => {
+		getTrendyProducts();
 
-  const trendy = useProductsStore((state) => state.trendy);
-  console.log(trendy);
-  /* prettier-ignore */
-  return (  
+		return () => {
+			removeAllTrendy();
+		};
+	}, []);
+
+	const trendy = useProductsStore((state) => state.trendy);
+	//console.log(trendy);
+
+	/* prettier-ignore */
+	return (  
     <div className="py-4 px-6">
       <div className="flex flex-row items-center justify-between py-6">
         <h2 className="text-3xl font-bold">Productos en Tendencia ⭐</h2>

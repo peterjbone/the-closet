@@ -44,14 +44,3 @@ const CheckoutSuccess = () => {
 };
 
 export default CheckoutSuccess;
-
-const Container = styled.div`
-	min-height: 80vh;
-	max-width: 800px;
-	width: 100%;
-	margin: auto;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-`;

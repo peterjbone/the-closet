@@ -2,13 +2,12 @@
 
 import "./styles.css";
 import { toast } from "react-hot-toast";
-import axios from 'axios'
 import { useEffect, useState } from "react";
 import { FaCartShopping } from "react-icons/fa6";
 import { useProductsStore } from "../../hooks/productsStore";
 import { useParams } from "next/navigation";
-import { initMercadoPago, Wallet } from "@mercadopago/sdk-react"
-import { useSession } from 'next-auth/react';
+import { initMercadoPago } from "@mercadopago/sdk-react";
+import { useSession } from "next-auth/react";
 import Header from "../../components/navbar/Navbar";
 import Images from "./Images";
 import ColorInput from "./ColorInput";
@@ -16,15 +15,12 @@ import TallaInput from "./TallaInput";
 import { useCartStore } from "../../hooks/cartStore.js";
 import { v4 as uuidv4 } from "uuid";
 
-
-initMercadoPago('TEST-aaf6addf-8825-47b9-b75c-547fe0bf6533')
+initMercadoPago("TEST-aaf6addf-8825-47b9-b75c-547fe0bf6533");
 
 const Page = () => {
 	//? obteniendo el nombre del producto por parametro
 	const params = useParams();
 	const nombre = params.nombre;
-
-  
 
 	//? Llenando el estado global de "all products"
 	const getAllProducts = useProductsStore((state) => state.getAllProducts);
@@ -46,13 +42,14 @@ const Page = () => {
 	const producto = allProducts.find(
 		(product) => normalizeName(product.nombre) === normalizeName(nombre)
 	);
- console.log(producto);
-	// Manejando imágenes
+	//console.log(producto);
+
+	//? Manejando imágenes
 	const [imagenSeleccionada, setImagenSeleccionada] = useState(
 		producto?.imagen[0]
 	);
 
-	//Limpia la información:
+	//? Limpia la información:
 	const productoOpciones = producto?.opcion;
 	const finalName = producto?.nombre.toUpperCase();
 	const finalBrands = producto?.marca.toUpperCase();
@@ -67,12 +64,11 @@ const Page = () => {
 		setMostrarDescripcion(false);
 	};
 
-	//! ZONA IMPORTANTE
-  const { data: session } = useSession();
-  const userId = session && session.user ? session.user._id : null;
-  const userName = session && session.user ? session.user.name : null;
-  const userEmail = session && session.user ? session.user.email : null;
-  
+	//! ------------------------- ZONA IMPORTANTE -----------------------
+	const { data: session } = useSession();
+	const userId = session && session.user ? session.user._id : null;
+	const userName = session && session.user ? session.user.name : null;
+	const userEmail = session && session.user ? session.user.email : null;
 
 	//? ------------ INFORMACION DEL PRODUCTO (que se enviara a la cart) -----------
 	const [productInfo, setProductInfo] = useState({
@@ -87,21 +83,21 @@ const Page = () => {
 		precio: producto?.precio,
 		color: "",
 		talla: "",
-    userId: userId,
-    userName: userName,
-    userEmail: userEmail
+		userId: userId,
+		userName: userName,
+		userEmail: userEmail
 	});
 	function handleProductChange(event) {
 		event.preventDefault();
 
 		const { name, value } = event.target;
-    console.log('name v',name, value)
+		//console.log("name v", name, value);
 		setProductInfo({
 			...productInfo,
-			[name]: value,
+			[name]: value
 		});
 	}
-	console.log('productos',producto, productInfo);
+	//console.log("productos", producto, productInfo);
 
 	//? ----------------- OPCIONES DE LA TALLA -------------------
 	let opcionesDeTallas = null;
@@ -124,12 +120,10 @@ const Page = () => {
 		}
 	}
 
-	//? ACTIONS Y ESTADOS GLOBALES DE LA CART
+	//? -------------------- ACTIONS Y ESTADOS GLOBALES DE LA CART ---------------------
 	const addToCart = useCartStore((state) => state.addToCart);
 	const getTotals = useCartStore((state) => state.getTotals);
-	const cartItems = useCartStore((state) => state.cartItems);
 
-	//? FUNCION PARA AGREGAR EL PRODUCTO A CARRITO Y ACTUALIZAR LOS TOTALES
 	function handleCartBtn() {
 		if (!productInfo.color) {
 			return toast.error("Debe seleccionar un color");
@@ -155,7 +149,8 @@ const Page = () => {
 			talla: ""
 		});
 	}
-	console.log('nombre',cartItems, cartItems && cartItems.nombre); // imprimiendo el estado global de carts
+	//console.log("nombre", cartItems, cartItems && cartItems.nombre);
+	// imprimiendo el estado global de carts
 
 	//* ------------------- PAGINA DETAIL DEL PRODUCTO ------------------------
 	/* prettier-ignore */

@@ -24,7 +24,6 @@ function Cart() {
 	const decreaseCart = useCartStore((state) => state.decreaseCart);
 	const removeFromCart = useCartStore((state) => state.removeFromCart);
 	const clearCart = useCartStore((state) => state.clearCart);
-	//clearCart();
 
 	//? Obteniendo los "estados globales"
 	const cartItems = useCartStore((state) => state.cartItems);
@@ -36,7 +35,7 @@ function Cart() {
 	//? Para coger la sesion de usuario
 	const { data: session, status } = useSession();
 	//console.log(session);
-  
+
 	//* -------------------------------- PAGINA CART -------------------------------- *//
 	/* prettier-ignore */
 	return (
