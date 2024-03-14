@@ -15,4 +15,14 @@
 - `Notificaciones (mail/socket.io)`: Utilizamos un servicio de correo electrónico como SendGrid o Nodemailer para enviar notificaciones por correo electrónico a los usuarios. Además, implementamos Socket.IO para ofrecer notificaciones en tiempo real que se entregan instantáneamente a los usuarios conectados al sitio web. Esto puede incluir notificaciones de nuevos mensajes, actualizaciones de inventario o cambios en el estado de los pedidos.
 - `Borrado logico`: Para implementar el borrado lógico en el sitio web, utilizamos una estrategia que consiste en marcar los registros como "eliminados" en lugar de eliminarlos físicamente de la base de datos. Esto nos permite mantener un historial completo de los datos y recuperarlos fácilmente si es necesario en el futuro.
 
-## :heavy_check_mark: Tecnologias utilizadas
+## :white_check_mark: Tecnologias utilizadas
+- JavaScript
+- Nextjs
+- Nodejs
+- Mongodb
+
+## Autores
+
+| [<img src="https://avatars.githubusercontent.com/u/119123840?v=4" width=115><br><sub>Joao Peter Bone Pena</sub>](https://github.com/peterjbone) |  [<img src="https://avatars.githubusercontent.com/u/71423470?v=4" width=115><br><sub>NicolasDelPozo</sub>](https://github.com/NDelPozo) |  [<img src="https://avatars.githubusercontent.com/u/129472389?v=4" width=115><br><sub>Pablo Girardi</sub>](https://github.com/pablogirardi) | [<img src="https://avatars.githubusercontent.com/u/111025964?v=4" width=115><br><sub>Abril</sub>](https://github.com/Abril31) |
+| :---: | :---: | :---: | :---: |
+
