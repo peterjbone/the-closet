@@ -23,7 +23,7 @@ export const BackArrowButton = () => {
   };
   return (
     <BiSolidLeftArrowCircle
-      size={45}
+      size={50}
       onClick={handleGoBack}
       className="cursor-pointer"
     />

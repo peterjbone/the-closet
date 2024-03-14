@@ -10,7 +10,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <div className="bg-black flex text-white p-2 pt-7 pb-7 place-content-evenly font-bold">
+      <div className="bg-black flex text-white text-xl p-2 pt-7 pb-7 place-content-evenly font-bold">
         <div>
           <p className="text-center mb-2">Explora</p>
           <div className="flex flex-col list-none font-light">
@@ -32,27 +32,27 @@ const Footer = () => {
           </div>
         </div>
         <div className="text-center">
-          <p>Acerca de Nosotros</p>
+          <Link href="/about">
+            <p>Acerca de Nosotros</p>
+          </Link>
           <div className="list-none font-light mt-3">
-            <li>Misión</li>
-            <li>Visión</li>
-            <li>Historia</li>
+            <Link href="/about">
+              <li>Misión</li>
+              <li>Visión</li>
+              <li>Historia</li>
+            </Link>
           </div>
         </div>
 
         <div>
           <p className="mb-2 text-center">Contacto</p>
-          <div className="list-none font-light">
-            <li className="flex items-center">
-              <IoLocationSharp />
-              <p className="ml-3">Av. Locura</p>
-            </li>
-            <li className="flex items-center">
-              <IoLogoWhatsapp />
+          <div className="list-none font-light m-2">
+            <li className="flex items-center mb-2">
+              <IoLogoWhatsapp size={30} />
               <p className="ml-3">+1 528 8789 55</p>
             </li>
             <li className="flex items-center">
-              <MdEmail />
+              <MdEmail size={30} />
               <p className="ml-3">thecloset@store.com</p>
             </li>{" "}
           </div>
