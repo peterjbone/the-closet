@@ -23,6 +23,6 @@
 
 ## Autores
 
-| [<img src="https://avatars.githubusercontent.com/u/119123840?v=4" width=115><br><sub>Joao Peter Bone Pena</sub>](https://github.com/peterjbone) |  [<img src="https://avatars.githubusercontent.com/u/71423470?v=4" width=115><br><sub>NicolasDelPozo</sub>](https://github.com/NDelPozo) |  [<img src="https://avatars.githubusercontent.com/u/129472389?v=4" width=115><br><sub>Pablo Girardi</sub>](https://github.com/pablogirardi) | [<img src="https://avatars.githubusercontent.com/u/111025964?v=4" width=115><br><sub>Abril</sub>](https://github.com/Abril31) |
-| :---: | :---: | :---: | :---: |
+| [<img src="https://avatars.githubusercontent.com/u/119123840?v=4" width=115><br><sub>Joao Peter Bone Pena</sub>](https://github.com/peterjbone) |  [<img src="https://avatars.githubusercontent.com/u/71423470?v=4" width=115><br><sub>NicolasDelPozo</sub>](https://github.com/NDelPozo) |  [<img src="https://avatars.githubusercontent.com/u/49510922?v=4" width=115><br><sub>Walter Moreyra</sub>](https://github.com/Wallmoreyra) | [<img src="https://avatars.githubusercontent.com/u/111025964?v=4" width=115><br><sub>Abril</sub>](https://github.com/Abril31) |  [<img src="https://avatars.githubusercontent.com/u/129472389?v=4" width=115><br><sub>Pablo Girardi</sub>](https://github.com/pablogirardi) |
+| :---: | :---: | :---: | :---: | :---: |
 
