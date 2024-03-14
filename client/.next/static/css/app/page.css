@@ -1,0 +1,442 @@
+/*!******************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./app/components/navbar/Navbar.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************/
+
+/*!****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./app/components/heroSection/HeroSection.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************/
+.slider {
+	position: relative;
+	width: 100vw;
+	height: 700px;
+	/* border-radius: 15px; */
+	overflow: hidden;
+}
+
+.slides {
+	width: 500%;
+	height: 700px;
+	display: flex;
+}
+
+.slides input {
+	display: none;
+}
+
+.slide {
+	width: 20%;
+	transition: 2.5s;
+}
+
+.slide img {
+	width: 100%;
+	height: 700px;
+	-o-object-fit: cover;
+	   object-fit: cover;
+}
+
+/* Manual navigation css */
+
+.navigation-manual {
+	position: absolute;
+
+	width: 100vw;
+	margin-top: -100px;
+
+	display: flex;
+	justify-content: center;
+}
+
+.manual-btn {
+	padding: 5px;
+	border: 3px solid red;
+	border-radius: 10px;
+	cursor: pointer;
+	transition: 1s;
+}
+
+.manual-btn:not(:last-child) {
+	margin-right: 40px;
+}
+
+.manual-btn:hover {
+	background-color: red;
+}
+
+#radio1:checked ~ .first {
+	margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+	margin-left: -20%;
+}
+
+#radio3:checked ~ .first {
+	margin-left: -40%;
+}
+
+#radio4:checked ~ .first {
+	margin-left: -60%;
+}
+
+/* Automatic navigation */
+
+.navigation-auto {
+	position: absolute;
+
+	width: 100vw;
+	margin-top: 600px;
+
+	display: flex;
+	justify-content: center;
+}
+
+.navigation-auto div {
+	padding: 5px;
+	border: 3px solid red;
+	border-radius: 15px;
+	transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+	margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+	background-color: red;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+	background-color: red;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+	background-color: red;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+	background-color: red;
+}
+
+.hero-content {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 1.5rem;
+}
+
+.hero-btn {
+	position: relative;
+
+	width: -moz-fit-content;
+
+	width: fit-content;
+	padding: 1.3rem 1rem;
+	border: medium solid #fff;
+	border-radius: 15px;
+	font-size: 1.5rem;
+	color: #fff;
+	background-color: transparent;
+
+	display: inline-flex;
+	align-items: center;
+	gap: 1rem;
+
+	overflow: hidden;
+	transition-duration: 0.8s;
+}
+
+.hero-btn:hover {
+	color: orangered;
+}
+
+.hero-btn::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 0%;
+	border-radius: 50% 50% 0 0;
+	background-color: #fff;
+	transition-duration: 0.8s;
+}
+
+.hero-btn:hover::before {
+	height: 180%;
+}
+
+/*!********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./app/components/categoryBanner/CategoryItem.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************/
+.overlay-layer {
+	opacity: 0;
+
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+
+	font-size: 1.5rem;
+	color: #fff;
+	background-color: #0008;
+
+	transition: opacity 0.5s ease-in-out;
+}
+
+/*!**************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./app/components/featuredProducts/FeaturedProducts.css ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************************/
+.featureProducts-grid {
+	display: grid;
+	grid-template-columns: repeat(1, minmax(325px, 1fr));
+	grid-template-rows: 1fr;
+
+	align-items: stretch;
+	justify-content: center;
+	gap: 15px;
+}
+
+@media (min-width: 768px) {
+	.featureProducts-grid {
+		grid-template-columns: repeat(2, minmax(325px, 1fr));
+	}
+}
+
+@media (min-width: 1024px) {
+	.featureProducts-grid {
+		grid-template-columns: repeat(4, minmax(325px, 1fr));
+	}
+}
+
+/*!******************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./app/components/featuredProducts/FeaturedProductsItem.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************************/
+.img-area {
+	position: relative;
+	width: 335px;
+	height: 480px;
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+.img-area img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: opacity 0.2s ease-in-out;
+}
+
+.img-area img.img-front:hover {
+	opacity: 0;
+	cursor: pointer;
+}
+
+.new-product-image {
+	width: 335px;
+	height: 480px;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	-o-object-position: center center;
+	   object-position: center center;
+}
+
+/*!****************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./app/components/collections/Collections.css ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************/
+.flex-collections {
+	margin: 3rem auto 0;
+
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: start;
+	gap: 5px;
+}
+
+.flex-collections div.container {
+	position: relative;
+
+	flex: 1;
+	height: 400px;
+	background-color: beige;
+	overflow: hidden;
+}
+
+.flex-collections div.container img {
+	width: 100%;
+	height: 100%;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	-o-object-position: center center;
+	   object-position: center center;
+}
+
+/* Las imagenes sean mas largas en dispositivos grandes */
+@media (min-width: 1280px) {
+	.flex-collections div.container {
+		height: 525px;
+	}
+
+	.flex-collections div.container img {
+		-o-object-fit: cover;
+		   object-fit: cover;
+		-o-object-position: top -120px right 0;
+		   object-position: top -120px right 0;
+	}
+}
+
+/* Un columna en dispositivos pequeños */
+@media (max-width: 768px) {
+	.flex-collections {
+		flex-flow: column nowrap;
+	}
+}
+
+.flex-collections div.container .layer {
+	position: absolute;
+	z-index: 1;
+	top: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: center;
+	gap: 5rem;
+
+	background-color: #0005;
+
+	opacity: 0;
+	transition: opacity 0.4s ease-in-out;
+}
+
+/* Estilos del Boton */
+
+.collection-btn {
+	position: relative;
+
+	padding: 1rem 0.8rem;
+	border: medium solid #fff;
+	border-radius: 15px;
+	font-size: 1.2rem;
+	color: #fff;
+	background-color: transparent;
+
+	display: inline-flex;
+	align-items: center;
+	gap: 1rem;
+
+	overflow: hidden;
+	transition-duration: 0.8s;
+}
+
+.collection-btn:hover {
+	color: orangered;
+}
+
+.collection-btn::before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 0%;
+	border-radius: 50% 50% 0 0;
+	background-color: #fff;
+	transition-duration: 0.8s;
+}
+
+.collection-btn:hover::before {
+	height: 180%;
+}
+
+/*!********************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./app/components/trendProducts/TrendProducts.css ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************/
+.featureProducts-grid {
+	display: grid;
+	grid-template-columns: repeat(1, minmax(325px, 1fr));
+	grid-template-rows: 1fr;
+
+	align-items: stretch;
+	justify-content: center;
+	gap: 15px;
+}
+
+@media (min-width: 768px) {
+	.featureProducts-grid {
+		grid-template-columns: repeat(2, minmax(325px, 1fr));
+	}
+}
+
+@media (min-width: 1024px) {
+	.featureProducts-grid {
+		grid-template-columns: repeat(4, minmax(325px, 1fr));
+	}
+}
+
+/*!*************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[12].use[3]!./app/components/trendProducts/TrendProductsItems.css ***!
+  \*************************************************************************************************************************************************************************************************************************************************************************************************/
+.img-area {
+	position: relative;
+	width: 335px;
+	height: 480px;
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+.img-area img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: opacity 0.2s ease-in-out;
+}
+
+.img-area img.img-front:hover {
+	opacity: 0;
+	cursor: pointer;
+}
+
+.new-product-image {
+	width: 335px;
+	height: 480px;
+	-o-object-fit: cover;
+	   object-fit: cover;
+	-o-object-position: center center;
+	   object-position: center center;
+}
+
+/*!******************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[11].oneOf[7].use[3]!./app/components/buttons/toTop/scroll.module.css ***!
+  \******************************************************************************************************************************************************************************************************************************************************************************************/
+.scroll_scrollToTopButton__NbVs0 {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: none;
+    background-color: #F97316;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 1.5rem;
+  }
+  
+  .scroll_scrollToTopButton__NbVs0.scroll_show__iQ9vs {
+    display: block;
+  }
+  
