@@ -1,0 +1,25 @@
+.img-area {
+	position: relative;
+	width: 335px;
+	height: 480px;
+	transition: box-shadow 0.3s ease-in-out;
+}
+
+.img-area img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	transition: opacity 0.2s ease-in-out;
+}
+
+.img-area img.img-front:hover {
+	opacity: 0;
+	cursor: pointer;
+}
+
+.new-product-image {
+	width: 335px;
+	height: 480px;
+	object-fit: cover;
+	object-position: center center;
+}

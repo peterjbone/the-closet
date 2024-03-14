@@ -1,0 +1,34 @@
+:root {
+    --color-inactivo: #5f5050;
+    --color-hover: #ffa400;
+}
+
+.valoracion-container {
+    display: flex;
+    justify-content: flex-end; /* Alinear los botones a la derecha */
+}
+
+.valoracion {
+    display: flex;
+    flex-direction: row; /* Invertimos la dirección de las estrellas */
+    justify-content: flex-end; /* Alinear los botones a la derecha */
+    margin-bottom: 8px;
+    margin-right: 8px;
+}
+
+.valoracion button {
+    background-color: initial;
+    border: 0;
+    color: var(--color-inactivo);
+    transition: color 0.5s;
+}
+
+.valoracion button:hover,
+.valoracion button.selected {
+    color: var(--color-hover);
+}
+
+.valoracion button:hover ~ button:not(.selected) {
+    color: var(--color-inactivo);
+}
+

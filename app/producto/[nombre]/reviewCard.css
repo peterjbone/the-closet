@@ -1,0 +1,25 @@
+.card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+    margin-top: 0;
+}
+
+.card p {
+    margin-bottom: 0;
+}
+
+.valoracion {
+    margin-top: 0; /* Ajusta el margen superior de las estrellas */
+    margin-bottom: 8px;
+}
+
+.review-section {
+    border-top: 1px solid #ccc; /* Agrega un borde superior */
+    padding-top: 20px; /* Ajusta el espacio entre el borde y el contenido */
+}
