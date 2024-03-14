@@ -1,5 +1,7 @@
 {
-	"build": {
-		"ignore": ["./backend"]
+	"functions": {
+		"api": {
+			"output": "./backend"
+		}
 	}
 }
